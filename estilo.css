@@ -30,9 +30,7 @@ header {
 .banner {
     width: 100%;
     height: auto;
-    max-width: 1000px;
     display: block;
-    margin: 0 auto;
 }
 
 nav {

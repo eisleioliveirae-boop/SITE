@@ -22,45 +22,36 @@ header {
     text-align: center;
 }
 
-.logo-header-container {
+.banner-header-container {
     width: 100%;
-    margin-bottom: 20px;
+    text-align: center;
 }
 
-.logo-header-container .logo {
+.banner {
     width: 100%;
-    max-width: 250px;
     height: auto;
+    max-width: 1000px;
     display: block;
-    margin: 0 auto 10px;
-}
-
-.logo-header-container .logo-title {
-    font-family: 'Times New Roman', Times, serif;
-    color: var(--primary-gold);
-    font-size: 1.5rem;
-    font-weight: normal;
-    margin: 0;
-    text-transform: uppercase;
+    margin: 0 auto;
 }
 
 nav {
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     margin-top: 20px;
 }
 
 nav a {
-    color: var(--primary-gold);
-    margin: 0 10px;
+    color: white;
+    margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
 }
 
 nav a:hover {
-    color: var(--light-gold);
+    color: var(--primary-gold);
     text-decoration: underline;
 }
 
@@ -82,20 +73,36 @@ footer {
     color: white;
     text-align: center;
     padding: 20px 0;
+    /* Remover 'position: sticky' ou 'fixed' */
+    bottom: 0;
+    width: 100%;
 }
 
 .footer-slogan {
     margin-bottom: 5px;
 }
 
-.social-links a i {
-    font-size: 24px;
-    margin: 0 10px;
-    color: white;
+.footer-contact {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
 }
 
-.social-links a:hover i {
+.footer-contact a {
+    color: white;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 5px;
+    font-weight: bold;
+}
+
+footer a:hover {
     color: var(--primary-gold);
+    text-decoration: underline;
 }
 
 .footer-copyright {

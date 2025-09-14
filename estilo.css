@@ -16,15 +16,16 @@ header {
     background-color: var(--dark-blue);
     color: white;
     padding: 15px 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.banner-header-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-}
-
-.banner-header-container {
     width: 100%;
-    text-align: center;
 }
 
 .banner {

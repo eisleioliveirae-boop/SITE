@@ -14,13 +14,12 @@ body {
 
 header {
     background-color: var(--dark-blue);
-    color: white;
     width: 100%;
     box-sizing: border-box;
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
 }
 
 .banner {

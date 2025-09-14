@@ -18,13 +18,13 @@ header {
     padding: 15px 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start; /* Alterado para alinhar à esquerda */
+    text-align: left;
 }
 
 .banner-header-container {
     width: 100%;
-    text-align: center;
+    text-align: left; /* Alterado para alinhar à esquerda */
 }
 
 .banner {
@@ -38,12 +38,12 @@ header {
 nav {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* Alterado para alinhar à esquerda */
     margin-top: 20px;
 }
 
 nav a {
-    color: white;
+    color: white; /* Cor da letra do menu alterada para branco */
     margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
@@ -70,10 +70,9 @@ h1, h2 {
 
 footer {
     background-color: var(--dark-blue);
-    color: white;
+    color: var(--primary-gold); /* Cor do rodapé alterada para dourado */
     text-align: center;
     padding: 20px 0;
-    /* Remover 'position: sticky' ou 'fixed' */
     bottom: 0;
     width: 100%;
 }
@@ -88,20 +87,20 @@ footer {
 }
 
 .footer-contact a {
-    color: white;
+    color: var(--primary-gold); /* Cor do link para dourado */
     text-decoration: none;
     margin: 0 5px;
 }
 
 .social-links a {
-    color: white;
+    color: var(--primary-gold); /* Cor dos links de redes sociais para dourado */
     text-decoration: none;
     margin: 0 5px;
     font-weight: bold;
 }
 
 footer a:hover {
-    color: var(--primary-gold);
+    color: var(--light-gold); /* Alterado para um dourado mais claro no hover */
     text-decoration: underline;
 }
 

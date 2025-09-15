@@ -8,9 +8,9 @@ body {
 
 /* Banner Centralizado */
 .header .banner {
-    text-align: center; /* Centraliza a imagem do logo */
+    text-align: center;
     padding: 20px 0;
-    background-color: #0c1a4b;
+    background-color: #0F2040; /* Cor de fundo corrigida */
 }
 
 .header .banner img {
@@ -20,7 +20,7 @@ body {
 
 /* Menu de Navegação */
 .menu {
-    background-color: #0c1a4b;
+    background-color: #0F2040; /* Cor de fundo corrigida */
     padding: 10px 0;
 }
 
@@ -28,7 +28,7 @@ body {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex; /* Permite alinhar os itens em uma linha */
+    display: flex;
     justify-content: flex-start; /* Alinha o menu à esquerda */
     padding-left: 20px; /* Adiciona um espaço à esquerda */
 }
@@ -43,12 +43,13 @@ body {
 }
 
 .menu ul li a:hover {
-    background-color: #1f3060;
+    background-color: #1f3060; /* Cor de fundo ao passar o mouse */
+    color: #C4A760; /* Cor da fonte dourada ao passar o mouse */
 }
 
 /* Rodapé (Footer) */
 .footer {
-    background-color: #0c1a4b;
+    background-color: #0F2040; /* Cor de fundo corrigida */
     color: white;
     text-align: center;
     padding: 20px;

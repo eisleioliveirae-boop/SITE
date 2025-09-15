@@ -65,7 +65,7 @@ body {
 }
 
 .main-banner img {
-    max-width: 800px; /* Tamanho do banner aumentado para preencher mais espaço */
+    max-width: 900px; /* Tamanho do banner ajustado para ser maior */
     height: auto;
 }
 
@@ -87,7 +87,7 @@ body {
     color: white;
     text-align: center;
     padding: 20px;
-    /* Removido o 'position: absolute' para que o rodapé siga o conteúdo */
+    margin-top: 40px; /* Adiciona um espaço extra entre o conteúdo e o rodapé */
 }
 
 .footer p, .footer .social-media {

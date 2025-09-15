@@ -8,20 +8,20 @@ body {
 
 /* Header principal */
 .header {
-    background-color: #0F2040; /* Cor de fundo para toda a seção do cabeçalho */
+    background-color: #0F2040;
     color: white;
 }
 
 /* Topo da barra (logo + menu) */
 .top-bar {
-    display: flex; /* Permite alinhar lado a lado */
-    justify-content: space-between; /* Empurra os elementos para as extremidades */
-    align-items: center; /* Centraliza verticalmente */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 15px 40px;
 }
 
 .logo-text {
-    font-size: 1.5em;
+    font-size: 1.2rem; /* Slogan no topo, 19.2px */
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -41,7 +41,8 @@ body {
     padding-bottom: 5px;
     font-weight: bold;
     text-transform: uppercase;
-    position: relative; /* Necessário para a linha abaixo */
+    position: relative;
+    font-size: 0.9rem; /* Aproximadamente 14.4px */
 }
 
 .menu ul li a:hover::after {
@@ -51,18 +52,29 @@ body {
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: #C4A760; /* Cor da linha dourada */
+    background-color: #C4A760;
 }
 
 /* Banner principal (centralizado) */
 .main-banner {
-    text-align: center; /* Centraliza a imagem do banner */
+    text-align: center;
     padding: 50px 0;
 }
 
 .main-banner img {
     max-width: 500px;
     height: auto;
+}
+
+/* Conteúdo principal da página */
+.content {
+    padding: 20px 40px;
+    color: #333;
+}
+
+.content p {
+    font-size: 1.1rem; /* 17.6px */
+    line-height: 1.8; /* Espaçamento entre as linhas */
 }
 
 /* Rodapé (Footer) */
@@ -78,6 +90,7 @@ body {
 
 .footer p, .footer .social-media {
     margin: 10px 0;
+    font-size: 0.9rem; /* 14.4px */
 }
 
 .footer a {

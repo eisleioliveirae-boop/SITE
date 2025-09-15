@@ -14,7 +14,7 @@ body {
 }
 
 .header .banner img {
-    max-width: 250px;
+    max-width: 100%; /* Garante que o banner não ultrapasse a largura da tela */
     height: auto;
 }
 
@@ -30,7 +30,7 @@ body {
     padding: 0;
     display: flex;
     justify-content: flex-start; /* Alinha o menu à esquerda */
-    padding-left: 20px; /* Adiciona um espaço à esquerda */
+    padding-left: 20px; /* Adiciona um espaço à esquerda para o menu */
 }
 
 .menu ul li a {
@@ -43,7 +43,7 @@ body {
 }
 
 .menu ul li a:hover {
-    background-color: #1f3060; /* Cor de fundo ao passar o mouse */
+    background-color: #1f3060;
     color: #C4A760; /* Cor da fonte dourada ao passar o mouse */
 }
 

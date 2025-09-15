@@ -13,10 +13,6 @@ body {
 .header {
     background-color: #0F2040;
     color: white;
-    /* Adiciona o posicionamento fixo */
-    position: sticky;
-    top: 0;
-    z-index: 100; /* Garante que o cabeçalho fique sobre o conteúdo */
 }
 
 /* Topo da barra (logo + menu) */
@@ -82,8 +78,8 @@ body {
     padding: 20px 40px;
     color: #333;
     flex-grow: 1;
-    /* Adiciona margem para que o conteúdo não fique por baixo do cabeçalho */
-    margin-top: 300px; 
+    /* Remove o espaçamento extra para que não haja espaço entre o banner e o texto */
+    margin-top: 0; 
 }
 
 .content p {

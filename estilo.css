@@ -6,22 +6,24 @@ body {
     background-color: #f0f0f0;
 }
 
-/* Header, que contém o banner e o menu */
+/* Header principal */
 .header {
-    background-color: #0F2040;
+    background-color: #0F2040; /* Cor de fundo para toda a seção do cabeçalho */
+    color: white;
 }
 
-/* Banner (a imagem) */
-.header .banner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+/* Topo da barra (logo + menu) */
+.top-bar {
+    display: flex; /* Permite alinhar lado a lado */
+    justify-content: space-between; /* Empurra os elementos para as extremidades */
+    align-items: center; /* Centraliza verticalmente */
+    padding: 15px 40px;
 }
 
-.header .banner img {
-    max-width: 250px;
-    height: auto;
+.logo-text {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 /* Menu de Navegação */
@@ -30,23 +32,37 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: flex-start; /* Alinha o menu à esquerda */
-    padding-left: 20px;
-    background-color: #0F2040;
+    gap: 20px;
 }
 
 .menu ul li a {
     color: white;
     text-decoration: none;
-    padding: 15px 20px;
-    display: block;
+    padding-bottom: 5px;
     font-weight: bold;
     text-transform: uppercase;
+    position: relative; /* Necessário para a linha abaixo */
 }
 
-.menu ul li a:hover {
-    background-color: #1f3060;
-    color: #C4A760;
+.menu ul li a:hover::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #C4A760; /* Cor da linha dourada */
+}
+
+/* Banner principal (centralizado) */
+.main-banner {
+    text-align: center; /* Centraliza a imagem do banner */
+    padding: 50px 0;
+}
+
+.main-banner img {
+    max-width: 500px;
+    height: auto;
 }
 
 /* Rodapé (Footer) */

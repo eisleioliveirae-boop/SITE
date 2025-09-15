@@ -45,7 +45,7 @@ body {
     font-weight: bold;
     text-transform: uppercase;
     position: relative;
-    font-size: 0.9rem; /* Tamanho da fonte do menu */
+    font-size: 0.9rem;
 }
 
 .menu ul li a:hover::after {
@@ -61,8 +61,8 @@ body {
 /* Banner principal (centralizado) */
 .main-banner {
     text-align: center;
-    max-width: 100%;
-    height: 300px; /* Altura do banner */
+    max-width: 1200px; /* Largura ajustada para 1200px */
+    height: 500px; /* Altura ajustada para 500px */
     margin: 0 auto;
     padding: 0;
 }
@@ -81,7 +81,7 @@ body {
 }
 
 .content p {
-    font-size: 1.1rem; /* Tamanho da fonte do corpo do texto */
+    font-size: 1.1rem;
     line-height: 1.8;
 }
 
@@ -96,7 +96,7 @@ body {
 
 .footer p, .footer .social-media {
     margin: 10px 0;
-    font-size: 0.9rem; /* Tamanho da fonte do rodapé */
+    font-size: 0.9rem;
 }
 
 .footer a {

@@ -4,9 +4,9 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
-    min-height: 100vh; /* Garante que a página tenha pelo menos a altura da tela */
-    display: flex; /* Permite o uso de flexbox no corpo do documento */
-    flex-direction: column; /* Alinha os elementos em uma coluna */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Header principal */
@@ -65,7 +65,7 @@ body {
 }
 
 .main-banner img {
-    max-width: 900px; /* Tamanho do banner ajustado para ser maior */
+    max-width: 900px;
     height: auto;
 }
 
@@ -73,7 +73,7 @@ body {
 .content {
     padding: 20px 40px;
     color: #333;
-    flex-grow: 1; /* Permite que o conteúdo ocupe o espaço restante */
+    flex-grow: 1;
 }
 
 .content p {
@@ -87,7 +87,7 @@ body {
     color: white;
     text-align: center;
     padding: 20px;
-    margin-top: 40px; /* Adiciona um espaço extra entre o conteúdo e o rodapé */
+    margin-top: 40px;
 }
 
 .footer p, .footer .social-media {

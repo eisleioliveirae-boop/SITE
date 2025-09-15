@@ -1,99 +1,78 @@
-:root {
-    --dark-blue: #0F2040;
-    --primary-gold: #CFA130;
-    --light-gold: #FFD700;
-}
-
+/* Estilos Gerais */
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
-    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
 }
 
-header {
-    background-color: var(--dark-blue);
-    width: 100%;
-    box-sizing: border-box;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.banner {
-    width: 250px;
-    height: auto;
-    display: block;
-}
-
-nav {
-    display: flex;
-}
-
-nav a {
-    color: white;
-    margin-left: 25px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-nav a:hover {
-    color: var(--primary-gold);
-    text-decoration: underline;
-}
-
-.container {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-h1, h2 {
-    color: var(--dark-blue);
-}
-
-footer {
-    background-color: var(--dark-blue);
-    color: var(--primary-gold);
-    text-align: center;
+/* Banner Centralizado */
+.header .banner {
+    text-align: center; /* Centraliza a imagem do logo */
     padding: 20px 0;
+    background-color: #0c1a4b;
+}
+
+.header .banner img {
+    max-width: 250px;
+    height: auto;
+}
+
+/* Menu de Navegação */
+.menu {
+    background-color: #0c1a4b;
+    padding: 10px 0;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Permite alinhar os itens em uma linha */
+    justify-content: flex-start; /* Alinha o menu à esquerda */
+    padding-left: 20px; /* Adiciona um espaço à esquerda */
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.menu ul li a:hover {
+    background-color: #1f3060;
+}
+
+/* Rodapé (Footer) */
+.footer {
+    background-color: #0c1a4b;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
     width: 100%;
 }
 
-.footer-slogan {
+.footer p, .footer .social-media {
+    margin: 10px 0;
+}
+
+.footer a {
     color: white;
-    margin-bottom: 5px;
-}
-
-.footer-contact {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-}
-
-.footer-contact a {
-    color: var(--primary-gold);
     text-decoration: none;
-    margin: 0 5px;
 }
 
-.social-links a {
-    color: var(--primary-gold);
-    text-decoration: none;
-    margin: 0 5px;
-    font-weight: bold;
-}
-
-footer a:hover {
-    color: var(--light-gold);
+.footer a:hover {
     text-decoration: underline;
 }
 
-.footer-copyright {
-    margin-top: 5px;
+/* Estilo para o link do WhatsApp com ícone */
+.whatsapp-link .fa-whatsapp {
+    color: #25D366; /* Cor verde do WhatsApp */
+    font-size: 1.2em;
+    margin-right: 5px;
 }

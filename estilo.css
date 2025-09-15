@@ -1,45 +1,79 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EDO Advogacia Empresarial</title>
-    <link rel="stylesheet" href="estilo.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
 
-    <header class="header">
-        <div class="banner">
-            <img src="banner.png" alt="Banner EDO Advogacia Empresarial">
-        </div>
-        <nav class="menu">
-            <ul>
-                <li><a href="#">Quem Somos</a></li>
-                <li><a href="#">Área de Atuação</a></li>
-                <li><a href="#">Fundadora</a></li>
-                <li><a href="#">Artigos</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+/* Banner Centralizado */
+.header .banner {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #0F2040;
+}
 
-    <main class="content">
-        </main>
+.header .banner img {
+    max-width: 100%;
+    height: auto;
+}
 
-    <footer class="footer">
-        <p>"Excelência Jurídico-Contábil a Serviço da Sua Empresa"</p>
-        <p>
-            <a href="https://wa.me/5515997007014" target="_blank" class="whatsapp-link">
-                <i class="fab fa-whatsapp"></i> (15) 99700-7014
-            </a>
-            | <a href="mailto:eisleiroliveira@yahoo.com.br">eisleiroliveira@yahoo.com.br</a>
-        </p>
-        <div class="social-media">
-            <a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="#">LinkedIn</a>
-        </div>
-        <p>EDO Advocacia Empresarial © 2025</p>
-    </footer>
+/* Menu de Navegação */
+.menu {
+    background-color: #0F2040;
+    padding: 10px 0;
+}
 
-</body>
-</html>
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start; /* Alinha o menu à esquerda */
+    padding-left: 20px;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.menu ul li a:hover {
+    background-color: #1f3060;
+    color: #C4A760;
+}
+
+/* Rodapé (Footer) */
+.footer {
+    background-color: #0F2040;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer p, .footer .social-media {
+    margin: 10px 0;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para o link do WhatsApp com ícone */
+.whatsapp-link .fa-whatsapp {
+    color: #25D366;
+    font-size: 1.2em;
+    margin-right: 5px;
+}

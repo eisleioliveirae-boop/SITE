@@ -1,116 +1,57 @@
-/* Estilos Gerais */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDO Advogacia Empresarial</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
 
-/* Header principal */
-.header {
-    background-color: #0F2040;
-    color: white;
-}
+    <header class="header">
+        <div class="top-bar">
+            <div class="logo-text">EDO ADVOCACIA</div>
+            
+            <nav class="menu">
+                <ul>
+                    <li><a href="#">Quem somos</a></li>
+                    <li><a href="#">Área de Atuação</a></li>
+                    <li><a href="#">Fundadora</a></li>
+                    <li><a href="#">Artigos Publicados</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
 
-/* Topo da barra (logo + menu) */
-.top-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 40px;
-}
+        <div class="main-banner">
+            <img src="banner.png" alt="Banner EDO Advogacia Empresarial">
+        </div>
+    </header>
 
-.logo-text {
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-transform: uppercase;
-}
+    <main class="content">
+        <p>A EDO Advocacia Empresarial nasceu com a missão de oferecer às empresas um atendimento jurídico diferenciado, pautado na integração entre Direito e Contabilidade.</p>
+        <p>Com atuação nas áreas de Direito Empresarial, Direito do Trabalho, Direito Civil e Direito Tributário, entregamos soluções estratégicas e personalizadas, capazes de atender às demandas que impactam diretamente a gestão e o crescimento das organizações.</p>
+        <p>Nosso grande diferencial está na experiência única de nossa fundadora, que além de advogada é também contadora, com mais de 18 anos de atuação no ramo empresarial. Essa combinação de conhecimentos jurídicos e contábeis proporciona uma visão ampla e integrada, permitindo compreender em profundidade os desafios enfrentados pelas empresas e oferecer orientações que unem segurança jurídica e eficiência administrativa.</p>
+        <p>Mais do que resolver conflitos, nossa proposta é prevenir riscos, assegurar conformidade legal e apoiar a tomada de decisões estratégicas, contribuindo para o desenvolvimento sustentável dos negócios de nossos clientes.</p>
+        <p>Nosso compromisso é atuar de forma estratégica, oferecendo soluções jurídicas eficientes que impulsionam o crescimento e a segurança da sua empresa.</p>
+        <p>Na EDO Advocacia Empresarial, unimos conhecimento, estratégia e experiência para oferecer soluções jurídicas que fortalecem empresas e impulsionam seu crescimento. Se a sua organização busca um parceiro de confiança para atuar lado a lado na construção de resultados sólidos e seguros, estamos prontos para atender você.</p>
+        
+    </main>
 
-/* Menu de Navegação */
-.menu ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 20px;
-}
+    <footer class="footer">
+        <p>"Excelência Jurídico-Contábil a Serviço da Sua Empresa"</p>
+        <p>
+            <a href="https://wa.me/5515997007014" target="_blank" class="whatsapp-link">
+                <i class="fab fa-whatsapp"></i> (15) 99700-7014
+            </a>
+            | <a href="mailto:eisleiroliveira@yahoo.com.br">eisleiroliveira@yahoo.com.br</a>
+        </p>
+        <div class="social-media">
+            <a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="#">LinkedIn</a>
+        </div>
+        <p>EDO Advocacia Empresarial © 2025</p>
+    </footer>
 
-.menu ul li a {
-    color: white;
-    text-decoration: none;
-    padding-bottom: 5px;
-    font-weight: bold;
-    text-transform: uppercase;
-    position: relative;
-    font-size: 0.9rem;
-}
-
-.menu ul li a:hover::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #C4A760;
-}
-
-/* Banner principal (centralizado) */
-.main-banner {
-    text-align: center;
-    max-width: 1200px; /* Largura ajustada para 1200px */
-    height: 500px; /* Altura ajustada para 500px */
-    margin: 0 auto;
-    padding: 0;
-}
-
-.main-banner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Conteúdo principal da página */
-.content {
-    padding: 20px 40px;
-    color: #333;
-    flex-grow: 1;
-}
-
-.content p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-}
-
-/* Rodapé (Footer) */
-.footer {
-    background-color: #0F2040;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-}
-
-.footer p, .footer .social-media {
-    margin: 10px 0;
-    font-size: 0.9rem;
-}
-
-.footer a {
-    color: white;
-    text-decoration: none;
-}
-
-.footer a:hover {
-    text-decoration: underline;
-}
-
-/* Estilo para o link do WhatsApp com ícone */
-.whatsapp-link .fa-whatsapp {
-    color: #25D366;
-    font-size: 1.2em;
-    margin-right: 5px;
-}
+</body>
+</html>

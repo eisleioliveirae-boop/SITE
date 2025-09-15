@@ -45,7 +45,7 @@ body {
     font-weight: bold;
     text-transform: uppercase;
     position: relative;
-    font-size: 1.1rem; /* Aumentado para melhor leitura */
+    font-size: 1.1rem;
 }
 
 .menu ul li a:hover::after {
@@ -81,7 +81,7 @@ body {
 }
 
 .content p {
-    font-size: 1.2rem; /* Aumentado para melhor leitura */
+    font-size: 1.2rem;
     line-height: 1.8;
 }
 
@@ -96,7 +96,7 @@ body {
 
 .footer p, .footer .social-media {
     margin: 10px 0;
-    font-size: 1.1rem; /* Aumentado para melhor leitura */
+    font-size: 1.1rem;
 }
 
 .footer a {

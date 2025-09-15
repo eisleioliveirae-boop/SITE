@@ -6,24 +6,25 @@ body {
     background-color: #f0f0f0;
 }
 
-/* Banner Centralizado */
-.header .banner {
-    text-align: center;
-    padding: 20px 0;
+/* Header, que contém o banner e o menu */
+.header {
     background-color: #0F2040;
 }
 
+/* Banner (a imagem) */
+.header .banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
 .header .banner img {
-    max-width: 100%;
+    max-width: 250px;
     height: auto;
 }
 
 /* Menu de Navegação */
-.menu {
-    background-color: #0F2040;
-    padding: 10px 0;
-}
-
 .menu ul {
     list-style-type: none;
     margin: 0;
@@ -31,6 +32,7 @@ body {
     display: flex;
     justify-content: flex-start; /* Alinha o menu à esquerda */
     padding-left: 20px;
+    background-color: #0F2040;
 }
 
 .menu ul li a {

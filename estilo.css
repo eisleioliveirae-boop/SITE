@@ -1,27 +1,141 @@
+/* Configurações globais e fontes */
+body {
+    font-family: 'Roboto', sans-serif, 'Arial';
+    margin: 0;
+    padding: 0;
+    color: #232342;
+    background-color: #fff;
+}
+
+/* Fontes de fallback (conforme a imagem) */
+@font-face {
+    font-family: "Roboto Fallback";
+    src: local('Arial');
+    ascent-override: 92.6709%;
+    descent-override: 24.3871%;
+    size-adjust: 100.1106%;
+    line-gap-override: 0%;
+}
+
+@font-face {
+    font-family: "Epilogue Fallback";
+    src: local('Arial');
+    ascent-override: 70.2338%;
+    descent-override: 20.8923%;
+    size-adjust: 112.4814%;
+    line-gap-override: 0%;
+}
+
+/* --- Cabeçalho e Navegação --- */
+header {
+    background-color: #232342;
+    padding: 20px 50px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+header nav ul li {
+    margin-left: 30px;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Epilogue', sans-serif, 'Epilogue Fallback';
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover,
+header nav a.active {
+    color: #CBA17B;
+}
+
 /* --- Banner --- */
 .banner-area {
     width: 100%;
     max-width: 100%;
     height: 300px;
-    background-image: url('banner.png');
+    background-image: url('banner.png'); /* AQUI ESTÁ A MUDANÇA */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     margin-top: 60px; /* Para acomodar o cabeçalho fixo */
 }
 
-/* --- Conteúdo Principal (sem margem no topo) --- */
+/* --- Conteúdo Principal --- */
 main {
     padding: 0 50px;
-    margin-top: 0; /* Adicionar essa linha para zerar a margem superior */
 }
 
 .content-section {
-    padding: 20px 0; /* Diminuir o padding-top para reduzir o espaço */
+    padding: 40px 0;
 }
 
 .text-container {
     max-width: 800px;
     margin: 0 auto;
     text-align: justify;
+}
+
+.text-container p {
+    font-family: 'Roboto', sans-serif, 'Roboto Fallback';
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* --- Rodapé --- */
+footer {
+    background-color: #232342;
+    color: #fff;
+    padding: 20px 50px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contact-info, .social-media {
+    margin: 10px 0;
+}
+
+.contact-info a, .social-media a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover, .social-media a:hover {
+    color: #CBA17B;
+}
+
+.divider {
+    margin: 0 10px;
+}
+
+.slogan {
+    color: #CBA17B;
+    font-style: italic;
+    margin-top: 15px;
+    font-family: 'Epilogue', sans-serif, 'Epilogue Fallback';
+    font-weight: 600;
 }

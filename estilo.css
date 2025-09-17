@@ -35,7 +35,7 @@ body {
 .header {
     background-color: #232342;
     color: white;
-    position: fixed;
+    position: sticky; /* Alterado de 'fixed' para 'sticky' */
     top: 0;
     width: 100%;
     z-index: 1000;
@@ -92,16 +92,14 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    position: fixed;
-    top: 66px; /* Altura do top-bar, para o banner aparecer abaixo do menu */
-    z-index: 999;
+    /* Removido as propriedades de `position: fixed` e `top`, o que causava o problema */
 }
 
 /* Conteúdo principal da página (com rolagem) */
 .content {
     padding: 20px 40px;
     color: #333;
-    margin-top: calc(66px + 300px); /* Ajusta o espaço para o conteúdo principal ficar abaixo do header e do banner */
+    /* Removido o margin-top, pois com o 'sticky' o fluxo é natural */
     overflow-y: auto;
 }
 

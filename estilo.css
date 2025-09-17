@@ -1,51 +1,321 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EDO Advocacia</title>
-    <link rel="stylesheet" href="estilo.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
-    <header class="header">
-        <div class="top-bar">
-            <div class="logo-text">EDO ADVOCACIA</div>
-            <nav class="menu">
-                <ul>
-                    <li><a href="#quem-somos">QUEM SOMOS</a></li>
-                    <li><a href="#fundadora">FUNDADORA</a></li>
-                    <li><a href="#areas-de-atuacao">ÁREAS DE ATUAÇÃO</a></li>
-                    <li><a href="#artigos-publicados">ARTIGOS PUBLICADOS</a></li>
-                    <li><a href="#contato">CONTATO</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+/* Importação das fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700&family=Roboto:wght@400;700&display=swap');
 
-    <div class="main-banner"></div>
+/* Estilos para controle de espaçamento e tamanho */
+@font-face {
+    font-family: 'Epilogue';
+    src: url('https://fonts.gstatic.com/s/epilogue/v13/O4ZfGzW5P1xR4y_-_CjJb74e.woff2') format('woff2');
+    font-weight: 400;
+    ascent-override: 100%;
+    descent-override: 30%;
+    size-adjust: 100%;
+    line-gap-override: 0%;
+}
 
-    <main class="content" id="quem-somos">
-        <p>A EDO Advocacia Empresarial nasceu com a missão de oferecer às empresas um atendimento jurídico diferenciado, pautado na integração entre Direito e Contabilidade.</p>
-        <p>Com atuação nas áreas de Direito Empresarial, Direito do Trabalho, Direito Civil e Direito Tributário, entregamos soluções estratégicas e personalizadas, capazes de atender às demandas que impactam diretamente a gestão e o crescimento das organizações.</p>
-        <p>Nosso grande diferencial está na experiência única de nossa fundadora, que além de advogada é também contadora, com mais de 18 anos de atuação no ramo empresarial. Essa combinação de conhecimentos jurídicos e contábeis proporciona uma visão ampla e integrada, permitindo compreender em profundidade os desafios enfrentados pelas empresas e oferecer orientações que unem segurança jurídica e eficiência administrativa.</p>
-        <p>Mais do que resolver conflitos, nossa proposta é prevenir riscos, assegurar conformidade legal e apoiar a tomada de decisões estratégicas, contribuindo para o desenvolvimento sustentável dos negócios de nossos clientes.</p>
-        <p>Nosso compromisso é atuar de forma estratégica, oferecendo soluções jurídicas eficientes que impulsionam o crescimento e a segurança da sua empresa.</p>
-        <p>Na EDO Advocacia Empresarial, unimos conhecimento, estratégia e experiência para oferecer soluções jurídicas que fortalecem empresas e impulsionam seu crescimento. Se a sua organização busca um parceiro de confiança para atuar lado a lado na construção de resultados sólidos e seguros, estamos prontos para atender você.</p>
-    </main>
-    
-    <footer class="footer">
-        <p class="slogan">"Excelência Jurídico-Contábil a Serviço da Sua Empresa"</p>
-        <p>
-            <a href="https://wa.me/5515997007014" target="_blank" class="whatsapp-link"><i class="fab fa-whatsapp"></i> WhatsApp: (15) 99700-7014</a> | 
-            <a href="mailto:eisleioliveira@yahoo.com.br"><i class="fas fa-envelope"></i> E-mail: eisleioliveira@yahoo.com.br</a>
-        </p>
-        <p class="social-media">
-            <a href="https://web.facebook.com/eislei.dominguesdeoliveira/?locale=pt_BR" target="_blank">Facebook</a> | 
-            <a href="https://www.instagram.com/eisleioliveira" target="_blank">Instagram</a> | 
-            <a href="https://www.linkedin.com/in/eislei-d-oliveira-06994025" target="_blank">LinkedIn</a>
-        </p>
-        <p>EDO Advocacia Empresarial © 2024</p>
-    </footer>
-</body>
-</html>
+@font-face {
+    font-family: 'Roboto';
+    src: url('https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxK.woff2') format('woff2');
+    font-weight: 400;
+    ascent-override: 100%;
+    descent-override: 30%;
+    size-adjust: 100%;
+    line-gap-override: 0%;
+}
+
+/* Estilos Gerais */
+body {
+    font-family: 'Epilogue', 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    min-height: 100vh;
+}
+
+/* Header principal */
+.header {
+    background-color: #232342;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Topo da barra (logo + menu) */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+}
+
+.logo-text {
+    font-family: 'Epilogue', Arial, sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+}
+
+/* Menu de Navegação */
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    padding-bottom: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    font-size: 1rem;
+    font-family: 'Epilogue', Arial, sans-serif;
+    transition: color 0.3s ease;
+}
+
+.menu ul li a:hover,
+.menu ul li a:focus {
+    color: #C4A760;
+    text-decoration: none;
+}
+
+/* Banner principal */
+.main-banner {
+    width: 100%;
+    height: 300px;
+    background-image: url('banner.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 66px; /* Altura do top-bar, para o banner aparecer abaixo do menu */
+    z-index: 999;
+}
+
+/* Conteúdo principal da página (com rolagem) */
+.content {
+    padding: 20px 40px;
+    color: #333;
+    margin-top: calc(66px + 300px); /* Ajusta o espaço para o conteúdo principal ficar abaixo do header e do banner */
+    overflow-y: auto;
+}
+
+/* Seções do site */
+section {
+    padding: 60px 0;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #ddd;
+}
+
+h2 {
+    font-family: 'Epilogue', Arial, sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #232342;
+    font-size: 2.5rem;
+}
+
+.section-quem-somos p {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* Estilos para a seção Fundadora */
+.section-fundadora {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+}
+
+.fundadora-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.fundadora-foto {
+    max-width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.fundadora-texto {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.fundadora-texto p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+}
+
+/* Estilos para Áreas de Atuação */
+.section-atuacao h3 {
+    color: #CBA17B;
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+
+.section-atuacao ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* Estilos para Artigos */
+.artigo-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.artigo-item h3 {
+    color: #232342;
+    margin-top: 0;
+}
+
+.btn-artigo {
+    display: inline-block;
+    background-color: #232342;
+    color: #CBA17B;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-artigo:hover {
+    background-color: #1a1a33;
+}
+
+/* Estilos para o formulário de Contato */
+.section-contato form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #232342;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.section-contato button {
+    background-color: #CBA17B;
+    color: #232342;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.section-contato button:hover {
+    background-color: #b8986c;
+}
+
+/* Rodapé (Footer) */
+.footer {
+    background-color: #232342;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+.footer .slogan {
+    color: #CBA17B;
+    margin: 10px 0;
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+.footer p, .footer .social-media {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #CBA17B;
+}
+
+.social-media a {
+    margin: 0 5px;
+}
+
+/* Estilo para o link do WhatsApp com ícone */
+.whatsapp-link .fab.fa-whatsapp {
+    color: #25D366;
+    font-size: 1em;
+    margin-right: 5px;
+}
+
+/* Estilo para o link de e-mail com ícone */
+.email-link .fas.fa-envelope {
+    color: #CBA17B;
+    font-size: 1em;
+    margin-right: 5px;
+}
+
+/* Media queries para responsividade */
+@media (max-width: 768px) {
+    .top-bar {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 20px;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .header {
+        position: static;
+        padding-bottom: 20px;
+    }
+
+    .main-banner {
+        position: static;
+    }
+
+    .content {
+        margin-top: 0;
+    }
+}

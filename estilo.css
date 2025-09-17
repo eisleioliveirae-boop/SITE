@@ -130,17 +130,18 @@ h2 {
 /* Estilos para a seção Fundadora */
 .section-fundadora {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
     gap: 40px;
 }
 
 .fundadora-info {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
-    text-align: center;
-    width: 100%;
+    justify-content: center;
+    gap: 40px;
 }
 
 .fundadora-foto {
@@ -317,5 +318,9 @@ h2 {
 
     .content {
         margin-top: 0;
+    }
+
+    .fundadora-info {
+        flex-direction: column;
     }
 }

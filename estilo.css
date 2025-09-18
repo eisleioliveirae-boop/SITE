@@ -329,3 +329,41 @@ h2 {
         flex-direction: column;
     }
 }
+/* --- Media Queries para telas menores (celulares) --- */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Coloca os elementos um abaixo do outro */
+        align-items: flex-start; /* Alinha tudo à esquerda */
+        padding: 10px 20px;
+    }
+
+    .banner {
+        width: 150px; /* Reduz o tamanho do banner para telas menores */
+    }
+
+    header nav {
+        margin-top: 15px;
+    }
+
+    header nav ul {
+        flex-direction: column; /* Coloca os links do menu um abaixo do outro */
+        align-items: flex-start;
+    }
+    
+    header nav ul li {
+        margin: 5px 0; /* Adiciona espaçamento vertical entre os links */
+    }
+
+    .content-section {
+        padding: 10px; /* Reduz o padding para melhor visualização em telas pequenas */
+    }
+    
+    footer {
+        flex-direction: column; /* Alinha o rodapé em coluna */
+        text-align: center;
+    }
+
+    .footer-content {
+        flex-direction: column; /* Alinha o conteúdo do rodapé em coluna */
+    }
+}

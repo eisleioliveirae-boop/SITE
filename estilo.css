@@ -190,8 +190,8 @@ h2 {
 
 .btn-artigo {
     display: inline-block;
-    background-color: #232342;
-    color: #CBA17B;
+    background-color: #CBA17B;
+    color: #FFFFFF;
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
@@ -200,7 +200,7 @@ h2 {
 }
 
 .btn-artigo:hover {
-    background-color: #1a1a33;
+    background-color: #b8986c;
 }
 
 /* Estilos para o formulário de Contato */

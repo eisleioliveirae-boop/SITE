@@ -428,54 +428,88 @@ section:last-of-type {
   .section-fundadora { padding-top: 8px; }
 }
 /* ======== FIM DOS AJUSTES ======== */
-/* ===== CORREÇÃO: foto da fundadora sempre à direita, texto sempre à esquerda ===== */
+}
+/* ======= FUNDADORA - layout horizontal definitivo e responsivo (foto à direita, texto à esquerda) ======= */
+
+/* Wrapper: sempre em linha, sem quebra */
 .section-fundadora .fundadora-info {
-  display: flex;
-  flex-direction: row;      /* manter lado a lado */
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 32px;
-  flex-wrap: nowrap;       /* impedir quebra */
+  display: flex !important;
+  flex-direction: row !important;    /* sempre lado a lado */
+  align-items: flex-start !important;
+  justify-content: space-between !important;
+  gap: 24px !important;
+  flex-wrap: nowrap !important;      /* impede empilhamento */
+  overflow: visible;                 /* permite mostrar todo conteúdo */
 }
 
-/* Texto ocupa espaço restante e fica à esquerda */
+/* Texto (lado esquerdo): ocupa espaço restante, evita overflow */
 .section-fundadora .fundadora-texto {
-  order: 1;
-  flex: 1 1 auto;
-  min-width: 0;            /* evita overflow do texto */
-  text-align: justify;
+  order: 1 !important;
+  flex: 1 1 auto !important;         /* cresce e encolhe conforme espaço */
+  min-width: 0 !important;           /* essencial para evitar overflow de texto */
+  text-align: justify !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box;
 }
 
-/* Foto fixa sempre à direita */
+/* Imagem (lado direito): tamanho responsivo progressivo */
 .section-fundadora .fundadora-foto {
-  order: 2;
-  width: 280px;            /* tamanho desktop */
-  max-width: 30%;          /* mantém proporcionalidade */
-  height: auto;
-  object-fit: cover;
-  border-radius: 8px;
-  display: block;
-  margin: 0;               /* remove margens que possam deslocar */
+  order: 2 !important;
+  flex: 0 0 280px !important;        /* base desktop */
+  max-width: 35% !important;
+  min-width: 120px !important;       /* nunca menor que 120px */
+  height: auto !important;
+  object-fit: cover !important;
+  border-radius: 8px !important;
+  display: block !important;
+  margin: 0 !important;
+  align-self: flex-start !important;
 }
 
-/* FORÇAR comportamento em mobile: manter horizontal (não empilhar) */
-@media (max-width: 768px) {
-  .section-fundadora .fundadora-info {
-    flex-direction: row !important;
-    align-items: flex-start;
-    gap: 18px;
-  }
+/* Ajustes progressivos para larguras menores */
+@media (max-width: 1200px) {
   .section-fundadora .fundadora-foto {
-    width: 200px;
-    max-width: 35%;
-  }
-  .section-fundadora .fundadora-texto {
-    font-size: 0.98rem;
-    line-height: 1.55;
+    flex: 0 0 240px !important;
+    max-width: 34% !important;
   }
 }
 
-/* Proteção: se outro CSS aplicar flex-direction: column, este !important garante respeito */
-.section-fundadora .fundadora-info[style] { /* sem alteração; fallback */
-  flex-direction: row !important;
+@media (max-width: 992px) {
+  .section-fundadora .fundadora-foto {
+    flex: 0 0 200px !important;
+    max-width: 36% !important;
+  }
+  .section-fundadora .fundadora-texto { font-size: 0.98rem !important; line-height: 1.55 !important; }
+}
+
+/* Mobile estreito: mantém horizontal, reduz imagem e fonte; permite scroll horizontal se necessário */
+@media (max-width: 480px) {
+  .section-fundadora .fundadora-info {
+    gap: 12px !important;
+    padding-right: 8px !important;
+    padding-left: 8px !important;
+    overflow-x: auto;                 /* permite rolagem horizontal ao invés de empilhar */
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .section-fundadora .fundadora-foto {
+    flex: 0 0 140px !important;       /* imagem menor mas visível */
+    max-width: 40% !important;
+    min-width: 120px !important;
+  }
+
+  .section-fundadora .fundadora-texto {
+    font-size: 0.95rem !important;
+    line-height: 1.5 !important;
+    padding-right: 12px !important;   /* garante separação da imagem no final da linha */
+  }
+}
+
+/* Proteção final: força regras mesmo diante de CSS concorrente */
+.section-fundadora .fundadora-info,
+.section-fundadora .fundadora-texto,
+.section-fundadora .fundadora-foto {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }

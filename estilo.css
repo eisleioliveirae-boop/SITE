@@ -367,3 +367,144 @@ h2 {
         flex-direction: column; /* Alinha o conteúdo do rodapé em coluna */
     }
 }
+/* ---------- TIPOGRAFIA (Google Fonts recomendadas) ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;500;700&display=swap');
+
+/* Corpo geral */
+body {
+  font-family: 'Roboto', 'Epilogue', Arial, sans-serif;
+  font-size: 1rem;           /* base = ~16px */
+  line-height: 1.65;
+  color: #222;
+  background-color: #f7f7f7; /* leve ajuste visual */
+  max-width: 1100px;
+  margin: 0 auto;            /* centra em telas largas */
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Cabeçalhos */
+h1, h2, h3 {
+  font-family: 'Playfair Display', 'Epilogue', serif;
+  color: #232342;
+  margin-top: 0;
+}
+
+/* H2: seção */
+h2 {
+  font-size: 2.2rem; /* desktop */
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+/* Conteúdo principal com largura controlada */
+.content {
+  padding: 24px 30px;
+  box-sizing: border-box;
+  color: #333;
+}
+
+/* Parágrafos - ajuste para evitar espaçamento exagerado */
+.section-quem-somos p,
+.fundadora-texto p,
+.artigo-item p {
+  font-size: 1rem;     /* reduzido de 1.25rem para 1rem */
+  line-height: 1.6;    /* evita romper linhas na tela estreita */
+  text-align: justify; /* mantemos no desktop */
+  margin-bottom: 1rem;
+}
+
+/* Diminuir espaço entre seções (desktop) */
+section {
+  padding: 40px 0;     /* reduzido de 60px */
+  margin-bottom: 24px; /* reduzido */
+  border-bottom: 1px solid #e6e6e6;
+}
+
+/* Remover borda da última seção */
+section:last-of-type {
+  border-bottom: none;
+}
+
+/* Fundadora - espaçamento interno controlado */
+.section-fundadora {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;           /* reduzido (antes 40px) */
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* Foto reduzida proporcionalmente */
+.fundadora-foto {
+  max-width: 260px; /* de 300px para 260px para telas menores */
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* ---------- Media Queries para mobile (corrige o problema visível nas imagens) ---------- */
+@media (max-width: 768px) {
+
+  /* Header/menu: reduzir padding e organizar */
+  .top-bar {
+    padding: 12px 18px;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .logo-text {
+    font-size: 1rem;
+  }
+
+  .menu ul {
+    gap: 8px;
+    margin-top: 8px;
+  }
+
+  /* Ajuste de títulos para mobile */
+  h2 {
+    font-size: 1.6rem;  /* menor para mobile */
+    margin-bottom: 12px;
+  }
+
+  /* Conteúdo com padding reduzido */
+  .content {
+    padding: 16px 16px;
+  }
+
+  /* Parágrafos: reduzir fonte e evitar justificação que estoura espaços */
+  .section-quem-somos p,
+  .fundadora-texto p,
+  .artigo-item p {
+    font-size: 0.98rem;    /* aprox 15.5px */
+    line-height: 1.55;
+    text-align: left;      /* evita grandes espaços entre palavras */
+    word-break: break-word;/* evita overflow de palavras */
+  }
+
+  /* Reduzir espaço entre seções no mobile (corrige gap grande) */
+  section {
+    padding: 24px 0;
+    margin-bottom: 12px;
+  }
+
+  .section-fundadora {
+    gap: 18px;
+  }
+
+  /* Garantir que o header não sobreponha conteúdo (se for sticky) */
+  .header {
+    position: sticky; /* se mantiver sticky */
+    top: 0;
+    z-index: 9999;
+  }
+  /* Espaço extra no topo do conteúdo igual à altura do header (ajuste se seu header for maior) */
+  .content { padding-top: calc(16px + 56px); } /* 56px = altura estimada do header em mobile */
+
+  /* Ajuste imagem fundadora */
+  .fundadora-foto {
+    max-width: 220px;
+  }
+}

@@ -429,36 +429,24 @@ section:last-of-type {
 }
 /* ======== FIM DOS AJUSTES ======== */
 }
-/* ======= FUNDADORA - layout horizontal definitivo e responsivo (foto à direita, texto à esquerda) ======= */
-
-/* Wrapper: sempre em linha, sem quebra */
+/* ====== FUNDADORA: foto à ESQUERDA e texto à DIREITA (responsivo e fixo) ====== */
 .section-fundadora .fundadora-info {
   display: flex !important;
-  flex-direction: row !important;    /* sempre lado a lado */
+  flex-direction: row !important;         /* foto à esquerda, texto à direita */
   align-items: flex-start !important;
   justify-content: space-between !important;
   gap: 24px !important;
-  flex-wrap: nowrap !important;      /* impede empilhamento */
-  overflow: visible;                 /* permite mostrar todo conteúdo */
+  flex-wrap: nowrap !important;           /* impede empilhamento */
+  overflow: visible !important;
+  box-sizing: border-box !important;
 }
 
-/* Texto (lado esquerdo): ocupa espaço restante, evita overflow */
-.section-fundadora .fundadora-texto {
-  order: 1 !important;
-  flex: 1 1 auto !important;         /* cresce e encolhe conforme espaço */
-  min-width: 0 !important;           /* essencial para evitar overflow de texto */
-  text-align: justify !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  box-sizing: border-box;
-}
-
-/* Imagem (lado direito): tamanho responsivo progressivo */
+/* Foto - lado esquerdo */
 .section-fundadora .fundadora-foto {
-  order: 2 !important;
-  flex: 0 0 280px !important;        /* base desktop */
+  order: 1 !important;                    /* garante posição à esquerda */
+  flex: 0 0 280px !important;
   max-width: 35% !important;
-  min-width: 120px !important;       /* nunca menor que 120px */
+  min-width: 120px !important;
   height: auto !important;
   object-fit: cover !important;
   border-radius: 8px !important;
@@ -467,34 +455,41 @@ section:last-of-type {
   align-self: flex-start !important;
 }
 
-/* Ajustes progressivos para larguras menores */
-@media (max-width: 1200px) {
-  .section-fundadora .fundadora-foto {
-    flex: 0 0 240px !important;
-    max-width: 34% !important;
-  }
+/* Texto - lado direito */
+.section-fundadora .fundadora-texto {
+  order: 2 !important;                    /* garante posição à direita */
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+  text-align: justify !important;
+  margin: 0 !important;
+  padding-left: 12px !important;          /* separa do lado da imagem */
+  box-sizing: border-box;
 }
 
+/* Ajustes para telas médias */
 @media (max-width: 992px) {
   .section-fundadora .fundadora-foto {
-    flex: 0 0 200px !important;
-    max-width: 36% !important;
+    flex: 0 0 220px !important;
+    max-width: 32% !important;
   }
-  .section-fundadora .fundadora-texto { font-size: 0.98rem !important; line-height: 1.55 !important; }
+  .section-fundadora .fundadora-texto {
+    font-size: 0.98rem !important;
+    line-height: 1.55 !important;
+  }
 }
 
-/* Mobile estreito: mantém horizontal, reduz imagem e fonte; permite scroll horizontal se necessário */
+/* Ajuste para mobile estreito — mantém lado a lado com rolagem horizontal */
 @media (max-width: 480px) {
   .section-fundadora .fundadora-info {
     gap: 12px !important;
     padding-right: 8px !important;
     padding-left: 8px !important;
-    overflow-x: auto;                 /* permite rolagem horizontal ao invés de empilhar */
+    overflow-x: auto !important;
     -webkit-overflow-scrolling: touch;
   }
 
   .section-fundadora .fundadora-foto {
-    flex: 0 0 140px !important;       /* imagem menor mas visível */
+    flex: 0 0 140px !important;
     max-width: 40% !important;
     min-width: 120px !important;
   }
@@ -502,14 +497,6 @@ section:last-of-type {
   .section-fundadora .fundadora-texto {
     font-size: 0.95rem !important;
     line-height: 1.5 !important;
-    padding-right: 12px !important;   /* garante separação da imagem no final da linha */
+    padding-left: 12px !important;
   }
-}
-
-/* Proteção final: força regras mesmo diante de CSS concorrente */
-.section-fundadora .fundadora-info,
-.section-fundadora .fundadora-texto,
-.section-fundadora .fundadora-foto {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
 }

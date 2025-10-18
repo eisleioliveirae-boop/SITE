@@ -499,4 +499,33 @@ section:last-of-type {
     line-height: 1.5 !important;
     padding-left: 12px !important;
   }
+/* === Ajuste recomendado: empilhar no mobile para máxima legibilidade === */
+@media (max-width: 480px) {
+  .section-fundadora .fundadora-info {
+    display: flex !important;
+    flex-direction: column !important;       /* empilha: foto acima, texto abaixo */
+    align-items: center !important;
+    gap: 14px !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  .section-fundadora .fundadora-foto {
+    order: 1 !important;
+    width: 180px !important;                  /* foto centralizada maior */
+    max-width: 60% !important;
+    min-width: 140px !important;
+    align-self: center !important;
+    margin: 0 auto !important;
+  }
+
+  .section-fundadora .fundadora-texto {
+    order: 2 !important;
+    width: 100% !important;
+    text-align: left !important;              /* leitura natural no mobile */
+    font-size: 0.98rem !important;
+    line-height: 1.6 !important;
+    padding: 0 6px 10px 6px !important;
+  }
 }
+

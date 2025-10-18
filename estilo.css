@@ -559,4 +559,19 @@ section:last-of-type {
   .section-fundadora .fundadora-texto p:first-child {
     margin-top: 0 !important;
   }
+/* Texto da fundadora – mantém o mesmo tamanho de fonte em todas as telas */
+.section-fundadora .fundadora-texto p {
+  font-size: 1.1rem !important; /* mesmo padrão das demais seções */
+  line-height: 1.6 !important;
+  color: #222 !important;
+  font-family: 'Lora', 'Merriweather', Georgia, serif !important;
 }
+
+/* Ajuste mobile – mantém proporção sem reduzir fonte */
+@media (max-width: 768px) {
+  .section-fundadora .fundadora-texto p {
+    font-size: 1.1rem !important; /* NÃO reduz mais a fonte */
+    line-height: 1.55 !important;
+  }
+}
+

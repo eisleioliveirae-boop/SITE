@@ -611,5 +611,101 @@ section:last-of-type {
   .section-atuacao h3 { font-size: 1.15rem; }
   .section-atuacao ul li { font-size: 0.98rem; }
 }
+/* ====== CORREÇÃO: logo visível e menu não sobrepondo o banner em mobile ====== */
+
+/* Garante que o header esteja acima do resto e com altura consistente */
+.header {
+  position: sticky;    /* mantém no topo */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1100;       /* header acima do banner */
+}
+
+/* Top bar responsiva e flexível */
+.top-bar {
+  display: flex;
+  flex-wrap: wrap;            /* permite quebra limpa no mobile */
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 12px 18px;         /* reduzido para mobile e desktop equilibrado */
+  box-sizing: border-box;
+  background: #232342;        /* sua cor institucional */
+}
+
+/* Logo: sempre visível e com prioridade no z-index */
+.logo-text {
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  z-index: 1150;              /* acima do menu */
+  position: relative;
+  flex: 0 0 auto;
+}
+
+/* Menu: remover qualquer posicionamento absoluto/fixo e fazê-lo fluir */
+.menu,
+.menu ul {
+  position: static !important;   /* força posição natural (fluxo do documento) */
+  display: block !important;
+  background: transparent !important;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Lista de links do menu: em desktop fica em linha; em mobile vira coluna mas sem sobreposição */
+.menu ul {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+/* Links do menu: ajuste visual */
+.menu ul li a {
+  display: inline-block;
+  padding: 6px 8px;
+  color: #fff;
+}
+
+/* RESPONSIVE: mobile - menu em coluna que empurra conteúdo (NÃO SOBREPOE) */
+@media (max-width: 768px) {
+  /* Menu vertical que ocupa espaço no fluxo, empurrando o conteúdo para baixo */
+  .menu ul {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-top: 8px;
+    padding: 10px 0;
+    border-top: 1px solid rgba(255,255,255,0.04); /* separador sutil */
+    background: rgba(35,35,66,1); /* mantém a barra de navegação visual consistente */
+  }
+
+  .menu ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu ul li a {
+    font-size: 1.05rem;
+    padding: 10px 16px;
+    display:block;
+  }
+
+  /* Se o banner estiver sendo coberto, adicionamos margem superior ao conteúdo para garantir visibilidade */
+  .content {
+    margin-top: 0; /* se já houver problema, ajuste conforme o header real */
+    padding-top: 12px; /* garante espaçamento visual com menu aberto */
+  }
+}
+
+/* Proteção: se houver alguma regra anterior com position/fixed aplicada via JS/inline, neutralizamos floats */
+.header *, .top-bar * {
+  float: none !important;
+  clear: none !important;
+}
 
 

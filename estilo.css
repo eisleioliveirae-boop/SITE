@@ -366,4 +366,58 @@ h2 {
     .footer-content {
         flex-direction: column; /* Alinha o conteúdo do rodapé em coluna */
     }
+/* Corpo geral */
+body {
+  font-family: 'Roboto', 'Epilogue', Arial, sans-serif;
+  font-size: 1rem;           /* base = ~16px */
+  line-height: 1.65;
+  color: #222;
+  background-color: #f7f7f7; /* leve ajuste visual */
+  max-width: 1100px;
+  margin: 0 auto;            /* centra em telas largas */
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+/* Conteúdo principal com largura controlada */
+.content {
+  padding: 24px 30px;
+  box-sizing: border-box;
+  color: #333;
+}
+
+/* Parágrafos - ajuste para evitar espaçamento exagerado */
+.section-quem-somos p,
+.fundadora-texto p,
+.artigo-item p {
+  font-size: 1rem;     /* reduzido de 1.25rem para 1rem */
+  line-height: 1.6;    /* evita romper linhas na tela estreita */
+  text-align: justify; /* mantemos no desktop */
+  margin-bottom: 1rem;
+}
+    /* Diminuir espaço entre seções (desktop) */
+section {
+  padding: 40px 0;     /* reduzido de 60px */
+  margin-bottom: 24px; /* reduzido */
+  border-bottom: 1px solid #e6e6e6;
+}
+    /* Remover borda da última seção */
+section:last-of-type {
+  border-bottom: none;
+}
+
+/* Fundadora - espaçamento interno controlado */
+.section-fundadora {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;           /* reduzido (antes 40px) */
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+/* Foto reduzida proporcionalmente */
+.fundadora-foto {
+  max-width: 260px; /* de 300px para 260px para telas menores */
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
 }

@@ -573,5 +573,43 @@ section:last-of-type {
     font-size: 1.1rem !important; /* NÃO reduz mais a fonte */
     line-height: 1.55 !important;
   }
+/* ====== UNIFICAR TIPOGRAFIA - Seção Áreas de Atuação ====== */
+/* Usa mesmas variáveis e família do restante do site */
+.section-atuacao,
+.section-atuacao h3,
+.section-atuacao ul,
+.section-atuacao li {
+  font-family: 'Merriweather', 'Lora', Georgia, serif; /* mesma família institucional */
+  color: #232342; /* cor padrão dos títulos; se preferir manter o dourado use var(--dourado) */
 }
+
+/* Subtítulos (h3) - tamanho e peso harmonizados */
+.section-atuacao h3 {
+  font-size: 1.25rem;      /* alinhado com hierarquia (ajuste fino se desejar) */
+  margin: 0 0 10px 0;
+  font-weight: 600;
+  color: var(--dourado);   /* mantém a cor dourada que você usa para destaque */
+  line-height: 1.2;
+}
+
+/* Listas - tamanho e espaçamento consistentes com o corpo do texto */
+.section-atuacao ul {
+  margin: 0 0 1rem 1.25rem; /* recuo padrão, espaço inferior */
+  padding: 0;
+  list-style-position: outside;
+}
+
+.section-atuacao ul li {
+  font-size: 1rem;        /* mesmo do corpo do site */
+  line-height: 1.6;
+  margin-bottom: 0.45rem; /* espaço entre itens */
+  color: #222222;
+}
+
+/* Em telas pequenas, reduzir levemente para manter proporção */
+@media (max-width: 768px) {
+  .section-atuacao h3 { font-size: 1.15rem; }
+  .section-atuacao ul li { font-size: 0.98rem; }
+}
+
 

@@ -527,9 +527,8 @@ section:last-of-type {
     line-height: 1.6 !important;
     padding: 0 6px 10px 6px !important;
   }
-/* === Ajuste específico: reduzir espaçamento da seção Fundadora em telas pequenas === */
+/* === Correção: harmonizar tamanho da fonte da seção Fundadora no mobile === */
 @media (max-width: 480px) {
-  /* garante empilhamento (foto acima do texto) e centraliza */
   .section-fundadora .fundadora-info {
     display: flex !important;
     flex-direction: column !important;
@@ -539,7 +538,6 @@ section:last-of-type {
     padding-right: 12px !important;
   }
 
-  /* foto um pouco menor para não "empurrar" o texto */
   .section-fundadora .fundadora-foto {
     width: 160px !important;
     max-width: 60% !important;
@@ -548,20 +546,17 @@ section:last-of-type {
     margin: 0 auto 6px auto !important;
   }
 
-  /* PARÁGRAFOS: reduzir fonte, line-height e margin-bottom para compactar o texto */
+  /* Texto da fundadora com mesmo tamanho das demais seções */
   .section-fundadora .fundadora-texto p {
-    font-size: 0.96rem !important;       /* ligeiramente menor */
-    line-height: 1.45 !important;        /* menos espaço entre linhas */
-    margin-bottom: 0.6rem !important;    /* parágrafos mais próximos */
-    text-align: left !important;         /* leitura natural no mobile */
-    hyphens: auto !important;            /* quebra de sílabas quando suportado */
+    font-size: 1rem !important;        /* iguala ao texto padrão do site */
+    line-height: 1.45 !important;      /* mantém leitura compacta e fluida */
+    margin-bottom: 0.6rem !important;  /* controla espaço entre parágrafos */
+    text-align: left !important;
+    hyphens: auto !important;
     word-break: break-word !important;
   }
 
-  /* Se houver espaçamento extra antes do primeiro parágrafo, removemos */
   .section-fundadora .fundadora-texto p:first-child {
     margin-top: 0 !important;
   }
 }
-
-

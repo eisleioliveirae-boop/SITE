@@ -428,45 +428,54 @@ section:last-of-type {
   .section-fundadora { padding-top: 8px; }
 }
 /* ======== FIM DOS AJUSTES ======== */
-    /* ======== CORREÇÃO - POSICIONAMENTO DA FOTO DA FUNDADORA ======== */
-
-/* Mantém texto à esquerda e foto à direita em todas as resoluções */
-.section-fundadora .fundadora-wrapper {
+/* ===== CORREÇÃO: foto da fundadora sempre à direita, texto sempre à esquerda ===== */
+.section-fundadora .fundadora-info {
   display: flex;
-  flex-direction: row;        /* Mantém os itens lado a lado */
-  align-items: center;        /* Centraliza verticalmente */
+  flex-direction: row;      /* manter lado a lado */
+  align-items: flex-start;
   justify-content: space-between;
-  flex-wrap: nowrap;          /* Impede quebra da ordem dos elementos */
-  gap: 32px;                  /* Espaço entre texto e foto */
+  gap: 32px;
+  flex-wrap: nowrap;       /* impedir quebra */
 }
 
-/* Foto com tamanho fixo proporcional */
-.fundadora-foto {
-  max-width: 280px;           /* Define um tamanho máximo para a imagem */
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  object-fit: cover;          /* Mantém o enquadramento correto */
-  order: 2;                   /* Garante que a foto fique sempre à direita */
-}
-
-/* Texto sempre à esquerda */
+/* Texto ocupa espaço restante e fica à esquerda */
 .section-fundadora .fundadora-texto {
-  flex: 1;                    /* Ocupa o espaço restante */
-  text-align: justify;
   order: 1;
+  flex: 1 1 auto;
+  min-width: 0;            /* evita overflow do texto */
+  text-align: justify;
 }
 
-/* Remove comportamento que alterava layout no mobile */
+/* Foto fixa sempre à direita */
+.section-fundadora .fundadora-foto {
+  order: 2;
+  width: 280px;            /* tamanho desktop */
+  max-width: 30%;          /* mantém proporcionalidade */
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  margin: 0;               /* remove margens que possam deslocar */
+}
+
+/* FORÇAR comportamento em mobile: manter horizontal (não empilhar) */
 @media (max-width: 768px) {
-  .section-fundadora .fundadora-wrapper {
-    flex-direction: row !important; /* Força layout horizontal no mobile */
+  .section-fundadora .fundadora-info {
+    flex-direction: row !important;
     align-items: flex-start;
-    justify-content: space-between;
+    gap: 18px;
   }
-
-  .fundadora-foto {
-    max-width: 200px;         /* Foto menor em telas pequenas */
+  .section-fundadora .fundadora-foto {
+    width: 200px;
+    max-width: 35%;
+  }
+  .section-fundadora .fundadora-texto {
+    font-size: 0.98rem;
+    line-height: 1.55;
   }
 }
 
+/* Proteção: se outro CSS aplicar flex-direction: column, este !important garante respeito */
+.section-fundadora .fundadora-info[style] { /* sem alteração; fallback */
+  flex-direction: row !important;
+}

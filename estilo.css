@@ -87,7 +87,7 @@ body {
 /* Banner principal */
 .main-banner {
     width: 100%;
-    height: 350px;
+    height: 340px;
     background-image: url('banner.png');
     background-size: cover;
     background-position: center;
@@ -103,8 +103,8 @@ body {
 
 /* Seções do site */
 section {
-    padding: 56px 0;
-    margin-bottom: 16px;
+    padding: 40px 0;
+    margin-bottom: 10px;
     border-bottom: 1px solid #ddd;
 }
 
@@ -118,8 +118,8 @@ h2 {
 
 .section-quem-somos p {
     font-family: 'Roboto', Arial, sans-serif;
-    font-size: 1.25rem; /* Aumentado o tamanho da fonte do parágrafo */
-    line-height: 1.8;
+    font-size: 1rem; /* Aumentado o tamanho da fonte do parágrafo */
+    line-height: 1.6;
     text-align: justify;
 }
 
@@ -137,11 +137,11 @@ h2 {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 40px;
+    gap: 28px;
 }
 
 .fundadora-foto {
-    max-width: 300px;
+    max-width: 260px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -152,7 +152,7 @@ h2 {
 }
 
 .fundadora-texto p {
-    font-size: 1.25rem; /* Aumentado o tamanho da fonte do texto da fundadora */
+    font-size: 1rem; /* Aumentado o tamanho da fonte do texto da fundadora */
     line-height: 1.6;
 }
 

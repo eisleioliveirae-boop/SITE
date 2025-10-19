@@ -679,4 +679,81 @@ section:last-of-type {
     background-size: cover;
     background-position: center;
   }
+/* === Correções para responsividade e visibilidade === */
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.6rem;
+  cursor: pointer;
 }
+
+@media (max-width: 768px) {
+  .top-bar {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  .logo-text {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: white;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .menu {
+    display: none;
+    width: 100%;
+  }
+
+  .menu.active {
+    display: block;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+  }
+
+  .menu ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu ul li a {
+    display: block;
+    padding: 10px 0;
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .main-banner {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .content, section, p, h2, h3 {
+    color: #222 !important;
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+}
+

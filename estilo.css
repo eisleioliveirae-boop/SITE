@@ -813,3 +813,30 @@ footer p,
 }
 
 /* =================== FIM =================== */
+/* Tipografia institucional (jurídica / corporativa) */
+:root{
+  --azul: #232342;
+  --dourado: #CBA17B;
+  --texto: #222222;
+  --base-font: 16px;
+}
+
+html { font-size: 100%; } /* 16px */
+body {
+  font-family: "Lora","Merriweather", Georgia, serif;
+  color: var(--texto);
+  font-size: 1rem;        /* 16px */
+  line-height: 1.65;
+}
+
+/* Headings */
+h1 { font-family: "Merriweather", serif; font-size: 2.4rem; margin: .2rem 0 .6rem; color: var(--azul); }
+h2 { font-family: "Merriweather", serif; font-size: 2rem; margin: .4rem 0 .8rem; color: var(--azul); }
+h3 { font-family: "Merriweather", serif; font-size: 1.25rem; margin: .6rem 0 .4rem; color: var(--azul); }
+
+/* Parágrafos e listas */
+p, li { font-size: 1rem; line-height: 1.6; color: var(--texto); text-align: justify; margin-bottom: .9rem; }
+
+/* Espaçamento entre seções */
+section { padding: 24px 0; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 18px; }

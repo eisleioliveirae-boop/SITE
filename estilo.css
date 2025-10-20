@@ -611,3 +611,63 @@ section:last-of-type {
   .section-atuacao h3 { font-size: 1.15rem; }
   .section-atuacao ul li { font-size: 0.98rem; }
 }
+/* ===== Menu toggle (3 pontos) - comportamento responsivo ===== */
+.menu { position: relative; }
+
+/* Botão tres pontinhos (desktop escondido) */
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.6rem;
+  padding: 6px 10px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+/* Menu desktop padrão: em linha */
+.menu-list {
+  display: flex;
+  gap: 18px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Links do menu */
+.menu-list a { color: #fff; text-decoration: none; display:inline-block; padding:6px 8px; }
+
+/* MOBILE: ocultar menu-list e mostrar botão */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: inline-block;
+    z-index: 1205;
+  }
+
+  /* por padrão menu oculto no mobile */
+  .menu-list {
+    display: none !important;
+  }
+
+  /* quando a classe "open" estiver no .menu, mostramos o menu como overlay */
+  .menu.open .menu-list {
+    display: flex !important;
+    flex-direction: column;
+    gap: 14px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #232342;
+    padding: 12px 18px 18px 18px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    z-index: 1200;
+  }
+
+  .menu.open .menu-list li { width:100%; text-align:center; list-style:none; }
+  .menu.open .menu-list a { display:block; padding:10px 6px; font-size:1.05rem; color:#fff; }
+}
+
+/* foco acessível */
+.menu-toggle:focus, .menu-list a:focus { outline: 3px solid rgba(203,161,123,0.25); outline-offset:4px; }

@@ -515,3 +515,79 @@ h2 {
 }
 
 /* ===== fim dos ajustes ===== */
+/* ====== Ajustes FINAIS – layout desktop ====== */
+
+/* 1. Remover o texto “EOD Advocacia Empresarial” do topo */
+header h1, 
+.header-logo-text,
+.navbar-brand {
+  display: none !important;
+}
+
+/* 2. Alinhar menu de navegação à direita no desktop */
+@media (min-width: 993px) {
+  nav,
+  .menu,
+  .menu-list {
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+
+  /* Garante que o menu não quebre o alinhamento */
+  .menu-list li {
+    display: inline-block !important;
+    margin-left: 25px !important;
+  }
+
+  /* Ajuste visual nos links do menu */
+  .menu-list a {
+    font-size: 1.1rem !important;
+    letter-spacing: 0.03em;
+    color: white !important;
+    text-decoration: none !important;
+    transition: color 0.3s ease;
+  }
+
+  .menu-list a:hover {
+    color: var(--dourado) !important;
+  }
+}
+
+/* 3. Aumentar tamanho das fontes gerais no desktop */
+@media (min-width: 993px) {
+  html {
+    font-size: 19px !important; /* base maior para todo o site */
+  }
+
+  body, p, li {
+    font-size: 1.1rem !important;
+    line-height: 1.8 !important;
+  }
+
+  h2, h3, h4 {
+    font-size: 2rem !important;
+    font-weight: 700 !important;
+  }
+
+  /* Títulos de seções */
+  .section-title,
+  .fundadora-titulo {
+    font-size: 2.2rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  /* Texto de áreas e artigos */
+  .section-atuacao li,
+  .artigo-item p {
+    font-size: 1.05rem !important;
+  }
+
+  /* Texto da fundadora */
+  .fundadora-texto p {
+    font-size: 1.08rem !important;
+  }
+}
+
+/* ====== Fim dos ajustes ====== */

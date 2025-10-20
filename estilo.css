@@ -591,3 +591,68 @@ header h1,
 }
 
 /* ====== Fim dos ajustes ====== */
+/* ===================== FORÇA: fonte desktop + remover título + alinhar menu ===================== */
+
+/* --- 1) Forçar base de fonte no DESKTOP (aplica-se em larguras >= 992px) --- */
+@media (min-width: 992px) {
+  html { font-size: 19px !important; }      /* base maior */
+  body { font-size: 1.05rem !important; line-height: 1.8 !important; }
+
+  /* títulos */
+  h1, h2, h3 { font-family: 'Merriweather','Lora', serif !important; }
+  h2 { font-size: 2.2rem !important; }
+
+  /* força tamanho de parágrafos e listas */
+  p, li, .fundadora-texto p, .section-atuacao ul li, .artigo-item p {
+    font-size: 1.05rem !important;
+    line-height: 1.7 !important;
+  }
+}
+
+/* --- 2) Esconder qualquer título textual no topo (desktop apenas) --- */
+/* mira variação de seletores que seu HTML pode ter */
+@media (min-width: 992px) {
+  /* principais alvos conhecidos */
+  .logo-text,
+  header .logo-text,
+  .header .logo-text,
+  .top-bar .logo-text,
+  header h1,
+  .header-title,
+  .header .header-title,
+  .header-brand,
+  .site-title {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+  }
+
+  /* Se existirem spans dentro do logo com texto */
+  .logo-text span,
+  header h1 span,
+  .header-title span {
+    display: none !important;
+  }
+}
+
+/* --- 3) Forçar menu alinhado à direita no desktop --- */
+@media (min-width: 992px) {
+  .top-bar { justify-content: flex-start !important; } /* mantem elementos no fluxo */
+  .menu { margin-left: auto !important; order: 3 !important; display:block !important; }
+  .menu-list { display: flex !important; gap: 22px !important; align-items: center !important; }
+  .menu-list li { display: inline-block !important; margin-left: 18px !important; }
+  .menu-list a { font-size: 1.05rem !important; color: #fff !important; padding: 6px 8px !important; }
+}
+
+/* --- 4) Proteção final contra regras com alta especificidade --- */
+@media (min-width: 992px) {
+  /* garante que o header não cubra o banner e mantém o logo grande centralizado só no banner (se houver) */
+  .main-banner { padding-top: 20px; }
+}
+
+/* ===================== fim: FORÇA ===================== */

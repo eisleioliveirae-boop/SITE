@@ -722,3 +722,67 @@ header h1,
 }
 
 /* ===== fim das alterações solicitadas ===== */
+/* =================== CORREÇÃO FINAL: menu à direita + rodapé centralizado =================== */
+
+/* --- MENU DESKTOP ALINHADO À DIREITA --- */
+@media (min-width: 992px) {
+  header,
+  .top-bar {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+
+  /* caso o menu esteja dentro de uma div específica */
+  nav, 
+  .menu, 
+  .menu-list {
+    margin-left: auto !important;
+    text-align: right !important;
+    justify-content: flex-end !important;
+  }
+
+  .menu-list li {
+    display: inline-block !important;
+    margin-left: 24px !important;
+  }
+}
+
+/* --- RODAPÉ CENTRALIZADO --- */
+footer,
+.footer,
+.footer-content {
+  text-align: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+footer p,
+.footer p,
+.footer span {
+  text-align: center !important;
+  margin: 4px 0 !important;
+  color: inherit !important;
+}
+
+/* --- BOTÃO ENVIAR (garante mesmo tamanho da tipografia) --- */
+.section-contato button {
+  font-size: 1.05rem !important;
+  line-height: 1.4 !important;
+  padding: 12px 18px !important;
+  height: auto !important;
+}
+
+/* --- MOBILE: esconder o texto “EOD Advocacia Empresarial” mantendo o logotipo --- */
+@media (max-width: 992px) {
+  header h1,
+  .logo-text,
+  .site-title {
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
+
+/* =================== FIM DAS CORREÇÕES =================== */

@@ -450,3 +450,68 @@ h2 {
 .footer, .footer a { color: #fff !important; }
 
 /* ===================== fim das correções ===================== */
+/* ======= Ajustes finais: alinhamento menu mobile + fonte desktop ======= */
+
+/* --- 1) Menu mobile: garantir alinhamento consistente dos itens --- */
+.menu.open .menu-list {
+  align-items: flex-start !important;     /* força alinhamento à esquerda */
+  list-style: none !important;
+}
+
+/* Remove margens/paddings irregulares nos li */
+.menu.open .menu-list li {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Padroniza padding e alinhamento dos links do menu no overlay */
+.menu.open .menu-list a {
+  display: block !important;
+  padding: 10px 16px !important;          /* padding horizontal uniforme */
+  text-align: left !important;            /* força alinhamento à esquerda */
+  line-height: 1.25 !important;
+  color: var(--dourado) !important;
+  text-decoration: none !important;
+  white-space: normal !important;         /* evita comportamento estranho com wrap */
+  letter-spacing: 0.01em !important;
+}
+
+/* Remove possíveis marcadores / recuos remanescentes */
+.menu.open .menu-list ul,
+.menu.open .menu-list ol { margin: 0; padding: 0; list-style: none; }
+
+/* Se algum item tiver um pseudo-element (ex: ::before) que cria deslocamento, zera-o */
+.menu.open .menu-list li::before,
+.menu.open .menu-list li::after { display: none !important; content: none !important; }
+
+/* Pequeno ajuste visual do overlay para que não "corte" textos muito longos */
+.menu.open .menu-list {
+  max-width: 86vw !important;
+  min-width: 170px !important;
+  padding: 8px 10px !important;
+}
+
+/* --- 2) Aumentar tipografia no DESKTOP para melhor leitura --- */
+/* aplica-se em telas maiores (desktop) */
+@media (min-width: 993px) {
+  html { font-size: 18px !important; }         /* base maior (aplica-se ao site inteiro) */
+
+  /* mantém H2 e corpo proporcionais */
+  h2 { font-size: 2.2rem !important; }         /* título das seções um pouco maior */
+  p  { font-size: 1.05rem !important; line-height: 1.7 !important; }
+
+  /* menu desktop: tamanho ligeiramente maior e espaçamento */
+  .menu-list a {
+    font-size: 1rem !important;
+    padding: 8px 12px !important;
+  }
+
+  /* formulários e textos de seção que ficaram pequenos */
+  .fundadora-texto p,
+  .section-atuacao ul li,
+  .artigo-item p { font-size: 1.02rem !important; }
+}
+
+/* ===== fim dos ajustes ===== */

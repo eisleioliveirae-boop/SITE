@@ -1,70 +1,75 @@
 /* ===========================
    EOD Advocacia Empresarial
-   CSS consolidado (substituir estilo.css)
+   CSS revisado - substituir estilo.css por este arquivo
    =========================== */
 
 /* ---------- IMPORTS ---------- */
-@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700&family=Roboto:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
 
 /* ---------- VARIÁVEIS ---------- */
 :root{
   --azul: #232342;
   --dourado: #CBA17B;
   --texto: #222222;
-  --fundo: #f0f0f0;
+  --fundo: #f4f4f4;
+  --max-width: 1100px;
 }
 
 /* ---------- RESET / BASE ---------- */
 * { box-sizing: border-box; }
-html,body{ height:100%; }
+html,body { height:100%; }
 body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
   background: var(--fundo);
   color: var(--texto);
-  font-family: 'Epilogue','Roboto', Arial, sans-serif;
+  font-family: 'Lora','Merriweather', Georgia, serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
 }
+
+/* utility container */
+.container { width:100%; max-width: var(--max-width); margin:0 auto; padding:0 20px; }
 
 /* ---------- HEADER / TOPO ---------- */
 .header {
-  background-color: var(--azul);
+  background: var(--azul);
   color: #fff;
   position: sticky;
   top: 0;
   width: 100%;
-  z-index: 1200;
+  z-index: 1300;
 }
 
 .top-bar {
-  display: flex;
-  align-items: center;
+  display:flex;
+  align-items:center;
   justify-content: space-between;
-  gap: 16px;
-  padding: 14px 28px;
+  gap: 12px;
+  padding: 14px 20px;
   position: relative;
 }
 
-/* logo */
+/* logo - sempre visível */
 .logo-text {
   font-family: 'Epilogue', Arial, sans-serif;
-  font-size: 1.15rem;
   font-weight: 700;
+  font-size: 1.15rem;
   text-transform: uppercase;
   color: #fff;
-  position: relative;
-  z-index: 1210;
   margin: 0;
+  position: relative;
+  z-index: 1310;
 }
 
 /* ---------- NAV / MENU ---------- */
-/* estrutura neutra */
 .menu { position: relative; }
 
-/* botão toggle (três pontinhos) - por padrão oculto (desktop) */
+/* botão toggle (três pontinhos) - escondido por padrão (desktop) */
 .menu-toggle {
   display: none;
   background: transparent;
@@ -76,28 +81,27 @@ body {
   line-height: 1;
 }
 
-/* lista desktop */
+/* lista desktop padrão */
 .menu-list {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  align-items: center;
+  display:flex;
+  gap:18px;
+  list-style:none;
+  margin:0;
+  padding:0;
+  align-items:center;
 }
 
+.menu-list li { margin: 0; }
 .menu-list a {
   color: #fff;
   text-decoration: none;
   font-weight: 700;
-  text-transform: uppercase;
   font-family: 'Epilogue', Arial, sans-serif;
+  font-size: 0.95rem;
   padding: 6px 8px;
+  text-transform: uppercase;
 }
-
-/* hover */
-.menu-list a:hover,
-.menu-list a:focus { color: var(--dourado); }
+.menu-list a:hover, .menu-list a:focus { color: var(--dourado); }
 
 /* ---------- BANNER ---------- */
 .main-banner {
@@ -109,19 +113,15 @@ body {
   background-repeat: no-repeat;
 }
 
+/* central logo image inside banner if you use an image - handled by HTML */
+.main-banner .logo { display:block; margin: 0 auto; }
+
 /* ---------- CONTEÚDO ---------- */
-.container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-.content { padding: 24px 0 40px 0; color: #333; }
+.content { padding: 28px 0; color: var(--texto); }
 
-/* ---------- SEÇÕES ---------- */
-section {
-  padding: 24px 0;
-  margin: 0;
-  border-bottom: 1px solid #e9e9e9;
-}
-
+/* ---------- TIPOGRAFIA ---------- */
 h2 {
-  font-family: 'Merriweather', 'Lora', Georgia, serif;
+  font-family: 'Merriweather','Lora', Georgia, serif;
   text-align: center;
   margin: 0 0 18px 0;
   color: var(--azul);
@@ -129,133 +129,118 @@ h2 {
   line-height: 1.15;
 }
 
-/* Parágrafo padrão institucional */
+/* Parágrafo padrão */
 p {
-  font-family: 'Lora','Merriweather', Georgia, serif;
   font-size: 1rem;
-  line-height: 1.65;
-  color: var(--texto);
+  margin: 0 0 1rem 0;
   text-align: justify;
-  margin-bottom: 0.9rem;
-}
-
-/* ---------- SEÇÃO QUEM SOMOS ---------- */
-.section-quem-somos .quem-texto,
-.section-quem-somos p {
-  font-family: 'Lora','Merriweather', Georgia, serif;
-  font-size: 1rem;
-  line-height: 1.65;
 }
 
 /* ---------- SEÇÃO FUNDADORA ---------- */
-/* layout por padrão: texto à esquerda, foto à direita (HTML já com texto primeiro) */
-.section-fundadora { display:block; padding-top: 18px; padding-bottom:18px; }
+/* Desktop: FOTO à ESQUERDA, TEXTO à DIREITA */
+.section-fundadora { padding: 22px 0; }
 .fundadora-info {
-  display: flex;
+  display:flex;
   flex-direction: row;
   align-items: flex-start;
-  gap: 24px;
+  gap: 28px;
   justify-content: space-between;
   flex-wrap: nowrap;
   width: 100%;
 }
 
-/* imagem */
+/* força imagem à esquerda no desktop */
 .fundadora-foto {
-  order: 2;                  /* imagem à direita no desktop (HTML tem texto antes) */
+  order: 1;                 /* imagem = esquerda */
   flex: 0 0 280px;
-  max-width: 35%;
-  min-width: 120px;
+  max-width: 34%;
+  min-width: 160px;
   height: auto;
   object-fit: cover;
   border-radius: 8px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
 }
 
-/* texto */
+/* texto ao lado direito */
 .fundadora-texto {
-  order: 1;
-  flex: 1 1 60%;
+  order: 2;                 /* texto = direita */
+  flex: 1 1 auto;
   min-width: 0;
   text-align: justify;
 }
-
-.fundadora-texto p {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 0.8rem;
-}
+.fundadora-texto p { margin-bottom: 0.8rem; }
 
 /* ---------- ÁREAS DE ATUAÇÃO ---------- */
 .section-atuacao h3 {
-  font-size: 1.25rem;
-  margin-top: 12px;
-  color: var(--dourado);
-  font-weight: 600;
   font-family: 'Merriweather','Lora', Georgia, serif;
+  color: var(--dourado);
+  font-size: 1.25rem;
+  margin: 12px 0 8px 0;
+  font-weight: 600;
 }
+.section-atuacao ul { margin-left: 1.2rem; padding-left: 0.6rem; }
+.section-atuacao ul li { margin-bottom: 0.45rem; font-size: 1rem; }
 
-.section-atuacao ul {
-  list-style: disc;
-  margin-left: 1.2rem;
-  padding-left: 0.6rem;
-}
-
-.section-atuacao ul li {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 0.45rem;
-}
-
-/* ---------- ARTIGOS, BOTÕES, FORMULÁRIO ---------- */
+/* ---------- ARTIGOS ---------- */
 .artigo-item { background:#fff; padding:18px; border-radius:8px; margin-bottom:18px; box-shadow:0 2px 6px rgba(0,0,0,0.04); }
 .artigo-item h3 { margin:0 0 8px 0; font-size:1.25rem; color:var(--azul); }
-.artigo-item p { margin:0 0 12px 0; font-size:1rem; }
 
-.btn-artigo {
+/* botão artigo */
+.btn-artigo { background: var(--dourado); color:#fff; padding:10px 16px; border-radius:6px; text-decoration:none; font-weight:700; }
+
+/* ---------- FORMULÁRIO CONTATO ---------- */
+.section-contato form { max-width:720px; margin: 0 auto; display:flex; flex-direction:column; gap:12px; }
+.form-group label { font-weight:700; color:var(--azul); font-size: 1rem; }
+.form-group input, .form-group textarea {
+  padding:10px; border-radius:6px; border:1px solid #ccc; font-size:1rem; width:100%;
+  font-family: inherit;
+}
+.form-group textarea { min-height:120px; resize: vertical; }
+
+/* botão enviar */
+.section-contato button {
   background: var(--dourado);
-  color: #fff;
-  padding: 10px 16px;
+  color: var(--azul);
+  padding: 12px;
   border-radius: 6px;
-  text-decoration: none;
-  display:inline-block;
-  font-weight:700;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
 }
 
-/* FORM */
-.section-contato form { max-width:720px; margin:0 auto; display:flex; flex-direction:column; gap:12px; }
-.form-group label { font-weight:700; font-size:1rem; color:var(--azul); }
-.form-group input, .form-group textarea { padding:10px; border-radius:6px; border:1px solid #ccc; font-size:1rem; }
+/* ---------- RODAPÉ ---------- */
+.footer {
+  background: var(--azul);
+  color: #fff;
+  text-align:center;
+  padding: 20px 16px;
+  margin-top: 24px;
+}
+.footer .slogan { color: var(--dourado); margin-bottom:8px; font-style: italic; }
 
-/* footer */
-.footer { background:var(--azul); color:#fff; padding:20px 12px; text-align:center; margin-top:28px; }
-.footer .slogan { color:var(--dourado); margin:8px 0; font-style:italic; }
+/* social links branco */
+.footer a { color: #fff; text-decoration:none; }
 
-/* ---------- Acessibilidade e foco ---------- */
-a:focus, button:focus { outline: 3px solid rgba(203,161,123,0.2); outline-offset:3px; }
+/* ---------- Acessibilidade ---------- */
+a:focus, button:focus { outline: 3px solid rgba(203,161,123,0.18); outline-offset: 3px; }
 
-/* ---------- RESPONSIVIDADE ---------- */
+/* ---------- RESPONSIVIDADE E CORREÇÕES MOBILE ---------- */
 
-/* MOBILE <= 768px: menu toggle, fundadora empilhada, tipografia ajustada */
+/* 1) Telas pequenas (mobile) */
 @media (max-width: 768px) {
 
-  /* top-bar ajustada */
-  .top-bar {
-    padding: 12px 18px;
-    justify-content:center;  /* logo centralizado; toggle é absoluto */
-  }
+  /* top-bar ajustes: logo centralizado, toggle no canto direito */
+  .top-bar { padding: 12px 16px; justify-content: center; }
+  .logo-text { font-size: 1rem; }
 
-  /* logo permanece visível */
-  .logo-text { font-size:1rem; z-index:1220; }
-
-  /* mostrar botão de três pontinhos e posicioná-lo no canto direito */
+  /* mostrar botão tres pontinhos no canto direito */
   .menu-toggle {
     display: inline-block !important;
     position: absolute !important;
-    right: 18px !important;
+    right: 16px !important;
     top: 50% !important;
     transform: translateY(-50%) !important;
-    z-index: 1250 !important;
+    z-index: 1320 !important;
     background: transparent;
     border: none;
     color: #fff;
@@ -264,76 +249,70 @@ a:focus, button:focus { outline: 3px solid rgba(203,161,123,0.2); outline-offset
     cursor: pointer;
   }
 
-  /* esconder o menu padrão (desktop) */
+  /* esconder menu padrão */
   .menu-list { display: none !important; }
 
-  /* quando .menu.open (classe controlada pelo JS) mostrar overlay alinhado à direita */
+  /* overlay do menu quando aberto (classe .open adicionada pelo JS) */
   .menu.open .menu-list {
-    display: flex !important;
+    display:flex !important;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
     position: absolute;
-    top: calc(100% + 6px);
-    right: 18px;
+    top: calc(100% + 8px);
+    right: 12px;
     left: auto;
-    min-width: 180px;
-    max-width: 80vw;
+    min-width: 170px;
+    max-width: 86vw;
     background: var(--azul);
     padding: 10px 12px;
     border-radius: 8px;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.25);
-    z-index: 1240;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    z-index: 1315;
   }
 
-  /* links do menu no overlay em dourado */
   .menu.open .menu-list a {
     color: var(--dourado) !important;
-    display:block;
-    padding: 8px 6px;
-    font-weight: 700;
-    text-decoration: none;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+    display: block;
+    padding: 8px 10px;
     text-align: left;
   }
 
-  /* empilhar fundadora (foto acima) para legibilidade */
+  /* empilhar fundadora: foto acima do texto para leitura confortável */
   .fundadora-info {
-    display: flex !important;
-    flex-direction: column;
+    flex-direction: column !important;
     align-items: center;
     gap: 12px;
-    padding: 6px 6px;
   }
   .fundadora-foto {
-    order: 1;
-    width: 160px;
-    max-width: 60%;
-    min-width: 120px;
-    align-self: center;
-    margin: 0 auto;
+    order: 1; width: 160px; max-width: 60%; min-width: 120px; align-self:center;
   }
-  .fundadora-texto { order: 2; width:100%; text-align:left; }
-  .fundadora-texto p { font-size: 1rem; line-height:1.5; margin-bottom:0.6rem; hyphens:auto; word-break:break-word; }
+  .fundadora-texto { order: 2; width:100%; text-align: left; }
+  .fundadora-texto p { font-size: 1rem; line-height: 1.5; margin-bottom: 0.6rem; hyphens:auto; word-break:break-word; }
 
-  /* ajuste de h2 e paragrafos para mobile */
+  /* títulos e parágrafos mobile */
   h2 { font-size: 1.4rem; }
-  p { font-size: 0.98rem; line-height: 1.55; text-align: left; }
+  p { font-size: 0.98rem; line-height: 1.5; text-align: left; }
+
+  /* formulário mobile */
+  .section-contato form { padding: 0 6px; gap:10px; }
 }
 
-/* TABLET / MEDIUM SCREENS */
+/* 2) Tablets / medium screens */
 @media (min-width: 769px) and (max-width: 992px) {
   .fundadora-foto { flex: 0 0 220px; max-width: 32%; }
-  .fundadora-texto p { font-size: 1rem; line-height: 1.55; }
   h2 { font-size: 1.6rem; }
 }
 
-/* DESKTOP */
+/* 3) Desktop */
 @media (min-width: 993px) {
-  .content { padding: 24px 0; }
-  .fundadora-foto { flex: 0 0 280px; max-width: 35%; }
-  .fundadora-texto p { font-size: 1.05rem; line-height: 1.6; }
+  .content { padding: 32px 0; }
+  .fundadora-foto { flex: 0 0 280px; max-width: 34%; }
+  .fundadora-texto p { font-size: 1.05rem; }
+  .menu-toggle { display: none !important; } /* garante que toggle fique oculto no desktop */
+  .menu-list { display:flex; }                 /* garante menu em linha */
 }
 
-/* ---------- Proteções finais (override de floats e comportamentos antigos) ---------- */
+/* final protections: eliminate old floats which can cause layout shifts */
 .header *, .top-bar * { float: none !important; clear: none !important; }
-
-/* ---------- fim do arquivo ---------- */

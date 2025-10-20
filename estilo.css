@@ -786,3 +786,30 @@ footer p,
 }
 
 /* =================== FIM DAS CORREÇÕES =================== */
+/* =================== CORREÇÃO FINAL — MENU NÃO QUEBRAR LINHA =================== */
+
+@media (min-width: 992px) {
+  .menu ul {
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+    gap: 32px !important;              /* espaçamento entre os itens */
+    flex-wrap: nowrap !important;      /* impede quebra de linha */
+    white-space: nowrap !important;    /* impede quebra de palavras */
+  }
+
+  .menu ul li {
+    display: inline-block !important;
+    margin: 0 !important;
+  }
+
+  .menu ul li a {
+    display: inline-block !important;
+    white-space: nowrap !important;    /* mantém "Área de Atuação" em uma linha */
+    font-size: 1.1rem !important;
+    font-family: inherit !important;
+    line-height: 1.4 !important;
+  }
+}
+
+/* =================== FIM =================== */

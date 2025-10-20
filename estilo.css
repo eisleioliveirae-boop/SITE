@@ -316,3 +316,137 @@ a:focus, button:focus { outline: 3px solid rgba(203,161,123,0.18); outline-offse
 
 /* final protections: eliminate old floats which can cause layout shifts */
 .header *, .top-bar * { float: none !important; clear: none !important; }
+/* ===================== CORREÇÕES FINAIS ===================== */
+/* Cole isto AO FINAL do seu estilo.css (sobrescreve regras conflitantes) */
+
+/* 1) Base tipográfica — garante tamanho legível no desktop */
+html { font-size: 16px !important; } /* base 16px */
+body {
+  font-family: 'Lora', 'Merriweather', Georgia, serif !important;
+  font-size: 1rem !important; /* 16px */
+  line-height: 1.65 !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+/* Ajuste de H2 para maior hierarquia no desktop */
+h2 {
+  font-size: 2rem !important; /* 32px base */
+  line-height: 1.15 !important;
+}
+
+/* 2) Header / alinhamento do topo - logo à ESQUERDA, menu à direita */
+.top-bar {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important; /* força logo esquerda, menu direita */
+  padding: 14px 28px !important;
+}
+
+/* força o logo no canto esquerdo */
+.logo-text {
+  order: 1 !important;
+  margin: 0 !important;
+  text-align: left !important;
+  align-self: center !important;
+  flex: 0 0 auto !important;
+}
+
+/* menu deve estar à direita */
+.menu {
+  order: 2 !important;
+  margin-left: auto !important;
+  display: block !important;
+}
+
+/* assegura menu em linha no desktop */
+@media (min-width: 993px) {
+  .menu-list {
+    display: flex !important;
+    gap: 18px !important;
+    align-items: center !important;
+  }
+  .menu-toggle { display: none !important; } /* toggle escondido em desktop */
+}
+
+/* 3) Mobile: garantir que o toggle apareça e menu fique oculto até abrir */
+@media (max-width: 992px) {
+  /* Toggle (três pontinhos) visível no canto direito */
+  .menu-toggle {
+    display: inline-block !important;
+    position: absolute !important;
+    right: 16px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    z-index: 1400 !important;
+    background: transparent !important;
+    border: none !important;
+    color: #fff !important;
+    font-size: 1.6rem !important;
+    padding: 6px !important;
+    cursor: pointer !important;
+  }
+
+  /* Garantir que a lista de menu esteja escondida por padrão */
+  .menu-list {
+    display: none !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+
+  /* Quando .menu.open adicionado pelo JS, exibe o overlay alinhado à direita */
+  .menu.open .menu-list {
+    display: flex !important;
+    position: absolute !important;
+    top: calc(100% + 8px) !important;
+    right: 12px !important;
+    left: auto !important;
+    min-width: 170px !important;
+    max-width: 86vw !important;
+    background: #232342 !important;
+    padding: 10px 12px !important;
+    border-radius: 8px !important;
+    z-index: 1390 !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25) !important;
+  }
+
+  .menu.open .menu-list a {
+    color: #CBA17B !important; /* dourado institucional */
+    display:block !important;
+    padding: 8px 10px !important;
+    font-weight:700 !important;
+    text-decoration:none !important;
+  }
+}
+
+/* 4) Forçar visibilidade do logo no mobile (evita overlap) */
+.logo-text {
+  position: relative !important;
+  z-index: 1410 !important;
+  color: #fff !important;
+}
+
+/* 5) Formulário e fundadora - garantir consistência */
+.section-contato form input,
+.section-contato form textarea {
+  font-size: 1rem !important;
+}
+
+/* Fundadora: garante foto à esquerda no desktop e empilha no mobile */
+@media (min-width: 993px) {
+  .fundadora-info { flex-direction: row !important; }
+  .fundadora-foto { order: 1 !important; margin-right: 28px !important; }
+  .fundadora-texto { order: 2 !important; }
+}
+@media (max-width: 992px) {
+  .fundadora-info { flex-direction: column !important; align-items:center !important; }
+  .fundadora-foto { order: 1 !important; margin: 0 0 12px 0 !important; width: 160px !important; }
+  .fundadora-texto { order: 2 !important; text-align: left !important; width: 100% !important; }
+}
+
+/* 6) Proteção contra regras antigas conflitantes */
+.header *, .top-bar *, .menu *, .menu-list * { float: none !important; clear: none !important; }
+
+/* 7) Forçar contraste rodapé (texto branco) */
+.footer, .footer a { color: #fff !important; }
+
+/* ===================== fim das correções ===================== */

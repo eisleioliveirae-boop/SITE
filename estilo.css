@@ -656,3 +656,69 @@ header h1,
 }
 
 /* ===================== fim: FORÇA ===================== */
+/* =================== Ajustes solicitados (cole ao final do estilo.css) =================== */
+
+/* 1) Forçar menu alinhado à direita no DESKTOP */
+@media (min-width: 993px) {
+  .top-bar {
+    justify-content: flex-start !important; /* mantém estrutura: logo à esquerda */
+  }
+
+  /* garante que o bloco .menu fique no extremo direito */
+  .menu {
+    margin-left: auto !important;
+    display: block !important;
+    order: 3 !important;
+  }
+
+  .menu-list {
+    display: flex !important;
+    justify-content: flex-end !important;
+    gap: 22px !important;
+    align-items: center !important;
+  }
+
+  .menu-list li { margin-left: 18px !important; }
+  .menu-list a { font-size: 1.06rem !important; } /* leve aumento para legibilidade */
+}
+
+/* 2) Centralizar o rodapé (desktop + mobile) */
+.footer {
+  text-align: center !important;
+}
+.footer p, .footer .slogan, .footer .social-media {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: block;
+}
+
+/* 3) Botão "Enviar" - garantir mesmo tamanho da tipografia do site */
+.section-contato button,
+.section-contato button:hover,
+.section-contato button:active {
+  font-size: 1.05rem !important;   /* compatível com corpo do site */
+  line-height: 1.4 !important;
+  padding: 12px 18px !important;
+  height: auto !important;
+  box-sizing: border-box !important;
+}
+
+/* 4) MOBILE: remover apenas o texto (string) do topo mantendo o logo gráfico */
+/* aplica-se somente em telas menores */
+@media (max-width: 992px) {
+  /* alvo principal conhecido */
+  .logo-text,
+  header h1,
+  .header-title,
+  .site-title {
+    display: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+  }
+}
+
+/* ===== fim das alterações solicitadas ===== */

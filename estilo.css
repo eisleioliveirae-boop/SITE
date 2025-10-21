@@ -174,3 +174,34 @@ a:focus, button:focus { outline:3px solid rgba(203,161,123,0.18); outline-offset
   .main-banner, .header, .footer { display:none; }
   body { color:#000; background:#fff; font-size:12pt; }
 }
+/* Ajustes recomendados */
+html { font-size: 18px; } /* desktop base — se quiser mais robusto 19-20px */
+body { font-family: 'Lora','Merriweather', Georgia, serif; color:#222; line-height:1.7; }
+
+/* Parágrafos (legibilidade) */
+p { font-size: 1rem; margin: 0 0 1rem 0; line-height:1.7; text-align:justify; }
+
+/* Títulos */
+h2 { font-family: 'Merriweather','Lora', serif; font-size:2.2rem; margin-bottom:18px; line-height:1.15; color:var(--azul); }
+
+/* Fundadora (uniformizar) */
+.fundadora-texto p { font-size:1.05rem; line-height:1.65; margin-bottom:0.9rem; }
+
+/* Mobile: reduzir levemente */
+@media (max-width:768px){
+  html { font-size:16px; } /* base móvel */
+  h2 { font-size:1.6rem; }
+  p, .fundadora-texto p { font-size:0.98rem; line-height:1.55; }
+}
+
+/* CTA principal */
+.cta-principal {
+  display:inline-block;
+  background:var(--dourado);
+  color:var(--azul);
+  padding:12px 18px;
+  border-radius:8px;
+  font-weight:700;
+  text-decoration:none;
+  margin-top:14px;
+}

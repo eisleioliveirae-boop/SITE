@@ -14,6 +14,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:title" content="EOD Advocacia Empresarial — Advocacia Empresarial em Sorocaba" />
   <meta property="og:description" content="Assessoria jurídico-contábil especializada para empresas. Direito Empresarial, Tributário, Trabalhista (empregador) e Contencioso Cível." />
+  <!-- ATENÇÃO: substitua a URL abaixo caso o seu site esteja em outro endereço -->
   <meta property="og:url" content="https://eisleioliveirae-boop.github.io/SITE/" />
   <meta property="og:site_name" content="EOD Advocacia Empresarial" />
   <meta property="og:image" content="https://eisleioliveirae-boop.github.io/SITE/logo.png" />
@@ -29,48 +30,25 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&family=Merriweather:wght@400;700&family=Epilogue:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- seu CSS -->
+  <!-- Seu CSS -->
   <link rel="stylesheet" href="estilo.css">
 
-  <!-- font-awesome (se usa ícones) -->
+  <!-- font-awesome (ícones) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-
-  <!-- JSON-LD: organização (com suas URLs reais) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "EOD Advocacia Empresarial",
-    "url": "https://eisleioliveirae-boop.github.io/SITE/",
-    "logo": "https://eisleioliveirae-boop.github.io/SITE/logo.png",
-    "sameAs": [
-      "https://www.linkedin.com/in/eislei-d-oliveira-06994025",
-      "https://www.instagram.com/eisleioliveira",
-      "https://web.facebook.com/eislei.dominguesdeoliveira"
-    ],
-    "contactPoint": [{
-      "@type": "ContactPoint",
-      "telephone": "+55-15-99700-7014",
-      "contactType": "customer service",
-      "areaServed": "BR",
-      "availableLanguage": "pt-BR"
-    }]
-  }
-  </script>
-
 </head>
 <body>
   <header class="header" role="banner">
     <div class="top-bar container">
-      <!-- h1 visível apenas para motores/leitores de tela -->
+      <!-- H1 presente para indexação, oculto visualmente via .sr-only -->
       <h1 class="sr-only">EOD Advocacia Empresarial — Advocacia Empresarial em Sorocaba</h1>
 
+      <!-- logotipo gráfico (substitua por <img src="logo.png"...> quando fizer upload) -->
       <div class="logo-wrap">
-        <!-- Se você tiver logo.png, substitua o bloco abaixo por:
-             <img src="logo.png" alt="EOD Advocacia Empresarial" class="logo-img"> -->
+        <img src="logo.png" alt="EOD Advocacia Empresarial" class="logo-img" onerror="this.style.display='none'">
         <div class="logo-text" aria-hidden="true">EOD ADVOCACIA EMPRESARIAL</div>
       </div>
 
+      <!-- NAV: toggle para mobile + lista de links -->
       <nav class="menu" aria-label="Menu de navegação">
         <button id="menuToggle" class="menu-toggle" aria-expanded="false" aria-controls="site-menu" aria-label="Abrir menu">⋮</button>
         <ul id="site-menu" class="menu-list">
@@ -87,15 +65,116 @@
   <div class="main-banner" role="img" aria-label="Banner institucional EOD Advocacia Empresarial"></div>
 
   <main class="content container" role="main">
-    <!-- === Mantenha aqui o conteúdo que já está (quem somos, fundadora, áreas etc.) === -->
-    <!-- Copie/cole as seções completas que você já tem -->
+    <!-- Quem Somos -->
+    <section id="quem-somos" class="section-quem-somos">
+      <h2>Quem Somos</h2>
+      <p>A EOD Advocacia Empresarial é um escritório jurídico-contábil sediado em Sorocaba-SP, especializado em Direito Empresarial, Tributário, Trabalhista (empregador) e Civil. Nosso propósito é oferecer assessoria jurídica e contábil integrada, voltada à segurança jurídica, eficiência tributária e conformidade regulatória das empresas.</p>
+      <p>Com base na ética, na excelência técnica e no compromisso com resultados, atuamos de forma preventiva e consultiva, auxiliando empresas de diversos segmentos na gestão jurídica corporativa, na redução de riscos e no fortalecimento institucional.</p>
+      <p>A fundadora, Eislei Domingues de Oliveira, advogada e contadora com mais de 18 anos de experiência no setor empresarial, alia sólida formação jurídica à expertise contábil, proporcionando uma visão ampla e integrada dos desafios corporativos. Essa combinação de competências permite oferecer soluções sob medida, que unem segurança jurídica, governança e eficiência administrativa.</p>
+      <p>Mais do que resolver conflitos, nossa missão é prevenir riscos, apoiar decisões corporativas e promover o crescimento sustentável das organizações. Na EOD Advocacia Empresarial, unimos conhecimento, técnica e experiência para entregar soluções jurídicas de alto desempenho, capazes de impulsionar negócios e consolidar resultados sólidos e duradouros.</p>
+    </section>
+
+    <!-- Fundadora -->
+    <section id="fundadora" class="section-fundadora">
+      <h2>Fundadora</h2>
+      <div class="fundadora-info">
+        <img src="fundadora.jpg" alt="Foto da fundadora Eislei Domingues de Oliveira" class="fundadora-foto">
+        <div class="fundadora-texto">
+          <p>Eislei Domingues de Oliveira, advogada, formada pela Faculdade de Direito de Sorocaba.</p>
+          <p>Contadora, formada pela ESAMC.</p>
+          <p>Especialista lato sensu em Direito Empresarial pelo Mackenzie.</p>
+          <p>Pós-graduada em Direito do Trabalho pela Escola Paulista de Direito.</p>
+          <p>MBA Executivo em Gestão de Pessoas pela ESAMC.</p>
+          <p>Membro da comissão de Direito Empresarial e de Direito do Trabalho da Ordem dos Advogados do Brasil na 24ª subseção (Sorocaba).</p>
+          <p>Atua há mais de 18 anos nas áreas de Direito do Trabalho, Direito Empresarial, Direito Civil e Contabilidade.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Áreas de Atuação -->
+    <section id="areas-de-atuacao" class="section-atuacao">
+      <h2>Áreas de Atuação</h2>
+      <div class="atuacao-area">
+        <h3>Direito Empresarial</h3>
+        <ul>
+          <li>Constituição e Organização de Empresas</li>
+          <li>Contratos Empresariais</li>
+          <li>Direito Societário</li>
+          <li>Recuperação judicial e extrajudicial.</li>
+          <li>Acompanhamento de processos de falência.</li>
+          <li>Reestruturação de empresas em crise.</li>
+        </ul>
+      </div>
+      <div class="atuacao-area">
+        <h3>Direito do Trabalho</h3>
+        <ul>
+          <li>Consultivo e Contencioso</li>
+          <li>Assessoria preventiva para empregadores.</li>
+          <li>Elaboração de políticas internas de RH.</li>
+          <li>Defesa em reclamatórias trabalhistas.</li>
+        </ul>
+      </div>
+      <div class="atuacao-area">
+        <h3>Direito Civil</h3>
+        <ul>
+          <li>Cobrança judicial e extrajudicial</li>
+          <li>Responsabilidade civil das empresas.</li>
+          <li>Questões contratuais e indenizatórias.</li>
+        </ul>
+      </div>
+      <div class="atuacao-area">
+        <h3>Direito Tributário</h3>
+        <ul>
+          <li>Planejamento tributário</li>
+          <li>Defesa em autos de infração e execuções fiscais.</li>
+          <li>Consultoria sobre tributos federais, estaduais e municipais.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Artigos Publicados -->
+    <section id="artigos-publicados" class="section-artigos">
+      <h2>Artigos Publicados</h2>
+      <!-- seus itens de artigo (links externos ao JusBrasil) -->
+      <div class="artigo-item">
+        <h3>Contrato de Trabalho: Conceito e Características</h3>
+        <p>Análise completa sobre o conceito jurídico de contrato de trabalho, seus elementos essenciais e principais características.</p>
+        <a href="https://www.jusbrasil.com.br/artigos/contrato-de-trabalho-conceito-e-caracteristicas/2602614132" target="_blank" class="btn-artigo" rel="noopener">Ler completo</a>
+      </div>
+      <!-- adicione os demais artigos como já constam no seu HTML -->
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="section-contato">
+      <h2>Fale Conosco</h2>
+      <form id="contact-form">
+        <div class="form-group">
+          <label for="name">Nome:</label>
+          <input type="text" id="name" name="from_name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="from_email" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Telefone:</label>
+          <input type="tel" id="phone" name="from_phone" required>
+        </div>
+        <div class="form-group">
+          <label for="subject">Assunto:</label>
+          <textarea id="subject" name="message" required></textarea>
+        </div>
+        <button type="submit">Enviar</button>
+      </form>
+      <div id="status-message" aria-live="polite" style="margin-top:12px"></div>
+    </section>
   </main>
 
   <footer class="footer" role="contentinfo">
     <p class="slogan">“Excelência Jurídico-Contábil a Serviço da Sua Empresa”</p>
     <p>
-      <a href="https://wa.me/5515997007014" target="_blank" class="whatsapp-link"><i class="fab fa-whatsapp"></i> WhatsApp: (15) 99700-7014</a> |
-      <a href="mailto:eisleioliveira@yahoo.com.br"><i class="fas fa-envelope"></i> E-mail: eisleioliveira@yahoo.com.br</a>
+      <a href="https://wa.me/5515997007014" target="_blank" class="whatsapp-link" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp: (15) 99700-7014</a> |
+      <a href="mailto:eisleioliveira@yahoo.com.br" rel="noopener"><i class="fas fa-envelope"></i> E-mail: eisleioliveira@yahoo.com.br</a>
     </p>
     <p class="social-media">
       <a href="https://web.facebook.com/eislei.dominguesdeoliveira/?locale=pt_BR" target="_blank" rel="noopener">Facebook</a> |
@@ -105,8 +184,43 @@
     <p>EOD Advocacia Empresarial © 2024</p>
   </footer>
 
-  <!-- emailjs lib -->
+  <!-- emailjs lib (se usar) -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <!-- Script: toggle menu (insira também no script.js se preferir) -->
+  <script>
+    (function(){
+      const menu = document.querySelector('.menu');
+      const toggle = document.getElementById('menuToggle');
+      const menuList = document.getElementById('site-menu');
+
+      if(!toggle || !menu) return;
+
+      toggle.addEventListener('click', function(e){
+        const expanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', String(!expanded));
+        menu.classList.toggle('open');
+      });
+
+      // Fecha menu ao clicar em link (mobile)
+      menuList.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          menu.classList.remove('open');
+          toggle.setAttribute('aria-expanded','false');
+        });
+      });
+
+      // Fechar ao clicar fora (mobile)
+      document.addEventListener('click', (ev) => {
+        if (!menu.contains(ev.target) && menu.classList.contains('open')) {
+          menu.classList.remove('open');
+          toggle.setAttribute('aria-expanded','false');
+        }
+      });
+    })();
+  </script>
+
+  <!-- seu script.js (se houver) -->
   <script src="script.js"></script>
 </body>
 </html>

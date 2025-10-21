@@ -11,11 +11,11 @@
   <meta property="og:site_name" content="EOD Advocacia Empresarial" />
   <meta property="og:title" content="EOD Advocacia Empresarial | Sorocaba" />
   <meta property="og:description" content="Assessoria jurídico-contábil especializada para empresas: Direito Empresarial, Tributário, Trabalhista (empregador) e Contencioso Civil. Atendimento estratégico e preventivo." />
-  <!-- Atualizar a URL do logo se diferente após o upload no GitHub -->
+  <!-- Atualizar se quiser outra imagem -->
   <meta property="og:image" content="https://eisleioliveirae-boop.github.io/SITE/logo.png" />
   <meta property="og:image:alt" content="Logotipo EOD Advocacia Empresarial" />
 
-  <!-- JSON-LD / Schema.org - substitua as URLs se necessário -->
+  <!-- JSON-LD - ATENÇÃO: URLs já apontam para seu GitHub SITE; altere se publicar em outro domínio -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -33,11 +33,30 @@
   }
   </script>
 
-  <!-- CSS principal (colocar estilo.css no mesmo diretório) -->
+  <!-- Link para CSS principal (mantê-lo no mesmo diretório) -->
   <link rel="stylesheet" href="estilo.css">
 
   <!-- Font Awesome (ícones) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+  <!-- Força visualmente ocultar o logo no header (permanece indexável se houver H1 sr-only) -->
+  <style>
+    /* garante que, mesmo que exista logo.png, fica invisível no header */
+    .logo-img { display: none !important; }
+    .logo-text { display: none !important; } /* ocultamos o texto redundante */
+    /* sr-only (caso o seu estilo.css não defina) */
+    .sr-only {
+      position:absolute !important;
+      width:1px !important;
+      height:1px !important;
+      padding:0 !important;
+      margin:-1px !important;
+      overflow:hidden !important;
+      clip:rect(0,0,0,0) !important;
+      white-space:nowrap !important;
+      border:0 !important;
+    }
+  </style>
 </head>
 <body>
 
@@ -46,7 +65,7 @@
 
   <header class="header">
     <div class="top-bar container">
-      <!-- Se houver logo.png na raiz do SITE, ele será exibido; caso contrário o texto fica oculto via CSS -->
+      <!-- Mantemos o elemento do logo por acessibilidade/SEO, mas ele está oculto via CSS acima -->
       <img src="logo.png" alt="Logotipo EOD Advocacia Empresarial" class="logo-img" onerror="this.style.display='none'">
       <div class="logo-text">EOD ADVOCACIA EMPRESARIAL</div>
 
@@ -64,11 +83,10 @@
     </div>
   </header>
 
-  <!-- Banner (imagem banner.png no mesmo diretório) -->
+  <!-- Banner (banner.png) -->
   <div class="main-banner" role="img" aria-label="Banner EOD Advocacia Empresarial"></div>
 
   <main class="content container">
-    <!-- Quem somos (texto refinado para SEO e linguagem jurídica) -->
     <section id="quem-somos" class="section-quem-somos" aria-labelledby="qs-title">
       <h2 id="qs-title">Quem Somos</h2>
       <p>
@@ -82,7 +100,6 @@
       </p>
     </section>
 
-    <!-- Fundadora -->
     <section id="fundadora" class="section-fundadora" aria-labelledby="fund-title">
       <h2 id="fund-title">Fundadora</h2>
       <div class="fundadora-info">
@@ -100,7 +117,6 @@
       </div>
     </section>
 
-    <!-- Áreas de atuação -->
     <section id="areas-de-atuacao" class="section-atuacao" aria-labelledby="areas-title">
       <h2 id="areas-title">Áreas de Atuação</h2>
 
@@ -145,7 +161,6 @@
       </div>
     </section>
 
-    <!-- Artigos publicados (todos os links que você publicou) -->
     <section id="artigos-publicados" class="section-artigos" aria-labelledby="arts-title">
       <h2 id="arts-title">Artigos Publicados</h2>
 
@@ -187,7 +202,6 @@
 
     </section>
 
-    <!-- Contato / Fale Conosco -->
     <section id="contato" class="section-contato" aria-labelledby="contato-title">
       <h2 id="contato-title">Fale Conosco</h2>
       <form id="contact-form" aria-label="Formulário de contato">
@@ -235,8 +249,7 @@
 
   <!-- EmailJS (CDN) -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
-  <!-- seu script (colocar script.js no mesmo diretório) -->
+  <!-- seu script.js (colocar script.js no mesmo diretório) -->
   <script src="script.js"></script>
 </body>
 </html>

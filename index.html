@@ -1,144 +1,112 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>EOD Advocacia Empresarial | Sorocaba</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EOD Advocacia Empresarial</title>
 
-  <!-- Meta SEO / Social -->
-  <meta name="description" content="EOD Advocacia Empresarial — assessoria jurídico-contábil em Sorocaba. Especialidade em Direito Empresarial, Tributário, Trabalhista (empregador) e Contencioso Civil. Assessoria preventiva e estratégica para empresas." />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="EOD Advocacia Empresarial" />
-  <meta property="og:title" content="EOD Advocacia Empresarial | Sorocaba" />
-  <meta property="og:description" content="Assessoria jurídico-contábil especializada para empresas: Direito Empresarial, Tributário, Trabalhista (empregador) e Contencioso Civil. Atendimento estratégico e preventivo." />
-  <!-- Atualizar se quiser outra imagem -->
+  <!-- Meta Open Graph para compartilhamento social (substitua logo.png se mudar) -->
+  <meta property="og:title" content="EOD Advocacia Empresarial — Assessoria Jurídica para Empresas" />
+  <meta property="og:description" content="EOD Advocacia Empresarial — assessoria jurídica e contábil para empresas. Especialidade em Direito Empresarial, Tributário e Trabalhista (empregador)." />
   <meta property="og:image" content="https://eisleioliveirae-boop.github.io/SITE/logo.png" />
-  <meta property="og:image:alt" content="Logotipo EOD Advocacia Empresarial" />
+  <meta property="og:type" content="website" />
 
-  <!-- JSON-LD - ATENÇÃO: URLs já apontam para seu GitHub SITE; altere se publicar em outro domínio -->
+  <!-- JSON-LD (Organization) - substitua a URL se seu site tiver outro endereço -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LawFirm",
+    "@type": "LegalService",
     "name": "EOD Advocacia Empresarial",
     "url": "https://eisleioliveirae-boop.github.io/SITE/",
     "logo": "https://eisleioliveirae-boop.github.io/SITE/logo.png",
-    "description": "Assessoria jurídico-contábil especializada em Direito Empresarial, Tributário, Trabalhista (empregador) e Contencioso Civil. Atendimento preventivo e estratégico para empresas.",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Sorocaba",
-      "addressRegion": "SP",
-      "addressCountry": "BR"
-    }
+    "description": "Assessoria jurídico-contábil para empresas. Especialidade em Direito Empresarial, Tributário, Trabalhista (empregador) e Contencioso Cível.",
+    "sameAs": [
+      "https://www.instagram.com/eisleioliveira",
+      "https://www.linkedin.com/in/eislei-d-oliveira-06994025",
+      "https://web.facebook.com/eislei.dominguesdeoliveira"
+    ]
   }
   </script>
 
-  <!-- Link para CSS principal (mantê-lo no mesmo diretório) -->
   <link rel="stylesheet" href="estilo.css">
-
-  <!-- Font Awesome (ícones) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-
-  <!-- Força visualmente ocultar o logo no header (permanece indexável se houver H1 sr-only) -->
-  <style>
-    /* garante que, mesmo que exista logo.png, fica invisível no header */
-    .logo-img { display: none !important; }
-    .logo-text { display: none !important; } /* ocultamos o texto redundante */
-    /* sr-only (caso o seu estilo.css não defina) */
-    .sr-only {
-      position:absolute !important;
-      width:1px !important;
-      height:1px !important;
-      padding:0 !important;
-      margin:-1px !important;
-      overflow:hidden !important;
-      clip:rect(0,0,0,0) !important;
-      white-space:nowrap !important;
-      border:0 !important;
-    }
-  </style>
 </head>
 <body>
-
-  <!-- H1 indexável, escondido visualmente -->
-  <h1 class="sr-only">EOD Advocacia Empresarial - Direito Empresarial em Sorocaba</h1>
+  <!-- H1 presente para indexação, oculto visualmente -->
+  <h1 class="sr-only">EOD Advocacia Empresarial — Eislei Domingues de Oliveira</h1>
 
   <header class="header">
     <div class="top-bar container">
-      <!-- Mantemos o elemento do logo por acessibilidade/SEO, mas ele está oculto via CSS acima -->
-      <img src="logo.png" alt="Logotipo EOD Advocacia Empresarial" class="logo-img" onerror="this.style.display='none'">
+      <!-- se quiser usar logo visível, faça upload de logo.png e descomente a img abaixo
+           e comente .logo-text (o CSS já oculta .logo-text) -->
+      <img src="logo.png" alt="EOD Advocacia Empresarial" class="logo-img" onerror="this.style.display='none'">
       <div class="logo-text">EOD ADVOCACIA EMPRESARIAL</div>
 
       <nav class="menu" aria-label="Menu de navegação">
         <button id="menuToggle" class="menu-toggle" aria-expanded="false" aria-controls="site-menu" aria-label="Abrir menu">⋮</button>
-
-        <ul id="site-menu" class="menu-list" role="menu">
-          <li role="none"><a role="menuitem" href="#quem-somos">QUEM SOMOS</a></li>
-          <li role="none"><a role="menuitem" href="#fundadora">FUNDADORA</a></li>
-          <li role="none"><a role="menuitem" href="#areas-de-atuacao">ÁREAS DE ATUAÇÃO</a></li>
-          <li role="none"><a role="menuitem" href="#artigos-publicados">ARTIGOS PUBLICADOS</a></li>
-          <li role="none"><a role="menuitem" href="#contato">CONTATO</a></li>
+        <ul id="site-menu" class="menu-list">
+          <li><a href="#quem-somos">QUEM SOMOS</a></li>
+          <li><a href="#fundadora">FUNDADORA</a></li>
+          <li><a href="#areas-de-atuacao">ÁREAS DE ATUAÇÃO</a></li>
+          <li><a href="#artigos-publicados">ARTIGOS PUBLICADOS</a></li>
+          <li><a href="#contato">CONTATO</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- Banner (banner.png) -->
   <div class="main-banner" role="img" aria-label="Banner EOD Advocacia Empresarial"></div>
 
   <main class="content container">
-    <section id="quem-somos" class="section-quem-somos" aria-labelledby="qs-title">
-      <h2 id="qs-title">Quem Somos</h2>
-      <p>
-        A EOD Advocacia Empresarial é um escritório jurídico-contábil sediado em Sorocaba (SP), dedicado à assessoria integrada de empresas. Atuamos nas áreas de Direito Empresarial, Direito Tributário, Direito do Trabalho (na defesa do empregador) e Contencioso Civil, prestando serviços que combinam análise jurídica e técnica contábil para reduzir riscos, otimizar estrutura tributária e assegurar conformidade regulatória.
-      </p>
-      <p>
-        Nosso trabalho prioriza a prevenção — implementamos controles, políticas internas e orientações que evitam passivos e fortalecem a governança. Na atuação contenciosa, adotamos estratégia processual alinhada aos objetivos comerciais do cliente, com foco em soluções eficientes e proteção do patrimônio empresarial.
-      </p>
-      <p>
-        Com base em princípios éticos e excelência técnica, oferecemos atendimento personalizado a empresas de diversos segmentos, entregando segurança jurídica e suporte decisório para o crescimento sustentável dos negócios.
-      </p>
+    <!-- Quem Somos -->
+    <section id="quem-somos" class="section-quem-somos">
+      <h2>Quem Somos</h2>
+
+      <p>A <strong>EOD Advocacia Empresarial</strong> é um escritório jurídico-contábil sediado em <strong>Sorocaba (SP)</strong>, dedicado à prestação de assessoria integrada em <strong>Direito Empresarial</strong>, Direito Tributário, Direito Trabalhista (empregador) e Contencioso Cível. Atuamos com foco na prevenção de riscos, otimização tributária e conformidade regulatória para empresas de pequeno, médio e grande porte.</p>
+
+      <p>Com base na ética, excelência técnica e visão multidisciplinar — jurídica e contábil — oferecemos soluções personalizadas para reduzir passivos, proteger ativos e suportar decisões estratégicas. Nossa abordagem alia análise preventiva, governança e execução eficiente, visando resultados empresariais sólidos e sustentáveis.</p>
+
+      <p>Para agendar uma avaliação preliminar e entender como podemos proteger e potencializar o seu negócio, <a class="cta-principal" href="#contato">solicite uma consulta</a>.</p>
     </section>
 
-    <section id="fundadora" class="section-fundadora" aria-labelledby="fund-title">
-      <h2 id="fund-title">Fundadora</h2>
+    <!-- Fundadora (imagem à ESQUERDA no desktop) -->
+    <section id="fundadora" class="section-fundadora">
+      <h2>Fundadora</h2>
       <div class="fundadora-info">
-        <div class="fundadora-texto">
-          <p>Eislei Domingues de Oliveira, advogada, formada pela Faculdade de Direito de Sorocaba.</p>
-          <p>Contadora, formada pela ESAMC.</p>
-          <p>Especialista lato sensu em Direito Empresarial pelo Mackenzie.</p>
-          <p>Pós-graduada em Direito do Trabalho pela Escola Paulista de Direito.</p>
-          <p>MBA Executivo em Gestão de Pessoas pela ESAMC.</p>
-          <p>Membro da comissão de Direito Empresarial e de Direito do Trabalho da Ordem dos Advogados do Brasil na 24ª subseção (Sorocaba).</p>
-          <p>Atua há mais de 18 anos nas áreas de Direito do Trabalho, Direito Empresarial, Direito Civil e Contabilidade.</p>
-        </div>
-
         <img src="fundadora.jpg" alt="Foto da fundadora Eislei Domingues de Oliveira" class="fundadora-foto">
+        <div class="fundadora-texto">
+          <p><strong>Eislei Domingues de Oliveira</strong> — advogada (Faculdade de Direito de Sorocaba) e contadora (ESAMC) — reúne mais de 18 anos de atuação no setor empresarial.</p>
+
+          <p>Especialista lato sensu em <strong>Direito Empresarial</strong> pelo Mackenzie e pós-graduada em Direito do Trabalho pela Escola Paulista de Direito, possui MBA Executivo em Gestão de Pessoas (ESAMC) e atuação destacada nas comissões de Direito Empresarial e Direito do Trabalho da OAB – 24ª Subseção (Sorocaba).</p>
+
+          <p>Essa formação multidisciplinar confere à Dra. Eislei capacidade técnica para oferecer consultoria estratégica, planejamento tributário e defesa contenciosa com foco na preservação do negócio e na mitigação de riscos operacionais e trabalhistas.</p>
+        </div>
       </div>
     </section>
 
-    <section id="areas-de-atuacao" class="section-atuacao" aria-labelledby="areas-title">
-      <h2 id="areas-title">Áreas de Atuação</h2>
+    <!-- Áreas de atuação -->
+    <section id="areas-de-atuacao" class="section-atuacao">
+      <h2>Áreas de Atuação</h2>
 
       <div class="atuacao-area">
         <h3>Direito Empresarial</h3>
         <ul>
-          <li>Constituição e organização de empresas</li>
-          <li>Contratos empresariais</li>
-          <li>Direito societário</li>
+          <li>Constituição e Organização de Empresas</li>
+          <li>Contratos Empresariais</li>
+          <li>Direito Societário</li>
           <li>Recuperação judicial e extrajudicial</li>
           <li>Acompanhamento de processos de falência</li>
-          <li>Reestruturação e readequação operacional</li>
+          <li>Reestruturação de empresas em crise</li>
         </ul>
       </div>
 
       <div class="atuacao-area">
-        <h3>Direito do Trabalho (empregador)</h3>
+        <h3>Direito do Trabalho</h3>
         <ul>
-          <li>Consultoria preventiva e contenciosa</li>
-          <li>Assessoria em políticas internas de RH</li>
+          <li>Consultivo e Contencioso</li>
+          <li>Assessoria preventiva para empregadores</li>
+          <li>Elaboração de políticas internas de RH</li>
           <li>Defesa em reclamatórias trabalhistas</li>
-          <li>Análises de passivo trabalhista e compliance</li>
         </ul>
       </div>
 
@@ -146,7 +114,7 @@
         <h3>Direito Civil</h3>
         <ul>
           <li>Cobrança judicial e extrajudicial</li>
-          <li>Responsabilidade civil empresarial</li>
+          <li>Responsabilidade civil das empresas</li>
           <li>Questões contratuais e indenizatórias</li>
         </ul>
       </div>
@@ -161,95 +129,83 @@
       </div>
     </section>
 
-    <section id="artigos-publicados" class="section-artigos" aria-labelledby="arts-title">
-      <h2 id="arts-title">Artigos Publicados</h2>
+    <!-- Artigos publicados -->
+    <section id="artigos-publicados" class="section-artigos">
+      <h2>Artigos Publicados</h2>
 
       <div class="artigo-item">
-        <h3>Riscos trabalhistas e compliance empresarial: como evitar passivos ocultos</h3>
-        <p>Identificação de riscos trabalhistas em rotinas corporativas e medidas de compliance para mitigação de passivos.</p>
-        <a class="btn-artigo" href="https://www.jusbrasil.com.br/artigos/riscos-trabalhistas-e-compliance-empresarial-como-evitar-passivos-ocultos/4997661808" target="_blank" rel="noopener">Ler no JusBrasil</a>
+        <h3>Contrato de Trabalho: Conceito e Características</h3>
+        <p>Análise completa sobre o conceito jurídico de contrato de trabalho, seus elementos essenciais e principais características.</p>
+        <a href="https://www.jusbrasil.com.br/artigos/contrato-de-trabalho-conceito-e-caracteristicas/2602614132" target="_blank" class="btn-artigo">Ler completo</a>
       </div>
 
       <div class="artigo-item">
-        <h3>Pejotização em foco: riscos e entendimentos jurídicos atuais</h3>
-        <p>Análise sobre a contratação por pessoa jurídica, seus riscos trabalhistas e a jurisprudência atual.</p>
-        <a class="btn-artigo" href="https://www.jusbrasil.com.br/artigos/pejotizacao-em-foco-riscos-e-entendimentos-juridicos-atuais/4856165935" target="_blank" rel="noopener">Ler no JusBrasil</a>
+        <h3>Jornada de Trabalho: Conceito, Tipos, Duração e o que determina a CLT</h3>
+        <p>Entenda o conceito de jornada de trabalho, os diferentes tipos e o que a Consolidação das Leis do Trabalho (CLT) determina sobre a duração.</p>
+        <a href="https://www.jusbrasil.com.br/artigos/jornada-de-trabalho-conceito-tipos-duracao-e-o-que-determina-a-clt/2626309497" target="_blank" class="btn-artigo">Ler completo</a>
       </div>
 
       <div class="artigo-item">
-        <h3>Ação regressiva do INSS contra empresas: origem, fundamento legal e evolução</h3>
-        <p>Estudo sobre o regime de responsabilização das empresas pelo INSS e decisões relevantes.</p>
-        <a class="btn-artigo" href="https://www.jusbrasil.com.br/artigos/acao-regressiva-do-inss-contra-empresas-origem-fundamento-legal-e-evolucao/4778895445" target="_blank" rel="noopener">Ler no JusBrasil</a>
+        <h3>Salário: Conceitos, Tipos e o que determina a Legislação</h3>
+        <p>Um guia completo sobre os conceitos e tipos de salário, além de uma análise sobre o que a legislação brasileira diz a respeito.</p>
+        <a href="https://www.jusbrasil.com.br/artigos/salario-conceitos-tipos-e-o-que-determinada-a-legislacao/2796771501" target="_blank" class="btn-artigo">Ler completo</a>
       </div>
 
       <div class="artigo-item">
-        <h3>Salário: conceitos, tipos e o que determina a legislação</h3>
-        <p>Guia prático sobre natureza salarial, verbas e efeitos legais na relação trabalhista.</p>
-        <a class="btn-artigo" href="https://www.jusbrasil.com.br/artigos/salario-conceitos-tipos-e-o-que-determinada-a-legislacao/2796771501" target="_blank" rel="noopener">Ler no JusBrasil</a>
+        <h3>Ação Regressiva do INSS contra Empresas: Origem, Fundamento Legal e Evolução</h3>
+        <p>Estudo sobre a ação regressiva do INSS, sua origem, fundamentos legais e evolução no cenário jurídico empresarial.</p>
+        <a href="https://www.jusbrasil.com.br/artigos/acao-regressiva-do-inss-contra-empresas-origem-fundamento-legal-e-evolucao/4778895445" target="_blank" class="btn-artigo">Ler completo</a>
       </div>
 
       <div class="artigo-item">
-        <h3>Jornada de trabalho: conceito, tipos, duração e o que determina a CLT</h3>
-        <p>Panorama sobre regimes de jornada, limites legais e principais enquadramentos práticos.</p>
-        <a class="btn-artigo" href="https://www.jusbrasil.com.br/artigos/jornada-de-trabalho-conceito-tipos-duracao-e-o-que-determina-a-clt/2626309497" target="_blank" rel="noopener">Ler no JusBrasil</a>
-      </div>
-
-      <div class="artigo-item">
-        <h3>Contrato de trabalho: conceito e características</h3>
-        <p>Análise do contrato de trabalho, seus elementos essenciais e implicações jurídicas.</p>
-        <a class="btn-artigo" href="https://www.jusbrasil.com.br/artigos/contrato-de-trabalho-conceito-e-caracteristicas/2602614132" target="_blank" rel="noopener">Ler no JusBrasil</a>
+        <h3>A Pejotização nas Relações de Trabalho: Aspectos Jurídicos e Entendimentos Atuais</h3>
+        <p>Uma análise aprofundada sobre a pejotização, seus aspectos jurídicos e os entendimentos mais recentes sobre o tema.</p>
+        <a href="https://www.jusbrasil.com.br/artigos/a-pejotizacao-nas-relacoes-de-trabalho-aspectos-juridicos-e-entendimentos-atuais/4856165935" target="_blank" class="btn-artigo">Ler completo</a>
       </div>
 
     </section>
 
-    <section id="contato" class="section-contato" aria-labelledby="contato-title">
-      <h2 id="contato-title">Fale Conosco</h2>
-      <form id="contact-form" aria-label="Formulário de contato">
+    <!-- Contato / formulário -->
+    <section id="contato" class="section-contato">
+      <h2>Fale Conosco</h2>
+      <form id="contact-form">
         <div class="form-group">
           <label for="name">Nome:</label>
-          <input id="name" name="from_name" type="text" required>
+          <input type="text" id="name" name="from_name" required>
         </div>
-
         <div class="form-group">
           <label for="email">E-mail:</label>
-          <input id="email" name="from_email" type="email" required>
+          <input type="email" id="email" name="from_email" required>
         </div>
-
         <div class="form-group">
           <label for="phone">Telefone:</label>
-          <input id="phone" name="from_phone" type="tel" required>
+          <input type="tel" id="phone" name="from_phone" required>
         </div>
-
         <div class="form-group">
-          <label for="subject">Assunto / Mensagem:</label>
+          <label for="subject">Assunto:</label>
           <textarea id="subject" name="message" required></textarea>
         </div>
-
         <button type="submit">Enviar</button>
       </form>
-
       <div id="status-message" aria-live="polite" style="margin-top:12px"></div>
     </section>
   </main>
 
-  <footer class="footer" role="contentinfo">
+  <footer class="footer">
     <p class="slogan">“Excelência Jurídico-Contábil a Serviço da Sua Empresa”</p>
     <p>
-      <a href="https://wa.me/5515997007014" target="_blank" rel="noopener" class="whatsapp-link"><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp: (15) 99700-7014</a>
-      &nbsp;|&nbsp;
-      <a href="mailto:eisleioliveira@yahoo.com.br"><i class="fas fa-envelope" aria-hidden="true"></i> E-mail: eisleioliveira@yahoo.com.br</a>
+      <a href="https://wa.me/5515997007014" target="_blank" class="whatsapp-link"><i class="fab fa-whatsapp"></i> WhatsApp: (15) 99700-7014</a> |
+      <a href="mailto:eisleioliveira@yahoo.com.br"><i class="fas fa-envelope"></i> E-mail: eisleioliveira@yahoo.com.br</a>
     </p>
     <p class="social-media">
-      <a href="https://web.facebook.com/eislei.dominguesdeoliveira/?locale=pt_BR" target="_blank" rel="noopener">Facebook</a> |
-      <a href="https://www.instagram.com/eisleioliveira" target="_blank" rel="noopener">@eisleioliveira</a> |
-      <a href="https://www.linkedin.com/in/eislei-d-oliveira-06994025" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://web.facebook.com/eislei.dominguesdeoliveira/?locale=pt_BR" target="_blank">Facebook</a> |
+      <a href="https://www.instagram.com/eisleioliveira" target="_blank">Instagram</a> |
+      <a href="https://www.linkedin.com/in/eislei-d-oliveira-06994025" target="_blank">LinkedIn</a>
     </p>
     <p>EOD Advocacia Empresarial © 2024</p>
   </footer>
 
-  <!-- EmailJS (CDN) -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  <!-- seu script.js (colocar script.js no mesmo diretório) -->
   <script src="script.js"></script>
 </body>
 </html>

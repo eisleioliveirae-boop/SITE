@@ -1,14 +1,8 @@
-/* ===========================
-   EOD Advocacia Empresarial
-   CSS revisado - substituir estilo.css por este arquivo
-   =========================== */
+/* estilo.css - EOD Advocacia Empresarial (versão consolidada) */
 
-/* ---------- IMPORTS ---------- */
-@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&family=Merriweather:wght@400;700&family=Epilogue:wght@400;700&display=swap');
 
-/* ---------- VARIÁVEIS ---------- */
 :root{
   --azul: #232342;
   --dourado: #CBA17B;
@@ -17,840 +11,143 @@
   --max-width: 1100px;
 }
 
-/* ---------- RESET / BASE ---------- */
+/* reset base */
 * { box-sizing: border-box; }
-html,body { height:100%; }
+html, body { height: 100%; margin:0; padding:0; }
 body {
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
+  font-family: 'Lora','Merriweather', Georgia, serif;
   background: var(--fundo);
   color: var(--texto);
-  font-family: 'Lora','Merriweather', Georgia, serif;
+  line-height: 1.65;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  line-height: 1.6;
 }
 
-/* utility container */
-.container { width:100%; max-width: var(--max-width); margin:0 auto; padding:0 20px; }
+/* container utilitário */
+.container { width:100%; max-width:var(--max-width); margin:0 auto; padding:0 20px; }
 
-/* ---------- HEADER / TOPO ---------- */
-.header {
-  background: var(--azul);
-  color: #fff;
-  position: sticky;
-  top: 0;
-  width: 100%;
-  z-index: 1300;
-}
+/* header */
+.header { background: var(--azul); position: sticky; top:0; z-index:1300; color:#fff; }
+.top-bar { display:flex; align-items:center; justify-content:space-between; padding:14px 20px; gap:12px; position:relative; }
 
-.top-bar {
-  display:flex;
-  align-items:center;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 14px 20px;
-  position: relative;
-}
+/* logo: quando tiver logo.png exibirá; se não, aparece texto (logo-text) */
+.logo-img { max-height:80px; display:block; margin-right:12px; }
+.logo-text { font-family:'Epilogue', Arial, sans-serif; font-weight:700; text-transform:uppercase; color:#fff; font-size:1.15rem; }
 
-/* logo - sempre visível */
-.logo-text {
-  font-family: 'Epilogue', Arial, sans-serif;
-  font-weight: 700;
-  font-size: 1.15rem;
-  text-transform: uppercase;
-  color: #fff;
-  margin: 0;
-  position: relative;
-  z-index: 1310;
-}
+/* NAV */
+.menu { position: relative; margin-left:auto; }
+.menu-toggle { display:none; background:transparent; border:none; color:#fff; font-size:1.6rem; cursor:pointer; padding:6px; }
+.menu-list { display:flex; gap:18px; list-style:none; margin:0; padding:0; align-items:center; }
+.menu-list a { color:#fff; text-decoration:none; font-weight:700; font-size:1rem; font-family:'Epilogue',Arial,sans-serif; padding:6px 8px; text-transform:uppercase; white-space:nowrap; }
 
-/* ---------- NAV / MENU ---------- */
-.menu { position: relative; }
+/* banner */
+.main-banner { width:100%; height:360px; background-image: url('banner.png'); background-size: cover; background-position:center; }
 
-/* botão toggle (três pontinhos) - escondido por padrão (desktop) */
-.menu-toggle {
-  display: none;
-  background: transparent;
-  border: none;
-  color: #fff;
-  font-size: 1.6rem;
-  padding: 6px;
-  cursor: pointer;
-  line-height: 1;
-}
+/* content */
+.content { padding:28px 0; color:var(--texto); }
 
-/* lista desktop padrão */
-.menu-list {
-  display:flex;
-  gap:18px;
-  list-style:none;
-  margin:0;
-  padding:0;
-  align-items:center;
-}
+/* headings */
+h2 { font-family:'Merriweather','Lora',serif; text-align:center; color:var(--azul); font-size:2rem; margin:0 0 18px 0; line-height:1.15; }
 
-.menu-list li { margin: 0; }
-.menu-list a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 700;
-  font-family: 'Epilogue', Arial, sans-serif;
-  font-size: 0.95rem;
-  padding: 6px 8px;
-  text-transform: uppercase;
-}
-.menu-list a:hover, .menu-list a:focus { color: var(--dourado); }
+/* paragraphs */
+p { font-size:1rem; margin:0 0 1rem 0; text-align:justify; }
 
-/* ---------- BANNER ---------- */
-.main-banner {
-  width: 100%;
-  height: 360px;
-  background-image: url('banner.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
+/* fundadora: foto à esquerda no desktop */
+.section-fundadora { padding:22px 0; }
+.fundadora-info { display:flex; gap:28px; align-items:flex-start; justify-content:space-between; flex-wrap:nowrap; width:100%; }
+.fundadora-foto { order:1; flex:0 0 280px; max-width:34%; min-width:160px; height:auto; object-fit:cover; border-radius:8px; box-shadow:0 8px 24px rgba(0,0,0,0.12); }
+.fundadora-texto { order:2; flex:1 1 auto; min-width:0; text-align:justify; }
+.fundadora-texto p { margin-bottom:0.8rem; }
 
-/* central logo image inside banner if you use an image - handled by HTML */
-.main-banner .logo { display:block; margin: 0 auto; }
+/* áreas de atuação */
+.section-atuacao h3 { color:var(--dourado); font-family:'Merriweather','Lora',serif; font-size:1.25rem; margin:12px 0 8px 0; }
+.section-atuacao ul { margin-left:1.2rem; padding-left:0.6rem; }
+.section-atuacao ul li { margin-bottom:0.45rem; font-size:1rem; }
 
-/* ---------- CONTEÚDO ---------- */
-.content { padding: 28px 0; color: var(--texto); }
-
-/* ---------- TIPOGRAFIA ---------- */
-h2 {
-  font-family: 'Merriweather','Lora', Georgia, serif;
-  text-align: center;
-  margin: 0 0 18px 0;
-  color: var(--azul);
-  font-size: 2rem;
-  line-height: 1.15;
-}
-
-/* Parágrafo padrão */
-p {
-  font-size: 1rem;
-  margin: 0 0 1rem 0;
-  text-align: justify;
-}
-
-/* ---------- SEÇÃO FUNDADORA ---------- */
-/* Desktop: FOTO à ESQUERDA, TEXTO à DIREITA */
-.section-fundadora { padding: 22px 0; }
-.fundadora-info {
-  display:flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 28px;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-  width: 100%;
-}
-
-/* força imagem à esquerda no desktop */
-.fundadora-foto {
-  order: 1;                 /* imagem = esquerda */
-  flex: 0 0 280px;
-  max-width: 34%;
-  min-width: 160px;
-  height: auto;
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-}
-
-/* texto ao lado direito */
-.fundadora-texto {
-  order: 2;                 /* texto = direita */
-  flex: 1 1 auto;
-  min-width: 0;
-  text-align: justify;
-}
-.fundadora-texto p { margin-bottom: 0.8rem; }
-
-/* ---------- ÁREAS DE ATUAÇÃO ---------- */
-.section-atuacao h3 {
-  font-family: 'Merriweather','Lora', Georgia, serif;
-  color: var(--dourado);
-  font-size: 1.25rem;
-  margin: 12px 0 8px 0;
-  font-weight: 600;
-}
-.section-atuacao ul { margin-left: 1.2rem; padding-left: 0.6rem; }
-.section-atuacao ul li { margin-bottom: 0.45rem; font-size: 1rem; }
-
-/* ---------- ARTIGOS ---------- */
+/* artigos */
 .artigo-item { background:#fff; padding:18px; border-radius:8px; margin-bottom:18px; box-shadow:0 2px 6px rgba(0,0,0,0.04); }
 .artigo-item h3 { margin:0 0 8px 0; font-size:1.25rem; color:var(--azul); }
+.btn-artigo { background:var(--dourado); color:#fff; padding:10px 16px; border-radius:6px; text-decoration:none; font-weight:700; }
 
-/* botão artigo */
-.btn-artigo { background: var(--dourado); color:#fff; padding:10px 16px; border-radius:6px; text-decoration:none; font-weight:700; }
-
-/* ---------- FORMULÁRIO CONTATO ---------- */
-.section-contato form { max-width:720px; margin: 0 auto; display:flex; flex-direction:column; gap:12px; }
-.form-group label { font-weight:700; color:var(--azul); font-size: 1rem; }
-.form-group input, .form-group textarea {
-  padding:10px; border-radius:6px; border:1px solid #ccc; font-size:1rem; width:100%;
-  font-family: inherit;
-}
+/* formulário */
+.section-contato form { max-width:720px; margin:0 auto; display:flex; flex-direction:column; gap:12px; }
+.form-group label { font-weight:700; color:var(--azul); font-size:1rem; }
+.form-group input, .form-group textarea { padding:10px; border-radius:6px; border:1px solid #ccc; font-size:1rem; width:100%; font-family:inherit; }
 .form-group textarea { min-height:120px; resize: vertical; }
+.section-contato button { background:var(--dourado); color:var(--azul); padding:12px; border-radius:6px; border:none; font-weight:700; cursor:pointer; font-size:1.05rem; }
 
-/* botão enviar */
-.section-contato button {
-  background: var(--dourado);
-  color: var(--azul);
-  padding: 12px;
-  border-radius: 6px;
-  border: none;
-  font-weight: 700;
-  cursor: pointer;
-}
+/* footer */
+.footer { background:var(--azul); color:#fff; text-align:center; padding:20px 16px; margin-top:24px; }
+.footer .slogan { color:var(--dourado); margin-bottom:8px; font-style:italic; }
 
-/* ---------- RODAPÉ ---------- */
-.footer {
-  background: var(--azul);
-  color: #fff;
-  text-align:center;
-  padding: 20px 16px;
-  margin-top: 24px;
-}
-.footer .slogan { color: var(--dourado); margin-bottom:8px; font-style: italic; }
+/* accessibility focus */
+a:focus, button:focus { outline:3px solid rgba(203,161,123,0.18); outline-offset:3px; }
 
-/* social links branco */
-.footer a { color: #fff; text-decoration:none; }
-
-/* ---------- Acessibilidade ---------- */
-a:focus, button:focus { outline: 3px solid rgba(203,161,123,0.18); outline-offset: 3px; }
-
-/* ---------- RESPONSIVIDADE E CORREÇÕES MOBILE ---------- */
-
-/* 1) Telas pequenas (mobile) */
+/* responsive: mobile */
 @media (max-width: 768px) {
-
-  /* top-bar ajustes: logo centralizado, toggle no canto direito */
-  .top-bar { padding: 12px 16px; justify-content: center; }
-  .logo-text { font-size: 1rem; }
-
-  /* mostrar botão tres pontinhos no canto direito */
-  .menu-toggle {
-    display: inline-block !important;
-    position: absolute !important;
-    right: 16px !important;
-    top: 50% !important;
-    transform: translateY(-50%) !important;
-    z-index: 1320 !important;
-    background: transparent;
-    border: none;
-    color: #fff;
-    font-size: 1.6rem;
-    padding: 6px;
-    cursor: pointer;
-  }
-
-  /* esconder menu padrão */
-  .menu-list { display: none !important; }
-
-  /* overlay do menu quando aberto (classe .open adicionada pelo JS) */
+  .top-bar { padding:12px 16px; justify-content:center; }
+  .logo-text { font-size:1rem; }
+  .menu-toggle { display:inline-block; position:absolute; right:16px; top:50%; transform:translateY(-50%); z-index:1320; }
+  .menu-list { display:none; }
   .menu.open .menu-list {
-    display:flex !important;
-    flex-direction: column;
-    gap: 10px;
-    position: absolute;
-    top: calc(100% + 8px);
-    right: 12px;
-    left: auto;
-    min-width: 170px;
-    max-width: 86vw;
-    background: var(--azul);
-    padding: 10px 12px;
-    border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-    z-index: 1315;
+    display:flex; flex-direction:column; gap:10px; position:absolute; top:calc(100% + 8px); right:12px; min-width:170px; max-width:86vw;
+    background:var(--azul); padding:10px 12px; border-radius:8px; box-shadow:0 10px 30px rgba(0,0,0,0.25); z-index:1315;
   }
-
-  .menu.open .menu-list a {
-    color: var(--dourado) !important;
-    font-weight: 700 !important;
-    text-decoration: none !important;
-    display: block;
-    padding: 8px 10px;
-    text-align: left;
-  }
-
-  /* empilhar fundadora: foto acima do texto para leitura confortável */
-  .fundadora-info {
-    flex-direction: column !important;
-    align-items: center;
-    gap: 12px;
-  }
-  .fundadora-foto {
-    order: 1; width: 160px; max-width: 60%; min-width: 120px; align-self:center;
-  }
-  .fundadora-texto { order: 2; width:100%; text-align: left; }
-  .fundadora-texto p { font-size: 1rem; line-height: 1.5; margin-bottom: 0.6rem; hyphens:auto; word-break:break-word; }
-
-  /* títulos e parágrafos mobile */
-  h2 { font-size: 1.4rem; }
-  p { font-size: 0.98rem; line-height: 1.5; text-align: left; }
-
-  /* formulário mobile */
-  .section-contato form { padding: 0 6px; gap:10px; }
+  .menu.open .menu-list a { color:var(--dourado); padding:8px 10px; display:block; text-align:left; }
+  /* empilha fundadora no mobile */
+  .fundadora-info { flex-direction:column; align-items:center; gap:12px; }
+  .fundadora-foto { width:160px; max-width:60%; min-width:120px; align-self:center; }
+  .fundadora-texto { width:100%; text-align:left; }
+  h2 { font-size:1.4rem; }
+  p { font-size:0.98rem; line-height:1.5; text-align:left; }
 }
 
-/* 2) Tablets / medium screens */
+/* tablets/medium */
 @media (min-width: 769px) and (max-width: 992px) {
-  .fundadora-foto { flex: 0 0 220px; max-width: 32%; }
-  h2 { font-size: 1.6rem; }
+  .fundadora-foto { flex:0 0 220px; max-width:32%; }
+  h2 { font-size:1.6rem; }
 }
 
-/* 3) Desktop */
+/* desktop */
 @media (min-width: 993px) {
-  .content { padding: 32px 0; }
-  .fundadora-foto { flex: 0 0 280px; max-width: 34%; }
-  .fundadora-texto p { font-size: 1.05rem; }
-  .menu-toggle { display: none !important; } /* garante que toggle fique oculto no desktop */
-  .menu-list { display:flex; }                 /* garante menu em linha */
+  .content { padding:32px 0; }
+  .fundadora-foto { flex:0 0 280px; max-width:34%; }
+  .fundadora-texto p { font-size:1.05rem; }
+  .menu-toggle { display:none; }
+  .menu-list { display:flex; }
 }
 
-/* final protections: eliminate old floats which can cause layout shifts */
-.header *, .top-bar * { float: none !important; clear: none !important; }
-/* ===================== CORREÇÕES FINAIS ===================== */
-/* Cole isto AO FINAL do seu estilo.css (sobrescreve regras conflitantes) */
+/* final protections / overrides */
+.header *, .top-bar * { float:none !important; clear:none !important; }
 
-/* 1) Base tipográfica — garante tamanho legível no desktop */
-html { font-size: 16px !important; } /* base 16px */
-body {
-  font-family: 'Lora', 'Merriweather', Georgia, serif !important;
-  font-size: 1rem !important; /* 16px */
-  line-height: 1.65 !important;
-  -webkit-font-smoothing: antialiased !important;
-}
-
-/* Ajuste de H2 para maior hierarquia no desktop */
-h2 {
-  font-size: 2rem !important; /* 32px base */
-  line-height: 1.15 !important;
-}
-
-/* 2) Header / alinhamento do topo - logo à ESQUERDA, menu à direita */
-.top-bar {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: space-between !important; /* força logo esquerda, menu direita */
-  padding: 14px 28px !important;
-}
-
-/* força o logo no canto esquerdo */
-.logo-text {
-  order: 1 !important;
-  margin: 0 !important;
-  text-align: left !important;
-  align-self: center !important;
-  flex: 0 0 auto !important;
-}
-
-/* menu deve estar à direita */
-.menu {
-  order: 2 !important;
-  margin-left: auto !important;
-  display: block !important;
-}
-
-/* assegura menu em linha no desktop */
-@media (min-width: 993px) {
-  .menu-list {
-    display: flex !important;
-    gap: 18px !important;
-    align-items: center !important;
-  }
-  .menu-toggle { display: none !important; } /* toggle escondido em desktop */
-}
-
-/* 3) Mobile: garantir que o toggle apareça e menu fique oculto até abrir */
-@media (max-width: 992px) {
-  /* Toggle (três pontinhos) visível no canto direito */
-  .menu-toggle {
-    display: inline-block !important;
-    position: absolute !important;
-    right: 16px !important;
-    top: 50% !important;
-    transform: translateY(-50%) !important;
-    z-index: 1400 !important;
-    background: transparent !important;
-    border: none !important;
-    color: #fff !important;
-    font-size: 1.6rem !important;
-    padding: 6px !important;
-    cursor: pointer !important;
-  }
-
-  /* Garantir que a lista de menu esteja escondida por padrão */
-  .menu-list {
-    display: none !important;
-    flex-direction: column !important;
-    gap: 10px !important;
-  }
-
-  /* Quando .menu.open adicionado pelo JS, exibe o overlay alinhado à direita */
-  .menu.open .menu-list {
-    display: flex !important;
-    position: absolute !important;
-    top: calc(100% + 8px) !important;
-    right: 12px !important;
-    left: auto !important;
-    min-width: 170px !important;
-    max-width: 86vw !important;
-    background: #232342 !important;
-    padding: 10px 12px !important;
-    border-radius: 8px !important;
-    z-index: 1390 !important;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.25) !important;
-  }
-
-  .menu.open .menu-list a {
-    color: #CBA17B !important; /* dourado institucional */
-    display:block !important;
-    padding: 8px 10px !important;
-    font-weight:700 !important;
-    text-decoration:none !important;
-  }
-}
-
-/* 4) Forçar visibilidade do logo no mobile (evita overlap) */
-.logo-text {
-  position: relative !important;
-  z-index: 1410 !important;
-  color: #fff !important;
-}
-
-/* 5) Formulário e fundadora - garantir consistência */
-.section-contato form input,
-.section-contato form textarea {
-  font-size: 1rem !important;
-}
-
-/* Fundadora: garante foto à esquerda no desktop e empilha no mobile */
-@media (min-width: 993px) {
-  .fundadora-info { flex-direction: row !important; }
-  .fundadora-foto { order: 1 !important; margin-right: 28px !important; }
-  .fundadora-texto { order: 2 !important; }
-}
-@media (max-width: 992px) {
-  .fundadora-info { flex-direction: column !important; align-items:center !important; }
-  .fundadora-foto { order: 1 !important; margin: 0 0 12px 0 !important; width: 160px !important; }
-  .fundadora-texto { order: 2 !important; text-align: left !important; width: 100% !important; }
-}
-
-/* 6) Proteção contra regras antigas conflitantes */
-.header *, .top-bar *, .menu *, .menu-list * { float: none !important; clear: none !important; }
-
-/* 7) Forçar contraste rodapé (texto branco) */
-.footer, .footer a { color: #fff !important; }
-
-/* ===================== fim das correções ===================== */
-/* ======= Ajustes finais: alinhamento menu mobile + fonte desktop ======= */
-
-/* --- 1) Menu mobile: garantir alinhamento consistente dos itens --- */
-.menu.open .menu-list {
-  align-items: flex-start !important;     /* força alinhamento à esquerda */
-  list-style: none !important;
-}
-
-/* Remove margens/paddings irregulares nos li */
-.menu.open .menu-list li {
-  margin: 0 !important;
-  padding: 0 !important;
-  width: 100% !important;
-  box-sizing: border-box !important;
-}
-
-/* Padroniza padding e alinhamento dos links do menu no overlay */
-.menu.open .menu-list a {
-  display: block !important;
-  padding: 10px 16px !important;          /* padding horizontal uniforme */
-  text-align: left !important;            /* força alinhamento à esquerda */
-  line-height: 1.25 !important;
-  color: var(--dourado) !important;
-  text-decoration: none !important;
-  white-space: normal !important;         /* evita comportamento estranho com wrap */
-  letter-spacing: 0.01em !important;
-}
-
-/* Remove possíveis marcadores / recuos remanescentes */
-.menu.open .menu-list ul,
-.menu.open .menu-list ol { margin: 0; padding: 0; list-style: none; }
-
-/* Se algum item tiver um pseudo-element (ex: ::before) que cria deslocamento, zera-o */
-.menu.open .menu-list li::before,
-.menu.open .menu-list li::after { display: none !important; content: none !important; }
-
-/* Pequeno ajuste visual do overlay para que não "corte" textos muito longos */
-.menu.open .menu-list {
-  max-width: 86vw !important;
-  min-width: 170px !important;
-  padding: 8px 10px !important;
-}
-
-/* --- 2) Aumentar tipografia no DESKTOP para melhor leitura --- */
-/* aplica-se em telas maiores (desktop) */
-@media (min-width: 993px) {
-  html { font-size: 18px !important; }         /* base maior (aplica-se ao site inteiro) */
-
-  /* mantém H2 e corpo proporcionais */
-  h2 { font-size: 2.2rem !important; }         /* título das seções um pouco maior */
-  p  { font-size: 1.05rem !important; line-height: 1.7 !important; }
-
-  /* menu desktop: tamanho ligeiramente maior e espaçamento */
-  .menu-list a {
-    font-size: 1rem !important;
-    padding: 8px 12px !important;
-  }
-
-  /* formulários e textos de seção que ficaram pequenos */
-  .fundadora-texto p,
-  .section-atuacao ul li,
-  .artigo-item p { font-size: 1.02rem !important; }
-}
-
-/* ===== fim dos ajustes ===== */
-/* ====== Ajustes FINAIS – layout desktop ====== */
-
-/* 1. Remover o texto “EOD Advocacia Empresarial” do topo */
-header h1, 
-.header-logo-text,
-.navbar-brand {
-  display: none !important;
-}
-
-/* 2. Alinhar menu de navegação à direita no desktop */
-@media (min-width: 993px) {
-  nav,
-  .menu,
-  .menu-list {
-    display: flex !important;
-    justify-content: flex-end !important;
-    align-items: center !important;
-    width: 100% !important;
-  }
-
-  /* Garante que o menu não quebre o alinhamento */
-  .menu-list li {
-    display: inline-block !important;
-    margin-left: 25px !important;
-  }
-
-  /* Ajuste visual nos links do menu */
-  .menu-list a {
-    font-size: 1.1rem !important;
-    letter-spacing: 0.03em;
-    color: white !important;
-    text-decoration: none !important;
-    transition: color 0.3s ease;
-  }
-
-  .menu-list a:hover {
-    color: var(--dourado) !important;
-  }
-}
-
-/* 3. Aumentar tamanho das fontes gerais no desktop */
-@media (min-width: 993px) {
-  html {
-    font-size: 19px !important; /* base maior para todo o site */
-  }
-
-  body, p, li {
-    font-size: 1.1rem !important;
-    line-height: 1.8 !important;
-  }
-
-  h2, h3, h4 {
-    font-size: 2rem !important;
-    font-weight: 700 !important;
-  }
-
-  /* Títulos de seções */
-  .section-title,
-  .fundadora-titulo {
-    font-size: 2.2rem !important;
-    margin-bottom: 1.5rem !important;
-  }
-
-  /* Texto de áreas e artigos */
-  .section-atuacao li,
-  .artigo-item p {
-    font-size: 1.05rem !important;
-  }
-
-  /* Texto da fundadora */
-  .fundadora-texto p {
-    font-size: 1.08rem !important;
-  }
-}
-
-/* ====== Fim dos ajustes ====== */
-/* ===================== FORÇA: fonte desktop + remover título + alinhar menu ===================== */
-
-/* --- 1) Forçar base de fonte no DESKTOP (aplica-se em larguras >= 992px) --- */
+/* ---------- Tipografia / base desktop (garante legibilidade) ---------- */
 @media (min-width: 992px) {
-  html { font-size: 19px !important; }      /* base maior */
-  body { font-size: 1.05rem !important; line-height: 1.8 !important; }
-
-  /* títulos */
-  h1, h2, h3 { font-family: 'Merriweather','Lora', serif !important; }
-  h2 { font-size: 2.2rem !important; }
-
-  /* força tamanho de parágrafos e listas */
-  p, li, .fundadora-texto p, .section-atuacao ul li, .artigo-item p {
-    font-size: 1.05rem !important;
-    line-height: 1.7 !important;
-  }
+  html { font-size:19px; } /* base maior */
+  p, li, .fundadora-texto p, .section-atuacao ul li, .artigo-item p { font-size:1.05rem; line-height:1.7; }
+  h2 { font-size:2.2rem; }
+  .menu-list a { font-size:1.05rem; padding:8px 12px; }
 }
 
-/* --- 2) Esconder qualquer título textual no topo (desktop apenas) --- */
-/* mira variação de seletores que seu HTML pode ter */
-@media (min-width: 992px) {
-  /* principais alvos conhecidos */
-  .logo-text,
-  header .logo-text,
-  .header .logo-text,
-  .top-bar .logo-text,
-  header h1,
-  .header-title,
-  .header .header-title,
-  .header-brand,
-  .site-title {
-    display: none !important;
-    visibility: hidden !important;
-    opacity: 0 !important;
-    width: 0 !important;
-    height: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    overflow: hidden !important;
-  }
-
-  /* Se existirem spans dentro do logo com texto */
-  .logo-text span,
-  header h1 span,
-  .header-title span {
-    display: none !important;
-  }
-}
-
-/* --- 3) Forçar menu alinhado à direita no desktop --- */
-@media (min-width: 992px) {
-  .top-bar { justify-content: flex-start !important; } /* mantem elementos no fluxo */
-  .menu { margin-left: auto !important; order: 3 !important; display:block !important; }
-  .menu-list { display: flex !important; gap: 22px !important; align-items: center !important; }
-  .menu-list li { display: inline-block !important; margin-left: 18px !important; }
-  .menu-list a { font-size: 1.05rem !important; color: #fff !important; padding: 6px 8px !important; }
-}
-
-/* --- 4) Proteção final contra regras com alta especificidade --- */
-@media (min-width: 992px) {
-  /* garante que o header não cubra o banner e mantém o logo grande centralizado só no banner (se houver) */
-  .main-banner { padding-top: 20px; }
-}
-
-/* ===================== fim: FORÇA ===================== */
-/* =================== Ajustes solicitados (cole ao final do estilo.css) =================== */
-
-/* 1) Forçar menu alinhado à direita no DESKTOP */
-@media (min-width: 993px) {
-  .top-bar {
-    justify-content: flex-start !important; /* mantém estrutura: logo à esquerda */
-  }
-
-  /* garante que o bloco .menu fique no extremo direito */
-  .menu {
-    margin-left: auto !important;
-    display: block !important;
-    order: 3 !important;
-  }
-
-  .menu-list {
-    display: flex !important;
-    justify-content: flex-end !important;
-    gap: 22px !important;
-    align-items: center !important;
-  }
-
-  .menu-list li { margin-left: 18px !important; }
-  .menu-list a { font-size: 1.06rem !important; } /* leve aumento para legibilidade */
-}
-
-/* 2) Centralizar o rodapé (desktop + mobile) */
-.footer {
-  text-align: center !important;
-}
-.footer p, .footer .slogan, .footer .social-media {
-  margin-left: auto !important;
-  margin-right: auto !important;
-  display: block;
-}
-
-/* 3) Botão "Enviar" - garantir mesmo tamanho da tipografia do site */
-.section-contato button,
-.section-contato button:hover,
-.section-contato button:active {
-  font-size: 1.05rem !important;   /* compatível com corpo do site */
-  line-height: 1.4 !important;
-  padding: 12px 18px !important;
-  height: auto !important;
-  box-sizing: border-box !important;
-}
-
-/* 4) MOBILE: remover apenas o texto (string) do topo mantendo o logo gráfico */
-/* aplica-se somente em telas menores */
-@media (max-width: 992px) {
-  /* alvo principal conhecido */
-  .logo-text,
-  header h1,
-  .header-title,
-  .site-title {
-    display: none !important;
-    visibility: hidden !important;
-    width: 0 !important;
-    height: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    overflow: hidden !important;
-  }
-}
-
-/* ===== fim das alterações solicitadas ===== */
-/* =================== CORREÇÃO FINAL: menu à direita + rodapé centralizado =================== */
-
-/* --- MENU DESKTOP ALINHADO À DIREITA --- */
-@media (min-width: 992px) {
-  header,
-  .top-bar {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-  }
-
-  /* caso o menu esteja dentro de uma div específica */
-  nav, 
-  .menu, 
-  .menu-list {
-    margin-left: auto !important;
-    text-align: right !important;
-    justify-content: flex-end !important;
-  }
-
-  .menu-list li {
-    display: inline-block !important;
-    margin-left: 24px !important;
-  }
-}
-
-/* --- RODAPÉ CENTRALIZADO --- */
-footer,
-.footer,
-.footer-content {
-  text-align: center !important;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-
-footer p,
-.footer p,
-.footer span {
-  text-align: center !important;
-  margin: 4px 0 !important;
-  color: inherit !important;
-}
-
-/* --- BOTÃO ENVIAR (garante mesmo tamanho da tipografia) --- */
-.section-contato button {
-  font-size: 1.05rem !important;
-  line-height: 1.4 !important;
-  padding: 12px 18px !important;
-  height: auto !important;
-}
-
-/* --- MOBILE: esconder o texto “EOD Advocacia Empresarial” mantendo o logotipo --- */
-@media (max-width: 992px) {
-  header h1,
-  .logo-text,
-  .site-title {
-    display: none !important;
-    visibility: hidden !important;
-  }
-}
-
-/* =================== FIM DAS CORREÇÕES =================== */
-/* =================== CORREÇÃO FINAL — MENU NÃO QUEBRAR LINHA =================== */
-
-@media (min-width: 992px) {
-  .menu ul {
-    display: flex !important;
-    justify-content: flex-end !important;
-    align-items: center !important;
-    gap: 32px !important;              /* espaçamento entre os itens */
-    flex-wrap: nowrap !important;      /* impede quebra de linha */
-    white-space: nowrap !important;    /* impede quebra de palavras */
-  }
-
-  .menu ul li {
-    display: inline-block !important;
-    margin: 0 !important;
-  }
-
-  .menu ul li a {
-    display: inline-block !important;
-    white-space: nowrap !important;    /* mantém "Área de Atuação" em uma linha */
-    font-size: 1.1rem !important;
-    font-family: inherit !important;
-    line-height: 1.4 !important;
-  }
-}
-
-/* =================== FIM =================== */
-/* Tipografia institucional (jurídica / corporativa) */
-:root{
-  --azul: #232342;
-  --dourado: #CBA17B;
-  --texto: #222222;
-  --base-font: 16px;
-}
-
-html { font-size: 100%; } /* 16px */
-body {
-  font-family: "Lora","Merriweather", Georgia, serif;
-  color: var(--texto);
-  font-size: 1rem;        /* 16px */
-  line-height: 1.65;
-}
-
-/* Headings */
-h1 { font-family: "Merriweather", serif; font-size: 2.4rem; margin: .2rem 0 .6rem; color: var(--azul); }
-h2 { font-family: "Merriweather", serif; font-size: 2rem; margin: .4rem 0 .8rem; color: var(--azul); }
-h3 { font-family: "Merriweather", serif; font-size: 1.25rem; margin: .6rem 0 .4rem; color: var(--azul); }
-
-/* Parágrafos e listas */
-p, li { font-size: 1rem; line-height: 1.6; color: var(--texto); text-align: justify; margin-bottom: .9rem; }
-
-/* Espaçamento entre seções */
-section { padding: 24px 0; }
-.container { max-width: 1100px; margin: 0 auto; padding: 0 18px; }
-/* =========================
-   Utility: esconder visualmente mas manter indexação / acessibilidade
-   ========================= */
+/* sr-only (ocultar visualmente, manter indexado) */
 .sr-only {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  padding: 0 !important;
-  margin: -1px !important;
-  overflow: hidden !important;
-  clip: rect(0, 0, 0, 0) !important;
-  white-space: nowrap !important;
-  border: 0 !important;
+  position:absolute !important;
+  width:1px !important;
+  height:1px !important;
+  padding:0 !important;
+  margin:-1px !important;
+  overflow:hidden !important;
+  clip:rect(0,0,0,0) !important;
+  white-space:nowrap !important;
+  border:0 !important;
 }
+
+/* Forçar menu no desktop à direita e impedir quebra de linha */
+@media (min-width: 992px) {
+  .top-bar { justify-content:flex-start; }
+  .menu { margin-left:auto; order:3; }
+  .menu-list { gap:32px; flex-wrap:nowrap; white-space:nowrap; }
+  .menu-list li { display:inline-block; margin-left:18px; }
+  .menu-list a { white-space:nowrap; }
+}
+
+/* centralizar rodapé sempre */
+footer, .footer { text-align:center; display:flex; flex-direction:column; align-items:center; justify-content:center; }

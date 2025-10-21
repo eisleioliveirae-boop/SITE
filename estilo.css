@@ -1,6 +1,6 @@
-/* estilo.css - EOD Advocacia Empresarial (versão consolidada) */
+/* estilo.css - EOD Advocacia Empresarial (versão consolidada e corrigida) */
 
-/* fonts */
+/* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&family=Merriweather:wght@400;700&family=Epilogue:wght@400;700&display=swap');
 
 :root{
@@ -20,6 +20,8 @@ body {
   color: var(--texto);
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size:16px;
 }
 
 /* container utilitário */
@@ -29,7 +31,7 @@ body {
 .header { background: var(--azul); position: sticky; top:0; z-index:1300; color:#fff; }
 .top-bar { display:flex; align-items:center; justify-content:space-between; padding:14px 20px; gap:12px; position:relative; }
 
-/* logo: quando tiver logo.png exibirá; se não, aparece texto (logo-text) */
+/* logo: se usar logo.png (img) ou logo-text */
 .logo-img { max-height:80px; display:block; margin-right:12px; }
 .logo-text { font-family:'Epilogue', Arial, sans-serif; font-weight:700; text-transform:uppercase; color:#fff; font-size:1.15rem; }
 
@@ -54,8 +56,8 @@ p { font-size:1rem; margin:0 0 1rem 0; text-align:justify; }
 /* fundadora: foto à esquerda no desktop */
 .section-fundadora { padding:22px 0; }
 .fundadora-info { display:flex; gap:28px; align-items:flex-start; justify-content:space-between; flex-wrap:nowrap; width:100%; }
-.fundadora-foto { order:1; flex:0 0 280px; max-width:34%; min-width:160px; height:auto; object-fit:cover; border-radius:8px; box-shadow:0 8px 24px rgba(0,0,0,0.12); }
-.fundadora-texto { order:2; flex:1 1 auto; min-width:0; text-align:justify; }
+.fundadora-foto { order:0; flex:0 0 280px; max-width:34%; min-width:160px; height:auto; object-fit:cover; border-radius:8px; box-shadow:0 8px 24px rgba(0,0,0,0.12); }
+.fundadora-texto { order:1; flex:1 1 auto; min-width:0; text-align:justify; }
 .fundadora-texto p { margin-bottom:0.8rem; }
 
 /* áreas de atuação */
@@ -64,6 +66,7 @@ p { font-size:1rem; margin:0 0 1rem 0; text-align:justify; }
 .section-atuacao ul li { margin-bottom:0.45rem; font-size:1rem; }
 
 /* artigos */
+.section-artigos { padding:20px 0; }
 .artigo-item { background:#fff; padding:18px; border-radius:8px; margin-bottom:18px; box-shadow:0 2px 6px rgba(0,0,0,0.04); }
 .artigo-item h3 { margin:0 0 8px 0; font-size:1.25rem; color:var(--azul); }
 .btn-artigo { background:var(--dourado); color:#fff; padding:10px 16px; border-radius:6px; text-decoration:none; font-weight:700; }
@@ -76,7 +79,7 @@ p { font-size:1rem; margin:0 0 1rem 0; text-align:justify; }
 .section-contato button { background:var(--dourado); color:var(--azul); padding:12px; border-radius:6px; border:none; font-weight:700; cursor:pointer; font-size:1.05rem; }
 
 /* footer */
-.footer { background:var(--azul); color:#fff; text-align:center; padding:20px 16px; margin-top:24px; }
+.footer { background:var(--azul); color:#fff; text-align:center; padding:20px 16px; margin-top:24px; display:flex; flex-direction:column; align-items:center; justify-content:center; }
 .footer .slogan { color:var(--dourado); margin-bottom:8px; font-style:italic; }
 
 /* accessibility focus */
@@ -93,7 +96,7 @@ a:focus, button:focus { outline:3px solid rgba(203,161,123,0.18); outline-offset
     background:var(--azul); padding:10px 12px; border-radius:8px; box-shadow:0 10px 30px rgba(0,0,0,0.25); z-index:1315;
   }
   .menu.open .menu-list a { color:var(--dourado); padding:8px 10px; display:block; text-align:left; }
-  /* empilha fundadora no mobile */
+  /* empilha fundadora no mobile (melhor UX) */
   .fundadora-info { flex-direction:column; align-items:center; gap:12px; }
   .fundadora-foto { width:160px; max-width:60%; min-width:120px; align-self:center; }
   .fundadora-texto { width:100%; text-align:left; }
@@ -116,10 +119,7 @@ a:focus, button:focus { outline:3px solid rgba(203,161,123,0.18); outline-offset
   .menu-list { display:flex; }
 }
 
-/* final protections / overrides */
-.header *, .top-bar * { float:none !important; clear:none !important; }
-
-/* ---------- Tipografia / base desktop (garante legibilidade) ---------- */
+/* tipografia/escala para desktop maior */
 @media (min-width: 992px) {
   html { font-size:19px; } /* base maior */
   p, li, .fundadora-texto p, .section-atuacao ul li, .artigo-item p { font-size:1.05rem; line-height:1.7; }
@@ -149,34 +149,28 @@ a:focus, button:focus { outline:3px solid rgba(203,161,123,0.18); outline-offset
   .menu-list a { white-space:nowrap; }
 }
 
-/* centralizar rodapé sempre */
-footer, .footer { text-align:center; display:flex; flex-direction:column; align-items:center; justify-content:center; }
-/* ===== Ajustes finais rápidos ===== */
+/* Remoção de floats problemáticos - NÃO forçar floats globalmente */
+/* header *, .top-bar * { float:none !important; clear:none !important; }  removed */
 
-/* 1) ocultar o texto redundante do header (mantém imagem do logo) */
-.logo-text {
-  display: none !important;
-}
+/* Remover a exibição textual redundante do header caso use banner com logo grande */
+.logo-text { display:none !important; }
 
-/* 2) garantir que logo.png apareça com tamanho adequado no topo (quando existir) */
-.logo-img {
-  display: block;
-  max-height: 84px;
-  width: auto;
-  margin: 0;
-}
+/* assegurar exibição do logo- img quando existir */
+.logo-img { display:block; max-height:84px; width:auto; margin:0; }
 
-/* 3) forçar cor dourada nos links do rodapé (evita azul) */
-.footer a {
-  color: var(--dourado) !important;
-  text-decoration: none !important;
-}
+/* Rodapé: links em branco (conforme solicitado) */
+.footer a { color: #fff !important; text-decoration: none !important; }
+.footer a:hover { color: var(--dourado) !important; }
 
-/* 4) estilo adicional p/ a lista de artigos: garante que todos apareçam em sequência */
+/* garantir que todos os artigos apareçam */
 .section-artigos .artigo-item { display:block; }
 
-/* 5) pequena proteção: se por algum motivo o banner sobrepor o conteúdo */
+/* evitar overlay do banner */
 .main-banner { z-index:0; }
 .header { z-index:1300; }
 
-/* ===== fim ajustes ===== */
+/* impressão */
+@media print {
+  .main-banner, .header, .footer { display:none; }
+  body { color:#000; background:#fff; font-size:12pt; }
+}

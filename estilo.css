@@ -186,3 +186,42 @@ a:focus, button:focus { outline:3px solid rgba(203,161,123,0.18); outline-offset
 .header { z-index:1300; }
 
 /* ===== fim ajustes ===== */
+/* ----- Correções solicitadas: ocultar logo no topo + botão discreto ----- */
+
+/* 1) Ocultar a imagem do logo no topo (permanece no repo para og:image, mas não aparece no site) */
+.header .logo-img {
+  display: none !important;
+  visibility: hidden !important;
+  width: 0 !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+
+/* 2) Estilo discreto para CTA (substitui o botão chamativo) */
+.cta-subtle {
+  display: inline-block;
+  background: transparent;
+  color: var(--azul);
+  border: 1px solid rgba(203,161,123,0.25); /* borda leve dourada */
+  padding: 8px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+  font-family: 'Epilogue', Arial, sans-serif;
+  box-shadow: none;
+  transition: background-color .18s ease, color .18s ease, border-color .18s ease;
+}
+
+.cta-subtle:hover,
+.cta-subtle:focus {
+  background: rgba(203,161,123,0.08);
+  border-color: rgba(203,161,123,0.45);
+  color: var(--azul);
+}
+
+/* 3) segurança: remover qualquer estilo antigo do CTA chamativo caso exista */
+.cta-principal { display: none !important; }
+
+/* ----- fim das correções ----- */

@@ -151,3 +151,32 @@ a:focus, button:focus { outline:3px solid rgba(203,161,123,0.18); outline-offset
 
 /* centralizar rodapé sempre */
 footer, .footer { text-align:center; display:flex; flex-direction:column; align-items:center; justify-content:center; }
+/* ===== Ajustes finais rápidos ===== */
+
+/* 1) ocultar o texto redundante do header (mantém imagem do logo) */
+.logo-text {
+  display: none !important;
+}
+
+/* 2) garantir que logo.png apareça com tamanho adequado no topo (quando existir) */
+.logo-img {
+  display: block;
+  max-height: 84px;
+  width: auto;
+  margin: 0;
+}
+
+/* 3) forçar cor dourada nos links do rodapé (evita azul) */
+.footer a {
+  color: var(--dourado) !important;
+  text-decoration: none !important;
+}
+
+/* 4) estilo adicional p/ a lista de artigos: garante que todos apareçam em sequência */
+.section-artigos .artigo-item { display:block; }
+
+/* 5) pequena proteção: se por algum motivo o banner sobrepor o conteúdo */
+.main-banner { z-index:0; }
+.header { z-index:1300; }
+
+/* ===== fim ajustes ===== */

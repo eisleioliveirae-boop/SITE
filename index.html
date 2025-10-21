@@ -1,57 +1,71 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EOD Advocacia Empresarial — Advocacia Empresarial em Sorocaba</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EOD Advocacia Empresarial</title>
+  <meta name="description" content="EOD Advocacia Empresarial | Escritório jurídico-contábil em Sorocaba-SP. Especialista em Direito Empresarial, Tributário, Trabalhista (empregador) e Civil. Assessoria preventiva e estratégica para empresas." />
+  <meta name="author" content="Eislei Domingues de Oliveira" />
 
-  <!-- Meta description para SEO -->
-  <meta name="description" content="EOD Advocacia Empresarial (Sorocaba) presta assessoria jurídico-contábil especializada em Direito Empresarial, Tributário, Trabalhista (empregador) e Contencioso Cível. Atendimento preventivo e estratégico para empresas." />
-  <meta name="robots" content="index, follow" />
-
-  <!-- Open Graph (social sharing) -->
-  <meta property="og:locale" content="pt_BR" />
-  <meta property="og:type" content="website" />
+  <!-- Open Graph (compartilhamento social) - atualize se mudar a URL do logo -->
   <meta property="og:title" content="EOD Advocacia Empresarial — Advocacia Empresarial em Sorocaba" />
-  <meta property="og:description" content="Assessoria jurídico-contábil especializada para empresas. Direito Empresarial, Tributário, Trabalhista (empregador) e Contencioso Cível." />
-  <!-- ATENÇÃO: substitua a URL abaixo caso o seu site esteja em outro endereço -->
+  <meta property="og:description" content="Assessoria jurídico-contábil preventiva e estratégica para empresas. Especialistas em direito empresarial, tributário, trabalhista e contencioso civil." />
+  <meta property="og:type" content="website" />
   <meta property="og:url" content="https://eisleioliveirae-boop.github.io/SITE/" />
-  <meta property="og:site_name" content="EOD Advocacia Empresarial" />
   <meta property="og:image" content="https://eisleioliveirae-boop.github.io/SITE/logo.png" />
-  <meta property="og:image:alt" content="Logotipo EOD Advocacia Empresarial" />
+  <meta property="og:locale" content="pt_BR" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="EOD Advocacia Empresarial — Advocacia Empresarial em Sorocaba" />
-  <meta name="twitter:description" content="Assessoria jurídico-contábil especializada para empresas. Direito Empresarial, Tributário, Trabalhista (empregador) e Contencioso Cível." />
+  <meta name="twitter:title" content="EOD Advocacia Empresarial" />
+  <meta name="twitter:description" content="Assessoria jurídico-contábil preventiva e estratégica para empresas em Sorocaba." />
   <meta name="twitter:image" content="https://eisleioliveirae-boop.github.io/SITE/logo.png" />
 
-  <!-- Load fonts -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&family=Merriweather:wght@400;700&family=Epilogue:wght@400;700&display=swap" rel="stylesheet">
+  <!-- JSON-LD (empresa/Organization) - substitua a URL base se necessário -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    "name": "EOD Advocacia Empresarial",
+    "url": "https://eisleioliveirae-boop.github.io/SITE/",
+    "logo": "https://eisleioliveirae-boop.github.io/SITE/logo.png",
+    "description": "Escritório jurídico-contábil em Sorocaba-SP, especializado em Direito Empresarial, Tributário, Trabalhista (empregador) e Civil. Assessoria preventiva, estratégica e contenciosa.",
+    "founder": {
+      "@type": "Person",
+      "name": "Eislei Domingues de Oliveira"
+    },
+    "areaServed": "BR",
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "telephone": "+55-15-99700-7014",
+      "contactType": "customer service",
+      "areaServed": "BR",
+      "availableLanguage": ["Portuguese"]
+    }]
+  }
+  </script>
 
-  <!-- Seu CSS -->
+  <!-- seu CSS -->
   <link rel="stylesheet" href="estilo.css">
 
-  <!-- font-awesome (ícones) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <!-- Font Awesome (icones) opcional -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="" crossorigin="anonymous" />
 </head>
 <body>
-  <header class="header" role="banner">
+  <!-- H1 visível apenas para indexação (oculto visualmente via .sr-only no CSS) -->
+  <h1 class="sr-only">EOD Advocacia Empresarial — Advocacia Empresarial em Sorocaba</h1>
+
+  <!-- Header: mantemos apenas a barra superior e o banner (sem exibir logo textual) -->
+  <header class="header">
     <div class="top-bar container">
-      <!-- H1 presente para indexação, oculto visualmente via .sr-only -->
-      <h1 class="sr-only">EOD Advocacia Empresarial — Advocacia Empresarial em Sorocaba</h1>
+      <div class="logo-text" aria-hidden="true">EOD ADVOCACIA EMPRESARIAL</div>
 
-      <!-- logotipo gráfico (substitua por <img src="logo.png"...> quando fizer upload) -->
-      <div class="logo-wrap">
-        <img src="logo.png" alt="EOD Advocacia Empresarial" class="logo-img" onerror="this.style.display='none'">
-        <div class="logo-text" aria-hidden="true">EOD ADVOCACIA EMPRESARIAL</div>
-      </div>
+      <nav class="menu" aria-label="Menu principal">
+        <button id="menuToggle" class="menu-toggle" aria-expanded="false" aria-controls="site-menu" aria-label="Abrir menu">
+          ⋮
+        </button>
 
-      <!-- NAV: toggle para mobile + lista de links -->
-      <nav class="menu" aria-label="Menu de navegação">
-        <button id="menuToggle" class="menu-toggle" aria-expanded="false" aria-controls="site-menu" aria-label="Abrir menu">⋮</button>
-        <ul id="site-menu" class="menu-list">
+        <ul id="site-menu" class="menu-list" hidden>
           <li><a href="#quem-somos">QUEM SOMOS</a></li>
           <li><a href="#fundadora">FUNDADORA</a></li>
           <li><a href="#areas-de-atuacao">ÁREAS DE ATUAÇÃO</a></li>
@@ -62,10 +76,11 @@
     </div>
   </header>
 
-  <div class="main-banner" role="img" aria-label="Banner institucional EOD Advocacia Empresarial"></div>
+  <!-- Banner (mantive como antes) -->
+  <div class="main-banner" role="img" aria-label="Banner EOD Advocacia Empresarial" style="background-image: url('banner.png');"></div>
 
-  <main class="content container" role="main">
-    <!-- Quem Somos -->
+  <main class="content container">
+    <!-- Quem somos -->
     <section id="quem-somos" class="section-quem-somos">
       <h2>Quem Somos</h2>
       <p>A EOD Advocacia Empresarial é um escritório jurídico-contábil sediado em Sorocaba-SP, especializado em Direito Empresarial, Tributário, Trabalhista (empregador) e Civil. Nosso propósito é oferecer assessoria jurídica e contábil integrada, voltada à segurança jurídica, eficiência tributária e conformidade regulatória das empresas.</p>
@@ -78,7 +93,6 @@
     <section id="fundadora" class="section-fundadora">
       <h2>Fundadora</h2>
       <div class="fundadora-info">
-        <img src="fundadora.jpg" alt="Foto da fundadora Eislei Domingues de Oliveira" class="fundadora-foto">
         <div class="fundadora-texto">
           <p>Eislei Domingues de Oliveira, advogada, formada pela Faculdade de Direito de Sorocaba.</p>
           <p>Contadora, formada pela ESAMC.</p>
@@ -88,63 +102,106 @@
           <p>Membro da comissão de Direito Empresarial e de Direito do Trabalho da Ordem dos Advogados do Brasil na 24ª subseção (Sorocaba).</p>
           <p>Atua há mais de 18 anos nas áreas de Direito do Trabalho, Direito Empresarial, Direito Civil e Contabilidade.</p>
         </div>
+
+        <img src="fundadora.jpg" alt="Foto da fundadora Eislei Domingues de Oliveira" class="fundadora-foto">
       </div>
     </section>
 
-    <!-- Áreas de Atuação -->
+    <!-- Áreas de atuação -->
     <section id="areas-de-atuacao" class="section-atuacao">
       <h2>Áreas de Atuação</h2>
+
       <div class="atuacao-area">
         <h3>Direito Empresarial</h3>
         <ul>
           <li>Constituição e Organização de Empresas</li>
           <li>Contratos Empresariais</li>
           <li>Direito Societário</li>
-          <li>Recuperação judicial e extrajudicial.</li>
-          <li>Acompanhamento de processos de falência.</li>
-          <li>Reestruturação de empresas em crise.</li>
+          <li>Recuperação judicial e extrajudicial</li>
+          <li>Acompanhamento de processos de falência</li>
+          <li>Reestruturação de empresas em crise</li>
         </ul>
       </div>
+
       <div class="atuacao-area">
         <h3>Direito do Trabalho</h3>
         <ul>
           <li>Consultivo e Contencioso</li>
-          <li>Assessoria preventiva para empregadores.</li>
-          <li>Elaboração de políticas internas de RH.</li>
-          <li>Defesa em reclamatórias trabalhistas.</li>
+          <li>Assessoria preventiva para empregadores</li>
+          <li>Elaboração de políticas internas de RH</li>
+          <li>Defesa em reclamatórias trabalhistas</li>
         </ul>
       </div>
+
       <div class="atuacao-area">
         <h3>Direito Civil</h3>
         <ul>
           <li>Cobrança judicial e extrajudicial</li>
-          <li>Responsabilidade civil das empresas.</li>
-          <li>Questões contratuais e indenizatórias.</li>
+          <li>Responsabilidade civil das empresas</li>
+          <li>Questões contratuais e indenizatórias</li>
         </ul>
       </div>
+
       <div class="atuacao-area">
         <h3>Direito Tributário</h3>
         <ul>
           <li>Planejamento tributário</li>
-          <li>Defesa em autos de infração e execuções fiscais.</li>
-          <li>Consultoria sobre tributos federais, estaduais e municipais.</li>
+          <li>Defesa em autos de infração e execuções fiscais</li>
+          <li>Consultoria sobre tributos federais, estaduais e municipais</li>
         </ul>
       </div>
     </section>
 
-    <!-- Artigos Publicados -->
+    <!-- Artigos publicados: inclui todos os artigos que você me enviou -->
     <section id="artigos-publicados" class="section-artigos">
       <h2>Artigos Publicados</h2>
-      <!-- seus itens de artigo (links externos ao JusBrasil) -->
+
       <div class="artigo-item">
-        <h3>Contrato de Trabalho: Conceito e Características</h3>
-        <p>Análise completa sobre o conceito jurídico de contrato de trabalho, seus elementos essenciais e principais características.</p>
-        <a href="https://www.jusbrasil.com.br/artigos/contrato-de-trabalho-conceito-e-caracteristicas/2602614132" target="_blank" class="btn-artigo" rel="noopener">Ler completo</a>
+        <h3>Riscos trabalhistas e compliance empresarial — Como evitar passivos ocultos</h3>
+        <p>Abordagem prática sobre compliance trabalhista e medidas para mitigação de passivos legais.</p>
+        <a href="https://www.jusbrasil.com.br/artigos/riscos-trabalhistas-e-compliance-empresarial-como-evitar-passivos-ocultos/4997661808" target="_blank" rel="noopener" class="btn-artigo">Ler completo</a>
       </div>
-      <!-- adicione os demais artigos como já constam no seu HTML -->
+
+      <div class="artigo-item">
+        <h3>Pejotização em foco: riscos e entendimentos jurídicos atuais</h3>
+        <p>Análise dos riscos decorrentes da pejotização e dos posicionamentos jurisprudenciais recentes.</p>
+        <a href="https://www.jusbrasil.com.br/artigos/pejotizacao-em-foco-riscos-e-entendimentos-juridicos-atuais/4856165935" target="_blank" rel="noopener" class="btn-artigo">Ler completo</a>
+      </div>
+
+      <div class="artigo-item">
+        <h3>Ação regressiva do INSS contra empresas: origem, fundamento legal e evolução</h3>
+        <p>Estudo sobre a ação regressiva do INSS e suas implicações para as empresas.</p>
+        <a href="https://www.jusbrasil.com.br/artigos/acao-regressiva-do-inss-contra-empresas-origem-fundamento-legal-e-evolucao/4778895445" target="_blank" rel="noopener" class="btn-artigo">Ler completo</a>
+      </div>
+
+      <div class="artigo-item">
+        <h3>Salário — Conceitos, tipos e o que determina a legislação</h3>
+        <p>Guia completo sobre salário, suas modalidades e determinações legais.</p>
+        <a href="https://www.jusbrasil.com.br/artigos/salario-conceitos-tipos-e-o-que-determinada-a-legislacao/2796771501" target="_blank" rel="noopener" class="btn-artigo">Ler completo</a>
+      </div>
+
+      <div class="artigo-item">
+        <h3>Jornada de trabalho: conceito, tipos, duração e o que determina a CLT</h3>
+        <p>Explicação sobre tipos de jornada e a regulação pela CLT.</p>
+        <a href="https://www.jusbrasil.com.br/artigos/jornada-de-trabalho-conceito-tipos-duracao-e-o-que-determina-a-clt/2626309497" target="_blank" rel="noopener" class="btn-artigo">Ler completo</a>
+      </div>
+
+      <div class="artigo-item">
+        <h3>Contrato de trabalho — Conceito e características</h3>
+        <p>Análise completa sobre o contrato de trabalho, seus elementos essenciais e principais características.</p>
+        <a href="https://www.jusbrasil.com.br/artigos/contrato-de-trabalho-conceito-e-caracteristicas/2602614132" target="_blank" rel="noopener" class="btn-artigo">Ler completo</a>
+      </div>
+
+      <div class="artigo-item">
+        <h3>A Pejotização nas relações de trabalho: aspectos jurídicos e entendimentos atuais</h3>
+        <p>Perspectiva analítica sobre a pejotização e posicionamentos recentes.</p>
+        <a href="https://www.jusbrasil.com.br/artigos/a-pejotizacao-nas-relacoes-de-trabalho-aspectos-juridicos-e-entendimentos-atuais/4856165935" target="_blank" rel="noopener" class="btn-artigo">Ler completo</a>
+      </div>
+
+      <!-- Se tiver outros artigos, cole aqui seguindo o mesmo padrão -->
     </section>
 
-    <!-- Contato -->
+    <!-- Contato / Fale conosco -->
     <section id="contato" class="section-contato">
       <h2>Fale Conosco</h2>
       <form id="contact-form">
@@ -170,15 +227,16 @@
     </section>
   </main>
 
-  <footer class="footer" role="contentinfo">
+  <!-- Footer -->
+  <footer class="footer">
     <p class="slogan">“Excelência Jurídico-Contábil a Serviço da Sua Empresa”</p>
     <p>
-      <a href="https://wa.me/5515997007014" target="_blank" class="whatsapp-link" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp: (15) 99700-7014</a> |
-      <a href="mailto:eisleioliveira@yahoo.com.br" rel="noopener"><i class="fas fa-envelope"></i> E-mail: eisleioliveira@yahoo.com.br</a>
+      <a href="https://wa.me/5515997007014" target="_blank" rel="noopener" class="whatsapp-link"><i class="fab fa-whatsapp"></i> WhatsApp: (15) 99700-7014</a> |
+      <a href="mailto:eisleioliveira@yahoo.com.br"><i class="fas fa-envelope"></i> E-mail: eisleioliveira@yahoo.com.br</a>
     </p>
     <p class="social-media">
       <a href="https://web.facebook.com/eislei.dominguesdeoliveira/?locale=pt_BR" target="_blank" rel="noopener">Facebook</a> |
-      <a href="https://www.instagram.com/eisleioliveira" target="_blank" rel="noopener">Instagram</a> |
+      <a href="https://www.instagram.com/eisleioliveira" target="_blank" rel="noopener">@eisleioliveira</a> |
       <a href="https://www.linkedin.com/in/eislei-d-oliveira-06994025" target="_blank" rel="noopener">LinkedIn</a>
     </p>
     <p>EOD Advocacia Empresarial © 2024</p>
@@ -187,40 +245,41 @@
   <!-- emailjs lib (se usar) -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
-  <!-- Script: toggle menu (insira também no script.js se preferir) -->
+  <!-- pequeno script para o botão toggle do menu -->
   <script>
-    (function(){
-      const menu = document.querySelector('.menu');
+    (function () {
       const toggle = document.getElementById('menuToggle');
-      const menuList = document.getElementById('site-menu');
+      const menu = document.getElementById('site-menu');
 
-      if(!toggle || !menu) return;
+      if (!toggle || !menu) return;
 
-      toggle.addEventListener('click', function(e){
+      toggle.addEventListener('click', function () {
         const expanded = this.getAttribute('aria-expanded') === 'true';
         this.setAttribute('aria-expanded', String(!expanded));
-        menu.classList.toggle('open');
+        if (expanded) {
+          menu.hidden = true;
+        } else {
+          menu.hidden = false;
+        }
       });
 
-      // Fecha menu ao clicar em link (mobile)
-      menuList.querySelectorAll('a').forEach(a => {
-        a.addEventListener('click', () => {
-          menu.classList.remove('open');
-          toggle.setAttribute('aria-expanded','false');
-        });
+      // fecha o menu se clicar em um link (útil em mobile)
+      menu.addEventListener('click', (e) => {
+        if (e.target.tagName === 'A') {
+          menu.hidden = true;
+          toggle.setAttribute('aria-expanded', 'false');
+        }
       });
 
-      // Fechar ao clicar fora (mobile)
-      document.addEventListener('click', (ev) => {
-        if (!menu.contains(ev.target) && menu.classList.contains('open')) {
-          menu.classList.remove('open');
-          toggle.setAttribute('aria-expanded','false');
+      // acessibilidade: ESC fecha o menu
+      document.addEventListener('keydown', function (ev) {
+        if (ev.key === 'Escape') {
+          menu.hidden = true;
+          toggle.setAttribute('aria-expanded', 'false');
         }
       });
     })();
   </script>
 
-  <!-- seu script.js (se houver) -->
-  <script src="script.js"></script>
 </body>
 </html>

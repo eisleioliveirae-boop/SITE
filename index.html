@@ -13,7 +13,7 @@
   <!-- Open Graph (para LinkedIn, WhatsApp, Facebook) -->
   <meta property="og:title" content="EOD Advocacia Empresarial | Excelência em Direito Empresarial">
   <meta property="og:description" content="Escritório jurídico com atuação nacional, especializado em Direito Empresarial, Tributário, Trabalhista e Cível, com foco na segurança jurídica, conformidade e governança corporativa.">
-  <meta property="og:image" content="https://eisleioliveirae-boop.github.io/SITE/banner.png">
+  <meta property="og:image" content="https://eisleioliveirae-boop.github.io/SITE/logo.png">
   <meta property="og:url" content="https://eisleioliveirae-boop.github.io/SITE/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
@@ -24,14 +24,14 @@
   <!-- Ícones -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 
-  <!-- SEO técnico (Google Structured Data) -->
+  <!-- SEO técnico (Google Structured Data) - substitua as URLs se quiser apontar para o seu domínio -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LegalService",
     "name": "EOD Advocacia Empresarial",
     "description": "Escritório jurídico com atuação nacional, especializado em Direito Empresarial, Tributário, Trabalhista (empregador) e Cível, com sede em Sorocaba (SP).",
-    "image": "https://eisleioliveirae-boop.github.io/SITE/banner.png",
+    "image": "https://eisleioliveirae-boop.github.io/SITE/logo.png",
     "url": "https://eisleioliveirae-boop.github.io/SITE/",
     "address": {
       "@type": "PostalAddress",
@@ -51,14 +51,15 @@
 <body>
   <header class="header">
     <div class="top-bar container">
-      <!-- Logotipo oculto (mantido para SEO e acessibilidade) -->
+      <!-- H1 oculto visualmente, mantido para indexação -->
       <h1 class="sr-only">EOD Advocacia Empresarial - Direito Empresarial, Tributário, Trabalhista e Cível</h1>
+
+      <!-- Logotipo (se tiver logo.png no repo, será exibido; caso contrário fica oculto via CSS) -->
+      <img src="logo.png" alt="EOD Advocacia Empresarial" class="logo-img" />
 
       <!-- Menu -->
       <nav class="menu" aria-label="Menu de navegação">
-        <button id="menuToggle" class="menu-toggle" aria-expanded="false" aria-controls="site-menu" aria-label="Abrir menu">
-          ⋮
-        </button>
+        <button id="menuToggle" class="menu-toggle" aria-expanded="false" aria-controls="site-menu" aria-label="Abrir menu">⋮</button>
         <ul id="site-menu" class="menu-list">
           <li><a href="#quem-somos">QUEM SOMOS</a></li>
           <li><a href="#fundadora">FUNDADORA</a></li>
@@ -76,10 +77,10 @@
     <!-- ====== QUEM SOMOS ====== -->
     <section id="quem-somos" class="section-quem-somos">
       <h2>Quem Somos</h2>
-      <p>A <strong>EOD Advocacia Empresarial</strong> é um escritório jurídico sediado em Sorocaba (SP), com atuação nacional e especialização em Direito Empresarial, Tributário, Trabalhista (empregador) e Cível. Com visão interdisciplinar e abordagem estratégica, o escritório oferece suporte jurídico voltado à conformidade normativa, à governança corporativa e à solidez institucional das empresas.</p>
-      <p>A atuação é pautada na assessoria preventiva e personalizada, direcionada à mitigação de riscos e ao fortalecimento das estruturas empresariais. O escritório atua na estruturação societária e contratual, no planejamento tributário, na elaboração de políticas internas e na implementação de programas de compliance corporativo que asseguram integridade e estabilidade às operações.</p>
-      <p>Com base em excelência técnica, rigor ético e compromisso institucional, a EOD desenvolve uma atuação consultiva e contenciosa voltada à proteção jurídica e à eficiência administrativa de seus clientes, assegurando soluções alinhadas às boas práticas empresariais e regulatórias.</p>
-      <p>A EOD Advocacia Empresarial dedica-se à construção de relacionamentos duradouros com seus clientes, pautados na confiança, confidencialidade e transparência, contribuindo para o desenvolvimento sustentável, a segurança patrimonial e a continuidade dos negócios.</p>
+      <p>A <strong>EOD Advocacia Empresarial</strong> é um escritório jurídico sediado em Sorocaba (SP), com atuação nacional e especialização em Direito Empresarial, Tributário, Trabalhista (empregador) e Cível. Com visão interdisciplinar e abordagem estratégica, oferecemos suporte técnico-jurídico orientado à conformidade normativa e ao fortalecimento institucional das empresas.</p>
+      <p>A atuação é pautada na assessoria preventiva e personalizada, direcionada à mitigação de riscos, à estruturação societária e contratual, ao planejamento fiscal (com observância das normas aplicáveis) e à implementação de programas de compliance que promovem integridade e estabilidade às operações empresariais.</p>
+      <p>Fundamentada em excelência técnica, rigor ético e compromisso institucional, a EOD presta consultoria contínua, elabora pareceres especializados, conduz due diligence e atua na esfera contenciosa com foco em soluções eficazes para as demandas empresariais.</p>
+      <p>O escritório busca estabelecer relações duradouras com clientes, pautadas em confidencialidade, transparência e resultados, contribuindo para a proteção do patrimônio e a continuidade dos negócios.</p>
     </section>
 
     <!-- ====== FUNDADORA ====== -->
@@ -88,9 +89,9 @@
       <div class="fundadora-info">
         <img src="fundadora.jpg" alt="Foto da fundadora Eislei Domingues de Oliveira" class="fundadora-foto">
         <div class="fundadora-texto">
-          <p><strong>Eislei Domingues de Oliveira</strong> é advogada formada pela Faculdade de Direito de Sorocaba e contadora pela ESAMC, com mais de 18 anos de atuação profissional nas áreas de Direito Empresarial, Tributário, Trabalhista e Cível.</p>
-          <p>Especialista lato sensu em Direito Empresarial pelo Mackenzie, pós-graduada em Direito do Trabalho pela Escola Paulista de Direito e detentora de MBA Executivo em Gestão de Pessoas pela ESAMC.</p>
-          <p>É integrante das comissões de Direito Empresarial e de Direito do Trabalho da Ordem dos Advogados do Brasil – 24ª subseção de Sorocaba, com ênfase em assessoria jurídica empresarial, governança e gestão de riscos.</p>
+          <p><strong>Eislei Domingues de Oliveira</strong> é advogada (Faculdade de Direito de Sorocaba) e contadora (ESAMC), com experiência consolidada em assessoria jurídica empresarial.</p>
+          <p>Formação complementar: especialização lato sensu em Direito Empresarial (Mackenzie), pós-graduação em Direito do Trabalho (Escola Paulista de Direito) e MBA Executivo em Gestão de Pessoas (ESAMC).</p>
+          <p>Participa das comissões de Direito Empresarial e Direito do Trabalho da OAB – 24ª subseção (Sorocaba) e atua com ênfase em governança, gestão de riscos e atendimento empresarial.</p>
         </div>
       </div>
     </section>
@@ -101,19 +102,19 @@
       <div class="atuacao-area">
         <h3>Direito Empresarial</h3>
         <ul>
-          <li>Constituição e organização societária de empresas;</li>
+          <li>Constituição e organização societária;</li>
           <li>Elaboração e revisão de contratos empresariais;</li>
-          <li>Consultoria em governança corporativa e sucessão empresarial;</li>
-          <li>Assessoria em reestruturações e dissoluções societárias;</li>
-          <li>Atuação em processos de recuperação judicial e falência.</li>
+          <li>Governança corporativa e sucessão empresarial;</li>
+          <li>Reestruturações e conformidade societária;</li>
+          <li>Recuperação judicial e falência.</li>
         </ul>
       </div>
 
       <div class="atuacao-area">
         <h3>Direito Tributário</h3>
         <ul>
-          <li>Planejamento tributário e gestão fiscal;</li>
-          <li>Defesa administrativa e judicial em autos de infração;</li>
+          <li>Planejamento tributário e revisão fiscal;</li>
+          <li>Defesa em autos de infração e execuções fiscais;</li>
           <li>Consultoria sobre tributos federais, estaduais e municipais;</li>
           <li>Recuperação de créditos tributários.</li>
         </ul>
@@ -123,9 +124,9 @@
         <h3>Direito Trabalhista</h3>
         <ul>
           <li>Assessoria preventiva para empregadores;</li>
-          <li>Elaboração de políticas e manuais internos;</li>
+          <li>Políticas internas e auditoria trabalhista;</li>
           <li>Defesa em reclamatórias trabalhistas;</li>
-          <li>Gestão de passivos e auditoria de práticas laborais.</li>
+          <li>Gestão de passivos trabalhistas.</li>
         </ul>
       </div>
 

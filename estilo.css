@@ -1,4 +1,4 @@
-/* estilo.css - EOD Advocacia Empresarial (versão consolidada recomendada) */
+/* estilo.css - EOD Advocacia Empresarial (versão ajustada para menu/negrito) */
 
 /* fonts */
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&family=Merriweather:wght@400;700&family=Epilogue:wght@400;700&display=swap');
@@ -18,9 +18,8 @@ body {
   font-family: 'Lora','Merriweather', Georgia, serif;
   background: var(--fundo);
   color: var(--texto);
-  line-height: 1.7;
+  line-height: 1.65;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 /* container utilitário */
@@ -30,7 +29,7 @@ body {
 .header { background: var(--azul); position: sticky; top:0; z-index:1300; color:#fff; }
 .top-bar { display:flex; align-items:center; justify-content:space-between; padding:14px 20px; gap:12px; position:relative; }
 
-/* logo */
+/* logo: quando tiver logo.png exibirá; se não, aparece texto (logo-text) */
 .logo-img { max-height:80px; display:block; margin-right:12px; }
 .logo-text { font-family:'Epilogue', Arial, sans-serif; font-weight:700; text-transform:uppercase; color:#fff; font-size:1.15rem; }
 
@@ -38,7 +37,8 @@ body {
 .menu { position: relative; margin-left:auto; }
 .menu-toggle { display:none; background:transparent; border:none; color:#fff; font-size:1.6rem; cursor:pointer; padding:6px; }
 .menu-list { display:flex; gap:18px; list-style:none; margin:0; padding:0; align-items:center; }
-.menu-list a { color:#fff; text-decoration:none; font-weight:700; font-size:1rem; font-family:'Epilogue',Arial,sans-serif; padding:6px 8px; text-transform:uppercase; white-space:nowrap; }
+.menu-list li { margin:0; padding:0; }
+.menu-list a { color:#fff; text-decoration:none; font-weight:700; font-size:1rem; font-family:'Epilogue',Arial,sans-serif; padding:6px 8px; text-transform:uppercase; white-space:nowrap; display:inline-block; }
 
 /* banner */
 .main-banner { width:100%; height:360px; background-image: url('banner.png'); background-size: cover; background-position:center; }
@@ -47,7 +47,7 @@ body {
 .content { padding:28px 0; color:var(--texto); }
 
 /* headings */
-h2 { font-family:'Merriweather','Lora',serif; text-align:center; color:var(--azul); font-size:2.2rem; margin:0 0 18px 0; line-height:1.15; }
+h2 { font-family:'Merriweather','Lora',serif; text-align:center; color:var(--azul); font-size:2rem; margin:0 0 18px 0; line-height:1.15; }
 
 /* paragraphs */
 p { font-size:1rem; margin:0 0 1rem 0; text-align:justify; }
@@ -77,23 +77,8 @@ p { font-size:1rem; margin:0 0 1rem 0; text-align:justify; }
 .section-contato button { background:var(--dourado); color:var(--azul); padding:12px; border-radius:6px; border:none; font-weight:700; cursor:pointer; font-size:1.05rem; }
 
 /* footer */
-.footer { background:var(--azul); color:#fff; text-align:center; padding:20px 16px; margin-top:24px; display:flex; flex-direction:column; align-items:center; justify-content:center; }
+.footer { background:var(--azul); color:#fff; text-align:center; padding:20px 16px; margin-top:24px; }
 .footer .slogan { color:var(--dourado); margin-bottom:8px; font-style:italic; }
-
-/* footer links color white (conforme solicitado) */
-.footer a { color: #fff !important; text-decoration:none !important; }
-
-/* cta principal */
-.cta-principal {
-  display:inline-block;
-  background:var(--dourado);
-  color:var(--azul);
-  padding:12px 18px;
-  border-radius:8px;
-  font-weight:700;
-  text-decoration:none;
-  margin-top:14px;
-}
 
 /* accessibility focus */
 a:focus, button:focus { outline:3px solid rgba(203,161,123,0.18); outline-offset:3px; }
@@ -108,19 +93,23 @@ a:focus, button:focus { outline:3px solid rgba(203,161,123,0.18); outline-offset
     display:flex; flex-direction:column; gap:10px; position:absolute; top:calc(100% + 8px); right:12px; min-width:170px; max-width:86vw;
     background:var(--azul); padding:10px 12px; border-radius:8px; box-shadow:0 10px 30px rgba(0,0,0,0.25); z-index:1315;
   }
-  .menu.open .menu-list a { color:var(--dourado); padding:8px 10px; display:block; text-align:left; }
+  .menu.open .menu-list a { color:var(--dourado); padding:8px 12px; display:block; text-align:left; }
+
+  /* corrige desalinhamento dos títulos do menu mobile: garante padding uniforme */
+  .menu.open .menu-list li { padding:0; margin:0; }
+
   /* empilha fundadora no mobile */
   .fundadora-info { flex-direction:column; align-items:center; gap:12px; }
   .fundadora-foto { width:160px; max-width:60%; min-width:120px; align-self:center; }
   .fundadora-texto { width:100%; text-align:left; }
-  h2 { font-size:1.6rem; }
-  p { font-size:0.98rem; line-height:1.55; text-align:left; }
+  h2 { font-size:1.4rem; }
+  p { font-size:0.98rem; line-height:1.5; text-align:left; }
 }
 
 /* tablets/medium */
 @media (min-width: 769px) and (max-width: 992px) {
   .fundadora-foto { flex:0 0 220px; max-width:32%; }
-  h2 { font-size:1.8rem; }
+  h2 { font-size:1.6rem; }
 }
 
 /* desktop */
@@ -137,7 +126,7 @@ a:focus, button:focus { outline:3px solid rgba(203,161,123,0.18); outline-offset
 
 /* ---------- Tipografia / base desktop (garante legibilidade) ---------- */
 @media (min-width: 992px) {
-  html { font-size:19px; } /* base maior no desktop */
+  html { font-size:19px; } /* base maior */
   p, li, .fundadora-texto p, .section-atuacao ul li, .artigo-item p { font-size:1.05rem; line-height:1.7; }
   h2 { font-size:2.2rem; }
   .menu-list a { font-size:1.05rem; padding:8px 12px; }
@@ -165,7 +154,10 @@ a:focus, button:focus { outline:3px solid rgba(203,161,123,0.18); outline-offset
   .menu-list a { white-space:nowrap; }
 }
 
-/* 1) ocultar o texto redundante do header (mantém imagem do logo, porém se logo não existir logo-text ficará oculto) */
+/* centralizar rodapé sempre */
+footer, .footer { text-align:center; display:flex; flex-direction:column; align-items:center; justify-content:center; }
+
+/* 1) ocultar o texto redundante do header (mantém imagem do logo para SEO) */
 .logo-text {
   display: none !important;
 }
@@ -178,74 +170,23 @@ a:focus, button:focus { outline:3px solid rgba(203,161,123,0.18); outline-offset
   margin: 0;
 }
 
-/* 3) estilo adicional p/ a lista de artigos: garante que todos apareçam em sequência */
+/* 3) forçar cor dourada nos links do rodapé (evita azul) */
+.footer a {
+  color: #fff !important; /* manter branco como você pediu */
+  text-decoration: none !important;
+}
+
+/* 4) estilo adicional p/ a lista de artigos: garante que todos apareçam em sequência */
 .section-artigos .artigo-item { display:block; }
 
-/* 4) proteção: header sobre conteúdo */
+/* 5) pequena proteção: se por algum motivo o banner sobrepor o conteúdo */
 .main-banner { z-index:0; }
 .header { z-index:1300; }
 
-/* ===== fim ajustes ===== */
-/* ----- Correções solicitadas: ocultar logo no topo + botão discreto ----- */
+/* garantia de negrito em strong (quando alguma regra anterior anular) */
+strong, b { font-weight:700; font-family: 'Epilogue', 'Lora', serif; }
 
-/* 1) Ocultar a imagem do logo no topo (permanece no repo para og:image, mas não aparece no site) */
-.header .logo-img {
-  display: none !important;
-  visibility: hidden !important;
-  width: 0 !important;
-  height: 0 !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-}
+/* garante que links do menu no mobile fiquem alinhados (resolve desalinhamento observado) */
+.menu.open .menu-list { right:12px; }
 
-/* 2) Estilo discreto para CTA (substitui o botão chamativo) */
-.cta-subtle {
-  display: inline-block;
-  background: transparent;
-  color: var(--azul);
-  border: 1px solid rgba(203,161,123,0.25); /* borda leve dourada */
-  padding: 8px 12px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 700;
-  font-family: 'Epilogue', Arial, sans-serif;
-  box-shadow: none;
-  transition: background-color .18s ease, color .18s ease, border-color .18s ease;
-}
-
-.cta-subtle:hover,
-.cta-subtle:focus {
-  background: rgba(203,161,123,0.08);
-  border-color: rgba(203,161,123,0.45);
-  color: var(--azul);
-}
-
-/* 3) segurança: remover qualquer estilo antigo do CTA chamativo caso exista */
-.cta-principal { display: none !important; }
-
-/* ----- fim das correções ----- */
-/* ===== ajuste mínimo: alinhamento do menu mobile (apenas isso) ===== */
-@media (max-width: 768px) {
-  .menu.open .menu-list {
-    right: 12px !important;
-    top: calc(100% + 8px) !important;
-    min-width: 170px;
-    max-width: 86vw;
-    padding: 6px 0 !important;
-    text-align: left !important; /* garante que todos os itens fiquem alinhados à esquerda */
-  }
-
-  .menu.open .menu-list li {
-    margin: 0 !important;
-    padding: 0 !important;
-    list-style: none !important;
-  }
-
-  .menu.open .menu-list a {
-    display: block !important;
-    padding: 10px 18px !important; /* espaçamento uniforme */
-    text-indent: 0 !important;
-    letter-spacing: 0.02em;
-  }
-}
+/* fim do CSS */

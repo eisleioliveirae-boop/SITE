@@ -3,47 +3,62 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EOD Advocacia Empresarial</title>
+  <title>EOD Advocacia Empresarial | Direito Empresarial em Sorocaba</title>
 
-  <!-- Meta Open Graph para compartilhamento social (substitua logo.png se mudar) -->
-  <meta property="og:title" content="EOD Advocacia Empresarial — Assessoria Jurídica para Empresas" />
-  <meta property="og:description" content="EOD Advocacia Empresarial — assessoria jurídica e contábil para empresas. Especialidade em Direito Empresarial, Tributário e Trabalhista (empregador)." />
-  <meta property="og:image" content="https://eisleioliveirae-boop.github.io/SITE/logo.png" />
-  <meta property="og:type" content="website" />
+  <!-- SEO -->
+  <meta name="description" content="EOD Advocacia Empresarial é um escritório jurídico com atuação nacional, especializado em Direito Empresarial, Tributário, Trabalhista (empregador) e Cível. Com sede em Sorocaba (SP), oferece assessoria preventiva e personalizada voltada à segurança jurídica, conformidade regulatória e fortalecimento institucional das empresas.">
+  <meta name="keywords" content="advocacia empresarial, advogado empresarial, direito empresarial Sorocaba, escritório de advocacia Sorocaba, direito tributário, advogado trabalhista Sorocaba, compliance empresarial, consultoria jurídica para empresas, advocacia preventiva, governança corporativa, direito cível empresarial">
+  <meta name="author" content="EOD Advocacia Empresarial">
 
-  <!-- JSON-LD (Organization) - substitua a URL se seu site tiver outro endereço -->
+  <!-- Open Graph (para LinkedIn, WhatsApp, Facebook) -->
+  <meta property="og:title" content="EOD Advocacia Empresarial | Excelência em Direito Empresarial">
+  <meta property="og:description" content="Escritório jurídico com atuação nacional, especializado em Direito Empresarial, Tributário, Trabalhista e Cível, com foco na segurança jurídica, conformidade e governança corporativa.">
+  <meta property="og:image" content="https://eisleioliveirae-boop.github.io/SITE/banner.png">
+  <meta property="og:url" content="https://eisleioliveirae-boop.github.io/SITE/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="estilo.css">
+
+  <!-- Ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+  <!-- SEO técnico (Google Structured Data) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LegalService",
     "name": "EOD Advocacia Empresarial",
+    "description": "Escritório jurídico com atuação nacional, especializado em Direito Empresarial, Tributário, Trabalhista (empregador) e Cível, com sede em Sorocaba (SP).",
+    "image": "https://eisleioliveirae-boop.github.io/SITE/banner.png",
     "url": "https://eisleioliveirae-boop.github.io/SITE/",
-    "logo": "https://eisleioliveirae-boop.github.io/SITE/logo.png",
-    "description": "Assessoria jurídico-contábil para empresas. Especialidade em Direito Empresarial, Tributário, Trabalhista (empregador) e Contencioso Cível.",
-    "sameAs": [
-      "https://www.instagram.com/eisleioliveira",
-      "https://www.linkedin.com/in/eislei-d-oliveira-06994025",
-      "https://web.facebook.com/eislei.dominguesdeoliveira"
-    ]
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Sorocaba",
+      "addressRegion": "SP",
+      "addressCountry": "BR"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Eislei Domingues de Oliveira"
+    },
+    "areaServed": "Brasil"
   }
   </script>
-
-  <link rel="stylesheet" href="estilo.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
-<body>
-  <!-- H1 presente para indexação, oculto visualmente -->
-  <h1 class="sr-only">EOD Advocacia Empresarial — Eislei Domingues de Oliveira</h1>
 
+<body>
   <header class="header">
     <div class="top-bar container">
-      <!-- se quiser usar logo visível, faça upload de logo.png e descomente a img abaixo
-           e comente .logo-text (o CSS já oculta .logo-text) -->
-      <img src="logo.png" alt="EOD Advocacia Empresarial" class="logo-img" onerror="this.style.display='none'">
-      <div class="logo-text">EOD ADVOCACIA EMPRESARIAL</div>
+      <!-- Logotipo oculto (mantido para SEO) -->
+      <h1 class="sr-only">EOD Advocacia Empresarial - Direito Empresarial, Tributário, Trabalhista e Cível</h1>
 
+      <!-- Menu -->
       <nav class="menu" aria-label="Menu de navegação">
-        <button id="menuToggle" class="menu-toggle" aria-expanded="false" aria-controls="site-menu" aria-label="Abrir menu">⋮</button>
+        <button id="menuToggle" class="menu-toggle" aria-expanded="false" aria-controls="site-menu" aria-label="Abrir menu">
+          ⋮
+        </button>
         <ul id="site-menu" class="menu-list">
           <li><a href="#quem-somos">QUEM SOMOS</a></li>
           <li><a href="#fundadora">FUNDADORA</a></li>
@@ -55,122 +70,111 @@
     </div>
   </header>
 
-  <div class="main-banner" role="img" aria-label="Banner EOD Advocacia Empresarial"></div>
+  <div class="main-banner"></div>
 
   <main class="content container">
-    <!-- Quem Somos -->
+    <!-- ====== QUEM SOMOS ====== -->
     <section id="quem-somos" class="section-quem-somos">
       <h2>Quem Somos</h2>
-  <p>A EOD Advocacia Empresarial é um escritório jurídico sediado em Sorocaba (SP), com atuação nacional e especialização nas áreas de Direito Empresarial, Tributário, Trabalhista (empregador) e Cível. Com visão interdisciplinar e sólida base técnica, o escritório oferece suporte jurídico voltado à conformidade normativa, segurança fiscal e estabilidade das operações empresariais.</p>
+      <p>A EOD Advocacia Empresarial é um escritório jurídico sediado em Sorocaba (SP), com atuação nacional e especialização em Direito Empresarial, Tributário, Trabalhista (empregador) e Cível. Com visão interdisciplinar e abordagem estratégica, o escritório oferece suporte jurídico voltado à conformidade normativa, à governança corporativa e à solidez institucional das empresas.</p>
+      <p>A atuação é pautada na assessoria preventiva e personalizada, direcionada à mitigação de riscos e ao fortalecimento das estruturas empresariais. O escritório atua na estruturação societária e contratual, no planejamento tributário, na elaboração de políticas internas e na implementação de programas de compliance corporativo que asseguram integridade e estabilidade às operações.</p>
+      <p>Com base em excelência técnica, rigor ético e compromisso institucional, a EOD desenvolve uma atuação consultiva e contenciosa voltada à proteção jurídica e à eficiência administrativa de seus clientes, assegurando soluções alinhadas às boas práticas empresariais e regulatórias.</p>
+      <p>A EOD Advocacia Empresarial dedica-se à construção de relacionamentos duradouros com seus clientes, pautados na confiança, confidencialidade e transparência, contribuindo para o desenvolvimento sustentável, a segurança patrimonial e a continuidade dos negócios.</p>
+    </section>
 
-  <p>Atuamos com ênfase na advocacia preventiva e na consultoria jurídica contínua, assessorando empresas na estruturação societária e contratual, no planejamento tributário e na implementação de políticas internas e programas de compliance voltados à integridade corporativa e à boa governança.</p>
-
-  <p>Guiada por princípios éticos e excelência técnica, a EOD Advocacia Empresarial desenvolve uma atuação jurídica comprometida com a proteção patrimonial, a segurança institucional e o fortalecimento sustentável das organizações.</p>
-</section>
-
-    <!-- Fundadora (imagem à ESQUERDA no desktop) -->
+    <!-- ====== FUNDADORA ====== -->
     <section id="fundadora" class="section-fundadora">
       <h2>Fundadora</h2>
       <div class="fundadora-info">
         <img src="fundadora.jpg" alt="Foto da fundadora Eislei Domingues de Oliveira" class="fundadora-foto">
         <div class="fundadora-texto">
-        <strong>Eislei Domingues de Oliveira</strong> é advogada e contadora, com sólida atuação há mais de <strong>18 anos</strong> no setor empresarial. Sua formação multidisciplinar e experiência prática conferem ao escritório uma visão ampla e integrada das demandas corporativas.
-      </p>
-
-      <p>
-        Graduada em <strong>Direito</strong> pela Faculdade de Direito de Sorocaba e em <strong>Ciências Contábeis</strong> pela ESAMC, possui especialização <strong>lato sensu em Direito Empresarial</strong> pela Universidade Presbiteriana Mackenzie e <strong>Pós-graduação em Direito do Trabalho</strong> pela Escola Paulista de Direito. <strong>MBA Executivo em Gestão de Pessoas</strong> pela ESAMC.
-      </p>
-
-      <p>
-        Membro das Comissões de <strong>Direito Empresarial</strong> e <strong>Direito do Trabalho</strong> da <strong>Ordem dos Advogados do Brasil</strong> – 24ª Subseção de Sorocaba.
-      </p>
-
-    </div>
-
+          <p><strong>Eislei Domingues de Oliveira</strong> é advogada formada pela Faculdade de Direito de Sorocaba e contadora pela ESAMC, com mais de 18 anos de experiência nas áreas de Direito Empresarial, Tributário, Trabalhista e Cível.</p>
+          <p>Especialista lato sensu em Direito Empresarial pelo Mackenzie, pós-graduada em Direito do Trabalho pela Escola Paulista de Direito e MBA Executivo em Gestão de Pessoas pela ESAMC.</p>
+          <p>É membro das comissões de Direito Empresarial e de Direito do Trabalho da Ordem dos Advogados do Brasil – 24ª subseção de Sorocaba, e atua com ênfase em assessoria jurídica corporativa, governança e gestão de riscos empresariais.</p>
+        </div>
+      </div>
     </section>
 
-    <!-- Áreas de atuação -->
+    <!-- ====== ÁREAS DE ATUAÇÃO ====== -->
     <section id="areas-de-atuacao" class="section-atuacao">
       <h2>Áreas de Atuação</h2>
-
       <div class="atuacao-area">
         <h3>Direito Empresarial</h3>
         <ul>
-          <li>Constituição e Organização de Empresas</li>
-          <li>Contratos Empresariais</li>
-          <li>Direito Societário</li>
-          <li>Recuperação judicial e extrajudicial</li>
-          <li>Acompanhamento de processos de falência</li>
-          <li>Reestruturação de empresas em crise</li>
-        </ul>
-      </div>
-
-      <div class="atuacao-area">
-        <h3>Direito do Trabalho</h3>
-        <ul>
-          <li>Consultivo e Contencioso</li>
-          <li>Assessoria preventiva para empregadores</li>
-          <li>Elaboração de políticas internas de RH</li>
-          <li>Defesa em reclamatórias trabalhistas</li>
-        </ul>
-      </div>
-
-      <div class="atuacao-area">
-        <h3>Direito Civil</h3>
-        <ul>
-          <li>Cobrança judicial e extrajudicial</li>
-          <li>Responsabilidade civil das empresas</li>
-          <li>Questões contratuais e indenizatórias</li>
+          <li>Constituição e organização societária de empresas;</li>
+          <li>Elaboração e revisão de contratos empresariais;</li>
+          <li>Consultoria em governança corporativa e sucessão empresarial;</li>
+          <li>Assessoria em reestruturações e dissoluções societárias;</li>
+          <li>Atuação em processos de recuperação judicial e falência.</li>
         </ul>
       </div>
 
       <div class="atuacao-area">
         <h3>Direito Tributário</h3>
         <ul>
-          <li>Planejamento tributário</li>
-          <li>Defesa em autos de infração e execuções fiscais</li>
-          <li>Consultoria sobre tributos federais, estaduais e municipais</li>
+          <li>Planejamento tributário e gestão fiscal;</li>
+          <li>Defesa administrativa e judicial em autos de infração;</li>
+          <li>Consultoria sobre tributos federais, estaduais e municipais;</li>
+          <li>Recuperação de créditos tributários.</li>
+        </ul>
+      </div>
+
+      <div class="atuacao-area">
+        <h3>Direito Trabalhista</h3>
+        <ul>
+          <li>Assessoria preventiva para empregadores;</li>
+          <li>Elaboração de políticas e manuais internos;</li>
+          <li>Defesa em reclamatórias trabalhistas;</li>
+          <li>Gestão de passivos e auditoria de práticas laborais.</li>
+        </ul>
+      </div>
+
+      <div class="atuacao-area">
+        <h3>Direito Cível</h3>
+        <ul>
+          <li>Responsabilidade civil e indenizações;</li>
+          <li>Cobranças judiciais e extrajudiciais;</li>
+          <li>Assessoria em contratos civis e comerciais.</li>
         </ul>
       </div>
     </section>
 
-    <!-- Artigos publicados -->
+    <!-- ====== ARTIGOS PUBLICADOS ====== -->
     <section id="artigos-publicados" class="section-artigos">
       <h2>Artigos Publicados</h2>
 
       <div class="artigo-item">
         <h3>Contrato de Trabalho: Conceito e Características</h3>
-        <p>Análise completa sobre o conceito jurídico de contrato de trabalho, seus elementos essenciais e principais características.</p>
+        <p>Análise sobre os elementos essenciais do contrato de trabalho, sua natureza jurídica e reflexos na relação empregatícia.</p>
         <a href="https://www.jusbrasil.com.br/artigos/contrato-de-trabalho-conceito-e-caracteristicas/2602614132" target="_blank" class="btn-artigo">Ler completo</a>
       </div>
 
       <div class="artigo-item">
         <h3>Jornada de Trabalho: Conceito, Tipos, Duração e o que determina a CLT</h3>
-        <p>Entenda o conceito de jornada de trabalho, os diferentes tipos e o que a Consolidação das Leis do Trabalho (CLT) determina sobre a duração.</p>
+        <p>Abordagem prática sobre os tipos de jornada de trabalho e os limites legais previstos na CLT.</p>
         <a href="https://www.jusbrasil.com.br/artigos/jornada-de-trabalho-conceito-tipos-duracao-e-o-que-determina-a-clt/2626309497" target="_blank" class="btn-artigo">Ler completo</a>
       </div>
 
       <div class="artigo-item">
         <h3>Salário: Conceitos, Tipos e o que determina a Legislação</h3>
-        <p>Um guia completo sobre os conceitos e tipos de salário, além de uma análise sobre o que a legislação brasileira diz a respeito.</p>
+        <p>Um guia sobre os principais tipos de salário e as obrigações legais do empregador.</p>
         <a href="https://www.jusbrasil.com.br/artigos/salario-conceitos-tipos-e-o-que-determinada-a-legislacao/2796771501" target="_blank" class="btn-artigo">Ler completo</a>
       </div>
 
       <div class="artigo-item">
-        <h3>Ação Regressiva do INSS contra Empresas: Origem, Fundamento Legal e Evolução</h3>
-        <p>Estudo sobre a ação regressiva do INSS, sua origem, fundamentos legais e evolução no cenário jurídico empresarial.</p>
+        <h3>Ação Regressiva do INSS contra Empresas</h3>
+        <p>Análise sobre o fundamento legal e a evolução das ações regressivas propostas pelo INSS contra empregadores.</p>
         <a href="https://www.jusbrasil.com.br/artigos/acao-regressiva-do-inss-contra-empresas-origem-fundamento-legal-e-evolucao/4778895445" target="_blank" class="btn-artigo">Ler completo</a>
       </div>
 
       <div class="artigo-item">
         <h3>A Pejotização nas Relações de Trabalho: Aspectos Jurídicos e Entendimentos Atuais</h3>
-        <p>Uma análise aprofundada sobre a pejotização, seus aspectos jurídicos e os entendimentos mais recentes sobre o tema.</p>
+        <p>Análise dos principais aspectos jurídicos e entendimentos recentes sobre a pejotização nas relações laborais.</p>
         <a href="https://www.jusbrasil.com.br/artigos/a-pejotizacao-nas-relacoes-de-trabalho-aspectos-juridicos-e-entendimentos-atuais/4856165935" target="_blank" class="btn-artigo">Ler completo</a>
       </div>
-
     </section>
 
-    <!-- Contato / formulário -->
+    <!-- ====== CONTATO ====== -->
     <section id="contato" class="section-contato">
       <h2>Fale Conosco</h2>
       <form id="contact-form">
@@ -197,7 +201,7 @@
   </main>
 
   <footer class="footer">
-    <p class="slogan">“Excelência Jurídico-Contábil a Serviço da Sua Empresa”</p>
+    <p class="slogan">“Excelência Jurídica a Serviço da Sua Empresa”</p>
     <p>
       <a href="https://wa.me/5515997007014" target="_blank" class="whatsapp-link"><i class="fab fa-whatsapp"></i> WhatsApp: (15) 99700-7014</a> |
       <a href="mailto:eisleioliveira@yahoo.com.br"><i class="fas fa-envelope"></i> E-mail: eisleioliveira@yahoo.com.br</a>
@@ -210,6 +214,7 @@
     <p>EOD Advocacia Empresarial © 2024</p>
   </footer>
 
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script src="script.js"></script>
 </body>

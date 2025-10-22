@@ -225,3 +225,27 @@ a:focus, button:focus { outline:3px solid rgba(203,161,123,0.18); outline-offset
 .cta-principal { display: none !important; }
 
 /* ----- fim das correções ----- */
+/* ===== ajuste mínimo: alinhamento do menu mobile (apenas isso) ===== */
+@media (max-width: 768px) {
+  .menu.open .menu-list {
+    right: 12px !important;
+    top: calc(100% + 8px) !important;
+    min-width: 170px;
+    max-width: 86vw;
+    padding: 6px 0 !important;
+    text-align: left !important; /* garante que todos os itens fiquem alinhados à esquerda */
+  }
+
+  .menu.open .menu-list li {
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+  }
+
+  .menu.open .menu-list a {
+    display: block !important;
+    padding: 10px 18px !important; /* espaçamento uniforme */
+    text-indent: 0 !important;
+    letter-spacing: 0.02em;
+  }
+}

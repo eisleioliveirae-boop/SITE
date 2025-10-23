@@ -391,3 +391,56 @@ body, html {
 footer, .section-contato {
   padding-bottom: 60px !important;
 }
+/* ====== CORREÇÕES RÁPIDAS: banner recortado / menu cortado / contato ====== */
+
+/* evita header excessivamente alto que cria espaço superior no banner */
+.top-bar {
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+}
+
+/* Banner: evita recorte do logotipo central e melhora responsividade.
+   Usamos background-size: contain para que a imagem inteira seja exibida
+   e ajustamos alturas por breakpoint para garantir que não fique cortada. */
+.main-banner {
+  background-repeat: no-repeat !important;
+  background-position: center 45% !important;
+  background-size: contain !important;
+  padding-top: 6px;        /* evita que header sobreponha visualmente */
+  box-sizing: border-box;
+}
+
+/* alturas do banner por tamanho de tela (aumenta para caber o logotipo) */
+@media (max-width: 991px) {
+  .main-banner { height: 360px !important; }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .main-banner { height: 520px !important; background-position: center 48% !important; }
+}
+@media (min-width: 1200px) {
+  .main-banner { height: 640px !important; background-position: center 50% !important; }
+}
+
+/* garante que o conteúdo abaixo do banner não suba e crie recorte visual */
+.content { margin-top: 0 !important; }
+
+/* evita que o menu principal perca o último item em telas menores:
+   se não couber, permitir scroll horizontal suave sem quebrar layout */
+.menu .menu-list {
+  flex-wrap: nowrap !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 6px; /* pequeno espaço para o scroll */
+}
+
+/* esconder barra de rolagem visual em alguns navegadores (estética) */
+.menu .menu-list::-webkit-scrollbar { height: 6px; }
+.menu .menu-list::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.12); border-radius: 6px; }
+
+/* aumento do padding inferior na seção contato para evitar corte em telas muito estreitas */
+.section-contato { padding-bottom: 48px !important; }
+@media (max-width: 480px) {
+  .section-contato { padding-bottom: 64px !important; }
+}
+
+/* Segurança: não alterar cores/formatacao existentes - apenas alinhamento/space */

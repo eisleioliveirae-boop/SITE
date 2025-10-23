@@ -1,4 +1,4 @@
-/* estilo.css - versão ajustada (corrige negritos e menu mobile alinhamento) */
+/* estilo.css - EOD Advocacia Empresarial (versão consolidada e corrigida) */
 
 /* fonts */
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&family=Merriweather:wght@400;700&family=Epilogue:wght@400;700&display=swap');
@@ -29,14 +29,21 @@ body {
 .header { background: var(--azul); position: sticky; top:0; z-index:1300; color:#fff; }
 .top-bar { display:flex; align-items:center; justify-content:space-between; padding:14px 20px; gap:12px; position:relative; }
 
-/* logo */
-.logo-img { max-height:80px; display:block; margin-right:12px; }
-.logo-text { font-family:'Epilogue', Arial, sans-serif; font-weight:700; text-transform:uppercase; color:#fff; font-size:1.15rem; }
+/* logo (oculto visualmente, mantido para indexação/og:image) */
+.logo-img {
+  display: none !important;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+.logo-text { font-family:'Epilogue', Arial, sans-serif; font-weight:700; text-transform:uppercase; color:#fff; font-size:1.15rem; display:none !important; }
 
 /* NAV */
 .menu { position: relative; margin-left:auto; }
 .menu-toggle { display:none; background:transparent; border:none; color:#fff; font-size:1.6rem; cursor:pointer; padding:6px; }
 .menu-list { display:flex; gap:18px; list-style:none; margin:0; padding:0; align-items:center; }
+.menu-list li { margin:0; padding:0; list-style:none; }
 .menu-list a { color:#fff; text-decoration:none; font-weight:700; font-size:1rem; font-family:'Epilogue',Arial,sans-serif; padding:6px 8px; text-transform:uppercase; white-space:nowrap; }
 
 /* banner */
@@ -79,6 +86,7 @@ strong { font-weight:700; }
 /* footer */
 .footer { background:var(--azul); color:#fff; text-align:center; padding:20px 16px; margin-top:24px; }
 .footer .slogan { color:var(--dourado); margin-bottom:8px; font-style:italic; }
+.footer a { color:#fff !important; text-decoration:none !important; }
 
 /* accessibility focus */
 a:focus, button:focus { outline:3px solid rgba(203,161,123,0.18); outline-offset:3px; }
@@ -89,12 +97,57 @@ a:focus, button:focus { outline:3px solid rgba(203,161,123,0.18); outline-offset
   .logo-text { font-size:1rem; }
   .menu-toggle { display:inline-block; position:absolute; right:16px; top:50%; transform:translateY(-50%); z-index:1320; }
   .menu-list { display:none; }
+
+  /* Painel do menu (abrido com class .open) */
   .menu.open .menu-list {
-    display:flex; flex-direction:column; gap:10px; position:absolute; top:calc(100% + 8px); right:12px; left:auto; min-width:170px; max-width:86vw;
-    background:var(--azul); padding:10px 12px; border-radius:8px; box-shadow:0 10px 30px rgba(0,0,0,0.25); z-index:1315;
-    text-align:left;
+    display:flex;
+    flex-direction:column;
+    gap:0;
+    position:absolute;
+    top:calc(100% + 8px);
+    right:12px;
+    left:auto;
+    min-width:220px;               /* largura mínima para evitar quebras */
+    max-width:calc(100vw - 24px);
+    background:var(--azul);
+    padding:6px 0;
+    border-radius:8px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.25);
+    z-index:1315;
+    margin:0;
+    list-style:none;
   }
-  .menu.open .menu-list a { color:var(--dourado); padding:8px 12px; display:block; text-align:left; }
+
+  /* cada li ocupa toda a largura do painel e sem recuos */
+  .menu.open .menu-list li {
+    margin:0;
+    padding:0;
+    display:block;
+    width:100%;
+    list-style:none;
+  }
+
+  /* links: padding uniforme, sem hanging-indent; quebra permitida somente em telas muito estreitas */
+  .menu.open .menu-list a {
+    display:block !important;
+    padding:12px 20px !important;
+    color:var(--dourado) !important;
+    text-align:left !important;
+    box-sizing:border-box !important;
+    white-space:nowrap !important;     /* evita quebra em grande parte dos dispositivos */
+    text-indent:0 !important;
+    -webkit-margin-start:0 !important;
+    margin:0 !important;
+    letter-spacing:0.02em;
+    line-height:1.35;
+  }
+
+  /* fallback para telas muito estreitas: permite quebra e reduz padding */
+  @media (max-width: 360px) {
+    .menu.open .menu-list { min-width:170px; max-width:calc(100vw - 12px); }
+    .menu.open .menu-list a { white-space:normal !important; padding-left:14px !important; padding-right:14px !important; }
+  }
+
   /* empilha fundadora no mobile */
   .fundadora-info { flex-direction:column; align-items:center; gap:12px; }
   .fundadora-foto { width:160px; max-width:60%; min-width:120px; align-self:center; }
@@ -121,12 +174,16 @@ a:focus, button:focus { outline:3px solid rgba(203,161,123,0.18); outline-offset
 /* final protections / overrides */
 .header *, .top-bar * { float:none !important; clear:none !important; }
 
-/* ---------- Tipografia / base desktop (garante legibilidade) ---------- */
+/* desktop menu ao lado direito */
 @media (min-width: 992px) {
-  html { font-size:19px; } /* base maior */
+  html { font-size:19px; }
+  .top-bar { justify-content:flex-start; }
+  .menu { margin-left:auto; order:3; }
+  .menu-list { gap:32px; flex-wrap:nowrap; white-space:nowrap; }
+  .menu-list li { display:inline-block; margin-left:18px; }
+  .menu-list a { white-space:nowrap; font-size:1.05rem; padding:8px 12px; }
   p, li, .fundadora-texto p, .section-atuacao ul li, .artigo-item p { font-size:1.05rem; line-height:1.7; }
   h2 { font-size:2.2rem; }
-  .menu-list a { font-size:1.05rem; padding:8px 12px; }
 }
 
 /* sr-only (ocultar visualmente, manter indexado) */
@@ -142,183 +199,11 @@ a:focus, button:focus { outline:3px solid rgba(203,161,123,0.18); outline-offset
   border:0 !important;
 }
 
-/* Forçar menu no desktop à direita e impedir quebra de linha */
-@media (min-width: 992px) {
-  .top-bar { justify-content:flex-start; }
-  .menu { margin-left:auto; order:3; }
-  .menu-list { gap:32px; flex-wrap:nowrap; white-space:nowrap; }
-  .menu-list li { display:inline-block; margin-left:18px; }
-  .menu-list a { white-space:nowrap; }
-}
-
-/* centralizar rodapé sempre */
-footer, .footer { text-align:center; display:flex; flex-direction:column; align-items:center; justify-content:center; }
-
-/* ocultar o texto redundante do header (mantém imagem do logo) */
-.logo-text {
-  display: none !important;
-}
-
-/* garantir que logo.png apareça com tamanho adequado no topo (quando existir) */
-.logo-img {
-  display: block;
-  max-height: 84px;
-  width: auto;
-  margin: 0;
-}
-
-/* forçar cor dourada nos links do rodapé (evita azul) */
-.footer a {
-  color: #fff !important;
-  text-decoration: none !important;
-}
-
-/* estilo adicional p/ a lista de artigos: garante que todos apareçam em sequência */
-.section-artigos .artigo-item { display:block; }
-
 /* proteção: se por algum motivo o banner sobrepor o conteúdo */
 .main-banner { z-index:0; }
 .header { z-index:1300; }
 
-/* ===== fim ajustes ===== */
-/* Mantém logo.png disponível para OG/meta, mas esconde visualmente no site */
-.logo-img {
-  display: none !important;
-  width: 0;
-  height: 0;
-  overflow: hidden;
-  visibility: hidden;
-}
-/* ===== Correção de alinhamento do menu mobile ===== */
-@media (max-width: 768px) {
-  /* garante que a lista não tenha recuos herdados */
-  .menu .menu-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    min-width: 170px; /* mantem largura mínima do menu */
-  }
+/* garantia: forçar cor branca no rodapé */
+.footer a { color:#fff !important; }
 
-  /* remove margens/recuos dos itens */
-  .menu .menu-list li {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  /* garante bloco uniforme para cada link e padding igual à esquerda/direita */
-  .menu.open .menu-list a {
-    display: block !important;
-    padding: 12px 18px !important;    /* espaço vertical e horizontal uniforme */
-    text-align: left !important;       /* força alinhamento à esquerda */
-    box-sizing: border-box !important;
-    white-space: normal !important;    /* permite que palavras quebrem naturalmente */
-    letter-spacing: 0.01em;            /* evita micro deslocamentos visuais */
-  }
-
-  /* se houver algum marcador ou pseudo-elemento ativo, remove */
-  .menu .menu-list li::marker,
-  .menu .menu-list li::before,
-  .menu .menu-list a::before {
-    content: none !important;
-  }
-
-  /* garante que o painel do menu fique ancorado à mesma margem direita */
-  .menu.open .menu-list {
-    position: absolute;
-    top: calc(100% + 8px);
-    right: 12px;
-    left: auto;
-    min-width: 170px;
-    max-width: 86vw;
-    padding: 6px 0;                     /* padding vertical do painel (links tem o padding interior) */
-    border-radius: 8px;
-  }
-}
-/* ======= Correção final: menu mobile sem quebras e padding uniforme ======= */
-@media (max-width: 768px) {
-  /* painel do menu: espaço suficiente e limites para não sair da tela */
-  .menu.open .menu-list {
-    position: absolute;
-    top: calc(100% + 8px);
-    right: 12px;
-    left: auto;
-    min-width: 220px;                /* LARGURA MÍNIMA para caber itens longos */
-    max-width: calc(100vw - 24px);   /* nunca estoura fora da viewport */
-    padding: 6px 0 !important;
-    box-sizing: border-box;
-  }
-
-  /* links: bloco uniforme, padding idêntico e texto alinhado à esquerda */
-  .menu.open .menu-list a {
-    display: block !important;
-    padding: 12px 20px !important;   /* uniforme: topo/baixo 12px, esquerda/direita 20px */
-    text-align: left !important;
-    box-sizing: border-box !important;
-    color: var(--dourado) !important;
-    white-space: nowrap !important;   /* evita quebra de linha para a maioria dos dispositivos */
-    letter-spacing: 0.02em !important;
-  }
-
-  /* itens da lista sem margens adicionais */
-  .menu.open .menu-list li {
-    margin: 0 !important;
-    padding: 0 !important;
-    list-style: none !important;
-  }
-
-  /* remove marcadores/pseudo elementos indesejados */
-  .menu .menu-list li::marker,
-  .menu .menu-list li::before,
-  .menu .menu-list a::before {
-    content: none !important;
-  }
-}
-
-/* fallback para telas MUITO estreitas: permite quebra para evitar overflow horizontal */
-@media (max-width: 360px) {
-  .menu.open .menu-list {
-    min-width: 170px;
-    max-width: calc(100vw - 12px);
-  }
-  .menu.open .menu-list a {
-    white-space: normal !important;  /* permite quebra em telas minúsculas */
-    padding-left: 14px !important;
-    padding-right: 14px !important;
-  }
-}
-/* ======= Correção de alinhamento do menu mobile ======= */
-@media (max-width: 768px) {
-  .menu.open .menu-list {
-    padding-left: 0 !important;
-    margin-left: 0 !important;
-    text-align: left !important;
-  }
-
-  .menu.open .menu-list li {
-    list-style: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  .menu.open .menu-list a {
-    display: block !important;
-    padding: 12px 20px !important;
-    text-align: left !important;
-    margin: 0 !important;
-    text-indent: 0 !important; /* 🔹 remove qualquer recuo invisível */
-  }
-
-  /* garante que todos os itens fiquem exatamente na mesma coluna visual */
-  .menu.open .menu-list li:first-child a,
-  .menu.open .menu-list li:last-child a {
-    padding-left: 20px !important;
-  }
-
-  /* remove qualquer pseudo-elemento oculto que cause deslocamento */
-  .menu.open .menu-list li::before,
-  .menu.open .menu-list a::before {
-    content: none !important;
-  }
-}
+/* fim do arquivo */

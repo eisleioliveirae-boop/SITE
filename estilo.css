@@ -290,3 +290,78 @@ footer {
 
 /* 4) assegurar que o painel do banner não crie scroll vertical inesperado */
 html, body { overflow-x: hidden; } 
+/* ===== Ajuste final: evitar corte do logotipo no banner + prevenir corte do item "CONTATO" ===== */
+
+/* 1) Banner: ajustar altura/posicionamento por breakpoints (evita que o logotipo seja cortado) */
+@media (min-width: 1400px) {
+  .main-banner {
+    height: 420px !important;
+    background-position: center 30% !important;
+    background-size: cover !important;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .main-banner {
+    height: 380px !important;
+    background-position: center 32% !important;
+    background-size: cover !important;
+  }
+}
+
+@media (min-width: 993px) and (max-width: 1199px) {
+  .main-banner {
+    height: 340px !important;
+    background-position: center 36% !important;
+    background-size: cover !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .main-banner {
+    height: 300px !important;
+    background-position: center 40% !important;
+    background-size: cover !important;
+  }
+}
+
+/* 2) Garantir que o conteúdo principal não seja sobreposto pelo header sticky */
+.header { z-index: 1300; } /* já tinha, reafirmando */
+.content { padding-top: 22px !important; }
+
+/* 3) Ajustes para o menu em larguras médias/grandes (evita cortar o último item "CONTATO") */
+@media (min-width: 993px) {
+  /* reduz gap levemente para criar espaço extra sem mexer no visual */
+  .menu-list { gap: 18px !important; }
+
+  /* reduz levemente a fonte dos links quando a viewport for estreita */
+  @media (max-width: 1250px) {
+    .menu-list a { font-size: 0.98rem !important; padding: 6px 10px !important; }
+  }
+
+  /* em faixas onde ocorre o corte, permite wrap controlado e alinha à direita */
+  @media (max-width: 1100px) and (min-width: 993px) {
+    .menu-list {
+      flex-wrap: wrap !important;
+      justify-content: flex-end !important;
+      gap: 10px !important;
+      padding-right: 8px !important;
+    }
+    .menu-list a { padding: 6px 8px !important; }
+  }
+}
+
+/* 4) Manter header/top-bar compacto para abrir espaço horizontal */
+.top-bar { padding-top: 8px !important; padding-bottom: 8px !important; }
+
+/* 5) proteção: evitar overflow horizontal causado por menu */
+html, body { overflow-x: hidden; }
+
+/* 6) pequeno ajuste de alinhamento do menu: garantir que o último item não "escape" do container */
+.container { max-width: var(--max-width) !important; box-sizing: border-box; }
+
+/* 7) caso ainda haja redução de espaço em telas com zoom/viewport estranha, reduzir gap do menu dinamicamente */
+@media (max-width: 980px) and (min-width: 920px) {
+  .menu-list { gap: 8px !important; }
+  .menu-list a { font-size: 0.95rem !important; padding: 5px 6px !important; }
+}

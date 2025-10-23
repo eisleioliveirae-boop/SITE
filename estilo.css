@@ -444,3 +444,88 @@ footer, .section-contato {
 }
 
 /* Segurança: não alterar cores/formatacao existentes - apenas alinhamento/space */
+/* ===== Ajustes finais: corrigir espaço do topo, exibição do banner e menu em larguras intermediárias ===== */
+
+/* Remove qualquer gap extra entre header e banner */
+.header {
+  margin: 0;
+  padding-bottom: 0; /* evita espaçamento extra embaixo do header */
+  box-shadow: none;  /* caso haja sombra causando aparência de deslocamento */
+}
+
+/* Garante que o container do banner não tenha margem que gere um "corte" */
+.main-banner {
+  margin: 0;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-position: center center; /* garante logo sempre centralizado */
+  background-size: contain;           /* mostra o logo inteiro dentro do banner */
+  height: clamp(260px, 36vh, 480px);  /* responsivo: mínimo 260px, ideal ~36vh, máximo 480px */
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  /* z-index baixo para não sobrepor o header - header já com z-index alto */
+  z-index: 0;
+}
+
+/* Pequena faixa superior do conteúdo para evitar que o topo "cole" no banner */
+.content {
+  margin-top: 0;
+  padding-top: 28px; /* mantém espaçamento do conteúdo sem gerar corte no banner */
+}
+
+/* Corrige quebras do menu em larguras intermediárias (evita que "CONTATO" suma ou fique na linha de baixo) */
+@media (max-width: 1280px) {
+  .menu-list {
+    gap: 22px;
+  }
+  .menu-list a {
+    font-size: 0.98rem; /* reduz levemente fonte para caber */
+    padding: 6px 10px;
+  }
+}
+
+/* Ajuste adicional para larguras mais estreitas onde o menu pode quebrar */
+@media (max-width: 1100px) {
+  .menu-list {
+    gap: 18px;
+    white-space: nowrap;   /* tenta manter cada item em uma linha única */
+  }
+  /* Se ainda assim ficar muito apertado, permite um leve scroll horizontal no menu */
+  .menu {
+    overflow-x: auto;
+  }
+  .menu-list {
+    display: flex;
+    min-width: max-content;
+  }
+}
+
+/* Proteção para telas pequenas - garante banner proporcional e sem cortes */
+@media (max-width: 768px) {
+  .main-banner {
+    height: clamp(160px, 22vh, 260px); /* menor em mobiles */
+    background-size: contain;
+    background-position: center center;
+  }
+
+  /* mantém o menu mobile como já configurado, sem alterar cores */
+  .menu.open .menu-list {
+    right: 12px;
+    left: auto;
+  }
+}
+
+/* Pequena correção para evitar que o banner "suba" atrás do header sticky:
+   caso o header seja sticky, garantir que conteúdo comece corretamente abaixo dele */
+.header + .main-banner {
+  /* nenhuma margem extra, mas se necessário empurra levemente o banner para baixo */
+  margin-top: 0;
+}
+
+/* Fallback: se algum reset anterior estiver escondendo parte do banner,
+   forçamos visibilidade plena */
+.main-banner:before,
+.main-banner:after {
+  content: none !important;
+}

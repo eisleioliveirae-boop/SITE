@@ -236,3 +236,55 @@ footer, .footer { text-align:center; display:flex; flex-direction:column; align-
     border-radius: 8px;
   }
 }
+/* ======= Correção final: menu mobile sem quebras e padding uniforme ======= */
+@media (max-width: 768px) {
+  /* painel do menu: espaço suficiente e limites para não sair da tela */
+  .menu.open .menu-list {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 12px;
+    left: auto;
+    min-width: 220px;                /* LARGURA MÍNIMA para caber itens longos */
+    max-width: calc(100vw - 24px);   /* nunca estoura fora da viewport */
+    padding: 6px 0 !important;
+    box-sizing: border-box;
+  }
+
+  /* links: bloco uniforme, padding idêntico e texto alinhado à esquerda */
+  .menu.open .menu-list a {
+    display: block !important;
+    padding: 12px 20px !important;   /* uniforme: topo/baixo 12px, esquerda/direita 20px */
+    text-align: left !important;
+    box-sizing: border-box !important;
+    color: var(--dourado) !important;
+    white-space: nowrap !important;   /* evita quebra de linha para a maioria dos dispositivos */
+    letter-spacing: 0.02em !important;
+  }
+
+  /* itens da lista sem margens adicionais */
+  .menu.open .menu-list li {
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+  }
+
+  /* remove marcadores/pseudo elementos indesejados */
+  .menu .menu-list li::marker,
+  .menu .menu-list li::before,
+  .menu .menu-list a::before {
+    content: none !important;
+  }
+}
+
+/* fallback para telas MUITO estreitas: permite quebra para evitar overflow horizontal */
+@media (max-width: 360px) {
+  .menu.open .menu-list {
+    min-width: 170px;
+    max-width: calc(100vw - 12px);
+  }
+  .menu.open .menu-list a {
+    white-space: normal !important;  /* permite quebra em telas minúsculas */
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+  }
+}

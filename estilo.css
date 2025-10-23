@@ -225,3 +225,12 @@ a:focus, button:focus { outline:3px solid rgba(203,161,123,0.18); outline-offset
     white-space: nowrap !important;
   }
 }
+/* ===== Ajuste: centralizar o rodapé (alinhamento apenas) ===== */
+.footer,
+footer {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+}

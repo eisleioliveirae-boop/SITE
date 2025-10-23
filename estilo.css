@@ -365,3 +365,29 @@ html, body { overflow-x: hidden; }
   .menu-list { gap: 8px !important; }
   .menu-list a { font-size: 0.95rem !important; padding: 5px 6px !important; }
 }
+/* ====== Correção final: banner e espaçamento geral ====== */
+
+/* Ajusta o banner para centralizar verticalmente o logo e reduzir o espaço superior */
+.main-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('banner.png');
+  background-size: contain; /* mantém proporção do logo */
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 300px !important; /* altura ajustada para equilíbrio */
+  margin: 0 auto;
+  padding: 0 !important;
+}
+
+/* Remove qualquer padding ou margin residual do topo e base do body */
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+/* Corrige possíveis cortes nas últimas seções (ex: Contato) */
+footer, .section-contato {
+  padding-bottom: 60px !important;
+}

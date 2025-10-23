@@ -189,3 +189,50 @@ footer, .footer { text-align:center; display:flex; flex-direction:column; align-
   overflow: hidden;
   visibility: hidden;
 }
+/* ===== Correção de alinhamento do menu mobile ===== */
+@media (max-width: 768px) {
+  /* garante que a lista não tenha recuos herdados */
+  .menu .menu-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-width: 170px; /* mantem largura mínima do menu */
+  }
+
+  /* remove margens/recuos dos itens */
+  .menu .menu-list li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* garante bloco uniforme para cada link e padding igual à esquerda/direita */
+  .menu.open .menu-list a {
+    display: block !important;
+    padding: 12px 18px !important;    /* espaço vertical e horizontal uniforme */
+    text-align: left !important;       /* força alinhamento à esquerda */
+    box-sizing: border-box !important;
+    white-space: normal !important;    /* permite que palavras quebrem naturalmente */
+    letter-spacing: 0.01em;            /* evita micro deslocamentos visuais */
+  }
+
+  /* se houver algum marcador ou pseudo-elemento ativo, remove */
+  .menu .menu-list li::marker,
+  .menu .menu-list li::before,
+  .menu .menu-list a::before {
+    content: none !important;
+  }
+
+  /* garante que o painel do menu fique ancorado à mesma margem direita */
+  .menu.open .menu-list {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 12px;
+    left: auto;
+    min-width: 170px;
+    max-width: 86vw;
+    padding: 6px 0;                     /* padding vertical do painel (links tem o padding interior) */
+    border-radius: 8px;
+  }
+}

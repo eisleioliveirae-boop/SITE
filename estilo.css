@@ -250,3 +250,17 @@ footer {
     color: var(--dourado) !important;
   }
 }
+/* ===== Correção final: cor padrão branca no menu mobile ===== */
+@media (max-width: 768px) {
+  /* cor padrão branca */
+  .menu.open .menu-list a {
+    color: #fff !important;
+  }
+
+  /* muda para dourado apenas quando clicado ou em foco */
+  .menu.open .menu-list a:hover,
+  .menu.open .menu-list a:focus,
+  .menu.open .menu-list a:active {
+    color: var(--dourado) !important;
+  }
+}

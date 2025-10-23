@@ -207,3 +207,21 @@ a:focus, button:focus { outline:3px solid rgba(203,161,123,0.18); outline-offset
 .footer a { color:#fff !important; }
 
 /* fim do arquivo */
+/* ===== Ajuste: alinhar menu à esquerda no desktop, manter mobile intacto ===== */
+@media (min-width: 992px) {
+  /* remove margem automática que empurra o menu para a direita */
+  .menu {
+    margin-left: 0 !important;
+    order: 2 !important; /* garante posição correta junto ao topo */
+  }
+
+  /* posiciona os itens do menu imediatamente após o logo (alinhamento à esquerda) */
+  .top-bar { justify-content: flex-start !important; gap: 24px; }
+
+  /* garante que o menu em desktop continue em linha única e sem quebras */
+  .menu-list {
+    display: flex !important;
+    gap: 28px !important;
+    white-space: nowrap !important;
+  }
+}

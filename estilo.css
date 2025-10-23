@@ -288,3 +288,37 @@ footer, .footer { text-align:center; display:flex; flex-direction:column; align-
     padding-right: 14px !important;
   }
 }
+/* ======= Correção de alinhamento do menu mobile ======= */
+@media (max-width: 768px) {
+  .menu.open .menu-list {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    text-align: left !important;
+  }
+
+  .menu.open .menu-list li {
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .menu.open .menu-list a {
+    display: block !important;
+    padding: 12px 20px !important;
+    text-align: left !important;
+    margin: 0 !important;
+    text-indent: 0 !important; /* 🔹 remove qualquer recuo invisível */
+  }
+
+  /* garante que todos os itens fiquem exatamente na mesma coluna visual */
+  .menu.open .menu-list li:first-child a,
+  .menu.open .menu-list li:last-child a {
+    padding-left: 20px !important;
+  }
+
+  /* remove qualquer pseudo-elemento oculto que cause deslocamento */
+  .menu.open .menu-list li::before,
+  .menu.open .menu-list a::before {
+    content: none !important;
+  }
+}

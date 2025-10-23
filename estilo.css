@@ -264,3 +264,29 @@ footer {
     color: var(--dourado) !important;
   }
 }
+/* ===== Ajustes finais solicitados ===== */
+
+/* 1) reduzir ligeiramente a altura do banner e elevar o ponto focal (logo) */
+.main-banner {
+  height: 320px;                 /* de 360px para 320px — reduz o espaço vertical */
+  background-position: center 36%; /* eleva o ponto focal do background para cima */
+  background-size: cover;
+}
+
+/* 2) prevenir corte do último item do menu em larguras de desktop menores
+   - reduz gap e fonte antes do menu estourar; mantém alinhamento à direita */
+@media (max-width: 1200px) and (min-width: 993px) {
+  .menu-list { gap: 16px; }                 /* menos espaço entre itens */
+  .menu-list a { font-size: 0.98rem; padding: 6px 8px; } /* ajuste fino de texto/padding */
+  .top-bar { padding-left:18px; padding-right:18px; } /* garante margem interna do container */
+}
+
+/* 3) fallback para telas entre 1024px e 1200px: permitir quebra controlada somente se necessário
+   (evita que um item fique cortado fora da viewport) */
+@media (max-width: 1200px) and (min-width: 1024px) {
+  .menu-list { flex-wrap:wrap; justify-content:flex-end; gap:12px; }
+  .menu-list li { margin-left:0; } /* remove margens conflitantes que podem empurrar itens */
+}
+
+/* 4) assegurar que o painel do banner não crie scroll vertical inesperado */
+html, body { overflow-x: hidden; } 

@@ -234,3 +234,19 @@ footer {
   justify-content: center !important;
   text-align: center !important;
 }
+/* ===== Ajuste: cor dourada no menu ao passar o mouse ou clicar ===== */
+.menu-list a:hover,
+.menu-list a:focus,
+.menu-list a:active {
+  color: var(--dourado) !important;
+  text-decoration: none !important;
+}
+
+/* no menu mobile (três pontinhos), mantém dourado quando ativo também */
+@media (max-width: 768px) {
+  .menu.open .menu-list a:hover,
+  .menu.open .menu-list a:focus,
+  .menu.open .menu-list a:active {
+    color: var(--dourado) !important;
+  }
+}

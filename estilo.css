@@ -171,21 +171,22 @@ a:focus, button:focus { outline:3px solid rgba(203,161,123,0.18); outline-offset
 @media (min-width: 769px) and (max-width: 992px) {
   .fundadora-foto { flex:0 0 220px; max-width:32%; }
   h2 { font-size:1.6rem; }
-/* NOVAS REGRAS PARA COMPACTAR O MENU */
-  .menu-list {
-    /* Garante que a lista não se quebre */
-    flex-wrap: nowrap;
-    /* Reduz o espaçamento entre os itens (gap) */
-    gap: 12px; /* Reduza de 18px para 12px */
-  }
-  .menu-list a {
-    /* Reduz o preenchimento interno dos links (padding) */
-    padding: 6px 4px; /* Reduza de 8px para 4px */
-    /* Garante que o texto fique em uma única linha */
-    white-space: nowrap;
-    /* Torna a fonte um pouco menor */
-    font-size: 0.95rem; 
-  }
+/* NOVAS REGRAS DE ALINHAMENTO E COMPACTAÇÃO */
+    .top-bar { 
+        justify-content: flex-start; /* Alinha o menu próximo ao logo */
+        gap: 12px; /* Reduz o espaço entre o logo e o menu */
+    }
+    .menu {
+        margin-left: 0; /* Remove margem que empurra o menu para a direita */
+    }
+    .menu-list {
+        gap: 8px; /* Compactação: Reduz o espaço entre os links */
+        flex-wrap: nowrap;
+    }
+    .menu-list a {
+        padding: 6px 2px; /* Compactação: Reduz o preenchimento */
+        font-size: 0.9rem; /* Compactação: Reduz o tamanho da fonte */
+    }
 }
 
 /* desktop */

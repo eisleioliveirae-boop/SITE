@@ -169,23 +169,28 @@ a:focus, button:focus { outline:3px solid rgba(203,161,123,0.18); outline-offset
 
 /* tablets/medium */
 @media (min-width: 769px) and (max-width: 992px) {
-  .fundadora-foto { flex:0 0 220px; max-width:32%; }
-  h2 { font-size:1.6rem; }
-/* NOVAS REGRAS DE ALINHAMENTO E COMPACTAÇÃO */
+    /* ... regras da fundadora e h2 ... */
+
+    /* NOVAS REGRAS DE ALINHAMENTO E COMPACTAÇÃO (COM !important) */
     .top-bar { 
-        justify-content: flex-start; /* Alinha o menu próximo ao logo */
-        gap: 12px; /* Reduz o espaço entre o logo e o menu */
+        justify-content: flex-start !important; 
+        gap: 12px !important; 
     }
     .menu {
-        margin-left: 0; /* Remove margem que empurra o menu para a direita */
+        margin-left: 0 !important; 
     }
     .menu-list {
-        gap: 8px; /* Compactação: Reduz o espaço entre os links */
-        flex-wrap: nowrap;
+        gap: 8px !important; 
+        flex-wrap: nowrap !important;
+        margin-left: 0 !important; /* Adicionado: Garante que não haja margem na lista */
+    }
+    .menu-list li {
+        margin: 0 !important; /* Adicionado: Remove o margin-left: 18px que está conflitando */
+        padding: 0 !important;
     }
     .menu-list a {
-        padding: 6px 2px; /* Compactação: Reduz o preenchimento */
-        font-size: 0.9rem; /* Compactação: Reduz o tamanho da fonte */
+        padding: 6px 2px !important; 
+        font-size: 0.9rem !important; 
     }
 }
 

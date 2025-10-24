@@ -268,3 +268,18 @@ footer {
     color: var(--dourado) !important;
   }
 }
+/* Media Query para Telas Intermediárias (Tablets - até 1024px) */
+@media (max-width: 1024px) {
+    .main-banner {
+        /* Reduz a altura do banner em telas de tablet/intermediárias */
+        height: 220px; /* Experimente este valor */
+    }
+}
+
+/* Media Query para Telas Pequenas (Mobile - até 768px) */
+@media (max-width: 768px) {
+    .main-banner {
+        /* Reduz ainda mais a altura no mobile, onde o logo é menor */
+        height: 180px; /* Experimente este valor */
+    }
+}

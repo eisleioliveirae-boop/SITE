@@ -168,7 +168,7 @@ a:focus, button:focus { outline:3px solid rgba(203,161,123,0.18); outline-offset
 }
 
 /* tablets/medium */
-@media (min-width: 769px) and (max-width: 992px) {
+@media (min-width: 769px) and (max-width: 1049px) {
     /* ... regras da fundadora e h2 ... */
 
     /* NOVAS REGRAS DE ALINHAMENTO E COMPACTAÇÃO (COM !important) */

@@ -49,14 +49,13 @@ body {
 /* banner */
 .main-banner { 
     width:100%; 
-    /* Altura definida pelo padding. Ajuste este valor se precisar de mais/menos espaço azul. */
-    padding: 60px 0; /* Aumentei um pouco para garantir que o logo fique visível */
+    padding: 60px 0; /* PADDING base para telas menores/intermediárias */
     background-image: url('banner.png'); 
-    background-size: contain; /* ALTERADO: Garante que a imagem inteira (logo) caiba sem ser cortada e seja maior */
-    background-repeat: no-repeat; /* Adicionado: Evita repetição */
+    background-size: cover; /* ESSENCIAL: Garante preenchimento total e elimina laterais brancas */
     background-position:center; 
+    background-repeat: no-repeat;
     
-    /* Regras de centralização (necessário para o background) */
+    /* Regras de centralização (garante que o conteúdo que está sendo centralizado seja o banner) */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -180,8 +179,8 @@ a:focus, button:focus { outline:3px solid rgba(203,161,123,0.18); outline-offset
     
     /* Ajuste de Altura do Banner para Desktop */
     .main-banner {
-        /* Usa PADDING maior para o desktop para um banner mais imponente */
-        padding: 100px 0; /* Ajuste para o tamanho que você gostava no desktop */
+        /* USA PADDING para o desktop para um banner imponente. */
+        padding: 120px 0; 
     }
 }
 
@@ -277,4 +276,19 @@ footer {
   .menu.open .menu-list a:active {
     color: var(--dourado) !important;
   }
+}
+/* Media Query para Telas Intermediárias (Tablet - até 1024px) */
+@media (max-width: 1024px) {
+    .main-banner {
+        /* Reduz a altura para telas de tablet, mas sem ser tão pequeno quanto no mobile */
+        padding: 80px 0; 
+    }
+}
+
+/* Media Query para Telas Pequenas (Mobile - até 768px) */
+@media (max-width: 768px) {
+    .main-banner {
+        /* Reduz ainda mais a altura no mobile */
+        padding: 50px 0; 
+    }
 }

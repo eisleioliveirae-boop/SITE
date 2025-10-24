@@ -180,7 +180,7 @@ a:focus, button:focus { outline:3px solid rgba(203,161,123,0.18); outline-offset
     /* Ajuste de Altura do Banner para Desktop */
     .main-banner {
         /* USA PADDING para o desktop para um banner imponente. */
-        padding: 150px 0; 
+        padding: 180px 0; 
     }
 }
 
@@ -289,6 +289,6 @@ footer {
 @media (max-width: 768px) {
     .main-banner {
         /* Aumentado de 50px para 70px */
-        padding: 70px 0; 
+        padding: 95px 0; 
     }
 }

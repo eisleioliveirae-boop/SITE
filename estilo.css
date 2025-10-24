@@ -169,6 +169,10 @@ a:focus, button:focus { outline:3px solid rgba(203,161,123,0.18); outline-offset
   .fundadora-texto p { font-size:1.05rem; }
   .menu-toggle { display:none; }
   .menu-list { display:flex; }
+/* Ajuste de Altura do Banner para Desktop */
+  .main-banner {
+    height: 400px; /* Use uma altura maior que evita o corte do logo */
+  }
 }
 
 /* final protections / overrides */

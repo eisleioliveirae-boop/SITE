@@ -263,9 +263,14 @@ footer {
     color: var(--dourado) !important;
   }
 }
-/* Media Query: TABLET/INTERMEDIÁRIO (769px até 1049px) - RESOLVE O CORTE */
-@media (min-width: 769px) and (max-width: 1049px) {
-    
+/* Media Query para Telas Intermediárias (Tablet - até 1024px) */
+@media (max-width: 1024px) {
+    .main-banner {
+        /* Aumentado de 80px para 110px */
+        padding: 110px 0; 
+    }
+}
+
     /* === SOLUÇÃO PARA O CORTE E MENU HAMBURGUER === */
     /* Força o menu hambúrguer no tablet, resolvendo o corte */
     .menu-list { 

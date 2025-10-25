@@ -169,27 +169,31 @@ a:focus, button:focus { outline:3px solid rgba(203,161,123,0.18); outline-offset
 
 /* tablets/medium */
 @media (min-width: 769px) and (max-width: 1049px) {
+    /* Regras originais */
     .fundadora-foto { flex:0 0 220px; max-width:32%; }
     h2 { font-size:1.6rem; }
 
-    /* NOVAS REGRAS DE ALINHAMENTO E COMPACTAÇÃO */
+    /* ANULAÇÃO COMPLETA DO PADDING E COMPACTAÇÃO MÁXIMA */
     .top-bar { 
-        /* MUITO IMPORTANTE: Mude para flex-start e REMOVA o GAP */
-        justify-content: flex-start !important;
-        gap: 0 !important; /* Remove o gap de 12px entre logo e menu */
-    }
-    .menu {
-        /* Puxa o menu para a esquerda, colando-o no logo */
-        margin-left: 0 !important;
+        /* MUITO IMPORTANTE: Remove o padding horizontal da barra para maximizar a largura */
+        padding-left: 0 !important;
+        padding-right: 0 !important;
         
-        /* Adiciona um espaço fixo entre o logo e o menu */
-        padding-left: 12px !important;
+        justify-content: flex-start !important;
+        gap: 0 !important; 
     }
-    .menu-list {
-        /* Compactação máxima */
-        gap: 6px !important; /* Reduz gap para 6px */
-        flex-wrap: nowrap !important;
+    
+    .menu {
         margin-left: 0 !important; 
+        /* Adiciona um padding para recuar o menu da borda esquerda da tela, junto ao logo */
+        padding-left: 12px !important; 
+    }
+    
+    .menu-list {
+        /* Puxa o menu ligeiramente para a esquerda para ganhar mais espaço */
+        margin-left: -5px !important;
+        gap: 6px !important; 
+        flex-wrap: nowrap !important;
     }
     .menu-list li {
         margin: 0 !important; 
@@ -197,11 +201,12 @@ a:focus, button:focus { outline:3px solid rgba(203,161,123,0.18); outline-offset
     }
     .menu-list a {
         /* Compactação máxima no padding e fonte */
-        padding: 4px 2px !important; /* Reduz padding para 4px */
-        font-size: 0.88rem !important; /* Compacta a fonte um pouco mais */
-    }
+        padding: 4px 2px !important; 
+        font-size: 0.86rem !important; /* COMPACTAÇÃO AINDA MAIOR */
+      }
 }
-/* desktop */
+    
+}/* desktop */
 @media (min-width: 1050px) {
     /* ... outras regras ... */
     

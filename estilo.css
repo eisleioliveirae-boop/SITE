@@ -169,31 +169,38 @@ a:focus, button:focus { outline:3px solid rgba(203,161,123,0.18); outline-offset
 
 /* tablets/medium */
 @media (min-width: 769px) and (max-width: 1049px) {
-    /* ... regras da fundadora e h2 ... */
+    .fundadora-foto { flex:0 0 220px; max-width:32%; }
+    h2 { font-size:1.6rem; }
 
-    /* NOVAS REGRAS DE ALINHAMENTO E COMPACTAÇÃO (COM !important) */
+    /* NOVAS REGRAS DE ALINHAMENTO E COMPACTAÇÃO */
     .top-bar { 
-        justify-content: flex-start !important; 
-        gap: 12px !important; 
+        /* MUITO IMPORTANTE: Mude para flex-start e REMOVA o GAP */
+        justify-content: flex-start !important;
+        gap: 0 !important; /* Remove o gap de 12px entre logo e menu */
     }
     .menu {
-        margin-left: 0 !important; 
+        /* Puxa o menu para a esquerda, colando-o no logo */
+        margin-left: 0 !important;
+        
+        /* Adiciona um espaço fixo entre o logo e o menu */
+        padding-left: 12px !important;
     }
     .menu-list {
-        gap: 8px !important; 
+        /* Compactação máxima */
+        gap: 6px !important; /* Reduz gap para 6px */
         flex-wrap: nowrap !important;
-        margin-left: 0 !important; /* Adicionado: Garante que não haja margem na lista */
+        margin-left: 0 !important; 
     }
     .menu-list li {
-        margin: 0 !important; /* Adicionado: Remove o margin-left: 18px que está conflitando */
+        margin: 0 !important; 
         padding: 0 !important;
     }
     .menu-list a {
-        padding: 6px 2px !important; 
-        font-size: 0.9rem !important; 
+        /* Compactação máxima no padding e fonte */
+        padding: 4px 2px !important; /* Reduz padding para 4px */
+        font-size: 0.88rem !important; /* Compacta a fonte um pouco mais */
     }
 }
-
 /* desktop */
 @media (min-width: 1050px) {
     /* ... outras regras ... */

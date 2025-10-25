@@ -301,6 +301,8 @@ footer {
   body {
     padding-left: 15px;
     padding-right: 15px;
+    /* NOVO CÓDIGO INSERIDO AQUI: Justifica o texto */
+    text-align: justify;
   }
 }
 /* Ajuste para telas "intermediárias grandes" (ex.: 13.3" 1440x900) */

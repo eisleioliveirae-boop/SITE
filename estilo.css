@@ -177,13 +177,13 @@ a:focus, button:focus { outline:3px solid rgba(203,161,123,0.18); outline-offset
 }
     
 }/* desktop */
-@media (min-width: 1050px) {
+@media (min-width: 993px) {
     /* ... outras regras ... */
     
     /* Ajuste de Altura do Banner para Desktop */
     .main-banner {
         /* USA PADDING para o desktop para um banner imponente. */
-        padding: 290px 0; !important;
+        padding: 190px 0; !important;
     }
 }
 
@@ -191,7 +191,7 @@ a:focus, button:focus { outline:3px solid rgba(203,161,123,0.18); outline-offset
 .header *, .top-bar * { float:none !important; clear:none !important; }
 
 /* desktop menu ao lado direito */
-@media (min-width: 1050px) {
+@media (min-width: 992px) {
   html { font-size:19px; }
   .top-bar { justify-content:flex-start; }
   .menu { margin-left:auto; order:3; }

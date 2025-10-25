@@ -103,19 +103,8 @@ strong { font-weight:700; }
 a:focus, button:focus { outline:3px solid rgba(203,161,123,0.18); outline-offset:3px; }
 
 /* responsive: mobile */
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .top-bar { padding:12px 16px; justify-content:center; }
-    /* Aumenta o tamanho do logo */
-    .logo-text { 
-        font-size: 1.3rem !important; 
-        display: inline-block !important; 
-    }
-
-    /* Reduz a altura do banner azul */
-    .main-banner {
-        padding: 70px 0; 
-    }
-    /* ======================================= */
   .menu-toggle { display:inline-block; position:absolute; right:16px; top:50%; transform:translateY(-50%); z-index:1320; }
   .menu-list { display:none; }
 
@@ -164,11 +153,21 @@ a:focus, button:focus { outline:3px solid rgba(203,161,123,0.18); outline-offset
   }
 
   /* fallback para telas muito estreitas: permite quebra e reduz padding */
-  @media (max-width: 360px) {
-    .menu.open .menu-list { min-width:170px; max-width:calc(100vw - 12px); }
-    .menu.open .menu-list a { white-space:normal !important; padding-left:14px !important; padding-right:14px !important; }
-  }
-
+@media (max-width: 360px) {
+    .menu.open .menu-list { min-width:170px; max-width:calc(100vw - 12px); }
+    .menu.open .menu-list a { white-space:normal !important; padding-left:14px !important; padding-right:14px !important; }
+  
+    /* === NOVOS AJUSTES PARA CELULAR PEQUENO === */
+    .logo-text { 
+        font-size: 1.3rem !important; /* Logo maior no celular */
+        display: inline-block !important;
+    }
+    .main-banner { 
+        padding: 50px 0 !important; /* Banner menor no celular */
+    }
+    /* =========================================== */
+} /* <-- FIM CORRETO DO BLOCO 360PX */
+ 
   /* empilha fundadora no mobile */
   .fundadora-info { flex-direction:column; align-items:center; gap:12px; }
   .fundadora-foto { width:160px; max-width:60%; min-width:120px; align-self:center; }
@@ -278,4 +277,34 @@ footer {
         /* Aumentado de 50px para 70px */
         padding: 70px 0; 
     }
+}
+/* Media Query: TABLET/INTERMEDIÁRIO (769px até 1049px) - RESOLVE O CORTE */
+@media (min-width: 769px) and (max-width: 1049px) {
+    
+    /* === SOLUÇÃO PARA O CORTE E MENU HAMBURGUER === */
+    /* Força o menu hambúrguer no tablet, resolvendo o corte */
+    .menu-list { 
+        display: none !important; 
+    }
+    .menu-toggle { 
+        display: inline-block !important; /* Mostra o hambúrguer */
+        position: absolute; 
+        right: 16px; 
+    }
+    .top-bar { 
+        justify-content: center; /* Centraliza o logo para evitar que o menu o esprema */
+    }
+
+    /* Ajustes de tamanho no tablet */
+    .logo-text { 
+        font-size: 1.6rem !important; /* Logo um pouco maior que no celular */ 
+        display: inline-block !important; 
+    }
+    .main-banner {
+        padding: 100px 0 !important; /* Altura média do banner no tablet */
+    }
+    
+    /* Mantém o layout da fundadora no tablet */
+    .fundadora-foto { flex:0 0 220px; max-width:32%; }
+    h2 { font-size:1.8rem; }
 }

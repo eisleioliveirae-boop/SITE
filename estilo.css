@@ -294,7 +294,7 @@ footer {
 @media (max-width: 768px) {
   .main-banner {
     /* reduzir ainda mais em celulares */
-    padding: 32px 0;
+    padding: 40px 0;
     background-position: center center;
   }
 }

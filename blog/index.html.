@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Artigos | EOD Advocacia Empresarial</title>
+  <meta name="description" content="Artigos técnicos da EOD Advocacia Empresarial sobre Direito Empresarial, Tributário, Trabalhista (empregador) e Cível.">
+  <link rel="canonical" href="https://eisleioliveirae-boop.github.io/SITE/blog/">
+  <meta property="og:title" content="Artigos | EOD Advocacia Empresarial">
+  <meta property="og:description" content="Análises e orientações jurídicas voltadas ao universo empresarial.">
+  <meta property="og:image" content="https://eisleioliveirae-boop.github.io/SITE/logo.png">
+  <meta property="og:url" content="https://eisleioliveirae-boop.github.io/SITE/blog/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../estilo.css">
+</head>
+<body>
+  <header class="header">
+    <div class="top-bar container">
+      <img src="../logo.png" alt="EOD Advocacia Empresarial" class="logo-img" />
+      <nav class="menu" aria-label="Menu de navegação">
+        <button id="menuToggle" class="menu-toggle" aria-expanded="false" aria-controls="site-menu" aria-label="Abrir menu">⋮</button>
+        <ul id="site-menu" class="menu-list">
+          <li><a href="../index.html">HOME</a></li>
+          <li><a href="../index.html#quem-somos">QUEM SOMOS</a></li>
+          <li><a href="../index.html#fundadora">FUNDADORA</a></li>
+          <li><a href="../index.html#nossos-valores">NOSSOS VALORES</a></li>
+          <li><a href="../index.html#areas-de-atuacao">ÁREAS DE ATUAÇÃO</a></li>
+          <li><a href="../index.html#artigos-publicados">ARTIGOS PUBLICADOS</a></li>
+          <li><a href="../index.html#contato">CONTATO</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="content container">
+    <h2>Artigos</h2>
+
+    <article class="artigo-item">
+      <h3><a href="artigo-legislacao-trabalhista-e-rentabilidade.html">Legislação Trabalhista e Rentabilidade — Impactos e medidas para empregadores</a></h3>
+      <p class="meta">22/10/2025 — Eislei Domingues de Oliveira</p>
+      <p>Resumo: Análise sobre como a legislação trabalhista afeta a estrutura de custos empresariais e medidas preventivas úteis para mitigar passivos e preservar rentabilidade. <a href="artigo-legislacao-trabalhista-e-rentabilidade.html">Leia mais</a></p>
+    </article>
+
+    <article class="artigo-item">
+      <h3><a href="../index.html#artigos-publicados">Outros artigos publicados</a></h3>
+      <p>Lista completa e atualizada de publicações técnicas — acesso centralizado no site institucional.</p>
+    </article>
+
+  </main>
+
+  <footer class="footer">
+    <p class="slogan">“Excelência Jurídica a Serviço da Sua Empresa”</p>
+    <p>
+      <a href="https://wa.me/5515997007014" target="_blank" class="whatsapp-link">WhatsApp: (15) 99700-7014</a> |
+      <a href="mailto:eisleioliveira@yahoo.com.br">E-mail: eisleioliveira@yahoo.com.br</a>
+    </p>
+    <p class="social-media">
+      <a href="https://www.instagram.com/eisleioliveira" target="_blank">Instagram</a> |
+      <a href="https://www.linkedin.com/in/eislei-d-oliveira-06994025" target="_blank">LinkedIn</a>
+    </p>
+    <p>EOD Advocacia Empresarial © 2024</p>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

@@ -297,6 +297,11 @@ footer {
     padding: 60px 0;
     background-position: center center;
   }
+/* Regra GLOBAL para o espaçamento lateral em todos os textos */
+  body {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 /* Ajuste para telas "intermediárias grandes" (ex.: 13.3" 1440x900) */
 @media (min-width: 1050px) and (max-width: 1440px) {

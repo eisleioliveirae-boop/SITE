@@ -103,9 +103,19 @@ strong { font-weight:700; }
 a:focus, button:focus { outline:3px solid rgba(203,161,123,0.18); outline-offset:3px; }
 
 /* responsive: mobile */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .top-bar { padding:12px 16px; justify-content:center; }
-  .logo-text { font-size:1rem; }
+    /* Aumenta o tamanho do logo */
+    .logo-text { 
+        font-size: 1.3rem !important; 
+        display: inline-block !important; 
+    }
+
+    /* Reduz a altura do banner azul */
+    .main-banner {
+        padding: 70px 0; 
+    }
+    /* ======================================= */
   .menu-toggle { display:inline-block; position:absolute; right:16px; top:50%; transform:translateY(-50%); z-index:1320; }
   .menu-list { display:none; }
 
@@ -165,45 +175,6 @@ a:focus, button:focus { outline:3px solid rgba(203,161,123,0.18); outline-offset
   .fundadora-texto { width:100%; text-align:left; }
   h2 { font-size:1.4rem; }
   p { font-size:0.98rem; line-height:1.5; text-align:left; }
-}
-
-/* tablets/medium */
-@media (min-width: 769px) and (max-width: 1049px) {
-    /* Regras originais */
-    .fundadora-foto { flex:0 0 220px; max-width:32%; }
-    h2 { font-size:1.6rem; }
-
-    /* ANULAÇÃO COMPLETA DO PADDING E COMPACTAÇÃO MÁXIMA */
-    .top-bar { 
-        /* MUITO IMPORTANTE: Remove o padding horizontal da barra para maximizar a largura */
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-        
-        justify-content: flex-start !important;
-        gap: 0 !important; 
-    }
-    
-    .menu {
-        margin-left: 0 !important; 
-        /* Adiciona um padding para recuar o menu da borda esquerda da tela, junto ao logo */
-        padding-left: 12px !important; 
-    }
-    
-    .menu-list {
-        /* Puxa o menu ligeiramente para a esquerda para ganhar mais espaço */
-        margin-left: -5px !important;
-        gap: 6px !important; 
-        flex-wrap: nowrap !important;
-    }
-    .menu-list li {
-        margin: 0 !important; 
-        padding: 0 !important;
-    }
-    .menu-list a {
-        /* Compactação máxima no padding e fonte */
-        padding: 4px 2px !important; 
-        font-size: 0.86rem !important; /* COMPACTAÇÃO AINDA MAIOR */
-      }
 }
     
 }/* desktop */
@@ -272,7 +243,7 @@ footer {
 }
 
 /* no menu mobile (três pontinhos), mantém dourado quando ativo também */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .menu.open .menu-list a:hover,
   .menu.open .menu-list a:focus,
   .menu.open .menu-list a:active {
@@ -280,7 +251,7 @@ footer {
   }
 }
 /* ===== Correção final: cor padrão branca no menu mobile ===== */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   /* cor padrão branca */
   .menu.open .menu-list a {
     color: #fff !important;
@@ -302,7 +273,7 @@ footer {
 }
 
 /* Media Query para Telas Pequenas (Mobile - até 768px) */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     .main-banner {
         /* Aumentado de 50px para 70px */
         padding: 70px 0; 

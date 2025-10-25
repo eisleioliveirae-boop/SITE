@@ -183,7 +183,7 @@ a:focus, button:focus { outline:3px solid rgba(203,161,123,0.18); outline-offset
     /* Ajuste de Altura do Banner para Desktop */
     .main-banner {
         /* USA PADDING para o desktop para um banner imponente. */
-        padding: 190px 0; 
+        padding: 220px 0; 
     }
 }
 

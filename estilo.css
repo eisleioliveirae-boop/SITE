@@ -168,13 +168,34 @@ a:focus, button:focus { outline:3px solid rgba(203,161,123,0.18); outline-offset
 }
 
 /* tablets/medium */
-@media (min-width: 769px) and (max-width: 992px) {
-  .fundadora-foto { flex:0 0 220px; max-width:32%; }
-  h2 { font-size:1.6rem; }
+@media (min-width: 769px) and (max-width: 1049px) {
+    /* ... regras da fundadora e h2 ... */
+
+    /* NOVAS REGRAS DE ALINHAMENTO E COMPACTAÇÃO (COM !important) */
+    .top-bar { 
+        justify-content: flex-start !important; 
+        gap: 12px !important; 
+    }
+    .menu {
+        margin-left: 0 !important; 
+    }
+    .menu-list {
+        gap: 8px !important; 
+        flex-wrap: nowrap !important;
+        margin-left: 0 !important; /* Adicionado: Garante que não haja margem na lista */
+    }
+    .menu-list li {
+        margin: 0 !important; /* Adicionado: Remove o margin-left: 18px que está conflitando */
+        padding: 0 !important;
+    }
+    .menu-list a {
+        padding: 6px 2px !important; 
+        font-size: 0.9rem !important; 
+    }
 }
 
 /* desktop */
-@media (min-width: 993px) {
+@media (min-width: 1050px) {
     /* ... outras regras ... */
     
     /* Ajuste de Altura do Banner para Desktop */
@@ -188,7 +209,7 @@ a:focus, button:focus { outline:3px solid rgba(203,161,123,0.18); outline-offset
 .header *, .top-bar * { float:none !important; clear:none !important; }
 
 /* desktop menu ao lado direito */
-@media (min-width: 992px) {
+@media (min-width: 1050px) {
   html { font-size:19px; }
   .top-bar { justify-content:flex-start; }
   .menu { margin-left:auto; order:3; }
@@ -220,24 +241,7 @@ a:focus, button:focus { outline:3px solid rgba(203,161,123,0.18); outline-offset
 .footer a { color:#fff !important; }
 
 /* fim do arquivo */
-/* ===== Ajuste: alinhar menu à esquerda no desktop, manter mobile intacto ===== */
-@media (min-width: 992px) {
-  /* remove margem automática que empurra o menu para a direita */
-  .menu {
-    margin-left: 0 !important;
-    order: 2 !important; /* garante posição correta junto ao topo */
-  }
 
-  /* posiciona os itens do menu imediatamente após o logo (alinhamento à esquerda) */
-  .top-bar { justify-content: flex-start !important; gap: 24px; }
-
-  /* garante que o menu em desktop continue em linha única e sem quebras */
-  .menu-list {
-    display: flex !important;
-    gap: 28px !important;
-    white-space: nowrap !important;
-  }
-}
 /* ===== Ajuste: centralizar o rodapé (alinhamento apenas) ===== */
 .footer,
 footer {

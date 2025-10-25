@@ -183,7 +183,7 @@ a:focus, button:focus { outline:3px solid rgba(203,161,123,0.18); outline-offset
     /* Ajuste de Altura do Banner para Desktop */
     .main-banner {
         /* USA PADDING para o desktop para um banner imponente. */
-        padding: 290px 0; 
+        padding: 290px 0; !important;
     }
 }
 
@@ -262,21 +262,6 @@ footer {
   .menu.open .menu-list a:active {
     color: var(--dourado) !important;
   }
-}
-/* Media Query para Telas Intermediárias (Tablet - até 1024px) */
-@media (max-width: 1024px) {
-    .main-banner {
-        /* Aumentado de 80px para 110px */
-        padding: 90px 0; 
-    }
-}
-
-/* Media Query para Telas Pequenas (Mobile - até 768px) */
-@media (max-width: 992px) {
-    .main-banner {
-        /* Aumentado de 50px para 70px */
-        padding: 70px 0; 
-    }
 }
 /* Media Query: TABLET/INTERMEDIÁRIO (769px até 1049px) - RESOLVE O CORTE */
 @media (min-width: 769px) and (max-width: 1049px) {

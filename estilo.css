@@ -281,18 +281,20 @@ footer {
     color: var(--dourado) !important;
   }
 }
-/* Media Query para Telas Intermediárias (Tablet - até 1024px) */
+/* Ajuste específico para tablets / telas intermediárias (<= 1024px) */
 @media (max-width: 1024px) {
-    .main-banner {
-        /* Aumentado de 80px para 110px */
-        padding: 110px 0; 
-    }
+  .main-banner {
+    /* reduzir a altura do banner em tablets */
+    padding: 48px 0;          /* topo / base menores */
+    background-position: center center; /* garante que o logo fique centralizado */
+  }
 }
 
-/* Media Query para Telas Pequenas (Mobile - até 768px) */
+/* Ajuste específico para mobile (<= 768px) */
 @media (max-width: 768px) {
-    .main-banner {
-        /* Aumentado de 50px para 70px */
-        padding: 100px 0; 
-    }
+  .main-banner {
+    /* reduzir ainda mais em celulares */
+    padding: 32px 0;
+    background-position: center center;
+  }
 }

@@ -105,6 +105,7 @@ a:focus, button:focus { outline:3px solid rgba(203,161,123,0.18); outline-offset
 /* responsive: mobile */
 @media (max-width: 768px) {
   .top-bar { padding:12px 16px; justify-content:center; }
+  .logo-text { font-size:1rem; }
   .menu-toggle { display:inline-block; position:absolute; right:16px; top:50%; transform:translateY(-50%); z-index:1320; }
   .menu-list { display:none; }
 
@@ -153,21 +154,11 @@ a:focus, button:focus { outline:3px solid rgba(203,161,123,0.18); outline-offset
   }
 
   /* fallback para telas muito estreitas: permite quebra e reduz padding */
-@media (max-width: 360px) {
-    .menu.open .menu-list { min-width:170px; max-width:calc(100vw - 12px); }
-    .menu.open .menu-list a { white-space:normal !important; padding-left:14px !important; padding-right:14px !important; }
-  
-    /* === NOVOS AJUSTES PARA CELULAR PEQUENO === */
-    .logo-text { 
-        font-size: 1.3rem !important; /* Logo maior no celular */
-        display: inline-block !important;
-    }
-    .main-banner { 
-        padding: 50px 0 !important; /* Banner menor no celular */
-    }
-    /* =========================================== */
-} /* <-- FIM CORRETO DO BLOCO 360PX */
- 
+  @media (max-width: 360px) {
+    .menu.open .menu-list { min-width:170px; max-width:calc(100vw - 12px); }
+    .menu.open .menu-list a { white-space:normal !important; padding-left:14px !important; padding-right:14px !important; }
+  }
+
   /* empilha fundadora no mobile */
   .fundadora-info { flex-direction:column; align-items:center; gap:12px; }
   .fundadora-foto { width:160px; max-width:60%; min-width:120px; align-self:center; }
@@ -175,15 +166,21 @@ a:focus, button:focus { outline:3px solid rgba(203,161,123,0.18); outline-offset
   h2 { font-size:1.4rem; }
   p { font-size:0.98rem; line-height:1.5; text-align:left; }
 }
-    
-}/* desktop */
+
+/* tablets/medium */
+@media (min-width: 769px) and (max-width: 992px) {
+  .fundadora-foto { flex:0 0 220px; max-width:32%; }
+  h2 { font-size:1.6rem; }
+}
+
+/* desktop */
 @media (min-width: 993px) {
     /* ... outras regras ... */
     
     /* Ajuste de Altura do Banner para Desktop */
     .main-banner {
         /* USA PADDING para o desktop para um banner imponente. */
-        padding: 190px 0; !important;
+        padding: 190px 0; 
     }
 }
 
@@ -223,7 +220,24 @@ a:focus, button:focus { outline:3px solid rgba(203,161,123,0.18); outline-offset
 .footer a { color:#fff !important; }
 
 /* fim do arquivo */
+/* ===== Ajuste: alinhar menu à esquerda no desktop, manter mobile intacto ===== */
+@media (min-width: 992px) {
+  /* remove margem automática que empurra o menu para a direita */
+  .menu {
+    margin-left: 0 !important;
+    order: 2 !important; /* garante posição correta junto ao topo */
+  }
 
+  /* posiciona os itens do menu imediatamente após o logo (alinhamento à esquerda) */
+  .top-bar { justify-content: flex-start !important; gap: 24px; }
+
+  /* garante que o menu em desktop continue em linha única e sem quebras */
+  .menu-list {
+    display: flex !important;
+    gap: 28px !important;
+    white-space: nowrap !important;
+  }
+}
 /* ===== Ajuste: centralizar o rodapé (alinhamento apenas) ===== */
 .footer,
 footer {
@@ -242,7 +256,7 @@ footer {
 }
 
 /* no menu mobile (três pontinhos), mantém dourado quando ativo também */
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .menu.open .menu-list a:hover,
   .menu.open .menu-list a:focus,
   .menu.open .menu-list a:active {
@@ -250,7 +264,7 @@ footer {
   }
 }
 /* ===== Correção final: cor padrão branca no menu mobile ===== */
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   /* cor padrão branca */
   .menu.open .menu-list a {
     color: #fff !important;
@@ -271,30 +285,10 @@ footer {
     }
 }
 
-    /* === SOLUÇÃO PARA O CORTE E MENU HAMBURGUER === */
-    /* Força o menu hambúrguer no tablet, resolvendo o corte */
-    .menu-list { 
-        display: none !important; 
-    }
-    .menu-toggle { 
-        display: inline-block !important; /* Mostra o hambúrguer */
-        position: absolute; 
-        right: 16px; 
-    }
-    .top-bar { 
-        justify-content: center; /* Centraliza o logo para evitar que o menu o esprema */
-    }
-
-    /* Ajustes de tamanho no tablet */
-    .logo-text { 
-        font-size: 1.6rem !important; /* Logo um pouco maior que no celular */ 
-        display: inline-block !important; 
-    }
+/* Media Query para Telas Pequenas (Mobile - até 768px) */
+@media (max-width: 768px) {
     .main-banner {
-        padding: 100px 0 !important; /* Altura média do banner no tablet */
+        /* Aumentado de 50px para 70px */
+        padding: 100px 0; 
     }
-    
-    /* Mantém o layout da fundadora no tablet */
-    .fundadora-foto { flex:0 0 220px; max-width:32%; }
-    h2 { font-size:1.8rem; }
 }

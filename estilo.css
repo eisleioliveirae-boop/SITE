@@ -298,3 +298,10 @@ footer {
     background-position: center center;
   }
 }
+/* Ajuste para telas "intermediárias grandes" (ex.: 13.3" 1440x900) */
+@media (min-width: 1050px) and (max-width: 1440px) {
+  .main-banner {
+    padding: 110px 0;   /* reduza/ajuste esse valor até ficar do seu gosto */
+    background-position: center center;
+  }
+}

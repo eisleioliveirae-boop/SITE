@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#232342"/>
+  <g transform="translate(60,80)">
+    <rect x="0" y="0" width="1080" height="470" rx="12" fill="#232342"/>
+    <text x="540" y="180" font-family="Arial, Helvetica, sans-serif" font-size="44" text-anchor="middle" fill="#CBA17B" font-weight="700">Ação Regressiva do INSS contra Empresas: Origem, Fundamento Legal e Evolução</text>
+    <text x="540" y="240" font-family="Arial, Helvetica, sans-serif" font-size="22" text-anchor="middle" fill="#ffffff">Estudo da ação regressiva do INSS: fundamentos legais, evolução institucional e impacto sobre a responsabilidade empresarial.</text>
+    <rect x="520" y="300" width="160" height="6" fill="#CBA17B" rx="3"/>
+  </g>
+</svg>

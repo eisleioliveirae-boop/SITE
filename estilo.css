@@ -521,39 +521,22 @@ footer {
   outline: 3px solid rgba(203,161,123,0.14);
   outline-offset: 3px;
 }
-/* Layout confortável para posts */
+/* ===== Ajuste de layout dos artigos individuais ===== */
+
 .post {
-  max-width: 760px;
-  margin: 0 auto;
-  padding: 16px;
-  line-height: 1.7;
-  font-size: 1.0625rem; /* ~17px, herda sua família de fontes */
+  max-width: 760px;           /* limita a largura para facilitar a leitura */
+  margin: 0 auto;             /* centraliza o texto */
+  padding: 20px;
+  line-height: 1.7;           /* aumenta o espaçamento entre linhas */
+  font-size: 1.0625rem;       /* tamanho de fonte confortável */
 }
-
-.post h1 {
-  font-size: clamp(1.75rem, 2.5vw + 1rem, 2.25rem);
-  line-height: 1.25;
-  margin: 0 0 12px 0;
-  font-weight: 700;
-}
-
-.post h2 {
-  margin: 28px 0 10px 0;
-  font-size: clamp(1.25rem, 1.2vw + 1rem, 1.5rem);
-  line-height: 1.35;
-}
-
-.post .post-meta { color:#555; margin-bottom: 12px; font-size: .95em; }
-.post .post-keywords { color:#444; margin: 6px 0 12px; }
 
 .post .cover img {
-  width: 100%;
-  height: auto;
   display: block;
-  border-radius: 12px;
+  width: 100%;                /* ocupa toda a largura disponível */
+  height: auto;               /* mantém proporção */
+  max-width: 760px;           /* não ultrapassa o corpo do texto */
+  margin: 20px auto;          /* centraliza a imagem e adiciona espaçamento */
+  border-radius: 10px;        /* bordas arredondadas */
+  object-fit: cover;          /* garante que a imagem não distorça */
 }
-.post-signature { margin-top: 28px; }
-.post-nav {
-  max-width: 760px; margin: 24px auto 40px; display:flex; justify-content:space-between; gap:12px; padding:0 16px;
-}
-.post-nav a { text-decoration: none; font-weight: 600; }

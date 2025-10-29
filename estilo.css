@@ -556,3 +556,41 @@ footer {
   background-repeat: no-repeat !important;
   border-bottom: 3px solid rgba(0,32,91,0.1);
 }
+/* ===== Ajuste de legibilidade do artigo ===== */
+.post {
+  font-size: 1.125rem;       /* tamanho base confortável */
+  line-height: 1.8;
+}
+
+@media (min-width: 1200px) {
+  .post {
+    font-size: 1.25rem;      /* aumenta em telas grandes */
+    line-height: 1.9;
+  }
+}
+
+.autor-data {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 16px;
+  font-family: 'Epilogue', Arial, sans-serif;
+}
+
+.post-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+}
+
+.post-nav a {
+  color: var(--azul);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.post-nav a:hover {
+  color: var(--dourado);
+}

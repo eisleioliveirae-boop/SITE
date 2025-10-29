@@ -1,48 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
   <url>
     <loc>https://eisleioliveirae-boop.github.io/SITE/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.00</priority>
   </url>
+
   <url>
     <loc>https://eisleioliveirae-boop.github.io/SITE/blog/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
+
   <url>
     <loc>https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho-clt-cover.jpg</image:loc>
+      <image:title>Contrato de trabalho na CLT</image:title>
+    </image:image>
   </url>
+
   <url>
     <loc>https://eisleioliveirae-boop.github.io/SITE/blog/jornada-de-trabalho-clt.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://eisleioliveirae-boop.github.io/SITE/blog/jornada-de-trabalho-clt-cover.jpg</image:loc>
+      <image:title>Jornada de trabalho na CLT</image:title>
+    </image:image>
   </url>
+
   <url>
     <loc>https://eisleioliveirae-boop.github.io/SITE/blog/salario-conceitos-e-legislacao.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://eisleioliveirae-boop.github.io/SITE/blog/salario-conceitos-e-legislacao-cover.jpg</image:loc>
+      <image:title>Salário: conceitos e legislação</image:title>
+    </image:image>
   </url>
+
   <url>
     <loc>https://eisleioliveirae-boop.github.io/SITE/blog/acao-regressiva-inss.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
+
   <url>
     <loc>https://eisleioliveirae-boop.github.io/SITE/blog/pejotizacao.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
+
   <url>
     <loc>https://eisleioliveirae-boop.github.io/SITE/blog/riscos-trabalhistas-compliance.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
+
   <url>
     <loc>https://eisleioliveirae-boop.github.io/SITE/blog/legislacao-rentabilidade.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
+
 </urlset>

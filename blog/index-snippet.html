@@ -1,25 +1,157 @@
-<!-- ======= BLOG INDEX (HOME) — FINAL ======= -->
-<section class="blog-section">
+<!-- ======= BLOG INDEX (HOME) — VERSÃO FINAL CORRIGIDA ======= -->
+<section class="blog-section" id="artigos">
   <h2 class="section-title">Artigos publicados</h2>
 
   <div class="blog-grid">
     
-    <!-- CARD 1 - CONTRATO DE TRABALHO -->
+    <!-- ✅ CARD 1 - CONTRATO DE TRABALHO -->
     <article class="preview">
       <a href="https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho.html"
          class="preview-img"
-         style="background-image:url('https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho-clt-cover.jpg');">
+         style="background-image:url('https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho-clt-cover.jpg');"
+         aria-label="Contrato de Trabalho na CLT: conceito, tipos e direitos do empregado e empregador">
       </a>
       <div class="preview-content">
-        <h3><a href="https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho.html">
-          Contrato de Trabalho na CLT: conceito, tipos e direitos do empregado e empregador
-        </a></h3>
-        <p>Entenda o conceito, os principais tipos e a importância do contrato de trabalho para a segurança jurídica nas relações laborais, segundo a CLT.</p>
-        <a href="https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho.html" class="btn">Ler completo</a>
+        <h3>
+          <a href="https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho.html">
+            Contrato de Trabalho na CLT: conceito, tipos e direitos do empregado e empregador
+          </a>
+        </h3>
+        <p>
+          Entenda o conceito, os principais tipos e a importância do contrato de trabalho para a segurança jurídica nas relações laborais, segundo a CLT.
+        </p>
+        <a href="https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho.html" class="btn" aria-label="Ler artigo completo sobre contrato de trabalho">Ler completo</a>
       </div>
     </article>
 
-    <!-- (Quando quiser reativar os demais, use o mesmo padrão de background-image) -->
+    <!-- ⚙️ FUTUROS CARDS (mantenha o mesmo padrão) -->
+    <!--
+    <article class="preview">
+      <a href="https://eisleioliveirae-boop.github.io/SITE/blog/jornada-de-trabalho-clt.html"
+         class="preview-img"
+         style="background-image:url('https://eisleioliveirae-boop.github.io/SITE/blog/jornada-de-trabalho-clt-cover.jpg');"
+         aria-label="Jornada de trabalho: conceitos e o que determina a CLT"></a>
+      <div class="preview-content">
+        <h3><a href="https://eisleioliveirae-boop.github.io/SITE/blog/jornada-de-trabalho-clt.html">Jornada de Trabalho: Conceitos, Tipos e o que determina a CLT</a></h3>
+        <p>Análise sobre jornada de trabalho, limites legais e regimes especiais previstos na CLT.</p>
+        <a href="https://eisleioliveirae-boop.github.io/SITE/blog/jornada-de-trabalho-clt.html" class="btn">Ler completo</a>
+      </div>
+    </article>
+    -->
 
   </div>
 </section>
+
+<!-- ======= CSS INTERNO (se preferir deixar embutido) ======= -->
+<style>
+.blog-section {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #1a1a2e;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 22px;
+  margin: 0 auto;
+  align-items: start;
+  max-width: 1100px;
+}
+
+/* CARD BASE */
+.preview {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.preview:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+}
+
+/* ✅ IMAGEM DE CAPA (background) */
+.preview-img {
+  display: block;
+  width: 100%;
+  height: 210px;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  border-bottom: 3px solid rgba(0, 32, 91, 0.08);
+  transition: filter 0.25s ease;
+}
+.preview:hover .preview-img {
+  filter: brightness(0.94);
+}
+
+/* CONTEÚDO */
+.preview-content {
+  padding: 18px 20px 22px 20px;
+  text-align: left;
+}
+
+.preview-content h3 {
+  font-size: 1.1rem;
+  margin: 0 0 10px;
+  color: #121225;
+  line-height: 1.35;
+}
+
+.preview-content p {
+  font-size: 0.95rem;
+  color: #444;
+  margin: 0 0 16px;
+  line-height: 1.5;
+}
+
+/* BOTÃO */
+.preview-content .btn {
+  background: #0b0b33;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  padding: 10px 20px;
+  display: inline-block;
+  text-align: center;
+  transition: background 0.25s ease;
+}
+
+.preview-content .btn:hover {
+  background: #00205b;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 600px) {
+  .preview-img {
+    height: 180px;
+  }
+  .section-title {
+    font-size: 1.5rem;
+  }
+}
+</style>
+
+<!-- ======= SEO E INDEXAÇÃO ======= -->
+<link rel="canonical" href="https://eisleioliveirae-boop.github.io/SITE/blog/">
+<link rel="alternate" type="application/rss+xml" title="Feed RSS - EOD Advocacia Empresarial" href="https://eisleioliveirae-boop.github.io/SITE/blog/feed.xml">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Artigos Jurídicos - EOD Advocacia Empresarial">
+<meta property="og:description" content="Conteúdos jurídicos empresariais produzidos por Eislei Domingues de Oliveira - EOD Advocacia Empresarial.">
+<meta property="og:url" content="https://eisleioliveirae-boop.github.io/SITE/blog/">
+<meta property="og:image" content="https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho-clt-cover.jpg">
+<meta property="og:site_name" content="EOD Advocacia Empresarial">

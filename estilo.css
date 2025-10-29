@@ -637,6 +637,7 @@ footer {
 
 .post-nav .prev-post { margin-right: auto; }  /* cola na esquerda */
 .post-nav .next-post { margin-left: auto; }   /* cola na direita */
+
 /* === Rodapé de navegação entre artigos === */
 .post-nav {
   display: flex;

@@ -1,20 +1,20 @@
-<!-- ======= BLOG INDEX SNIPPET (HOME, capas como background-image) ======= -->
+<!-- ======= BLOG INDEX SNIPPET (HOME) — VERSÃO AJUSTADA ======= -->
 <section class="blog-section">
   <h2 class="section-title">Artigos publicados</h2>
 
   <div class="blog-grid">
     
-    <!-- CARD 1 - CONTRATO DE TRABALHO -->
+    <!-- ✅ CARD 1 - CONTRATO DE TRABALHO -->
     <article class="preview">
       <a href="https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho.html"
          class="preview-img cover"
          style="background-image:url('https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho-clt-cover.jpg');">
-        <!-- fallback para navegadores sem CSS -->
         <noscript>
           <img src="https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho-clt-cover.jpg"
                alt="Contrato de Trabalho na CLT: conceito, tipos e importância" width="600" height="315">
         </noscript>
       </a>
+
       <div class="preview-content">
         <h3>
           <a href="https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho.html">
@@ -22,69 +22,103 @@
           </a>
         </h3>
         <p>
-          O contrato de trabalho segundo a CLT: conceito, tipos e elementos essenciais do vínculo e sua importância para segurança jurídica de empregadores e empregados.
+          Entenda o conceito, os principais tipos e a importância do contrato de trabalho para a segurança jurídica nas relações laborais, segundo a CLT.
         </p>
         <a href="https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho.html" class="btn">Ler completo</a>
       </div>
     </article>
 
-    <!-- CARD 2 - JORNADA DE TRABALHO -->
-    <article class="preview">
-      <a href="https://eisleioliveirae-boop.github.io/SITE/blog/jornada-de-trabalho-clt.html"
-         class="preview-img cover"
-         style="background-image:url('https://eisleioliveirae-boop.github.io/SITE/blog/jornada-de-trabalho-clt-cover.jpg');">
-        <noscript>
-          <img src="https://eisleioliveirae-boop.github.io/SITE/blog/jornada-de-trabalho-clt-cover.jpg"
-               alt="Jornada de trabalho: conceitos, tipos e o que determina a CLT" width="600" height="315">
-        </noscript>
-      </a>
-      <div class="preview-content">
-        <h3>
-          <a href="https://eisleioliveirae-boop.github.io/SITE/blog/jornada-de-trabalho-clt.html">
-            Jornada de trabalho: Conceitos, Tipos e o que determina a CLT
-          </a>
-        </h3>
-        <p>
-          Análise detalhada sobre jornada de trabalho: conceito, limites legais, variações e regimes especiais previstos na CLT.
-        </p>
-        <a href="https://eisleioliveirae-boop.github.io/SITE/blog/jornada-de-trabalho-clt.html" class="btn">Ler completo</a>
-      </div>
-    </article>
-
-    <!-- CARD 3 - SALÁRIO -->
-    <article class="preview">
-      <a href="https://eisleioliveirae-boop.github.io/SITE/blog/salario-conceitos-e-legislacao.html"
-         class="preview-img cover"
-         style="background-image:url('https://eisleioliveirae-boop.github.io/SITE/blog/salario-conceitos-e-legislacao-cover.jpg');">
-        <noscript>
-          <img src="https://eisleioliveirae-boop.github.io/SITE/blog/salario-conceitos-e-legislacao-cover.jpg"
-               alt="Salário: Conceitos, Tipos e o que determina a legislação" width="600" height="315">
-        </noscript>
-      </a>
-      <div class="preview-content">
-        <h3>
-          <a href="https://eisleioliveirae-boop.github.io/SITE/blog/salario-conceitos-e-legislacao.html">
-            Salário: Conceitos, Tipos e o que determina a legislação
-          </a>
-        </h3>
-        <p>
-          Panorama jurídico sobre salário e remuneração: princípios, naturezas, denominações e proteção constitucional do salário.
-        </p>
-        <a href="https://eisleioliveirae-boop.github.io/SITE/blog/salario-conceitos-e-legislacao.html" class="btn">Ler completo</a>
-      </div>
-    </article>
+    <!-- ⚙️ OS OUTROS CARDS FICARÃO DESATIVADOS ATÉ AJUSTARMOS O PRIMEIRO -->
+    <!--
+    <article class="preview">...</article>
+    <article class="preview">...</article>
+    -->
 
   </div>
 </section>
 
-<!-- Complemento mínimo de CSS (pode ir no seu style.css) -->
+<!-- ======= CSS COMPLEMENTAR (pode ir no style.css) ======= -->
 <style>
-  .preview-img.cover {
-    display:block;
-    width:100%;
-    height:200px;              /* ajuste se quiser mais/menos alto */
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-  }
+.blog-section {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #1a1a2e;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 22px;
+  margin: 0 auto;
+  align-items: start;
+  max-width: 1100px;
+}
+
+.preview {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.preview:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+}
+
+/* IMAGEM DE CAPA COMO BACKGROUND (garante exibição estável) */
+.preview-img.cover {
+  display: block;
+  width: 100%;
+  height: 210px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-bottom: 3px solid #00205b20;
+}
+
+.preview-content {
+  padding: 18px 20px 22px 20px;
+  text-align: left;
+}
+
+.preview-content h3 {
+  font-size: 1.1rem;
+  margin: 0 0 10px;
+  color: #121225;
+  line-height: 1.35;
+}
+
+.preview-content p {
+  font-size: 0.95rem;
+  color: #444;
+  margin: 0 0 16px;
+  line-height: 1.5;
+}
+
+.preview-content .btn {
+  background: #0b0b33;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  padding: 10px 20px;
+  display: inline-block;
+  text-align: center;
+  transition: background 0.25s ease;
+}
+
+.preview-content .btn:hover {
+  background: #00205b;
+}
 </style>

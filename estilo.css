@@ -594,3 +594,46 @@ footer {
 .post-nav a:hover {
   color: var(--dourado);
 }
+/* === Overrides de legibilidade do artigo (final do arquivo) === */
+.post,
+.post p,
+.post li {
+  font-size: clamp(1.06rem, 0.9rem + 0.7vw, 1.28rem); /* cresce até ~20px */
+  line-height: 1.85;
+}
+
+@media (min-width: 1200px) {
+  .post { max-width: 820px; } /* um pouco mais largo em telas grandes */
+}
+
+/* assinatura (autor + data) */
+.autor-data {
+  font-size: 0.98rem;
+  color: #666;
+  margin-bottom: 16px;
+  font-family: 'Epilogue', Arial, sans-serif;
+}
+/* navegação entre artigos (rodapé) */
+.post-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* joga um para cada lado */
+  align-items: center;
+  gap: 12px;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+}
+
+.post-nav a {
+  display: inline-block;     /* garante caixa clicável */
+  color: var(--azul);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color .2s ease;
+}
+
+.post-nav a:hover { color: var(--dourado); }
+
+.post-nav .prev-post { margin-right: auto; }  /* cola na esquerda */
+.post-nav .next-post { margin-left: auto; }   /* cola na direita */

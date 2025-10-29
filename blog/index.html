@@ -1,172 +1,207 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
-  <title>Artigos Jurídicos - EOD Advocacia Empresarial</title>
-  <meta name="description" content="Artigos jurídicos sobre direito empresarial, trabalhista e contratos. Conteúdos exclusivos da EOD Advocacia Empresarial.">
+  <title>Contrato de Trabalho na CLT: conceito, tipos e importância - EOD Advocacia Empresarial</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index,follow">
+  <meta name="description" content="O contrato de trabalho, previsto na CLT, formaliza a relação entre empregado e empregador. Conceito, principais tipos e importância para a segurança jurídica.">
+  <meta name="keywords" content="contrato de trabalho, CLT, vínculo empregatício, direitos trabalhistas, contrato por prazo determinado, contrato por prazo indeterminado, contrato de experiência, contrato intermitente">
 
-  <!-- Canonical do índice do blog -->
-  <link rel="canonical" href="https://eisleioliveirae-boop.github.io/SITE/blog/">
+  <!-- Canonical -->
+  <link rel="canonical" href="https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho.html">
 
-  <!-- CSS principal do site -->
-  <link rel="stylesheet" href="../style.css">
+  <!-- Pré-carrega imagem -->
+  <link rel="preload" as="image" href="https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho-clt-cover.jpg">
 
-  <!-- Feed RSS do blog -->
-  <link rel="alternate" type="application/rss+xml"
-        title="EOD — Artigos Jurídicos"
-        href="https://eisleioliveirae-boop.github.io/SITE/blog/feed.xml">
+  <!-- CSS global -->
+  <link rel="stylesheet" href="../estilo.css">
 
-  <!-- Open Graph / Twitter para a LISTA do blog -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Artigos Jurídicos - EOD Advocacia Empresarial">
-  <meta property="og:description" content="Conteúdos jurídicos empresariais produzidos por Eislei Domingues de Oliveira - EOD Advocacia Empresarial.">
-  <meta property="og:url" content="https://eisleioliveirae-boop.github.io/SITE/blog/">
+  <!-- Estilo refinado para leitura e identidade visual -->
+  <style>
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 18px;
+    }
+
+    .post {
+      max-width: 900px;
+      margin: 0 auto;
+      line-height: 1.75;
+      font-size: 1.075rem;
+    }
+
+    .post h1 {
+      line-height: 1.25;
+      margin: 0 0 22px; /* aumento do espaçamento inferior */
+      color: #232342;
+    }
+
+    .autor-data {
+      margin: 12px 0 24px; /* espaço adicional abaixo do título */
+      color: #CBA17B;      /* cor dourada institucional */
+      font-size: 0.975rem;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+    }
+
+    .autor-data a {
+      color: #CBA17B;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .autor-data a:hover {
+      color: #232342;
+      text-decoration: underline;
+    }
+
+    .post .cover img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+      margin: 20px auto;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+
+    .post-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin: 40px 0 8px;
+      padding-top: 20px;
+      border-top: 1px solid #ddd;
+    }
+
+    .post-nav a {
+      text-decoration: none;
+      font-weight: 600;
+      color: #232342;
+    }
+
+    .post-nav a:hover {
+      color: #CBA17B;
+      text-decoration: underline;
+    }
+
+    @media (min-width: 1200px) {
+      .post {
+        max-width: 1040px;
+        font-size: 1.1rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .container {
+        padding: 0 12px;
+      }
+
+      .post {
+        padding: 12px;
+        font-size: 1.02rem;
+        line-height: 1.7;
+      }
+
+      .autor-data {
+        font-size: 0.95rem;
+        text-align: left;
+      }
+    }
+  </style>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Contrato de Trabalho na CLT: conceito, tipos e importância">
+  <meta property="og:description" content="Conceito, tipos e elementos essenciais do contrato de trabalho segundo a CLT, com foco em segurança jurídica.">
+  <meta property="og:url" content="https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho.html">
   <meta property="og:image" content="https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho-clt-cover.jpg">
   <meta property="og:site_name" content="EOD Advocacia Empresarial">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho-clt-cover.jpg">
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"Contrato de Trabalho na CLT: conceito, tipos e importância",
+    "description":"Conceito, principais tipos e elementos essenciais do contrato de trabalho segundo a CLT, com foco em segurança jurídica.",
+    "author":{"@type":"Person","name":"Eislei Domingues de Oliveira"},
+    "publisher":{"@type":"Organization","name":"EOD Advocacia Empresarial"},
+    "datePublished":"2025-10-29",
+    "dateModified":"2025-10-29",
+    "image":"https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho-clt-cover.jpg",
+    "mainEntityOfPage":"https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho.html"
+  }
+  </script>
 </head>
 
 <body>
-  <header class="blog-header">
-    <h1>Artigos publicados</h1>
-    <p>Conteúdos jurídicos elaborados por <strong>Eislei Domingues de Oliveira</strong> – EOD Advocacia Empresarial.</p>
-  </header>
+  <div class="container">
+    <article class="post">
 
-  <main>
-    <section class="blog-section">
-      <h2 class="section-title">Últimos Artigos</h2>
+      <h1>Contrato de Trabalho na CLT: conceito, tipos e importância para a segurança jurídica nas relações laborais</h1>
 
-      <div class="blog-grid">
+      <p class="autor-data">
+        <strong>Por <a href="https://eisleioliveirae-boop.github.io/SITE/">Eislei Domingues de Oliveira</a></strong>
+        &nbsp;|&nbsp; Publicado em <time datetime="2025-10-29">29 de outubro de 2025</time>
+      </p>
 
-        <!-- CARD 1 — CONTRATO DE TRABALHO -->
-        <article class="preview">
-          <a
-            href="./contrato-de-trabalho.html"
-            class="preview-img"
-            style="background-image:url('https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho-clt-cover.jpg');"
-            aria-label="Contrato de Trabalho na CLT: conceito, tipos e direitos do empregado e empregador">
-            <noscript>
-              <img src="https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho-clt-cover.jpg"
-                   alt="Contrato de Trabalho na CLT: conceito, tipos e direitos" width="600" height="315">
-            </noscript>
-          </a>
-          <div class="preview-content">
-            <h3><a href="./contrato-de-trabalho.html">Contrato de Trabalho na CLT: conceito, tipos e direitos do empregado e empregador</a></h3>
-            <p>O contrato de trabalho segundo a CLT: conceito, tipos e elementos essenciais do vínculo e sua importância para a segurança jurídica.</p>
-            <a href="./contrato-de-trabalho.html" class="btn">Ler completo</a>
-          </div>
-        </article>
-
-        <!-- CARD 2 — JORNADA DE TRABALHO -->
-        <article class="preview">
-          <a
-            href="./jornada-de-trabalho-clt.html"
-            class="preview-img"
-            style="background-image:url('https://eisleioliveirae-boop.github.io/SITE/blog/jornada-de-trabalho-clt-cover.jpg');"
-            aria-label="Jornada de trabalho: Conceitos, Tipos e o que determina a CLT">
-            <noscript>
-              <img src="https://eisleioliveirae-boop.github.io/SITE/blog/jornada-de-trabalho-clt-cover.jpg"
-                   alt="Jornada de trabalho: Conceitos, Tipos e o que determina a CLT" width="600" height="315">
-            </noscript>
-          </a>
-          <div class="preview-content">
-            <h3><a href="./jornada-de-trabalho-clt.html">Jornada de trabalho: Conceitos, Tipos e o que determina a CLT</a></h3>
-            <p>Análise detalhada sobre jornada de trabalho: conceito, limites legais, variações e regimes especiais previstos na CLT.</p>
-            <a href="./jornada-de-trabalho-clt.html" class="btn">Ler completo</a>
-          </div>
-        </article>
-
-        <!-- CARD 3 — SALÁRIO -->
-        <article class="preview">
-          <a
-            href="./salario-conceitos-e-legislacao.html"
-            class="preview-img"
-            style="background-image:url('https://eisleioliveirae-boop.github.io/SITE/blog/salario-conceitos-e-legislacao-cover.jpg');"
-            aria-label="Salário: Conceitos, Tipos e o que determina a legislação">
-            <noscript>
-              <img src="https://eisleioliveirae-boop.github.io/SITE/blog/salario-conceitos-e-legislacao-cover.jpg"
-                   alt="Salário: Conceitos, Tipos e o que determina a legislação" width="600" height="315">
-            </noscript>
-          </a>
-          <div class="preview-content">
-            <h3><a href="./salario-conceitos-e-legislacao.html">Salário: Conceitos, Tipos e o que determina a legislação</a></h3>
-            <p>Panorama jurídico sobre salário e remuneração: princípios, naturezas, denominações e proteção constitucional do salário.</p>
-            <a href="./salario-conceitos-e-legislacao.html" class="btn">Ler completo</a>
-          </div>
-        </article>
-
+      <div class="cover">
+        <img
+          src="./contrato-de-trabalho-clt-cover.jpg"
+          alt="Assinatura de contrato de trabalho em ambiente corporativo"
+          width="1200" height="630"
+          loading="eager" decoding="async" fetchpriority="high">
       </div>
-    </section>
-  </main>
 
-  <footer class="blog-footer">
-    <p>© 2025 EOD Advocacia Empresarial — Desenvolvido por Eislei Domingues de Oliveira</p>
-  </footer>
+      <p><strong>Resumo:</strong> O contrato de trabalho é o instrumento jurídico que formaliza a relação entre empregado e empregador, conforme a Consolidação das Leis do Trabalho (CLT). Este artigo apresenta o conceito, os principais tipos e as características essenciais do vínculo empregatício, destacando os elementos jurídicos que configuram a relação de emprego e asseguram os direitos trabalhistas no Brasil.</p>
 
-  <!-- CSS complementar mínimo para os cards com background-image -->
-  <style>
-    .blog-header {
-      text-align: center;
-      padding: 40px 20px 10px;
-      background: #fff;
-    }
-    .blog-header h1 {
-      color: #1a1a2e;
-      font-size: 2rem;
-      margin-bottom: 10px;
-    }
-    .blog-section { margin: 40px auto; max-width: 1100px; padding: 0 20px; }
-    .section-title { text-align: center; font-size: 1.6rem; font-weight: 700; margin-bottom: 30px; color: #1a1a2e; }
+      <h2>1. Conceito de Contrato de Trabalho</h2>
+      <p>O <strong>contrato de trabalho</strong>, previsto na <strong>Consolidação das Leis do Trabalho (CLT)</strong>, é o instrumento jurídico que formaliza a relação entre empregado e empregador. Por meio dele, uma <strong>pessoa física</strong> (empregado) compromete-se a prestar serviços <strong>de forma contínua, pessoal, subordinada e mediante remuneração</strong> a uma <strong>pessoa física ou jurídica</strong> (empregador).</p>
+      <p>Esse vínculo jurídico estabelece <strong>direitos e deveres recíprocos</strong>, servindo como base das relações laborais no ordenamento jurídico brasileiro e garantindo <strong>segurança jurídica</strong> tanto ao trabalhador quanto à empresa.</p>
 
-    .blog-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-      align-items: start;
-    }
-    .preview {
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-    }
-    .preview:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 22px rgba(0,0,0,0.1);
-    }
+      <h2>2. Principais Tipos de Contrato de Trabalho</h2>
+      <p>A legislação trabalhista define diferentes <strong>modalidades contratuais</strong>, permitindo adequações conforme as necessidades da empresa e da atividade desenvolvida. Entre as principais formas de contratação previstas na CLT, destacam-se:</p>
+      <ul>
+        <li><strong>Contrato por prazo indeterminado</strong> – modelo mais comum, sem data de término previamente fixada, garantindo estabilidade e continuidade da relação laboral.</li>
+        <li><strong>Contrato por prazo determinado</strong> – possui data de encerramento previamente ajustada, aplicável em situações transitórias ou de necessidade temporária de pessoal.</li>
+        <li><strong>Contrato de experiência</strong> – tem por finalidade avaliar a adaptação do empregado às funções e à cultura organizacional, com duração máxima de 90 dias.</li>
+        <li><strong>Contrato intermitente</strong> – possibilita a prestação de serviços de forma não contínua, alternando períodos de trabalho e inatividade, mediante remuneração proporcional.</li>
+      </ul>
+      <p>Cada modalidade deve respeitar as <strong>condições legais estabelecidas pela CLT</strong>, sob pena de nulidade e consequente reconhecimento de vínculo empregatício típico.</p>
 
-    /* ✅ capa como background para garantir exibição */
-    .preview-img {
-      display: block;
-      width: 100%;
-      height: 210px;
-      background-size: cover !important;
-      background-position: center !important;
-      background-repeat: no-repeat !important;
-      border-bottom: 3px solid rgba(0, 32, 91, 0.1);
-      transition: filter 0.25s ease;
-    }
-    .preview:hover .preview-img { filter: brightness(0.94); }
+      <h2>3. Elementos Essenciais do Vínculo Empregatício</h2>
+      <p>Para a caracterização da relação de emprego, a doutrina e a jurisprudência exigem a presença dos seguintes elementos:</p>
+      <ul>
+        <li><strong>Pessoalidade</strong> – o serviço deve ser prestado pessoalmente pelo empregado, sem substituição por terceiros.</li>
+        <li><strong>Habitualidade (não eventualidade)</strong> – a prestação de serviços ocorre de forma contínua e reiterada.</li>
+        <li><strong>Subordinação jurídica</strong> – sujeição do empregado ao poder diretivo e disciplinar do empregador.</li>
+        <li><strong>Onerosidade</strong> – contraprestação salarial pelo serviço executado.</li>
+      </ul>
+      <p>A ausência de qualquer desses elementos descaracteriza o vínculo empregatício, podendo configurar <strong>relação autônoma, eventual</strong> ou <strong>prestação de serviços independente</strong>.</p>
 
-    .preview-content { padding: 18px 20px 24px; text-align: left; }
-    .preview-content h3 { font-size: 1.1rem; margin: 0 0 10px; line-height: 1.35; color: #121225; }
-    .preview-content p { font-size: 0.95rem; color: #555; line-height: 1.5; margin-bottom: 16px; }
-    .preview-content .btn {
-      display: inline-block; background: #0b0b33; color: #fff;
-      font-weight: 600; font-size: 0.9rem; border-radius: 8px;
-      padding: 10px 18px; text-decoration: none; transition: background 0.25s ease;
-    }
-    .preview-content .btn:hover { background: #00205b; }
+      <h2>4. A Importância do Contrato de Trabalho para a Segurança Jurídica</h2>
+      <p>O contrato de trabalho representa <strong>proteção jurídica</strong> para ambas as partes. Para o empregador, proporciona <strong>previsibilidade</strong> e <strong>regularidade</strong> nas relações laborais, reduzindo litígios e passivos trabalhistas. Para o empregado, assegura <strong>direitos fundamentais</strong> como remuneração, jornada adequada, férias, 13º salário, FGTS e demais benefícios previstos na legislação.</p>
+      <p>Além disso, a formalização contratual reflete o <strong>comprometimento ético e legal da empresa</strong>, fortalecendo sua imagem institucional e contribuindo para um ambiente de trabalho transparente e equilibrado.</p>
 
-    @media (max-width: 600px) {
-      .preview-img { height: 180px; }
-    }
-  </style>
+      <h2>5. Considerações Finais</h2>
+      <p>O adequado cumprimento das normas celetistas e a elaboração criteriosa do contrato de trabalho são essenciais para assegurar <strong>equilíbrio, transparência e segurança jurídica</strong> nas relações empresariais. Empresas que prezam pela regularidade de seus vínculos laborais reduzem significativamente o risco de <strong>passivos trabalhistas</strong> e demonstram <strong>maturidade na gestão de pessoas</strong>.</p>
+
+      <!-- Navegação entre artigos -->
+      <nav class="post-nav" aria-label="Navegação entre artigos">
+        <a href="jornada-de-trabalho-clt.html" class="prev-post">← Artigo anterior</a>
+        <a href="salario-conceitos-e-legislacao.html" class="next-post">Próximo artigo →</a>
+      </nav>
+
+    </article>
+  </div>
 </body>
 </html>

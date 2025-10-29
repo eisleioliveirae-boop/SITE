@@ -637,3 +637,31 @@ footer {
 
 .post-nav .prev-post { margin-right: auto; }  /* cola na esquerda */
 .post-nav .next-post { margin-left: auto; }   /* cola na direita */
+/* === Rodapé de navegação entre artigos === */
+.post-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+}
+
+.post-nav a {
+  color: var(--azul);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color .2s ease;
+}
+
+.post-nav a:hover { color: var(--dourado); }
+
+/* Reforço de tamanho de fonte em telas grandes (se quiser um pouco maior) */
+@media (min-width: 1200px) {
+  .post, .post p, .post li {
+    font-size: clamp(1.08rem, 0.85rem + 0.9vw, 1.40rem);
+    line-height: 1.9;
+  }
+}

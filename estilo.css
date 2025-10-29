@@ -556,13 +556,13 @@ footer {
   border-radius: 12px;
   object-fit: cover;
 }
-/* miniaturas dos cards */
-.preview img,
-.preview .preview-img {
+/* miniaturas dos cards — apenas quando usar <img> como capa */
+.preview img {
   width: 100%;
   height: 180px;
   object-fit: cover;
   display: block;
+  border-bottom: 1px solid rgba(0,0,0,0.04);
 }
 /* Cards - imagem como background */
 .preview-img {

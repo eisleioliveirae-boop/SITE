@@ -17,18 +17,99 @@
   <!-- CSS global do site -->
   <link rel="stylesheet" href="../estilo.css">
 
-  <!-- Fallback CSS (garante tipografia e navegação mesmo sem o CSS externo) -->
+  <!-- Ajuste de espaçamento e legibilidade -->
   <style>
-    .container{max-width:940px;margin:0 auto;padding:16px}
-    .post{max-width:760px;margin:0 auto;line-height:1.7;font-size:clamp(1.06rem,0.85rem + 0.9vw,1.35rem)}
-    .post h1{line-height:1.25;margin:0 0 12px}
-    .autor-data{margin:6px 0 14px 0;color:#444;font-size:.95em}
-    .autor-data a{color:inherit;text-decoration:none}
-    .autor-data a:hover{color:#CBA17B}
-    .post .cover img{display:block;width:100%;height:auto;max-width:760px;margin:18px auto;border-radius:12px;object-fit:cover}
-    .post-nav{display:flex;justify-content:space-between;align-items:center;gap:12px;width:100%;margin-top:40px;padding-top:20px;border-top:1px solid #ddd}
-    .post-nav a{color:#232342;font-weight:600;text-decoration:none}
-    .post-nav a:hover{color:#CBA17B}
+    /* === Ajuste de largura, margens e tipografia === */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 18px;
+    }
+
+    .post {
+      max-width: 900px;
+      margin: 0 auto;
+      line-height: 1.75;
+      font-size: 1.075rem;
+    }
+
+    .post h1 {
+      line-height: 1.25;
+      margin: 0 0 12px;
+    }
+
+    .post .cover img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+      margin: 18px auto;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+
+    .autor-data {
+      margin: 6px 0 16px;
+      color: #555;
+      font-size: 0.975rem;
+    }
+
+    .autor-data a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .autor-data a:hover {
+      color: #CBA17B;
+    }
+
+    /* === Navegação entre artigos === */
+    .post-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin: 40px 0 8px;
+      padding-top: 20px;
+      border-top: 1px solid #ddd;
+    }
+
+    .post-nav a {
+      text-decoration: none;
+      font-weight: 600;
+      color: #232342;
+    }
+
+    .post-nav a:hover {
+      color: #CBA17B;
+      text-decoration: underline;
+    }
+
+    /* === Ajustes para telas grandes === */
+    @media (min-width: 1200px) {
+      .post {
+        max-width: 1040px;
+        font-size: 1.1rem;
+      }
+    }
+
+    /* === Ajustes para telas menores === */
+    @media (max-width: 768px) {
+      body {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .container {
+        padding: 0 12px;
+      }
+
+      .post {
+        padding: 12px;
+        font-size: 1.02rem;
+        line-height: 1.7;
+      }
+    }
   </style>
 
   <!-- Open Graph / Twitter -->

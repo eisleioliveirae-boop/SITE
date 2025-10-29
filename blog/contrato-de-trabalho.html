@@ -23,13 +23,24 @@
     .post { max-width: 900px; margin: 0 auto; line-height: 1.75; font-size: 1.075rem; }
     .post h1 { line-height: 1.25; margin: 0 0 22px; color: #232342; }
 
-    /* Autor/data: cor e espaçamento (mantém padrão do site) */
+    /* Autor/data */
     .autor-data { margin: 12px 0 24px; color: #6B7280; font-size: 0.98rem; letter-spacing: .2px; }
     .autor-data strong { color: var(--azul); }
     .autor-data a { color: inherit; text-decoration: none; border-bottom: 1px solid rgba(203,161,123,.45); }
     .autor-data a:hover { color: var(--dourado); border-bottom-color: var(--dourado); }
 
     .post .cover img { display: block; width: 100%; height: auto; max-width: 100%; margin: 20px auto; border-radius: 12px; object-fit: cover; }
+
+    /* Subtítulos otimizados (sem numerais) */
+    .post h2 {
+      color: #232342;
+      font-weight: 700;
+      font-size: 1.35rem;
+      margin-top: 36px;
+      margin-bottom: 12px;
+      border-left: 4px solid #CBA17B;
+      padding-left: 10px;
+    }
 
     .post-nav { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin: 40px 0 8px; padding-top: 20px; border-top: 1px solid #ddd; }
     .post-nav a { text-decoration: none; font-weight: 600; color: #232342; }
@@ -91,11 +102,12 @@
 
       <p><strong>Resumo:</strong> O contrato de trabalho é o instrumento jurídico que formaliza a relação entre empregado e empregador, conforme a Consolidação das Leis do Trabalho (CLT). Este artigo apresenta o conceito, os principais tipos e as características essenciais do vínculo empregatício, destacando os elementos jurídicos que configuram a relação de emprego e asseguram os direitos trabalhistas no Brasil.</p>
 
-      <h2>1. Conceito de Contrato de Trabalho</h2>
+      <!-- Subtítulos sem numeração e otimizados -->
+      <h2>Contrato de trabalho: conceito jurídico na CLT</h2>
       <p>O <strong>contrato de trabalho</strong>, previsto na <strong>Consolidação das Leis do Trabalho (CLT)</strong>, é o instrumento jurídico que formaliza a relação entre empregado e empregador. Por meio dele, uma <strong>pessoa física</strong> (empregado) compromete-se a prestar serviços <strong>de forma contínua, pessoal, subordinada e mediante remuneração</strong> a uma <strong>pessoa física ou jurídica</strong> (empregador).</p>
       <p>Esse vínculo jurídico estabelece <strong>direitos e deveres recíprocos</strong>, servindo como base das relações laborais no ordenamento jurídico brasileiro e garantindo <strong>segurança jurídica</strong> tanto ao trabalhador quanto à empresa.</p>
 
-      <h2>2. Principais Tipos de Contrato de Trabalho</h2>
+      <h2>Modalidades de contrato de trabalho previstas na CLT</h2>
       <p>A legislação trabalhista define diferentes <strong>modalidades contratuais</strong>, permitindo adequações conforme as necessidades da empresa e da atividade desenvolvida. Entre as principais formas de contratação previstas na CLT, destacam-se:</p>
       <ul>
         <li><strong>Contrato por prazo indeterminado</strong> – modelo mais comum, sem data de término previamente fixada, garantindo estabilidade e continuidade da relação laboral.</li>
@@ -105,7 +117,7 @@
       </ul>
       <p>Cada modalidade deve respeitar as <strong>condições legais estabelecidas pela CLT</strong>, sob pena de nulidade e consequente reconhecimento de vínculo empregatício típico.</p>
 
-      <h2>3. Elementos Essenciais do Vínculo Empregatício</h2>
+      <h2>Elementos caracterizadores do vínculo empregatício</h2>
       <p>Para a caracterização da relação de emprego, a doutrina e a jurisprudência exigem a presença dos seguintes elementos:</p>
       <ul>
         <li><strong>Pessoalidade</strong> – o serviço deve ser prestado pessoalmente pelo empregado, sem substituição por terceiros.</li>
@@ -115,18 +127,16 @@
       </ul>
       <p>A ausência de qualquer desses elementos descaracteriza o vínculo empregatício, podendo configurar <strong>relação autônoma, eventual</strong> ou <strong>prestação de serviços independente</strong>.</p>
 
-      <h2>4. A Importância do Contrato de Trabalho para a Segurança Jurídica</h2>
+      <h2>Importância do contrato de trabalho para a segurança jurídica</h2>
       <p>O contrato de trabalho representa <strong>proteção jurídica</strong> para ambas as partes. Para o empregador, proporciona <strong>previsibilidade</strong> e <strong>regularidade</strong> nas relações laborais, reduzindo litígios e passivos trabalhistas. Para o empregado, assegura <strong>direitos fundamentais</strong> como remuneração, jornada adequada, férias, 13º salário, FGTS e demais benefícios previstos na legislação.</p>
       <p>Além disso, a formalização contratual reflete o <strong>comprometimento ético e legal da empresa</strong>, fortalecendo sua imagem institucional e contribuindo para um ambiente de trabalho transparente e equilibrado.</p>
 
-      <h2>5. Considerações Finais</h2>
+      <h2>Conclusões e boas práticas para empresas</h2>
       <p>O adequado cumprimento das normas celetistas e a elaboração criteriosa do contrato de trabalho são essenciais para assegurar <strong>equilíbrio, transparência e segurança jurídica</strong> nas relações empresariais. Empresas que prezam pela regularidade de seus vínculos laborais reduzem significativamente o risco de <strong>passivos trabalhistas</strong> e demonstram <strong>maturidade na gestão de pessoas</strong>.</p>
 
       <!-- Navegação entre artigos -->
       <nav class="post-nav" aria-label="Navegação entre artigos">
-        <!-- Este é o primeiro artigo publicado: 'anterior' volta ao índice do blog -->
         <a href="index.html" class="prev-post" rel="prev">← Voltar ao índice</a>
-        <!-- Próximo aponta para o arquivo exato do artigo seguinte -->
         <a href="jornada-de-trabalho-clt.html" class="next-post" rel="next">Próximo: Jornada de trabalho →</a>
       </nav>
 

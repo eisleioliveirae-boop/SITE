@@ -690,3 +690,30 @@ footer {
 }
 .post-nav a { color: var(--azul); font-weight: 700; text-decoration: none; }
 .post-nav a:hover { color: var(--dourado); }
+/* Autor e data — cor e espaçamento (blog) */
+article.post h1 {
+  margin-bottom: 10px;             /* espaço claro entre título e autor */
+}
+
+article.post p.autor-data {
+  margin: 8px 0 18px 0;            /* separa do título e do parágrafo seguinte */
+  color: #6B7280;                  /* cinza elegante p/ diferenciar do título */
+  font-size: 0.98rem;
+  line-height: 1.4;
+}
+
+article.post p.autor-data strong {
+  color: var(--azul);              /* nome em azul institucional */
+}
+
+article.post p.autor-data a {
+  color: inherit;                  /* link segue a mesma cor do texto */
+  text-decoration: none;
+  border-bottom: 1px solid rgba(203,161,123,0.45);
+}
+
+article.post p.autor-data a:hover,
+article.post p.autor-data a:focus {
+  color: var(--dourado);
+  border-bottom-color: var(--dourado);
+}

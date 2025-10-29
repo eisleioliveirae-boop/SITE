@@ -7,12 +7,8 @@
     <!-- ✅ CARD 1 - CONTRATO DE TRABALHO -->
     <article class="preview">
       <a href="https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho.html"
-         class="preview-img"
+         class="preview-img cover"
          style="background-image:url('https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho-clt-cover.jpg');">
-        <noscript>
-          <img src="https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho-clt-cover.jpg"
-               alt="Contrato de Trabalho na CLT: conceito, tipos e importância" width="600" height="315">
-        </noscript>
       </a>
 
       <div class="preview-content">
@@ -31,7 +27,7 @@
   </div>
 </section>
 
-<!-- ======= CSS COMPLEMENTAR (copiar para o final do style.css, se quiser manter externo) ======= -->
+<!-- ======= CSS COMPLEMENTAR (cole no final do style.css ou mantenha embutido) ======= -->
 <style>
 .blog-section {
   margin: 40px 0;
@@ -70,15 +66,25 @@
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
 }
 
-/* ✅ IMAGEM DE CAPA COMO BACKGROUND */
-.preview-img {
-  display: block;
-  width: 100%;
-  height: 210px;
+/* ✅ CORREÇÃO FINAL — GARANTE QUE AS CAPAS APAREÇAM SEM BLOQUEIO */
+.preview-img.cover {
+  display: block !important;
+  width: 100% !important;
+  height: 210px !important;
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
   border-bottom: 3px solid rgba(0, 32, 91, 0.1);
+}
+
+/* força o navegador a renderizar o background corretamente */
+.preview-img {
+  background-color: #f8f8f8 !important;
+}
+
+/* impede conflito com outras regras que mostrem <img> interno */
+.preview-img img {
+  display: none !important;
 }
 
 /* CONTEÚDO DO CARD */

@@ -717,3 +717,22 @@ article.post p.autor-data a:focus {
   color: var(--dourado);
   border-bottom-color: var(--dourado);
 }
+/* === Estilo fixo para nome do autor e data nos artigos do blog === */
+.post .autor-data {
+  margin: 10px 0 22px 0;
+  color: #CBA17B !important;        /* dourado institucional */
+  font-size: 0.98rem;
+  letter-spacing: 0.25px;
+  font-weight: 500;
+}
+
+.post .autor-data a,
+.post .autor-data strong {
+  color: #CBA17B !important;        /* garante cor dourada no nome/link */
+  text-decoration: none;
+}
+
+.post .autor-data a:hover {
+  color: #232342 !important;        /* azul escuro do tema no hover */
+  text-decoration: underline;
+}

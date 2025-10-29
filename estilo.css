@@ -666,3 +666,27 @@ footer {
     line-height: 1.9;
   }
 }
+/* ===== BLOG: tipografia e barra autor/data ===== */
+.container { max-width: 1160px; padding: 0 8px; }             /* reduz margens laterais */
+.post { max-width: 880px; margin: 0 auto;                      /* centraliza e limita largura */
+        line-height: 1.75;
+        font-size: clamp(1.06rem, 0.92rem + 0.6vw, 1.28rem); } /* legível em telas grandes */
+
+.post h1 { margin-bottom: 10px; }                              /* dá “respiro” antes do autor */
+
+.autor-data {
+  margin: 6px 0 18px 0;                                        /* espaçamento sob o título */
+  color: #6b6b6b;                                              /* cinza elegante (não #000) */
+  font-size: 0.95em;
+}
+.autor-data a { color: inherit; text-decoration: none; }
+.autor-data a:hover { color: var(--dourado); }
+
+/* Navegação anterior/próximo */
+.post-nav {
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 12px; width: 100%;
+  margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd;
+}
+.post-nav a { color: var(--azul); font-weight: 700; text-decoration: none; }
+.post-nav a:hover { color: var(--dourado); }

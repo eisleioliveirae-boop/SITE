@@ -335,15 +335,6 @@ footer {
   height: 100%;
 }
 
-/* Imagem de capa */
-.preview img {
-  width: 100%;
-  height: 180px;          /* tamanho consistente */
-  object-fit: cover;
-  display: block;
-  border-bottom: 1px solid rgba(0,0,0,0.04);
-}
-
 /* Conteúdo do card */
 .preview h3 {
   font-family: 'Epilogue', Arial, sans-serif;
@@ -436,15 +427,6 @@ footer {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-}
-
-/* capa — ajustada para usar as proporções do site (sem cortar tipografia) */
-.preview img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;       /* cover mantém impacto visual; troque para contain se quiser ver imagem inteira */
-  display: block;
-  border-bottom: 1px solid rgba(0,0,0,0.04);
 }
 
 /* título — acompanha a família e peso do site */

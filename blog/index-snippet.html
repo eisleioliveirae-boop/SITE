@@ -1,127 +1,25 @@
-<!-- ======= BLOG INDEX SNIPPET (HOME) — VERSÃO FINAL CORRIGIDA ======= -->
+<!-- ======= BLOG INDEX (HOME) — FINAL ======= -->
 <section class="blog-section">
   <h2 class="section-title">Artigos publicados</h2>
 
   <div class="blog-grid">
     
-    <!-- ✅ CARD 1 - CONTRATO DE TRABALHO -->
+    <!-- CARD 1 - CONTRATO DE TRABALHO -->
     <article class="preview">
       <a href="https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho.html"
-         class="preview-img cover"
+         class="preview-img"
          style="background-image:url('https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho-clt-cover.jpg');">
       </a>
-
       <div class="preview-content">
-        <h3>
-          <a href="https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho.html">
-            Contrato de Trabalho na CLT: conceito, tipos e direitos do empregado e empregador
-          </a>
-        </h3>
-        <p>
-          Entenda o conceito, os principais tipos e a importância do contrato de trabalho para a segurança jurídica nas relações laborais, segundo a CLT.
-        </p>
+        <h3><a href="https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho.html">
+          Contrato de Trabalho na CLT: conceito, tipos e direitos do empregado e empregador
+        </a></h3>
+        <p>Entenda o conceito, os principais tipos e a importância do contrato de trabalho para a segurança jurídica nas relações laborais, segundo a CLT.</p>
         <a href="https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho.html" class="btn">Ler completo</a>
       </div>
     </article>
 
+    <!-- (Quando quiser reativar os demais, use o mesmo padrão de background-image) -->
+
   </div>
 </section>
-
-<!-- ======= CSS COMPLEMENTAR (cole no final do style.css ou mantenha embutido) ======= -->
-<style>
-.blog-section {
-  margin: 40px 0;
-  text-align: center;
-}
-
-.section-title {
-  font-size: 1.8rem;
-  font-weight: 700;
-  margin-bottom: 30px;
-  color: #1a1a2e;
-}
-
-.blog-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 22px;
-  margin: 0 auto;
-  align-items: start;
-  max-width: 1100px;
-}
-
-/* CARD PRINCIPAL */
-.preview {
-  background: #ffffff;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  display: flex;
-  flex-direction: column;
-}
-
-.preview:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
-}
-
-/* ✅ CORREÇÃO FINAL — GARANTE QUE AS CAPAS APAREÇAM SEM BLOQUEIO */
-.preview-img.cover {
-  display: block !important;
-  width: 100% !important;
-  height: 210px !important;
-  background-size: cover !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-  border-bottom: 3px solid rgba(0, 32, 91, 0.1);
-}
-
-/* força o navegador a renderizar o background corretamente */
-.preview-img {
-  background-color: #f8f8f8 !important;
-}
-
-/* impede conflito com outras regras que mostrem <img> interno */
-.preview-img img {
-  display: none !important;
-}
-
-/* CONTEÚDO DO CARD */
-.preview-content {
-  padding: 18px 20px 22px 20px;
-  text-align: left;
-}
-
-.preview-content h3 {
-  font-size: 1.1rem;
-  margin: 0 0 10px;
-  color: #121225;
-  line-height: 1.35;
-}
-
-.preview-content p {
-  font-size: 0.95rem;
-  color: #444;
-  margin: 0 0 16px;
-  line-height: 1.5;
-}
-
-/* BOTÃO */
-.preview-content .btn {
-  background: #0b0b33;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.9rem;
-  border-radius: 8px;
-  padding: 10px 20px;
-  display: inline-block;
-  text-align: center;
-  transition: background 0.25s ease;
-}
-
-.preview-content .btn:hover {
-  background: #00205b;
-}
-</style>

@@ -3,7 +3,10 @@
      xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>EOD Advocacia Empresarial - Artigos</title>
-    <link>https://eisleioliveirae-boop.github.io/SITE/</link>
+
+    <!-- Link do canal apontando para o índice do blog -->
+    <link>https://eisleioliveirae-boop.github.io/SITE/blog/</link>
+
     <description>Atualizações e artigos jurídicos — EOD Advocacia Empresarial</description>
     <language>pt-BR</language>
 
@@ -11,8 +14,18 @@
     <atom:link href="https://eisleioliveirae-boop.github.io/SITE/blog/feed.xml"
                rel="self" type="application/rss+xml" />
 
+    <!-- Cache sugerido para leitores (em minutos) -->
+    <ttl>60</ttl>
+
     <!-- Data do último build em RFC-1123 -->
     <lastBuildDate>Sat, 25 Oct 2025 23:58:31 GMT</lastBuildDate>
+
+    <!-- Imagem do canal (opcional, melhora compatibilidade em alguns leitores) -->
+    <image>
+      <url>https://eisleioliveirae-boop.github.io/SITE/banner.png</url>
+      <title>EOD Advocacia Empresarial - Artigos</title>
+      <link>https://eisleioliveirae-boop.github.io/SITE/blog/</link>
+    </image>
 
     <item>
       <title>Contrato de Trabalho na CLT: conceito, tipos e direitos do empregado e empregador</title>

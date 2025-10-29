@@ -6,15 +6,15 @@
   <!-- Home -->
   <url>
     <loc>https://eisleioliveirae-boop.github.io/SITE/</loc>
-    <lastmod>2025-10-29</lastmod>
+    <lastmod>2025-10-29T09:00:00-03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.00</priority>
   </url>
 
-  <!-- Índice do blog -->
+  <!-- Índice do Blog -->
   <url>
     <loc>https://eisleioliveirae-boop.github.io/SITE/blog/</loc>
-    <lastmod>2025-10-29</lastmod>
+    <lastmod>2025-10-29T09:00:00-03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
@@ -22,12 +22,12 @@
   <!-- Artigo: Contrato de Trabalho -->
   <url>
     <loc>https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho.html</loc>
-    <lastmod>2025-10-29</lastmod>
+    <lastmod>2025-10-29T09:00:00-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
     <image:image>
       <image:loc>https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho-clt-cover.jpg</image:loc>
-      <image:title>Contrato de trabalho na CLT</image:title>
+      <image:title>Contrato de Trabalho na CLT</image:title>
       <image:caption>Assinatura de contrato de trabalho em ambiente corporativo.</image:caption>
     </image:image>
   </url>
@@ -35,20 +35,20 @@
   <!-- Artigo: Jornada de Trabalho -->
   <url>
     <loc>https://eisleioliveirae-boop.github.io/SITE/blog/jornada-de-trabalho-clt.html</loc>
-    <lastmod>2025-10-29</lastmod>
+    <lastmod>2025-10-29T09:00:00-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
     <image:image>
       <image:loc>https://eisleioliveirae-boop.github.io/SITE/blog/jornada-de-trabalho-clt-cover.jpg</image:loc>
-      <image:title>Jornada de trabalho na CLT</image:title>
-      <image:caption>Planejamento de jornada e controles de ponto conforme a CLT.</image:caption>
+      <image:title>Jornada de Trabalho na CLT</image:title>
+      <image:caption>Planejamento de jornada e controle de ponto conforme a CLT.</image:caption>
     </image:image>
   </url>
 
   <!-- Artigo: Salário -->
   <url>
     <loc>https://eisleioliveirae-boop.github.io/SITE/blog/salario-conceitos-e-legislacao.html</loc>
-    <lastmod>2025-10-29</lastmod>
+    <lastmod>2025-10-29T09:00:00-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -61,7 +61,7 @@
   <!-- Artigo: Ação Regressiva do INSS -->
   <url>
     <loc>https://eisleioliveirae-boop.github.io/SITE/blog/acao-regressiva-inss.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-09-06T09:00:00-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
@@ -69,23 +69,23 @@
   <!-- Artigo: Pejotização -->
   <url>
     <loc>https://eisleioliveirae-boop.github.io/SITE/blog/pejotizacao.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-09-06T09:00:00-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
 
-  <!-- Artigo: Riscos trabalhistas e compliance -->
+  <!-- Artigo: Riscos Trabalhistas e Compliance -->
   <url>
     <loc>https://eisleioliveirae-boop.github.io/SITE/blog/riscos-trabalhistas-compliance.html</loc>
-    <lastmod>2025-09-28</lastmod>
+    <lastmod>2025-09-28T09:00:00-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
 
-  <!-- Artigo: Legislação e rentabilidade -->
+  <!-- Artigo: Legislação e Rentabilidade -->
   <url>
     <loc>https://eisleioliveirae-boop.github.io/SITE/blog/legislacao-rentabilidade.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-09-06T09:00:00-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>

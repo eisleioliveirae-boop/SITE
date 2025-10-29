@@ -1,61 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
-<channel>
-  <title>EOD Advocacia Empresarial - Artigos</title>
-  <link>https://eisleioliveirae-boop.github.io/SITE/</link>
-  <description>Atualizações e artigos jurídicos — EOD Advocacia Empresarial</description>
-  <language>pt-BR</language>
-  <lastBuildDate>Sat, 25 Oct 2025 23:58:31 </lastBuildDate>
+<rss version="2.0"
+     xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>EOD Advocacia Empresarial - Artigos</title>
+    <link>https://eisleioliveirae-boop.github.io/SITE/</link>
+    <description>Atualizações e artigos jurídicos — EOD Advocacia Empresarial</description>
+    <language>pt-BR</language>
 
-  <item>
-    <title>Contrato de Trabalho na CLT: conceito, tipos e direitos do empregado e empregador</title>
-    <link>https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho.html</link>
-    <guid>https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho.html</guid>
-    <description>O contrato de trabalho segundo a CLT: conceito, tipos e elementos essenciais do vínculo e sua importância para segurança jurídica de empregadores e empregados.</description>
-    <pubDate>2024-06-13</pubDate>
-  </item>
-  <item>
-    <title>Jornada de trabalho: Conceitos, Tipos e o que determina a CLT</title>
-    <link>https://eisleioliveirae-boop.github.io/SITE/blog/jornada-de-trabalho.html</link>
-    <guid>https://eisleioliveirae-boop.github.io/SITE/blog/jornada-de-trabalho.html</guid>
-    <description>Análise detalhada sobre jornada de trabalho: conceito, limites legais, variações e regimes especiais previstos na CLT.</description>
-    <pubDate>2024-07-30</pubDate>
-  </item>
-  <item>
-    <title>Salário: Conceitos, Tipos e o que determina a legislação</title>
-    <link>https://eisleioliveirae-boop.github.io/SITE/blog/salario.html</link>
-    <guid>https://eisleioliveirae-boop.github.io/SITE/blog/salario.html</guid>
-    <description>Panorama jurídico sobre salário e remuneração: princípios, naturezas, denominações e proteção constitucional do salário.</description>
-    <pubDate>2024-10-18</pubDate>
-  </item>
-  <item>
-    <title>Ação Regressiva do INSS contra Empresas: Origem, Fundamento Legal e Evolução</title>
-    <link>https://eisleioliveirae-boop.github.io/SITE/blog/acao-regressiva-inss.html</link>
-    <guid>https://eisleioliveirae-boop.github.io/SITE/blog/acao-regressiva-inss.html</guid>
-    <description>Estudo da ação regressiva do INSS: fundamentos legais, evolução institucional e impacto sobre a responsabilidade empresarial.</description>
-    <pubDate>2025-09-06</pubDate>
-  </item>
-  <item>
-    <title>Pejotização em foco: riscos e entendimentos jurídicos atuais</title>
-    <link>https://eisleioliveirae-boop.github.io/SITE/blog/pejotizacao.html</link>
-    <guid>https://eisleioliveirae-boop.github.io/SITE/blog/pejotizacao.html</guid>
-    <description>Análise sobre pejotização: definição, riscos de fraude, jurisprudência and limites entre autonomia e vínculo empregatício.</description>
-    <pubDate>2025-09-06</pubDate>
-  </item>
-  <item>
-    <title>Riscos trabalhistas e compliance empresarial: como evitar passivos ocultos</title>
-    <link>https://eisleioliveirae-boop.github.io/SITE/blog/riscos-trabalhistas-compliance.html</link>
-    <guid>https://eisleioliveirae-boop.github.io/SITE/blog/riscos-trabalhistas-compliance.html</guid>
-    <description>Como programas de compliance trabalhista reduzem passivos ocultos: auditorias, controles, políticas e treinamento.</description>
-    <pubDate>2025-09-28</pubDate>
-  </item>
-  <item>
-    <title>Legislação e rentabilidade: equilíbrio essencial para empresas modernas</title>
-    <link>https://eisleioliveirae-boop.github.io/SITE/blog/legislacao-rentabilidade.html</link>
-    <guid>https://eisleioliveirae-boop.github.io/SITE/blog/legislacao-rentabilidade.html</guid>
-    <description>Reflexões sobre como conciliar normas trabalhistas com rentabilidade empresarial por meio de compliance e planejamento.</description>
-    <pubDate>2025-09-06</pubDate>
-  </item>
+    <!-- Link canônico para o próprio feed -->
+    <atom:link href="https://eisleioliveirae-boop.github.io/SITE/blog/feed.xml"
+               rel="self" type="application/rss+xml" />
 
-</channel>
+    <!-- Data do último build em RFC-1123 -->
+    <lastBuildDate>Sat, 25 Oct 2025 23:58:31 GMT</lastBuildDate>
+
+    <item>
+      <title>Contrato de Trabalho na CLT: conceito, tipos e direitos do empregado e empregador</title>
+      <link>https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho.html</link>
+      <guid isPermaLink="true">https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho.html</guid>
+      <description><![CDATA[O contrato de trabalho segundo a CLT: conceito, tipos e elementos essenciais do vínculo e sua importância para segurança jurídica de empregadores e empregados.]]></description>
+      <pubDate>Thu, 13 Jun 2024 00:00:00 GMT</pubDate>
+    </item>
+
+    <item>
+      <title>Jornada de trabalho: Conceitos, Tipos e o que determina a CLT</title>
+      <link>https://eisleioliveirae-boop.github.io/SITE/blog/jornada-de-trabalho-clt.html</link>
+      <guid isPermaLink="true">https://eisleioliveirae-boop.github.io/SITE/blog/jornada-de-trabalho-clt.html</guid>
+      <description><![CDATA[Análise detalhada sobre jornada de trabalho: conceito, limites legais, variações e regimes especiais previstos na CLT.]]></description>
+      <pubDate>Tue, 30 Jul 2024 00:00:00 GMT</pubDate>
+    </item>
+
+    <item>
+      <title>Salário: Conceitos, Tipos e o que determina a legislação</title>
+      <link>https://eisleioliveirae-boop.github.io/SITE/blog/salario-conceitos-e-legislacao.html</link>
+      <guid isPermaLink="true">https://eisleioliveirae-boop.github.io/SITE/blog/salario-conceitos-e-legislacao.html</guid>
+      <description><![CDATA[Panorama jurídico sobre salário e remuneração: princípios, naturezas, denominações e proteção constitucional do salário.]]></description>
+      <pubDate>Fri, 18 Oct 2024 00:00:00 GMT</pubDate>
+    </item>
+
+    <item>
+      <title>Ação Regressiva do INSS contra Empresas: Origem, Fundamento Legal e Evolução</title>
+      <link>https://eisleioliveirae-boop.github.io/SITE/blog/acao-regressiva-inss.html</link>
+      <guid isPermaLink="true">https://eisleioliveirae-boop.github.io/SITE/blog/acao-regressiva-inss.html</guid>
+      <description><![CDATA[Estudo da ação regressiva do INSS: fundamentos legais, evolução institucional e impacto sobre a responsabilidade empresarial.]]></description>
+      <pubDate>Sat, 06 Sep 2025 00:00:00 GMT</pubDate>
+    </item>
+
+    <item>
+      <title>Pejotização em foco: riscos e entendimentos jurídicos atuais</title>
+      <link>https://eisleioliveirae-boop.github.io/SITE/blog/pejotizacao.html</link>
+      <guid isPermaLink="true">https://eisleioliveirae-boop.github.io/SITE/blog/pejotizacao.html</guid>
+      <description><![CDATA[Análise sobre pejotização: definição, riscos de fraude, jurisprudência e limites entre autonomia e vínculo empregatício.]]></description>
+      <pubDate>Sat, 06 Sep 2025 00:00:00 GMT</pubDate>
+    </item>
+
+    <item>
+      <title>Riscos trabalhistas e compliance empresarial: como evitar passivos ocultos</title>
+      <link>https://eisleioliveirae-boop.github.io/SITE/blog/riscos-trabalhistas-compliance.html</link>
+      <guid isPermaLink="true">https://eisleioliveirae-boop.github.io/SITE/blog/riscos-trabalhistas-compliance.html</guid>
+      <description><![CDATA[Como programas de compliance trabalhista reduzem passivos ocultos: auditorias, controles, políticas e treinamento.]]></description>
+      <pubDate>Sun, 28 Sep 2025 00:00:00 GMT</pubDate>
+    </item>
+
+    <item>
+      <title>Legislação e rentabilidade: equilíbrio essencial para empresas modernas</title>
+      <link>https://eisleioliveirae-boop.github.io/SITE/blog/legislacao-rentabilidade.html</link>
+      <guid isPermaLink="true">https://eisleioliveirae-boop.github.io/SITE/blog/legislacao-rentabilidade.html</guid>
+      <description><![CDATA[Reflexões sobre como conciliar normas trabalhistas com rentabilidade empresarial por meio de compliance e planejamento.]]></description>
+      <pubDate>Sat, 06 Sep 2025 00:00:00 GMT</pubDate>
+    </item>
+
+  </channel>
 </rss>

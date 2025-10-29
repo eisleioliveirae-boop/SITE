@@ -7,16 +7,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index,follow">
 
-  <!-- Canonical -->
+  <!-- Canonical do índice do blog -->
   <link rel="canonical" href="https://eisleioliveirae-boop.github.io/SITE/blog/">
 
-  <!-- CSS principal -->
+  <!-- CSS principal do site -->
   <link rel="stylesheet" href="../style.css">
 
-  <!-- ✅ Feed RSS -->
+  <!-- Feed RSS do blog -->
   <link rel="alternate" type="application/rss+xml"
         title="EOD — Artigos Jurídicos"
         href="https://eisleioliveirae-boop.github.io/SITE/blog/feed.xml">
+
+  <!-- Open Graph / Twitter para a LISTA do blog -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Artigos Jurídicos - EOD Advocacia Empresarial">
+  <meta property="og:description" content="Conteúdos jurídicos empresariais produzidos por Eislei Domingues de Oliveira - EOD Advocacia Empresarial.">
+  <meta property="og:url" content="https://eisleioliveirae-boop.github.io/SITE/blog/">
+  <meta property="og:image" content="https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho-clt-cover.jpg">
+  <meta property="og:site_name" content="EOD Advocacia Empresarial">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho-clt-cover.jpg">
 </head>
 
 <body>
@@ -28,28 +38,39 @@
   <main>
     <section class="blog-section">
       <h2 class="section-title">Últimos Artigos</h2>
+
       <div class="blog-grid">
 
-        <!-- CARD 1 -->
+        <!-- CARD 1 — CONTRATO DE TRABALHO -->
         <article class="preview">
-          <a href="./contrato-de-trabalho.html" class="preview-img">
-            <img src="./contrato-de-trabalho-clt-cover.jpg"
-                 alt="Contrato de Trabalho na CLT: conceito, tipos e direitos"
-                 width="600" height="315" loading="lazy" decoding="async">
+          <a
+            href="./contrato-de-trabalho.html"
+            class="preview-img"
+            style="background-image:url('https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho-clt-cover.jpg');"
+            aria-label="Contrato de Trabalho na CLT: conceito, tipos e direitos do empregado e empregador">
+            <noscript>
+              <img src="https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho-clt-cover.jpg"
+                   alt="Contrato de Trabalho na CLT: conceito, tipos e direitos" width="600" height="315">
+            </noscript>
           </a>
           <div class="preview-content">
             <h3><a href="./contrato-de-trabalho.html">Contrato de Trabalho na CLT: conceito, tipos e direitos do empregado e empregador</a></h3>
-            <p>O contrato de trabalho segundo a CLT: conceito, tipos e elementos essenciais do vínculo e sua importância para segurança jurídica de empregadores e empregados.</p>
+            <p>O contrato de trabalho segundo a CLT: conceito, tipos e elementos essenciais do vínculo e sua importância para a segurança jurídica.</p>
             <a href="./contrato-de-trabalho.html" class="btn">Ler completo</a>
           </div>
         </article>
 
-        <!-- CARD 2 -->
+        <!-- CARD 2 — JORNADA DE TRABALHO -->
         <article class="preview">
-          <a href="./jornada-de-trabalho-clt.html" class="preview-img">
-            <img src="./jornada-de-trabalho-clt-cover.jpg"
-                 alt="Jornada de trabalho: conceitos, tipos e o que determina a CLT"
-                 width="600" height="315" loading="lazy" decoding="async">
+          <a
+            href="./jornada-de-trabalho-clt.html"
+            class="preview-img"
+            style="background-image:url('https://eisleioliveirae-boop.github.io/SITE/blog/jornada-de-trabalho-clt-cover.jpg');"
+            aria-label="Jornada de trabalho: Conceitos, Tipos e o que determina a CLT">
+            <noscript>
+              <img src="https://eisleioliveirae-boop.github.io/SITE/blog/jornada-de-trabalho-clt-cover.jpg"
+                   alt="Jornada de trabalho: Conceitos, Tipos e o que determina a CLT" width="600" height="315">
+            </noscript>
           </a>
           <div class="preview-content">
             <h3><a href="./jornada-de-trabalho-clt.html">Jornada de trabalho: Conceitos, Tipos e o que determina a CLT</a></h3>
@@ -58,12 +79,17 @@
           </div>
         </article>
 
-        <!-- CARD 3 -->
+        <!-- CARD 3 — SALÁRIO -->
         <article class="preview">
-          <a href="./salario-conceitos-e-legislacao.html" class="preview-img">
-            <img src="./salario-conceitos-e-legislacao-cover.jpg"
-                 alt="Salário: Conceitos, Tipos e o que determina a legislação"
-                 width="600" height="315" loading="lazy" decoding="async">
+          <a
+            href="./salario-conceitos-e-legislacao.html"
+            class="preview-img"
+            style="background-image:url('https://eisleioliveirae-boop.github.io/SITE/blog/salario-conceitos-e-legislacao-cover.jpg');"
+            aria-label="Salário: Conceitos, Tipos e o que determina a legislação">
+            <noscript>
+              <img src="https://eisleioliveirae-boop.github.io/SITE/blog/salario-conceitos-e-legislacao-cover.jpg"
+                   alt="Salário: Conceitos, Tipos e o que determina a legislação" width="600" height="315">
+            </noscript>
           </a>
           <div class="preview-content">
             <h3><a href="./salario-conceitos-e-legislacao.html">Salário: Conceitos, Tipos e o que determina a legislação</a></h3>
@@ -80,13 +106,8 @@
     <p>© 2025 EOD Advocacia Empresarial — Desenvolvido por Eislei Domingues de Oliveira</p>
   </footer>
 
+  <!-- CSS complementar mínimo para os cards com background-image -->
   <style>
-    body {
-      font-family: "Segoe UI", sans-serif;
-      margin: 0;
-      color: #222;
-      background: #fafafa;
-    }
     .blog-header {
       text-align: center;
       padding: 40px 20px 10px;
@@ -97,22 +118,14 @@
       font-size: 2rem;
       margin-bottom: 10px;
     }
-    .blog-section {
-      margin: 40px auto;
-      max-width: 1100px;
-      padding: 0 20px;
-    }
-    .section-title {
-      text-align: center;
-      font-size: 1.6rem;
-      font-weight: 700;
-      margin-bottom: 30px;
-      color: #1a1a2e;
-    }
+    .blog-section { margin: 40px auto; max-width: 1100px; padding: 0 20px; }
+    .section-title { text-align: center; font-size: 1.6rem; font-weight: 700; margin-bottom: 30px; color: #1a1a2e; }
+
     .blog-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 24px;
+      align-items: start;
     }
     .preview {
       background: #fff;
@@ -127,46 +140,32 @@
       transform: translateY(-4px);
       box-shadow: 0 8px 22px rgba(0,0,0,0.1);
     }
-    .preview-img img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
+
+    /* ✅ capa como background para garantir exibição */
+    .preview-img {
       display: block;
+      width: 100%;
+      height: 210px;
+      background-size: cover !important;
+      background-position: center !important;
+      background-repeat: no-repeat !important;
+      border-bottom: 3px solid rgba(0, 32, 91, 0.1);
+      transition: filter 0.25s ease;
     }
-    .preview-content {
-      padding: 18px 20px 24px;
-      text-align: left;
-    }
-    .preview-content h3 {
-      font-size: 1.1rem;
-      margin: 0 0 10px;
-      line-height: 1.35;
-    }
-    .preview-content p {
-      font-size: 0.95rem;
-      color: #555;
-      line-height: 1.5;
-      margin-bottom: 16px;
-    }
+    .preview:hover .preview-img { filter: brightness(0.94); }
+
+    .preview-content { padding: 18px 20px 24px; text-align: left; }
+    .preview-content h3 { font-size: 1.1rem; margin: 0 0 10px; line-height: 1.35; color: #121225; }
+    .preview-content p { font-size: 0.95rem; color: #555; line-height: 1.5; margin-bottom: 16px; }
     .preview-content .btn {
-      display: inline-block;
-      background: #0b0b33;
-      color: #fff;
-      font-weight: 600;
-      font-size: 0.9rem;
-      border-radius: 8px;
-      padding: 10px 18px;
-      text-decoration: none;
-      transition: background 0.25s ease;
+      display: inline-block; background: #0b0b33; color: #fff;
+      font-weight: 600; font-size: 0.9rem; border-radius: 8px;
+      padding: 10px 18px; text-decoration: none; transition: background 0.25s ease;
     }
-    .preview-content .btn:hover {
-      background: #00205b;
-    }
-    .blog-footer {
-      text-align: center;
-      font-size: 0.9rem;
-      color: #666;
-      padding: 20px 10px 40px;
+    .preview-content .btn:hover { background: #00205b; }
+
+    @media (max-width: 600px) {
+      .preview-img { height: 180px; }
     }
   </style>
 </body>

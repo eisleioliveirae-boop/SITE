@@ -11,7 +11,10 @@
   <!-- Canonical do site publicado -->
   <link rel="canonical" href="https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho.html">
 
-  <!-- ATENÇÃO: herdar o CSS correto (arquivo na raiz do SITE) -->
+  <!-- ✅ Pré-carrega a imagem de capa para garantir exibição imediata -->
+  <link rel="preload" as="image" href="https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho-clt-cover.jpg" imagesrcset="https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho-clt-cover.jpg 1200w" imagesizes="(max-width: 760px) 100vw, 760px">
+
+  <!-- CSS global do site -->
   <link rel="stylesheet" href="../style.css">
 
   <!-- Fallback CSS (garante imagem e largura corretas mesmo se o CSS externo não carregar) -->
@@ -23,13 +26,14 @@
     .author-info{margin-top:28px}
   </style>
 
-  <!-- Open Graph -->
+  <!-- Open Graph / Twitter -->
   <meta property="og:type" content="article">
   <meta property="og:title" content="Contrato de Trabalho na CLT: conceito, tipos e importância">
   <meta property="og:description" content="Conceito, tipos e elementos essenciais do contrato de trabalho segundo a CLT, com foco em segurança jurídica.">
   <meta property="og:url" content="https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho.html">
   <meta property="og:image" content="https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho-clt-cover.jpg">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho-clt-cover.jpg">
 
   <!-- Schema.org -->
   <script type="application/ld+json">
@@ -54,10 +58,12 @@
       <h1>Contrato de Trabalho na CLT: conceito, tipos e importância para a segurança jurídica nas relações laborais</h1>
 
       <div class="cover">
-        <!-- imagem no MESMO diretório do HTML -->
-        <img src="./contrato-de-trabalho-clt-cover.jpg"
-             alt="Assinatura de contrato de trabalho em ambiente corporativo"
-             loading="eager" decoding="async">
+        <!-- imagem está no MESMO diretório do HTML -->
+        <img
+          src="./contrato-de-trabalho-clt-cover.jpg"
+          alt="Assinatura de contrato de trabalho em ambiente corporativo"
+          width="1200" height="630"
+          loading="eager" decoding="async" fetchpriority="high">
       </div>
 
       <p><strong>Resumo:</strong> O contrato de trabalho é o instrumento jurídico que formaliza a relação entre empregado e empregador, conforme a Consolidação das Leis do Trabalho (CLT). Este artigo apresenta o conceito, os principais tipos e as características essenciais do vínculo empregatício, destacando os elementos jurídicos que configuram a relação de emprego e asseguram os direitos trabalhistas no Brasil.</p>

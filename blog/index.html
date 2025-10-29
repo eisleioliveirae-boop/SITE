@@ -6,8 +6,19 @@
   <meta name="description" content="Artigos jurídicos sobre direito empresarial, trabalhista e contratos. Conteúdos exclusivos da EOD Advocacia Empresarial.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index,follow">
+
+  <!-- URL da listagem do blog -->
   <link rel="canonical" href="https://eisleioliveirae-boop.github.io/SITE/blog/">
+
+  <!-- CSS global do site -->
   <link rel="stylesheet" href="../style.css">
+
+  <!-- Open Graph (opcional, mas ajuda em compartilhamento) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Artigos publicados - EOD Advocacia Empresarial">
+  <meta property="og:description" content="Artigos jurídicos sobre direito empresarial, trabalhista e contratos.">
+  <meta property="og:url" content="https://eisleioliveirae-boop.github.io/SITE/blog/">
+  <meta property="og:image" content="https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho-clt-cover.jpg">
 </head>
 
 <body>
@@ -17,17 +28,17 @@
   </header>
 
   <main>
-    <!-- Importa o conteúdo dos cards -->
     <section class="blog-section">
       <h2 class="section-title">Últimos Artigos</h2>
-      <div class="blog-grid">
 
+      <div class="blog-grid">
         <!-- CARD 1 -->
         <article class="preview">
           <a href="./contrato-de-trabalho.html" class="preview-img">
-            <img src="./contrato-de-trabalho-clt-cover.jpg"
-                 alt="Contrato de Trabalho na CLT: conceito, tipos e direitos"
-                 width="600" height="315" loading="lazy" decoding="async">
+            <img
+              src="https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho-clt-cover.jpg"
+              alt="Contrato de Trabalho na CLT: conceito, tipos e direitos"
+              width="600" height="315" loading="lazy" decoding="async">
           </a>
           <div class="preview-content">
             <h3><a href="./contrato-de-trabalho.html">Contrato de Trabalho na CLT: conceito, tipos e direitos do empregado e empregador</a></h3>
@@ -39,9 +50,10 @@
         <!-- CARD 2 -->
         <article class="preview">
           <a href="./jornada-de-trabalho-clt.html" class="preview-img">
-            <img src="./jornada-de-trabalho-clt-cover.jpg"
-                 alt="Jornada de trabalho: conceitos, tipos e o que determina a CLT"
-                 width="600" height="315" loading="lazy" decoding="async">
+            <img
+              src="https://eisleioliveirae-boop.github.io/SITE/blog/jornada-de-trabalho-clt-cover.jpg"
+              alt="Jornada de trabalho: conceitos, tipos e o que determina a CLT"
+              width="600" height="315" loading="lazy" decoding="async">
           </a>
           <div class="preview-content">
             <h3><a href="./jornada-de-trabalho-clt.html">Jornada de trabalho: Conceitos, Tipos e o que determina a CLT</a></h3>
@@ -53,9 +65,10 @@
         <!-- CARD 3 -->
         <article class="preview">
           <a href="./salario-conceitos-e-legislacao.html" class="preview-img">
-            <img src="./salario-conceitos-e-legislacao-cover.jpg"
-                 alt="Salário: Conceitos, Tipos e o que determina a legislação"
-                 width="600" height="315" loading="lazy" decoding="async">
+            <img
+              src="https://eisleioliveirae-boop.github.io/SITE/blog/salario-conceitos-e-legislacao-cover.jpg"
+              alt="Salário: Conceitos, Tipos e o que determina a legislação"
+              width="600" height="315" loading="lazy" decoding="async">
           </a>
           <div class="preview-content">
             <h3><a href="./salario-conceitos-e-legislacao.html">Salário: Conceitos, Tipos e o que determina a legislação</a></h3>
@@ -63,7 +76,6 @@
             <a href="./salario-conceitos-e-legislacao.html" class="btn">Ler completo</a>
           </div>
         </article>
-
       </div>
     </section>
   </main>
@@ -72,94 +84,25 @@
     <p>© 2025 EOD Advocacia Empresarial — Desenvolvido por Eislei Domingues de Oliveira</p>
   </footer>
 
+  <!-- Estilos mínimos locais: só o que a listagem precisa; o resto já está em style.css -->
   <style>
-    body {
-      font-family: "Segoe UI", sans-serif;
-      margin: 0;
-      color: #222;
-      background: #fafafa;
-    }
-    .blog-header {
-      text-align: center;
-      padding: 40px 20px 10px;
-      background: #fff;
-    }
-    .blog-header h1 {
-      color: #1a1a2e;
-      font-size: 2rem;
-      margin-bottom: 10px;
-    }
-    .blog-section {
-      margin: 40px auto;
-      max-width: 1100px;
-      padding: 0 20px;
-    }
-    .section-title {
-      text-align: center;
-      font-size: 1.6rem;
-      font-weight: 700;
-      margin-bottom: 30px;
-      color: #1a1a2e;
-    }
-    .blog-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-    }
-    .preview {
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-    }
-    .preview:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 22px rgba(0,0,0,0.1);
-    }
-    .preview-img img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      display: block;
-    }
-    .preview-content {
-      padding: 18px 20px 24px;
-      text-align: left;
-    }
-    .preview-content h3 {
-      font-size: 1.1rem;
-      margin: 0 0 10px;
-      line-height: 1.35;
-    }
-    .preview-content p {
-      font-size: 0.95rem;
-      color: #555;
-      line-height: 1.5;
-      margin-bottom: 16px;
-    }
-    .preview-content .btn {
-      display: inline-block;
-      background: #0b0b33;
-      color: #fff;
-      font-weight: 600;
-      font-size: 0.9rem;
-      border-radius: 8px;
-      padding: 10px 18px;
-      text-decoration: none;
-      transition: background 0.25s ease;
-    }
-    .preview-content .btn:hover {
-      background: #00205b;
-    }
-    .blog-footer {
-      text-align: center;
-      font-size: 0.9rem;
-      color: #666;
-      padding: 20px 10px 40px;
-    }
+    body { margin:0; background:#fafafa; color:#222; font-family:"Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif; }
+    .blog-header { text-align:center; padding:40px 20px 10px; background:#fff; }
+    .blog-header h1 { color:#1a1a2e; font-size:2rem; margin-bottom:10px; }
+    .blog-section { margin:40px auto; max-width:1100px; padding:0 20px; }
+    .section-title { text-align:center; font-size:1.6rem; font-weight:700; margin-bottom:30px; color:#1a1a2e; }
+    .blog-footer { text-align:center; font-size:.9rem; color:#666; padding:20px 10px 40px; }
+
+    /* Garantias visuais específicas dos cards desta página */
+    .blog-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:24px; }
+    .preview { background:#fff; border-radius:12px; box-shadow:0 6px 16px rgba(0,0,0,.08); overflow:hidden; display:flex; flex-direction:column; transition:transform .25s ease, box-shadow .25s ease; }
+    .preview:hover { transform:translateY(-4px); box-shadow:0 8px 22px rgba(0,0,0,.1); }
+    .preview-img img { width:100%; height:200px; object-fit:cover; display:block; }
+    .preview-content { padding:18px 20px 24px; text-align:left; }
+    .preview-content h3 { font-size:1.1rem; margin:0 0 10px; line-height:1.35; color:#121225; }
+    .preview-content p { font-size:.95rem; color:#555; line-height:1.5; margin-bottom:16px; }
+    .preview-content .btn { display:inline-block; background:#0b0b33; color:#fff; font-weight:600; font-size:.9rem; border-radius:8px; padding:10px 18px; text-decoration:none; transition:background .25s ease; }
+    .preview-content .btn:hover { background:#00205b; }
   </style>
 </body>
 </html>

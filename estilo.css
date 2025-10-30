@@ -1,767 +1,16 @@
-/* estilo.css - EOD Advocacia Empresarial (versão consolidada e corrigida) */
+/* ===== BLOG — Tipografia e layout unificados (versão final e segura) ===== */
 
-/* fonts */
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&family=Merriweather:wght@400;700&family=Epilogue:wght@400;700&display=swap');
-
-:root{
-  --azul: #232342;
-  --dourado: #CBA17B;
-  --texto: #222222;
-  --fundo: #f4f4f4;
-  --max-width: 1100px;
-}
-
-/* reset base */
-* { box-sizing: border-box; }
-html, body { height: 100%; margin:0; padding:0; }
-body {
-  font-family: 'Lora','Merriweather', Georgia, serif;
-  background: var(--fundo);
-  color: var(--texto);
-  line-height: 1.65;
-  -webkit-font-smoothing: antialiased;
-}
-
-/* container utilitário */
-.container { width:100%; max-width:var(--max-width); margin:0 auto; padding:0 20px; }
-
-/* header */
-.header { background: var(--azul); position: sticky; top:0; z-index:1300; color:#fff; }
-.top-bar { display:flex; align-items:center; justify-content:space-between; padding:14px 20px; gap:12px; position:relative; }
-
-/* logo (oculto visualmente, mantido para indexação/og:image) */
-.logo-img {
-  display: none !important;
-  width: 0;
-  height: 0;
-  overflow: hidden;
-  visibility: hidden;
-}
-.logo-text { font-family:'Epilogue', Arial, sans-serif; font-weight:700; text-transform:uppercase; color:#fff; font-size:1.15rem; display:none !important; }
-
-/* NAV */
-.menu { position: relative; margin-left:auto; }
-.menu-toggle { display:none; background:transparent; border:none; color:#fff; font-size:1.6rem; cursor:pointer; padding:6px; }
-.menu-list { display:flex; gap:18px; list-style:none; margin:0; padding:0; align-items:center; }
-.menu-list li { margin:0; padding:0; list-style:none; }
-.menu-list a { color:#fff; text-decoration:none; font-weight:700; font-size:1rem; font-family:'Epilogue',Arial,sans-serif; padding:6px 8px; text-transform:uppercase; white-space:nowrap; }
-
-/* banner */
-.main-banner { 
-    width:100%; 
-    padding: 70px 0; /* PADDING base para telas menores/intermediárias */
-    background-image: url('banner.png'); 
-    background-size: cover; /* ESSENCIAL: Garante preenchimento total e elimina laterais brancas */
-    background-position:center; 
-    background-repeat: no-repeat;
-    
-    /* Regras de centralização (garante que o conteúdo que está sendo centralizado seja o banner) */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-/* content */
-.content { padding:28px 0; color:var(--texto); }
-
-/* headings */
-h2 { font-family:'Merriweather','Lora',serif; text-align:center; color:var(--azul); font-size:2rem; margin:0 0 18px 0; line-height:1.15; }
-
-/* paragraphs */
-p { font-size:1rem; margin:0 0 1rem 0; text-align:justify; }
-strong { font-weight:700; }
-
-/* fundadora */
-.section-fundadora { padding:22px 0; }
-.fundadora-info { display:flex; gap:28px; align-items:flex-start; justify-content:space-between; flex-wrap:nowrap; width:100%; }
-.fundadora-foto { order:1; flex:0 0 280px; max-width:34%; min-width:160px; height:auto; object-fit:cover; border-radius:8px; box-shadow:0 8px 24px rgba(0,0,0,0.12); }
-.fundadora-texto { order:2; flex:1 1 auto; min-width:0; text-align:justify; }
-.fundadora-texto p { margin-bottom:0.8rem; }
-
-/* áreas de atuação */
-.section-atuacao h3 { color:var(--dourado); font-family:'Merriweather','Lora',serif; font-size:1.25rem; margin:12px 0 8px 0; }
-.section-atuacao ul { margin-left:1.2rem; padding-left:0.6rem; }
-.section-atuacao ul li { margin-bottom:0.45rem; font-size:1rem; }
-
-/* artigos */
-.artigo-item { background:#fff; padding:18px; border-radius:8px; margin-bottom:18px; box-shadow:0 2px 6px rgba(0,0,0,0.04); }
-.artigo-item h3 { margin:0 0 8px 0; font-size:1.25rem; color:var(--azul); }
-.btn-artigo { background:var(--dourado); color:#fff; padding:10px 16px; border-radius:6px; text-decoration:none; font-weight:700; }
-
-/* formulário */
-.section-contato form { max-width:720px; margin:0 auto; display:flex; flex-direction:column; gap:12px; }
-.form-group label { font-weight:700; color:var(--azul); font-size:1rem; }
-.form-group input, .form-group textarea { padding:10px; border-radius:6px; border:1px solid #ccc; font-size:1rem; width:100%; font-family:inherit; }
-.form-group textarea { min-height:120px; resize: vertical; }
-.section-contato button { background:var(--dourado); color:var(--azul); padding:12px; border-radius:6px; border:none; font-weight:700; cursor:pointer; font-size:1.05rem; }
-
-/* footer */
-.footer { background:var(--azul); color:#fff; text-align:center; padding:20px 16px; margin-top:24px; }
-.footer .slogan { color:var(--dourado); margin-bottom:8px; font-style:italic; }
-.footer a { color:#fff !important; text-decoration:none !important; }
-
-/* accessibility focus */
-a:focus, button:focus { outline:3px solid rgba(203,161,123,0.18); outline-offset:3px; }
-
-/* responsive: mobile */
-@media (max-width: 768px) {
-  .top-bar { padding:12px 16px; justify-content:center; }
-  .logo-text { font-size:1rem; }
-  .menu-toggle { display:inline-block; position:absolute; right:16px; top:50%; transform:translateY(-50%); z-index:1320; }
-  .menu-list { display:none; }
-
-  /* Painel do menu (abrido com class .open) */
-  .menu.open .menu-list {
-    display:flex;
-    flex-direction:column;
-    gap:0;
-    position:absolute;
-    top:calc(100% + 8px);
-    right:12px;
-    left:auto;
-    min-width:220px;               /* largura mínima para evitar quebras */
-    max-width:calc(100vw - 24px);
-    background:var(--azul);
-    padding:6px 0;
-    border-radius:8px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.25);
-    z-index:1315;
-    margin:0;
-    list-style:none;
-  }
-
-  /* cada li ocupa toda a largura do painel e sem recuos */
-  .menu.open .menu-list li {
-    margin:0;
-    padding:0;
-    display:block;
-    width:100%;
-    list-style:none;
-  }
-
-  /* links: padding uniforme, sem hanging-indent; quebra permitida somente em telas muito estreitas */
-  .menu.open .menu-list a {
-    display:block !important;
-    padding:12px 20px !important;
-    color:var(--dourado) !important;
-    text-align:left !important;
-    box-sizing:border-box !important;
-    white-space:nowrap !important;     /* evita quebra em grande parte dos dispositivos */
-    text-indent:0 !important;
-    -webkit-margin-start:0 !important;
-    margin:0 !important;
-    letter-spacing:0.02em;
-    line-height:1.35;
-  }
-
-  /* fallback para telas muito estreitas: permite quebra e reduz padding */
-  @media (max-width: 360px) {
-    .menu.open .menu-list { min-width:170px; max-width:calc(100vw - 12px); }
-    .menu.open .menu-list a { white-space:normal !important; padding-left:14px !important; padding-right:14px !important; }
-  }
-
-  /* empilha fundadora no mobile */
-  .fundadora-info { flex-direction:column; align-items:center; gap:12px; }
-  .fundadora-foto { width:160px; max-width:60%; min-width:120px; align-self:center; }
-  .fundadora-texto { width:100%; text-align:left; }
-  h2 { font-size:1.4rem; }
-  p { font-size:0.98rem; line-height:1.5; text-align:left; }
-}
-
-/* tablets/medium */
-@media (min-width: 769px) and (max-width: 1049px) {
-    /* ... regras da fundadora e h2 ... */
-
-    /* NOVAS REGRAS DE ALINHAMENTO E COMPACTAÇÃO (COM !important) */
-    .top-bar { 
-        justify-content: flex-start !important; 
-        gap: 12px !important; 
-    }
-    .menu {
-        margin-left: 0 !important; 
-    }
-    .menu-list {
-        gap: 8px !important; 
-        flex-wrap: nowrap !important;
-        margin-left: 0 !important; /* Adicionado: Garante que não haja margem na lista */
-    }
-    .menu-list li {
-        margin: 0 !important; /* Adicionado: Remove o margin-left: 18px que está conflitando */
-        padding: 0 !important;
-    }
-    .menu-list a {
-        padding: 6px 2px !important; 
-        font-size: 0.9rem !important; 
-    }
-}
-
-/* desktop */
-@media (min-width: 1050px) {
-    /* ... outras regras ... */
-    
-    /* Ajuste de Altura do Banner para Desktop */
-    .main-banner {
-        /* USA PADDING para o desktop para um banner imponente. */
-        padding: 190px 0; 
-    }
-}
-
-/* final protections / overrides */
-.header *, .top-bar * { float:none !important; clear:none !important; }
-
-/* desktop menu ao lado direito */
-@media (min-width: 1050px) {
-  html { font-size:19px; }
-  .top-bar { justify-content:flex-start; }
-  .menu { margin-left:auto; order:3; }
-  .menu-list { gap:32px; flex-wrap:nowrap; white-space:nowrap; }
-  .menu-list li { display:inline-block; margin-left:18px; }
-  .menu-list a { white-space:nowrap; font-size:1.05rem; padding:8px 12px; }
-  p, li, .fundadora-texto p, .section-atuacao ul li, .artigo-item p { font-size:1.05rem; line-height:1.7; }
-  h2 { font-size:2.2rem; }
-}
-
-/* sr-only (ocultar visualmente, manter indexado) */
-.sr-only {
-  position:absolute !important;
-  width:1px !important;
-  height:1px !important;
-  padding:0 !important;
-  margin:-1px !important;
-  overflow:hidden !important;
-  clip:rect(0,0,0,0) !important;
-  white-space:nowrap !important;
-  border:0 !important;
-}
-
-/* proteção: se por algum motivo o banner sobrepor o conteúdo */
-.main-banner { z-index:0; }
-.header { z-index:1300; }
-
-/* garantia: forçar cor branca no rodapé */
-.footer a { color:#fff !important; }
-
-/* fim do arquivo */
-
-/* ===== Ajuste: centralizar o rodapé (alinhamento apenas) ===== */
-.footer,
-footer {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
-  text-align: center !important;
-}
-/* ===== Ajuste: cor dourada no menu ao passar o mouse ou clicar ===== */
-.menu-list a:hover,
-.menu-list a:focus,
-.menu-list a:active {
-  color: var(--dourado) !important;
-  text-decoration: none !important;
-}
-
-/* no menu mobile (três pontinhos), mantém dourado quando ativo também */
-@media (max-width: 768px) {
-  .menu.open .menu-list a:hover,
-  .menu.open .menu-list a:focus,
-  .menu.open .menu-list a:active {
-    color: var(--dourado) !important;
-  }
-}
-/* ===== Correção final: cor padrão branca no menu mobile ===== */
-@media (max-width: 768px) {
-  /* cor padrão branca */
-  .menu.open .menu-list a {
-    color: #fff !important;
-  }
-
-  /* muda para dourado apenas quando clicado ou em foco */
-  .menu.open .menu-list a:hover,
-  .menu.open .menu-list a:focus,
-  .menu.open .menu-list a:active {
-    color: var(--dourado) !important;
-  }
-}
-/* Ajuste específico para tablets / telas intermediárias (<= 1024px) */
-@media (max-width: 1024px) {
-  .main-banner {
-    /* reduzir a altura do banner em tablets */
-    padding: 48px 0;          /* topo / base menores */
-    background-position: center center; /* garante que o logo fique centralizado */
-  }
-}
-
-/* Ajuste específico para mobile (<= 768px) */
-@media (max-width: 768px) {
-  .main-banner {
-    /* reduzir ainda mais em celulares */
-    padding: 60px 0;
-    background-position: center center;
-  }
-/* Regra GLOBAL para o espaçamento lateral em todos os textos */
-  body {
-    padding-left: 15px;
-    padding-right: 15px;
-    /* NOVO CÓDIGO INSERIDO AQUI: Justifica o texto */
-    text-align: justify;
-  }
-}
-/* Ajuste para telas "intermediárias grandes" (ex.: 13.3" 1440x900) */
-@media (min-width: 1050px) and (max-width: 1440px) {
-  .main-banner {
-    padding: 140px 0;   /* reduza/ajuste esse valor até ficar do seu gosto */
-    background-position: center center;
-  }
-}
-/* ===== Estilos para previews do blog (cole ao final do estilo.css) ===== */
-
-/* Grid principal dos previews */
-.blog-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* cards responsivos */
-  gap: 20px;
-  margin: 20px 0 36px 0;
-  align-items: stretch;
-}
-
-/* Card individual */
-.preview {
-  background: #ffffff;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 6px 18px rgba(35,35,66,0.06);
-  transition: transform .22s ease, box-shadow .22s ease;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-/* Conteúdo do card */
-.preview h3 {
-  font-family: 'Epilogue', Arial, sans-serif;
-  font-size: 1.05rem;
-  margin: 14px 16px 6px 16px;
-  color: var(--azul);
-  line-height: 1.25;
-}
-
-.preview h3 a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.preview h3 a:hover,
-.preview h3 a:focus {
-  color: var(--dourado);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-/* Descrição */
-.preview p {
-  margin: 0 16px 16px 16px;
-  color: #444;
-  font-size: 0.98rem;
-  line-height: 1.5;
-  flex-grow: 1; /* empurra o conteúdo para manter botões/links alinhados abaixo */
-}
-
-/* Link de leitura (opcional: usa mesma classe btn-artigo já existente) */
-.preview .btn-artigo,
-.preview a.read-more {
-  display: inline-block;
-  margin: 12px 16px 18px 16px;
-  background: var(--azul);
-  color: #fff !important;
-  padding: 9px 14px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight:700;
-  font-size:0.95rem;
-  text-align:center;
-}
-
-/* Hover / foco do card */
-.preview:hover,
-.preview:focus-within {
-  transform: translateY(-6px);
-  box-shadow: 0 14px 36px rgba(35,35,66,0.12);
-}
-
-/* Ajustes para mobile */
-@media (max-width: 480px) {
-  .preview img { height: 140px; }
-  .preview h3 { font-size: 1rem; margin: 12px 12px 6px 12px; }
-  .preview p { margin: 0 12px 12px 12px; font-size:0.97rem; }
-  .blog-grid { gap: 14px; }
-}
-
-/* Ajuste para tablets (melhor leitura em 768px) */
-@media (min-width: 481px) and (max-width: 899px) {
-  .preview img { height: 160px; }
-  .preview h3 { font-size: 1.03rem; }
-}
-
-/* Acessibilidade: foco visível para links dentro do card */
-.preview a:focus {
-  outline: 3px solid rgba(203,161,123,0.14);
-  outline-offset: 3px;
-}
-/* ===== Estilos finais e refinados para previews do blog — cole ao final do estilo.css ===== */
-
-/* garante que os cards herdem a tipografia do site */
-.blog-grid { 
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-  margin: 24px 0 42px 0;
-  align-items: start;
-}
-
-/* card */
-.preview {
-  background: #ffffff;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 6px 18px rgba(35,35,66,0.06);
-  transition: transform .20s ease, box-shadow .20s ease;
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-}
-
-/* título — acompanha a família e peso do site */
-.preview h3 {
-  font-family: 'Epilogue', Arial, sans-serif; /* mesma família usada no topo/menu */
-  font-weight: 700;
-  font-size: 1.05rem;     /* alinhado com headings menores do site */
-  margin: 14px 16px 6px 16px;
-  color: var(--azul);
-  line-height: 1.25;
-  letter-spacing: 0.01em;
-}
-
-/* link do título */
-.preview h3 a {
-  color: inherit;
-  text-decoration: none;
-}
-
-/* mudança sutil no hover */
-.preview h3 a:hover,
-.preview h3 a:focus {
-  color: var(--dourado);
-  text-decoration: none;
-}
-
-/* descrição — usa mesma família serifada do corpo para legibilidade */
-.preview p {
-  font-family: 'Lora', Georgia, serif;
-  margin: 0 16px 16px 16px;
-  color: #444;
-  font-size: 1rem;        /* mesmo tamanho base do texto do site */
-  line-height: 1.6;       /* idem ao body */
-  flex-grow: 1;
-  text-align: left;
-}
-
-/* botão/link de leitura (usa a classe já existente para consistência) */
-.preview .btn-artigo,
-.preview a.read-more {
-  display: inline-block;
-  margin: 12px 16px 18px 16px;
-  background: var(--azul);
-  color: #fff !important;
-  padding: 9px 14px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight:700;
-  font-size:0.95rem;
-}
-
-/* Hover do card para destaque sutil */
-.preview:hover,
-.preview:focus-within {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 48px rgba(35,35,66,0.12);
-}
-
-/* Ajustes responsivos */
-@media (max-width: 480px) {
-  .preview img { height: 140px; }
-  .preview h3 { font-size: 1rem; margin: 12px; }
-  .preview p { margin: 0 12px 12px 12px; font-size:0.97rem; }
-  .blog-grid { gap: 14px; }
-}
-
-@media (min-width: 481px) and (max-width: 899px) {
-  .preview img { height: 160px; }
-  .preview h3 { font-size: 1.03rem; }
-}
-
-/* Acessibilidade: foco visível para links dentro do card */
-.preview a:focus {
-  outline: 3px solid rgba(203,161,123,0.14);
-  outline-offset: 3px;
-}
-/* ===== Ajuste de layout dos artigos individuais ===== */
-
-.post {
-  max-width: 760px;           /* limita a largura para facilitar a leitura */
-  margin: 0 auto;             /* centraliza o texto */
-  padding: 20px;
-  line-height: 1.7;           /* aumenta o espaçamento entre linhas */
-  font-size: 1.0625rem;       /* tamanho de fonte confortável */
-}
-
-.post .cover img {
-  display: block;
-  width: 100%;                /* ocupa toda a largura disponível */
-  height: auto;               /* mantém proporção */
-  max-width: 760px;           /* não ultrapassa o corpo do texto */
-  margin: 20px auto;          /* centraliza a imagem e adiciona espaçamento */
-  border-radius: 10px;        /* bordas arredondadas */
-  object-fit: cover;          /* garante que a imagem não distorça */
-}
-.post {
-  max-width: 760px;
-  margin: 0 auto;
-  padding: 20px;
-  line-height: 1.7;
-  font-size: 1.0625rem;
-}
-.post .cover img {
-  width: 100%;
-  height: auto;
-  display: block;
-  max-width: 760px;
-  margin: 20px auto;
-  border-radius: 12px;
-  object-fit: cover;
-}
-/* miniaturas dos cards — apenas quando usar <img> como capa */
-.preview img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  display: block;
-  border-bottom: 1px solid rgba(0,0,0,0.04);
-}
-/* Cards - imagem como background */
-.preview-img {
-  display: block;
-  width: 100%;
-  height: 210px;
-  background-size: cover !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-  border-bottom: 3px solid rgba(0,32,91,0.1);
-}
-/* ===== Ajuste de legibilidade do artigo ===== */
-.post {
-  font-size: 1.125rem;       /* tamanho base confortável */
-  line-height: 1.8;
-}
-
-@media (min-width: 1200px) {
-  .post {
-    font-size: 1.25rem;      /* aumenta em telas grandes */
-    line-height: 1.9;
-  }
-}
-
-.autor-data {
-  font-size: 0.95rem;
-  color: #666;
-  margin-bottom: 16px;
-  font-family: 'Epilogue', Arial, sans-serif;
-}
-
-.post-nav {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 40px;
-  padding-top: 20px;
-  border-top: 1px solid #ddd;
-}
-
-.post-nav a {
-  color: var(--azul);
-  font-weight: 600;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.post-nav a:hover {
-  color: var(--dourado);
-}
-/* === Overrides de legibilidade do artigo (final do arquivo) === */
-.post,
-.post p,
-.post li {
-  font-size: clamp(1.06rem, 0.9rem + 0.7vw, 1.28rem); /* cresce até ~20px */
-  line-height: 1.85;
-}
-
-@media (min-width: 1200px) {
-  .post { max-width: 820px; } /* um pouco mais largo em telas grandes */
-}
-
-/* assinatura (autor + data) */
-.autor-data {
-  font-size: 0.98rem;
-  color: #666;
-  margin-bottom: 16px;
-  font-family: 'Epilogue', Arial, sans-serif;
-}
-/* navegação entre artigos (rodapé) */
-.post-nav {
-  width: 100%;
-  display: flex;
-  justify-content: space-between; /* joga um para cada lado */
-  align-items: center;
-  gap: 12px;
-  margin-top: 40px;
-  padding-top: 20px;
-  border-top: 1px solid #ddd;
-}
-
-.post-nav a {
-  display: inline-block;     /* garante caixa clicável */
-  color: var(--azul);
-  font-weight: 600;
-  text-decoration: none;
-  transition: color .2s ease;
-}
-
-.post-nav a:hover { color: var(--dourado); }
-
-.post-nav .prev-post { margin-right: auto; }  /* cola na esquerda */
-.post-nav .next-post { margin-left: auto; }   /* cola na direita */
-
-/* === Rodapé de navegação entre artigos === */
-.post-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
-  width: 100%;
-  margin-top: 40px;
-  padding-top: 20px;
-  border-top: 1px solid #ddd;
-}
-
-.post-nav a {
-  color: var(--azul);
-  font-weight: 600;
-  text-decoration: none;
-  transition: color .2s ease;
-}
-
-.post-nav a:hover { color: var(--dourado); }
-
-/* Reforço de tamanho de fonte em telas grandes (se quiser um pouco maior) */
-@media (min-width: 1200px) {
-  .post, .post p, .post li {
-    font-size: clamp(1.08rem, 0.85rem + 0.9vw, 1.40rem);
-    line-height: 1.9;
-  }
-}
-/* ===== BLOG: tipografia e barra autor/data ===== */
-.container { max-width: 1160px; padding: 0 8px; }             /* reduz margens laterais */
-.post { max-width: 880px; margin: 0 auto;                      /* centraliza e limita largura */
-        line-height: 1.75;
-        font-size: clamp(1.06rem, 0.92rem + 0.6vw, 1.28rem); } /* legível em telas grandes */
-
-.post h1 { margin-bottom: 10px; }                              /* dá “respiro” antes do autor */
-
-.autor-data {
-  margin: 6px 0 18px 0;                                        /* espaçamento sob o título */
-  color: #6b6b6b;                                              /* cinza elegante (não #000) */
-  font-size: 0.95em;
-}
-.autor-data a { color: inherit; text-decoration: none; }
-.autor-data a:hover { color: var(--dourado); }
-
-/* Navegação anterior/próximo */
-.post-nav {
-  display: flex; justify-content: space-between; align-items: center;
-  gap: 12px; width: 100%;
-  margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd;
-}
-.post-nav a { color: var(--azul); font-weight: 700; text-decoration: none; }
-.post-nav a:hover { color: var(--dourado); }
-/* Autor e data — cor e espaçamento (blog) */
-article.post h1 {
-  margin-bottom: 10px;             /* espaço claro entre título e autor */
-}
-
-article.post p.autor-data {
-  margin: 8px 0 18px 0;            /* separa do título e do parágrafo seguinte */
-  color: #6B7280;                  /* cinza elegante p/ diferenciar do título */
-  font-size: 0.98rem;
-  line-height: 1.4;
-}
-
-article.post p.autor-data strong {
-  color: var(--azul);              /* nome em azul institucional */
-}
-
-article.post p.autor-data a {
-  color: inherit;                  /* link segue a mesma cor do texto */
-  text-decoration: none;
-  border-bottom: 1px solid rgba(203,161,123,0.45);
-}
-
-article.post p.autor-data a:hover,
-article.post p.autor-data a:focus {
-  color: var(--dourado);
-  border-bottom-color: var(--dourado);
-}
-/* === Estilo fixo para nome do autor e data nos artigos do blog === */
-.post .autor-data {
-  margin: 10px 0 22px 0;
-  color: #CBA17B !important;        /* dourado institucional */
-  font-size: 0.98rem;
-  letter-spacing: 0.25px;
-  font-weight: 500;
-}
-
-.post .autor-data a,
-.post .autor-data strong {
-  color: #CBA17B !important;        /* garante cor dourada no nome/link */
-  text-decoration: none;
-}
-
-.post .autor-data a:hover {
-  color: #232342 !important;        /* azul escuro do tema no hover */
-  text-decoration: underline;
-}
-/* ===== BLOG — Tipografia e layout unificados (3 artigos) ===== */
-:root{
-  --azul: #232342;
-  --dourado: #CBA17B;
-  --cinza-txt: #343a40;
-}
-
-/* container da página (mantém folga lateral e centra o conteúdo) */
-.container{
-  max-width: 1160px;
-  margin: 0 auto;
-  padding: 0 16px;
-}
-
-/* corpo do artigo */
+/* Corpo do artigo — largura responsiva e tipografia escalonada */
 .post{
-  /* largura responsiva (nunca passa de 960px) */
   width: min(960px, 100%);
   margin: 0 auto;
-  line-height: 1.72;
-  /* base tipográfica igual para todos os artigos */
+  color: var(--cinza-txt, #343a40);
+  line-height: 1.75;
   font-size: clamp(1.02rem, 0.95rem + 0.35vw, 1.18rem);
-  color: var(--cinza-txt);
+  padding: 20px 0; /* container global já cuida das laterais */
 }
 
-/* título principal (H1) — igual em todos */
+/* Título principal (H1) */
 .post h1{
   color: var(--azul);
   line-height: 1.22;
@@ -770,37 +19,37 @@ article.post p.autor-data a:focus {
   font-size: clamp(1.85rem, 1.3rem + 1.45vw, 2.40rem);
 }
 
-/* autor + data (dourado) com espaçamento padrão */
-.autor-data{
+/* Autor e data (dourado) com espaçamento padrão */
+.post .autor-data{
   margin: 12px 0 22px 0;
-  color: var(--dourado);
+  color: var(--dourado) !important;
   font-size: 0.98rem;
   letter-spacing: .2px;
   font-weight: 500;
 }
-.autor-data a{
-  color: var(--dourado);
+.post .autor-data a,
+.post .autor-data strong{
+  color: var(--dourado) !important;
   text-decoration: none;
   border-bottom: 1px solid color-mix(in oklab, var(--dourado) 55%, transparent);
 }
-.autor-data a:hover{
-  color: var(--azul);
+.post .autor-data a:hover{
+  color: var(--azul) !important;
   border-bottom-color: var(--azul);
 }
 
-/* imagem de capa — sempre ocupa a largura do texto e mantém proporção */
+/* Imagem de capa — largura do texto e proporção consistente */
 .post .cover img{
-  display:block;
+  display: block;
   width: 100%;
   height: auto;
-  /* caso queira “cortar” bordas para manter visual consistente */
   aspect-ratio: 1200 / 630;
   object-fit: cover;
-  margin: 18px auto 18px;
+  margin: 18px auto;
   border-radius: 12px;
 }
 
-/* subtítulos (H2/H3) — padronizados, sem numeração e sem barras laterais */
+/* Subtítulos (sem barras laterais e sem numeração) */
 .post h2{
   color: var(--azul);
   font-weight: 800;
@@ -816,17 +65,21 @@ article.post p.autor-data a:focus {
   font-size: clamp(1.15rem, 1.02rem + 0.5vw, 1.38rem);
 }
 
-/* listas com respiro consistente */
+/* Listas com respiro consistente */
 .post ul, .post ol{ padding-left: 1.2rem; margin: 10px 0 16px; }
 .post li{ margin: 6px 0; }
 
-/* navegação anterior/próximo — alinhada e responsiva */
+/* Justificar somente o conteúdo do artigo (não o site inteiro) */
+.post p{ text-align: justify; }
+
+/* Navegação anterior/próximo — alinhada e responsiva */
 .post-nav{
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 12px;
-  margin: 40px 0 8px;
+  width: 100%;
+  margin-top: 40px;
   padding-top: 20px;
   border-top: 1px solid #e5e7eb;
 }
@@ -834,16 +87,80 @@ article.post p.autor-data a:focus {
   color: var(--azul);
   font-weight: 700;
   text-decoration: none;
+  transition: color .2s ease;
 }
 .post-nav a:hover{ color: var(--dourado); text-decoration: underline; }
 
-/* microajustes por breakpoint (opcional) */
+/* ===== Cards/grade do blog (index de artigos) — única versão ===== */
+.blog-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin: 24px 0 42px;
+  align-items: start;
+}
+.preview{
+  background:#fff;
+  border-radius:10px;
+  overflow:hidden;
+  box-shadow:0 6px 18px rgba(35,35,66,0.06);
+  transition: transform .2s ease, box-shadow .2s ease;
+  display:flex;
+  flex-direction:column;
+  min-height:100%;
+}
+.preview img{
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+}
+.preview h3{
+  font-family:'Epilogue', Arial, sans-serif;
+  font-weight:700;
+  font-size:1.05rem;
+  margin:14px 16px 6px 16px;
+  color:var(--azul);
+  line-height:1.25;
+  letter-spacing:.01em;
+}
+.preview h3 a{ color: inherit; text-decoration: none; }
+.preview h3 a:hover, .preview h3 a:focus{ color: var(--dourado); }
+.preview p{
+  font-family:'Lora', Georgia, serif;
+  margin:0 16px 16px 16px;
+  color:#444;
+  font-size:1rem;
+  line-height:1.6;
+  flex-grow:1;
+  text-align:left;
+}
+.preview .btn-artigo, .preview a.read-more{
+  display:inline-block;
+  margin:12px 16px 18px 16px;
+  background:var(--azul);
+  color:#fff !important;
+  padding:9px 14px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:700;
+  font-size:0.95rem;
+}
+.preview:hover, .preview:focus-within{
+  transform: translateY(-6px);
+  box-shadow: 0 18px 48px rgba(35,35,66,0.12);
+}
+
+/* ===== Breakpoints — microajustes ===== */
 @media (max-width: 768px){
-  .container{ padding: 0 12px; }
   .post{ line-height: 1.7; }
   .post .cover img{ border-radius: 10px; }
+  .preview img{ height: 140px; }
+  .preview h3{ font-size: 1rem; margin: 12px; }
+  .preview p{ margin: 0 12px 12px 12px; font-size:0.97rem; }
+  .blog-grid{ gap: 14px; }
 }
 @media (min-width: 1400px){
-  /* em telas enormes, aumente sutilmente o corpo do texto */
   .post{ font-size: clamp(1.06rem, 0.95rem + 0.45vw, 1.22rem); }
 }

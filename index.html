@@ -183,10 +183,11 @@
       </div>
     </section>
 
-    <!-- ====== ARTIGOS PUBLICADOS (carregamento com paginação) ====== -->
+  <!-- ====== ARTIGOS PUBLICADOS (grid + paginação, com fallback p/ <img>) ====== -->
 <section id="blog-previews" class="container">
   <h2>Artigos publicados</h2>
   <div id="blog-cards" class="blog-grid"></div>
+
   <div id="blog-pager" class="blog-pager" aria-label="Paginação de artigos" hidden>
     <button type="button" id="prevPage" aria-label="Artigos anteriores">← Anterior</button>
     <span id="pageInfo" aria-live="polite"></span>
@@ -195,20 +196,17 @@
 </section>
 
 <script>
-  // Cache-buster — altere a cada atualização do snippet:
-  const SNIPPET_VERSION = '2025-10-30-2';
-
-  // Quantos cards por página
+  // Cache-buster — mude sempre que atualizar o /blog/index-snippet.html
+  const SNIPPET_VERSION = '2025-10-30-3';
   const PAGE_SIZE = 6;
 
-  // Carrega o snippet e aplica paginação
   fetch(`blog/index-snippet.html?v=${SNIPPET_VERSION}`)
     .then(r => r.text())
     .then(html => {
       const holder = document.createElement('div');
       holder.innerHTML = html;
 
-      // Todos os cards do snippet
+      // pega só os cards (.preview) para não trazer conteúdo de páginas internas
       const items = [...holder.querySelectorAll('.preview')];
 
       const grid  = document.getElementById('blog-cards');
@@ -217,17 +215,36 @@
       const next  = document.getElementById('nextPage');
       const info  = document.getElementById('pageInfo');
 
-      if (items.length === 0) { grid.innerHTML = '<p>Sem artigos no momento.</p>'; return; }
+      if (!items.length) {
+        grid.innerHTML = '<p style="text-align:center">Sem artigos no momento.</p>';
+        return;
+      }
 
       let page = 1;
       const total = items.length;
       const totalPages = Math.ceil(total / PAGE_SIZE);
 
-      function render() {
+      function normalizeCard(card){
+        // Se a capa vier como <img> direto, aplica altura fixa
+        const directImg = card.querySelector(':scope > img');
+        if (directImg) {
+          directImg.loading = directImg.loading || 'lazy';
+          directImg.decoding = directImg.decoding || 'async';
+          directImg.style.width = '100%';
+          directImg.style.height = '210px';
+          directImg.style.objectFit = 'cover';
+          directImg.style.display = 'block';
+        }
+      }
+
+      function render(){
         grid.innerHTML = '';
         const start = (page - 1) * PAGE_SIZE;
         const end   = Math.min(start + PAGE_SIZE, total);
-        for (let i = start; i < end; i++) grid.appendChild(items[i]);
+        for (let i = start; i < end; i++) {
+          normalizeCard(items[i]);
+          grid.appendChild(items[i]);
+        }
         info.textContent = `Página ${page} de ${totalPages}`;
         prev.disabled = page === 1;
         next.disabled = page === totalPages;
@@ -246,14 +263,72 @@
 </script>
 
 <style>
-  /* pager minimal */
-  .blog-pager { display:flex; gap:12px; align-items:center; justify-content:center; margin:18px 0 6px; }
-  .blog-pager button {
-    background:#0b0b33; color:#fff; border:0; border-radius:8px; padding:8px 14px;
-    font-weight:700; cursor:pointer;
+  /* GRID dos cards (3 colunas desktop, responsivo) */
+  #blog-previews .blog-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:22px;
+    align-items:start;
   }
-  .blog-pager button[disabled] { opacity:.45; cursor:not-allowed; }
-  .blog-pager #pageInfo { font-weight:600; color:#232342; }
+  @media (max-width: 1024px){
+    #blog-previews .blog-grid{ grid-template-columns:repeat(2, 1fr); }
+  }
+  @media (max-width: 640px){
+    #blog-previews .blog-grid{ grid-template-columns:1fr; }
+  }
+
+  /* Aparência dos cards */
+  #blog-previews .preview{
+    background:#fff; border-radius:12px; overflow:hidden;
+    box-shadow:0 6px 16px rgba(0,0,0,.06);
+    transition:transform .22s ease, box-shadow .22s ease;
+    display:flex; flex-direction:column; height:100%;
+  }
+  #blog-previews .preview:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 28px rgba(0,0,0,.10);
+  }
+
+  /* Capa como background (quando usar .preview-img) */
+  #blog-previews .preview-img{
+    display:block; width:100%; height:210px;
+    background-size:cover !important;
+    background-position:center !important;
+    background-repeat:no-repeat !important;
+    border-bottom:3px solid rgba(0,32,91,.08);
+  }
+
+  /* Fallback: se a capa vier como <img> direto, garante altura/recorte */
+  #blog-previews .preview > img{
+    width:100%; height:210px; object-fit:cover; display:block;
+    border-bottom:3px solid rgba(0,32,91,.08);
+  }
+
+  /* Conteúdo do card */
+  #blog-previews .preview h3{
+    font-size:1.05rem; margin:14px 16px 6px; color:#121225; line-height:1.35;
+  }
+  #blog-previews .preview h3 a{ color:inherit; text-decoration:none; }
+  #blog-previews .preview h3 a:hover{ text-decoration:underline; }
+
+  #blog-previews .preview p{
+    margin:0 16px 14px; color:#444; font-size:.98rem; line-height:1.5; flex-grow:1;
+  }
+
+  #blog-previews .preview .btn,
+  #blog-previews .preview .btn-artigo{
+    margin:0 16px 16px; display:inline-block;
+    background:#0b0b33; color:#fff !important;
+    padding:9px 14px; border-radius:8px; text-decoration:none; font-weight:700;
+  }
+
+  /* Pager */
+  .blog-pager{ display:flex; gap:12px; align-items:center; justify-content:center; margin:18px 0 6px; }
+  .blog-pager button{
+    background:#0b0b33; color:#fff; border:0; border-radius:8px; padding:8px 14px; font-weight:700; cursor:pointer;
+  }
+  .blog-pager button[disabled]{ opacity:.45; cursor:not-allowed; }
+  .blog-pager #pageInfo{ font-weight:600; color:#232342; }
 </style>
  
     <!-- ====== CONTATO ====== -->

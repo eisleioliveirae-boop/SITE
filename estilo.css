@@ -407,3 +407,37 @@ article.post li { margin: 6px 0; }
 }
 
 /* === Fim do arquivo === */
+/* ==== HOTFIX: capas dos cards do blog visíveis em qualquer markup ==== */
+
+/* 1) Quando a capa é um <img> dentro do card */
+.preview > img,
+.preview img.preview-img,     /* se usar class preview-img no <img> */
+.preview .thumb img,          /* se houver um wrapper .thumb */
+.preview .cover img {         /* fallback: alguns snippets usam .cover */
+  display: block !important;
+  width: 100% !important;
+  height: 200px !important;   /* ajuste fino: 180–220px se preferir */
+  object-fit: cover !important;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* 2) Quando a capa é um bloco com background-image */
+.preview-img:not(img),       /* <a/div class="preview-img" style="background-image:..."> */
+.preview .thumb,             /* wrapper que recebe o background */
+.preview .cover {            /* fallback */
+  display: block !important;
+  width: 100% !important;
+  height: 210px !important;  /* ajuste fino: combine com o valor acima */
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+/* 3) Garante que nenhuma regra genérica esconda imagens do card */
+.preview img {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}

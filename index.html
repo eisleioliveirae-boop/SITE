@@ -37,7 +37,7 @@
         title="EOD — Artigos Jurídicos"
         href="https://eisleioliveirae-boop.github.io/SITE/blog/feed.xml">
 
-  <!-- (Opcional útil) Sitemap -->
+  <!-- Sitemap -->
   <link rel="sitemap" type="application/xml"
         href="https://eisleioliveirae-boop.github.io/SITE/sitemap.xml">
 
@@ -77,13 +77,9 @@
 <body>
   <header class="header">
     <div class="top-bar container">
-      <!-- H1 oculto visualmente, mantido para indexação -->
       <h1 class="sr-only">EOD Advocacia Empresarial - Direito Empresarial, Tributário, Trabalhista e Cível</h1>
-
-      <!-- Logotipo (se existir logo.png) -->
       <img src="logo.png" alt="EOD Advocacia Empresarial" class="logo-img" width="200" height="200" loading="lazy" decoding="async" />
 
-      <!-- Menu -->
       <nav class="menu" aria-label="Menu de navegação">
         <button id="menuToggle" class="menu-toggle" aria-expanded="false" aria-controls="site-menu" aria-label="Abrir menu"><i class="fas fa-bars"></i></button>
         <ul id="site-menu" class="menu-list">
@@ -126,17 +122,14 @@
     <!-- ====== NOSSOS VALORES ====== -->
     <section id="nossos-valores" class="section-valores">
       <h2>Nossos Valores</h2>
-
       <div class="valores-bloco">
         <h3>Missão</h3>
         <p>Prestar <strong>assessoria jurídica empresarial</strong> com excelência técnica e compromisso ético, oferecendo soluções personalizadas que assegurem conformidade legal, segurança institucional e sustentabilidade aos negócios de nossos clientes.</p>
       </div>
-
       <div class="valores-bloco">
         <h3>Visão</h3>
         <p>Consolidar-se como referência nacional em <strong>advocacia empresarial</strong>, reconhecida pela atuação estratégica, credibilidade e contribuição ao fortalecimento jurídico e institucional das empresas.</p>
       </div>
-
       <div class="valores-bloco">
         <h3>Valores</h3>
         <ul>
@@ -162,7 +155,6 @@
           <li>Recuperação judicial e falência.</li>
         </ul>
       </div>
-
       <div class="atuacao-area">
         <h3>Direito Tributário</h3>
         <ul>
@@ -172,7 +164,6 @@
           <li>Recuperação de créditos tributários.</li>
         </ul>
       </div>
-
       <div class="atuacao-area">
         <h3>Direito Trabalhista</h3>
         <ul>
@@ -182,7 +173,6 @@
           <li>Gestão de passivos trabalhistas.</li>
         </ul>
       </div>
-
       <div class="atuacao-area">
         <h3>Direito Cível</h3>
         <ul>
@@ -193,43 +183,26 @@
       </div>
     </section>
 
-    <!-- ====== ARTIGOS PUBLICADOS (cards do blog) ====== -->
+    <!-- ====== ARTIGOS PUBLICADOS (carregamento dinâmico) ====== -->
     <section id="blog-previews" class="container">
       <h2>Blog</h2>
-      <div class="blog-grid">
-
-        <article class="preview">
-          <a class="preview-img" href="/SITE/blog/contrato-de-trabalho.html"
-             style="background-image:url('https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho-clt-cover.jpg');">
-            <noscript><img src="https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho-clt-cover.jpg" alt="Contrato de Trabalho" width="600" height="315"></noscript>
-          </a>
-          <h3><a href="/SITE/blog/contrato-de-trabalho.html">Contrato de Trabalho na CLT: conceito, tipos e direitos do empregado e empregador</a></h3>
-          <p>O contrato de trabalho segundo a CLT: conceito, tipos e elementos essenciais do vínculo e sua importância para segurança jurídica de empregadores e empregados.</p>
-          <a class="btn-artigo" href="/SITE/blog/contrato-de-trabalho.html">Ler completo</a>
-        </article>
-
-        <article class="preview">
-          <a class="preview-img" href="/SITE/blog/jornada-de-trabalho-clt.html"
-             style="background-image:url('https://eisleioliveirae-boop.github.io/SITE/blog/jornada-de-trabalho-clt-cover.jpg');">
-            <noscript><img src="https://eisleioliveirae-boop.github.io/SITE/blog/jornada-de-trabalho-clt-cover.jpg" alt="Jornada de Trabalho" width="600" height="315"></noscript>
-          </a>
-          <h3><a href="/SITE/blog/jornada-de-trabalho-clt.html">Jornada de trabalho: Conceitos, Tipos e o que determina a CLT</a></h3>
-          <p>Análise detalhada sobre jornada de trabalho: conceito, limites legais, variações e regimes especiais previstos na CLT.</p>
-          <a class="btn-artigo" href="/SITE/blog/jornada-de-trabalho-clt.html">Ler completo</a>
-        </article>
-
-        <article class="preview">
-          <a class="preview-img" href="/SITE/blog/salario-conceitos-e-legislacao.html"
-             style="background-image:url('https://eisleioliveirae-boop.github.io/SITE/blog/salario-conceitos-e-legislacao-cover.jpg');">
-            <noscript><img src="https://eisleioliveirae-boop.github.io/SITE/blog/salario-conceitos-e-legislacao-cover.jpg" alt="Salário" width="600" height="315"></noscript>
-          </a>
-          <h3><a href="/SITE/blog/salario-conceitos-e-legislacao.html">Salário: Conceitos, Tipos e o que determina a legislação</a></h3>
-          <p>Panorama jurídico sobre salário e remuneração: princípios, naturezas, denominações e proteção constitucional do salário.</p>
-          <a class="btn-artigo" href="/SITE/blog/salario-conceitos-e-legislacao.html">Ler completo</a>
-        </article>
-
-      </div>
+      <div id="blog-cards"></div>
     </section>
+
+    <script>
+      // Força o carregamento da versão mais recente do snippet
+      const v = '2025-10-30-1515'; // altere esse valor a cada atualização do snippet
+      fetch(`blog/index-snippet.html?v=${v}`)
+        .then(r => r.text())
+        .then(html => {
+          const el = document.getElementById('blog-cards');
+          if (el) el.outerHTML = html;
+        })
+        .catch(() => {
+          const el = document.getElementById('blog-cards');
+          if (el) el.innerHTML = '<p style="text-align:center">Não foi possível carregar os artigos agora.</p>';
+        });
+    </script>
 
     <!-- ====== CONTATO ====== -->
     <section id="contato" class="section-contato">
@@ -259,25 +232,13 @@
 
   <footer class="footer">
     <p class="slogan">“Excelência Jurídica a Serviço da Sua Empresa”</p>
-
-    <p>
-      <a href="https://wa.me/5515997007014" target="_blank" rel="noopener noreferrer" class="whatsapp-link">
-        <i class="fab fa-whatsapp"></i> WhatsApp: (15) 99700-7014
-      </a>
-    </p>
-
-    <p>
-      <a href="mailto:eisleioliveira@yahoo.com.br">
-        <i class="fas fa-envelope"></i> E-mail: eisleioliveira@yahoo.com.br
-      </a>
-    </p>
-
+    <p><a href="https://wa.me/5515997007014" target="_blank" rel="noopener noreferrer" class="whatsapp-link"><i class="fab fa-whatsapp"></i> WhatsApp: (15) 99700-7014</a></p>
+    <p><a href="mailto:eisleioliveira@yahoo.com.br"><i class="fas fa-envelope"></i> E-mail: eisleioliveira@yahoo.com.br</a></p>
     <p class="social-media">
       <a href="https://web.facebook.com/eislei.dominguesdeoliveira/?locale=pt_BR" target="_blank" rel="noopener noreferrer">Facebook</a> |
       <a href="https://www.instagram.com/eisleioliveira" target="_blank" rel="noopener noreferrer">Instagram</a> |
       <a href="https://www.linkedin.com/in/eislei-d-oliveira-06994025" target="_blank" rel="noopener noreferrer">LinkedIn</a>
     </p>
-
     <p>EOD Advocacia Empresarial © 2024</p>
   </footer>
 

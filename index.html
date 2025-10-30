@@ -183,27 +183,79 @@
       </div>
     </section>
 
-    <!-- ====== ARTIGOS PUBLICADOS (carregamento dinâmico) ====== -->
-    <section id="blog-previews" class="container">
-      <h2>Blog</h2>
-      <div id="blog-cards"></div>
-    </section>
+    <!-- ====== ARTIGOS PUBLICADOS (carregamento com paginação) ====== -->
+<section id="blog-previews" class="container">
+  <h2>Artigos publicados</h2>
+  <div id="blog-cards" class="blog-grid"></div>
+  <div id="blog-pager" class="blog-pager" aria-label="Paginação de artigos" hidden>
+    <button type="button" id="prevPage" aria-label="Artigos anteriores">← Anterior</button>
+    <span id="pageInfo" aria-live="polite"></span>
+    <button type="button" id="nextPage" aria-label="Próximos artigos">Próximo →</button>
+  </div>
+</section>
 
-    <script>
-      // Força o carregamento da versão mais recente do snippet
-      const v = '2025-10-30-1515'; // altere esse valor a cada atualização do snippet
-      fetch(`blog/index-snippet.html?v=${v}`)
-        .then(r => r.text())
-        .then(html => {
-          const el = document.getElementById('blog-cards');
-          if (el) el.outerHTML = html;
-        })
-        .catch(() => {
-          const el = document.getElementById('blog-cards');
-          if (el) el.innerHTML = '<p style="text-align:center">Não foi possível carregar os artigos agora.</p>';
-        });
-    </script>
+<script>
+  // Cache-buster — altere a cada atualização do snippet:
+  const SNIPPET_VERSION = '2025-10-30-2';
 
+  // Quantos cards por página
+  const PAGE_SIZE = 6;
+
+  // Carrega o snippet e aplica paginação
+  fetch(`blog/index-snippet.html?v=${SNIPPET_VERSION}`)
+    .then(r => r.text())
+    .then(html => {
+      const holder = document.createElement('div');
+      holder.innerHTML = html;
+
+      // Todos os cards do snippet
+      const items = [...holder.querySelectorAll('.preview')];
+
+      const grid  = document.getElementById('blog-cards');
+      const pager = document.getElementById('blog-pager');
+      const prev  = document.getElementById('prevPage');
+      const next  = document.getElementById('nextPage');
+      const info  = document.getElementById('pageInfo');
+
+      if (items.length === 0) { grid.innerHTML = '<p>Sem artigos no momento.</p>'; return; }
+
+      let page = 1;
+      const total = items.length;
+      const totalPages = Math.ceil(total / PAGE_SIZE);
+
+      function render() {
+        grid.innerHTML = '';
+        const start = (page - 1) * PAGE_SIZE;
+        const end   = Math.min(start + PAGE_SIZE, total);
+        for (let i = start; i < end; i++) grid.appendChild(items[i]);
+        info.textContent = `Página ${page} de ${totalPages}`;
+        prev.disabled = page === 1;
+        next.disabled = page === totalPages;
+        pager.hidden  = totalPages <= 1;
+      }
+
+      prev.addEventListener('click', () => { if (page > 1) { page--; render(); } });
+      next.addEventListener('click', () => { if (page < totalPages) { page++; render(); } });
+
+      render();
+    })
+    .catch(() => {
+      document.getElementById('blog-cards').innerHTML =
+        '<p style="text-align:center">Não foi possível carregar os artigos agora.</p>';
+    });
+</script>
+
+<style>
+  /* pager minimal */
+  .blog-pager { display:flex; gap:12px; align-items:center; justify-content:center; margin:18px 0 6px; }
+  .blog-pager button {
+    background:#0b0b33; color:#fff; border:0; border-radius:8px; padding:8px 14px;
+    font-weight:700; cursor:pointer;
+  }
+  .blog-pager button[disabled] { opacity:.45; cursor:not-allowed; }
+  .blog-pager #pageInfo { font-weight:600; color:#232342; }
+</style>
+ 
     <!-- ====== CONTATO ====== -->
     <section id="contato" class="section-contato">
       <h2>Fale Conosco</h2>

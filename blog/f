@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>Férias e 13º Salário: Direitos Trabalhistas e Impactos na Gestão Empresarial — EOD Advocacia Empresarial</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index,follow">
+
+  <!-- SEO -->
+  <meta name="description" content="Entenda como calcular e programar férias e 13º salário, quais são os direitos mínimos previstos na CLT e os reflexos financeiros e operacionais para as empresas. Guia prático para compliance trabalhista e gestão orçamentária.">
+  <meta name="keywords" content="férias, 13º salário, adicional de um terço, abono pecuniário, CLT, férias proporcionais, gestão orçamentária, provisões trabalhistas, compliance trabalhista, EOD Advocacia Empresarial">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://eisleioliveirae-boop.github.io/SITE/blog/ferias-e-13o-gestao-empresarial.html">
+
+  <!-- Preload da capa -->
+  <link rel="preload" as="image" href="https://eisleioliveirae-boop.github.io/SITE/blog/ferias-13-salario-gestao-empresarial-cover.jpg">
+
+  <!-- CSS global do site -->
+  <link rel="stylesheet" href="../estilo.css">
+
+  <!-- Estilo mínimo de segurança (se o CSS externo falhar) -->
+  <style>
+    .container{max-width:1160px;margin:0 auto;padding:0 16px}
+    .post{width:min(960px,100%);margin:0 auto;line-height:1.75;font-size:clamp(1.02rem,0.98rem + 0.25vw,1.16rem)}
+    .post h1{line-height:1.22;margin:0 0 16px;color:#232342}
+    .autor-data{margin:12px 0 22px;color:#CBA17B;font-weight:600}
+    .autor-data a{color:#CBA17B;text-decoration:none}
+    .autor-data a:hover{color:#232342;text-decoration:underline}
+    .cover img{display:block;width:100%;height:auto;aspect-ratio:1200/630;object-fit:cover;margin:18px auto;border-radius:12px}
+    .post h2{margin:30px 0 12px;color:#232342}
+    .post ul{padding-left:20px}
+    .post li{margin:6px 0}
+    .caixa{background:#f7f7fb;border:1px solid #e6e7ef;border-radius:12px;padding:16px 18px;margin:18px 0}
+    .post-nav{display:flex;justify-content:space-between;gap:12px;margin:40px 0 12px;padding-top:20px;border-top:1px solid #e5e7eb}
+    .post-nav a{font-weight:700;color:#232342;text-decoration:none}
+    .post-nav a:hover{color:#CBA17B;text-decoration:underline}
+  </style>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Férias e 13º Salário: Direitos Trabalhistas e Impactos na Gestão Empresarial">
+  <meta property="og:description" content="Direitos mínimos na CLT, cálculos essenciais e boas práticas para planejamento orçamentário e compliance trabalhista.">
+  <meta property="og:url" content="https://eisleioliveirae-boop.github.io/SITE/blog/ferias-e-13o-gestao-empresarial.html">
+  <meta property="og:image" content="https://eisleioliveirae-boop.github.io/SITE/blog/ferias-13-salario-gestao-empresarial-cover.jpg">
+  <meta property="og:site_name" content="EOD Advocacia Empresarial">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://eisleioliveirae-boop.github.io/SITE/blog/ferias-13-salario-gestao-empresarial-cover.jpg">
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"Férias e 13º Salário: Direitos Trabalhistas e Impactos na Gestão Empresarial",
+    "description":"Direitos previstos na CLT, requisitos de concessão e cálculo de férias e 13º salário e como planejar provisões para reduzir riscos e passivos.",
+    "author":{"@type":"Person","name":"Eislei Domingues de Oliveira"},
+    "publisher":{"@type":"Organization","name":"EOD Advocacia Empresarial"},
+    "datePublished":"2024-09-22",
+    "dateModified":"2024-09-22",
+    "image":"https://eisleioliveirae-boop.github.io/SITE/blog/ferias-13-salario-gestao-empresarial-cover.jpg",
+    "mainEntityOfPage":"https://eisleioliveirae-boop.github.io/SITE/blog/ferias-e-13o-gestao-empresarial.html"
+  }
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <article class="post">
+
+      <h1>Férias e 13º Salário: Direitos Trabalhistas e Impactos na Gestão Empresarial</h1>
+
+      <p class="autor-data">
+        <strong>Por <a href="https://eisleioliveirae-boop.github.io/SITE/">Eislei Domingues de Oliveira</a></strong>
+        &nbsp;|&nbsp; Publicado em <time datetime="2024-09-22">22 de setembro de 2024</time>
+      </p>
+
+      <!-- Capa do artigo -->
+      <div class="cover">
+        <img
+          src="./ferias-13-salario-gestao-empresarial-cover.jpg"
+          alt="Imagem institucional nas cores azul e dourado ilustrando férias e 13º na gestão trabalhista"
+          width="1200" height="630"
+          loading="eager" decoding="async" fetchpriority="high"
+          onerror="this.onerror=null;this.src='https://eisleioliveirae-boop.github.io/SITE/blog/ferias-13-salario-gestao-empresarial-cover.jpg';">
+      </div>
+
+      <p><strong>Resumo:</strong> Férias e 13º salário são direitos fundamentais assegurados pela CLT e exigem planejamento jurídico-financeiro permanente. A correta concessão, cálculo e provisão contábil reduzem contencioso, evitam multas administrativas e preservam a previsibilidade orçamentária da empresa.</p>
+
+      <h2>Férias: aquisição, concessão e pagamento</h2>
+      <p>O período aquisitivo é de <strong>12 meses</strong> de trabalho. A concessão deve ocorrer nos <strong>12 meses seguintes</strong> (período concessivo), sob pena de pagamento em dobro. É possível fracionar em até <strong>três períodos</strong>, desde que um deles tenha, no mínimo, <strong>14 dias</strong> e os demais, ao menos, <strong>5 dias</strong> cada. O pagamento deve ocorrer até <strong>2 dias antes</strong> do início, com o <strong>adicional de 1/3</strong> constitucional.</p>
+
+      <div class="caixa">
+        <strong>Boas práticas de gestão:</strong>
+        <ul>
+          <li>Calendário anual de férias por setor e substituições previamente definidas.</li>
+          <li>Conferência de afastamentos que impactam o período aquisitivo (faltas injustificadas, licenças, suspensões).</li>
+          <li>Controle eletrônico de ciência do empregado sobre datas e valores.</li>
+        </ul>
+      </div>
+
+      <h2>Abono pecuniário e férias proporcionais</h2>
+      <p>O empregado pode converter <strong>1/3 das férias</strong> em abono pecuniário, mediante solicitação até <strong>15 dias</strong> antes do término do período aquisitivo. Na rescisão, quando devido, paga-se <strong>férias vencidas</strong> e/ou <strong>proporcionais</strong> com adicional de 1/3.</p>
+
+      <h2>13º salário: estrutura e prazos</h2>
+      <p>O 13º salário corresponde a <strong>1/12 da remuneração por mês trabalhado</strong> no ano civil. A <strong>1ª parcela</strong> é devida entre fevereiro e novembro (ou por ocasião das férias, se requerido), e a <strong>2ª parcela</strong> até <strong>20 de dezembro</strong>, com incidência de encargos legais.</p>
+
+      <div class="caixa">
+        <strong>Componentes usuais do 13º:</strong>
+        <ul>
+          <li>Salário-base e médias variáveis habituais (comissões, horas extras, adicionais, quando devidos).</li>
+          <li>Descontos proporcionais por faltas não justificadas.</li>
+          <li>Recolhimentos previdenciários e fiscais conforme a legislação aplicável.</li>
+        </ul>
+      </div>
+
+      <h2>Provisões e planejamento orçamentário</h2>
+      <p>Para evitar picos de desembolso, recomenda-se a constituição de <strong>provisões mensais</strong> para férias e 13º, com base em dados atualizados de headcount, médias remuneratórias e políticas de reajuste. A sincronização entre <strong>DP, RH, Fiscal e Controladoria</strong> é essencial para previsibilidade de caixa.</p>
+
+      <h2>Compliance e risco trabalhista</h2>
+      <p>As inconformidades mais frequentes envolvem concessão fora do período legal, pagamento intempestivo, ausência de 1/3 constitucional, desconsideração de médias variáveis e descontos indevidos. Adoção de <strong>políticas internas</strong>, <strong>checklists de cálculo</strong>, <strong>auditorias amostrais</strong> e <strong>pareceres jurídicos</strong> previne autuações e reclamatórias.</p>
+
+      <h2>Checklist executivo</h2>
+      <ul>
+        <li>Mapa anual de férias com validação do gestor e ciência do empregado.</li>
+        <li>Concessão fracionada conforme limites legais e registro formal.</li>
+        <li>Pagamento de férias até 2 dias antes do início, com 1/3.</li>
+        <li>1ª parcela do 13º entre fev–nov (ou junto às férias, se solicitado); 2ª parcela até 20/12.</li>
+        <li>Provisões mensais e conciliações contábeis.</li>
+        <li>Política de médias variáveis e conferência de eventos remuneratórios.</li>
+      </ul>
+
+      <!-- Navegação entre artigos -->
+      <nav class="post-nav" aria-label="Navegação entre artigos">
+        <a href="salario-conceitos-e-legislacao.html" class="prev-post" rel="prev">← Artigo anterior: Salário na CLT</a>
+        <a href="responsabilidade-civil-do-empregador.html" class="next-post" rel="next">Próximo: Responsabilidade Civil do Empregador →</a>
+      </nav>
+
+    </article>
+  </div>
+</body>
+</html>

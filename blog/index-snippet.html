@@ -1,133 +1,144 @@
-<!-- ======= BLOG INDEX (HOME) — GRID + PAGINAÇÃO (6 por página) ======= -->
+<!-- ============ BLOG / index-snippet.html — EOD Advocacia Empresarial ============ -->
 <section class="blog-section" id="artigos">
   <h2 class="section-title">Artigos publicados</h2>
 
-  <!-- Grid onde os cards serão injetados -->
-  <div id="blog-grid" class="blog-grid" aria-live="polite"></div>
+  <!-- Grade de cards (será preenchida via JS) -->
+  <div id="cardsMount" class="blog-grid" aria-live="polite"></div>
 
-  <!-- Controles de paginação -->
-  <nav class="blog-pager" aria-label="Paginação dos artigos">
-    <button id="prevPage" type="button" class="pager-btn" disabled>← Anteriores</button>
-    <span id="pageInfo" class="pager-info">Página 1</span>
-    <button id="nextPage" type="button" class="pager-btn">Próximos →</button>
-  </nav>
+  <!-- Paginação -->
+  <div class="blog-pager" style="display:flex;gap:12px;justify-content:center;margin-top:20px">
+    <button id="btnPrev" type="button" class="btn" disabled>← Anterior</button>
+    <button id="btnNext" type="button" class="btn">Próximo →</button>
+  </div>
 </section>
 
-<style>
-  .blog-section{margin:40px 0;text-align:center}
-  .section-title{font-size:2rem;font-weight:800;margin:6px 0 26px;color:#1a1a2e}
-
-  .blog-grid{
-    display:grid; gap:22px; margin:0 auto; align-items:start; max-width:1100px;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-  @media (max-width: 980px){ .blog-grid{grid-template-columns: repeat(2, minmax(0, 1fr));} }
-  @media (max-width: 620px){ .blog-grid{grid-template-columns: 1fr;} }
-
-  .preview{
-    background:#fff;border-radius:12px;overflow:hidden;
-    box-shadow:0 6px 16px rgba(0,0,0,.06);
-    transition:transform .25s ease, box-shadow .25s ease;
-    display:flex;flex-direction:column;
-  }
-  .preview:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(0,0,0,.08)}
-
-  .preview-img{display:block;width:100%;height:210px;background:#f2f2f7;
-    background-size:cover;background-position:center;background-repeat:no-repeat;
-    border-bottom:3px solid rgba(0,32,91,.08)}
-  @media (max-width:620px){ .preview-img{height:180px} }
-
-  .preview-content{padding:18px 20px 22px 20px;text-align:left}
-  .preview-content h3{font-size:1.1rem;margin:0 0 10px;color:#121225;line-height:1.35}
-  .preview-content p{font-size:.95rem;color:#444;margin:0 0 16px;line-height:1.5}
-  .btn{background:#0b0b33;color:#fff;text-decoration:none;font-weight:700;font-size:.9rem;border-radius:8px;padding:10px 20px;display:inline-block}
-  .btn:hover{background:#00205b}
-
-  .blog-pager{display:flex;justify-content:center;align-items:center;gap:12px;margin-top:18px}
-  .pager-btn{background:#0b0b33;color:#fff;border:0;border-radius:8px;padding:8px 14px;font-weight:700;cursor:pointer}
-  .pager-btn:disabled{opacity:.45;cursor:not-allowed}
-  .pager-info{font-weight:700;color:#232342}
-</style>
-
 <script>
-(function(){
-  // Lista de artigos (ordem controla a exibição). Mantém links absolutos pra evitar 404.
-  const posts = [
-    {
-      url: "https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho.html",
-      img: "https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho-clt-cover.jpg",
-      title: "Contrato de Trabalho na CLT: conceito, tipos e direitos do empregado e empregador",
-      desc: "Conceito, tipos e elementos essenciais do vínculo e sua importância para segurança jurídica nas relações laborais."
-    },
-    {
-      url: "https://eisleioliveirae-boop.github.io/SITE/blog/jornada-de-trabalho-clt.html",
-      img: "https://eisleioliveirae-boop.github.io/SITE/blog/jornada-de-trabalho-clt-cover.jpg",
-      title: "Jornada de trabalho: Conceitos, Tipos e o que determina a CLT",
-      desc: "Limites legais, variações e regimes especiais previstos na CLT — análise objetiva para gestão empresarial."
-    },
-    {
-      url: "https://eisleioliveirae-boop.github.io/SITE/blog/salario-conceitos-e-legislacao.html",
-      img: "https://eisleioliveirae-boop.github.io/SITE/blog/salario-conceitos-e-legislacao-cover.jpg",
-      title: "Salário: Conceitos, Tipos e o que determina a legislação",
-      desc: "Panorama jurídico sobre natureza, denominações, princípios e proteção constitucional do salário."
-    },
-    {
-      url: "https://eisleioliveirae-boop.github.io/SITE/blog/relacao-de-trabalho-e-emprego.html",
-      img: "https://eisleioliveirae-boop.github.io/SITE/blog/relacao-de-trabalho-e-emprego-cover.jpg",
-      title: "Relação de Trabalho x Relação de Emprego: diferenças e impactos jurídicos",
-      desc: "Critérios da CLT, primazia da realidade e efeitos práticos para empresas e trabalhadores."
-    },
-    {
-      url: "https://eisleioliveirae-boop.github.io/SITE/blog/pejotizacao.html",
-      img: "https://eisleioliveirae-boop.github.io/SITE/blog/pejotizacao-aspectos-juridicos-cover.jpg",
-      title: "Pejotização nas Relações de Trabalho: aspectos jurídicos e entendimentos atuais",
-      desc: "Riscos, enquadramento jurídico e boas práticas de contratação para mitigar passivos."
-    },
-    {
-      // 👉 Garantido na primeira página
-      url: "https://eisleioliveirae-boop.github.io/SITE/blog/terceirizacao-contratos-prestacao-servicos.html",
-      img: "https://eisleioliveirae-boop.github.io/SITE/blog/terceirizacao-contratos-prestacao-servicos-cover.jpg",
-      title: "Terceirização e Contratos: limites e responsabilidade da empresa contratante",
-      desc: "Cláusulas essenciais, governança do contrato, compliance e responsabilidade da tomadora."
-    },
-    {
-      url: "https://eisleioliveirae-boop.github.io/SITE/blog/acao-regressiva-inss.html",
-      img: "https://eisleioliveirae-boop.github.io/SITE/blog/acao-regressiva-inss-cover.jpg",
-      title: "Ação Regressiva do INSS contra Empresas: quando ocorre e como prevenir",
-      desc: "Base legal, hipóteses de responsabilização, defesa e políticas de prevenção corporativa."
-    }
-  ];
+/* ===== CONFIG ===== */
+const PER_PAGE = 6;
 
-  const perPage = 6;
-  let page = 1;
-  const grid = document.getElementById('blog-grid');
-  const prev = document.getElementById('prevPage');
-  const next = document.getElementById('nextPage');
-  const info = document.getElementById('pageInfo');
-
-  function render(){
-    const start = (page - 1) * perPage;
-    const slice = posts.slice(start, start + perPage);
-
-    grid.innerHTML = slice.map(p => `
-      <article class="preview">
-        <a class="preview-img" href="${p.url}" style="background-image:url('${p.img}');" aria-label="${p.title}"></a>
-        <div class="preview-content">
-          <h3><a href="${p.url}">${p.title}</a></h3>
-          <p>${p.desc}</p>
-          <a class="btn" href="${p.url}">Ler completo</a>
-        </div>
-      </article>
-    `).join('');
-
-    prev.disabled = (page === 1);
-    next.disabled = (start + perPage >= posts.length);
-    info.textContent = `Página ${page}`;
+/* ===== DADOS — 13 ARTIGOS =====
+   Ordem didática:
+   1 Contrato • 2 Relação Trabalho×Emprego • 3 Jornada • 4 Salário
+   5 SST (novo) • 6 Férias e 13º (novo) • 7 Alteração Contratual
+   8 Terceirização • 9 Pejotização • 10 Riscos & Compliance
+   11 Acidente de Trabalho • 12 Responsabilidade Civil • 13 Ação Regressiva INSS
+*/
+const posts = [
+  {
+    href: "/SITE/blog/contrato-de-trabalho.html",
+    img:  "https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho-clt-cover.jpg",
+    title:"Contrato de Trabalho na CLT: conceito, tipos e direitos do empregado e empregador",
+    desc: "Conceito, tipos e importância do contrato de trabalho para a segurança jurídica nas relações laborais."
+  },
+  {
+    href: "/SITE/blog/relacao-de-trabalho-e-emprego.html",
+    img:  "https://eisleioliveirae-boop.github.io/SITE/blog/relacao-de-trabalho-e-emprego-cover.jpg",
+    title:"Relação de Trabalho × Relação de Emprego: diferenças e impactos jurídicos",
+    desc: "Critérios da CLT, primazia da realidade e efeitos práticos para empresas e trabalhadores."
+  },
+  {
+    href: "/SITE/blog/jornada-de-trabalho-clt.html",
+    img:  "https://eisleioliveirae-boop.github.io/SITE/blog/jornada-de-trabalho-clt-cover.jpg",
+    title:"Jornada de trabalho: Conceitos, Tipos e o que determina a CLT",
+    desc: "Limites legais, variações e regimes especiais previstos na legislação."
+  },
+  {
+    href: "/SITE/blog/salario-conceitos-e-legislacao.html",
+    img:  "https://eisleioliveirae-boop.github.io/SITE/blog/salario-conceitos-e-legislacao-cover.jpg",
+    title:"Salário: Conceitos, Tipos e o que determina a legislação",
+    desc: "Princípios, naturezas, denominações e proteção constitucional do salário."
+  },
+  {
+    href: "/SITE/blog/sst-politica-interna-prevencao-passivos.html",
+    img:  "https://eisleioliveirae-boop.github.io/SITE/blog/sst-politica-interna-prevencao-passivos-cover.jpg",
+    title:"Política Interna de SST e Prevenção de Passivos Trabalhistas",
+    desc: "Diretrizes, documentos e governança para estruturar SST e mitigar riscos trabalhistas."
+  },
+  {
+    href: "/SITE/blog/ferias-13-direitos-gestao.html",
+    img:  "https://eisleioliveirae-boop.github.io/SITE/blog/ferias-13-direitos-gestao-cover.jpg",
+    title:"Férias e 13º Salário: Direitos Trabalhistas e Impactos na Gestão",
+    desc: "Regras legais, impactos financeiros e boas práticas de controle para empresas."
+  },
+  {
+    href: "/SITE/blog/alteracao-contratual-condicoes-trabalho.html",
+    img:  "https://eisleioliveirae-boop.github.io/SITE/blog/alteracao-contratual-condicoes-trabalho-cover.jpg",
+    title:"Alteração Contratual e Condições de Trabalho: Limites e Garantias do Empregado",
+    desc: "Ius variandi, mudanças lícitas, vedação a prejuízo e trilhas de evidência."
+  },
+  {
+    href: "/SITE/blog/terceirizacao-contratos-prestacao-servicos.html",
+    img:  "https://eisleioliveirae-boop.github.io/SITE/blog/terceirizacao-contratos-prestacao-servicos-cover.jpg",
+    title:"Terceirização e Contratos de Serviço: responsabilidade da tomadora",
+    desc: "Requisitos contratuais, fiscalização sem subordinação e compliance do fornecedor."
+  },
+  {
+    href: "/SITE/blog/pejotizacao.html",
+    img:  "https://eisleioliveirae-boop.github.io/SITE/blog/pejotizacao-aspectos-juridicos-cover.jpg",
+    title:"Pejotização nas Relações de Trabalho: riscos e controles",
+    desc: "Elementos do vínculo, critérios de descaracterização e medidas de prevenção."
+  },
+  {
+    href: "/SITE/blog/riscos-trabalhistas-compliance-empresarial.html",
+    img:  "https://eisleioliveirae-boop.github.io/SITE/blog/riscos-trabalhistas-compliance-empresarial-cover.jpg",
+    title:"Riscos Trabalhistas e Compliance Empresarial: como evitar passivos ocultos",
+    desc: "Mapeamento de riscos, políticas internas, auditorias e governança."
+  },
+  {
+    href: "/SITE/blog/acidente-de-trabalho-responsabilidade-empresarial.html",
+    img:  "https://eisleioliveirae-boop.github.io/SITE/blog/acidente-de-trabalho-responsabilidade-empresarial-cover.jpg",
+    title:"Acidente de Trabalho e Responsabilidade Empresarial",
+    desc: "Gestão preventiva, deveres do empregador e evidências de conformidade."
+  },
+  {
+    href: "/SITE/blog/responsabilidade-civil-do-empregador.html",
+    img:  "https://eisleioliveirae-boop.github.io/SITE/blog/responsabilidade-civil-do-empregador-cover.jpg",
+    title:"Responsabilidade Civil do Empregador",
+    desc: "Dever de segurança, culpa, nexo e reparação de danos materiais e morais."
+  },
+  {
+    href: "/SITE/blog/acao-regressiva-inss.html",
+    img:  "https://eisleioliveirae-boop.github.io/SITE/blog/acao-regressiva-inss-cover.jpg",
+    title:"Ação Regressiva do INSS: quando a empresa pode ser cobrada",
+    desc: "Fundamentos, hipóteses de regressiva e defesa com foco em evidências de SST."
   }
+];
 
-  prev.addEventListener('click', () => { if(page > 1){ page--; render(); window.scrollTo({top: document.getElementById('artigos').offsetTop - 20, behavior: 'smooth'}); } });
-  next.addEventListener('click', () => { if((page * perPage) < posts.length){ page++; render(); window.scrollTo({top: document.getElementById('artigos').offsetTop - 20, behavior: 'smooth'}); } });
+/* ===== RENDER ===== */
+const mount = document.getElementById('cardsMount');
+const btnPrev = document.getElementById('btnPrev');
+const btnNext = document.getElementById('btnNext');
+let page = 1;
+const totalPages = Math.max(1, Math.ceil(posts.length / PER_PAGE));
 
-  render();
-})();
+function cardHTML(p) {
+  return `
+    <article class="preview">
+      <a class="preview-img" href="${p.href}"
+         style="background-image:url('${p.img}');"></a>
+      <div class="preview-content">
+        <h3><a href="${p.href}">${p.title}</a></h3>
+        <p>${p.desc}</p>
+        <a class="btn" href="${p.href}">Ler completo</a>
+      </div>
+    </article>
+  `;
+}
+
+function render() {
+  const start = (page - 1) * PER_PAGE;
+  const slice = posts.slice(start, start + PER_PAGE);
+  mount.innerHTML = slice.map(cardHTML).join('');
+
+  btnPrev.disabled = page === 1;
+  btnNext.disabled = page === totalPages;
+  btnPrev.setAttribute('aria-disabled', String(btnPrev.disabled));
+  btnNext.setAttribute('aria-disabled', String(btnNext.disabled));
+}
+
+btnPrev.addEventListener('click', () => { if (page > 1) { page--; render(); window.scrollTo({top: document.getElementById('artigos').offsetTop - 20, behavior:'smooth'}); }});
+btnNext.addEventListener('click', () => { if (page < totalPages) { page++; render(); window.scrollTo({top: document.getElementById('artigos').offsetTop - 20, behavior:'smooth'}); }});
+
+render();
 </script>
+<!-- ============================ /FIM DO SNIPPET ============================ -->

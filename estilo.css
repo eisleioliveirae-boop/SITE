@@ -441,3 +441,38 @@ article.post li { margin: 6px 0; }
   opacity: 1 !important;
   visibility: visible !important;
 }
+/* Navegação entre artigos (Anterior / Próximo) */
+.post-nav{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  margin:40px 0 8px;
+  padding-top:20px;
+  border-top:1px solid #e5e7eb;
+}
+
+.post-nav a{
+  flex:1 1 0;
+  max-width:48%;             /* limita a largura de cada lado */
+  display:block;             /* permite comportamento de bloco */
+  font-weight:700;
+  color:#232342;
+  text-decoration:none;
+  line-height:1.35;
+  white-space:normal;        /* garante quebra de linha */
+  overflow-wrap:anywhere;    /* quebra palavras longas, se preciso */
+  word-break:normal;         /* mantém quebra “natural” */
+}
+
+.post-nav a:hover{
+  color:#CBA17B;
+  text-decoration:underline;
+}
+
+/* opcional: deixando o tamanho agradável em telas pequenas */
+@media (max-width: 600px){
+  .post-nav a{
+    max-width:100%;
+    font-size:clamp(0.98rem, 0.92rem + 0.4vw, 1.02rem);
+  }
+}

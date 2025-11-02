@@ -6,7 +6,7 @@
   <!-- Home -->
   <url>
     <loc>https://eisleioliveirae-boop.github.io/SITE/</loc>
-    <lastmod>2025-10-31T12:00:00-03:00</lastmod>
+    <lastmod>2025-11-02T09:00:00-03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.00</priority>
   </url>
@@ -14,161 +14,26 @@
   <!-- Índice do Blog -->
   <url>
     <loc>https://eisleioliveirae-boop.github.io/SITE/blog/</loc>
-    <lastmod>2025-10-31T12:00:00-03:00</lastmod>
+    <lastmod>2025-11-02T09:00:00-03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
 
-  <!-- 1) Relação de Trabalho x Relação de Emprego -->
+  <!-- 1. Relação de Trabalho x Relação de Emprego -->
   <url>
     <loc>https://eisleioliveirae-boop.github.io/SITE/blog/relacao-de-trabalho-e-emprego.html</loc>
-    <lastmod>2025-10-31T12:00:00-03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
+    <lastmod>2025-01-05T09:00:00-03:00</lastmod>
+    <priority>0.80</priority>
     <image:image>
       <image:loc>https://eisleioliveirae-boop.github.io/SITE/blog/relacao-de-trabalho-e-emprego-cover.jpg</image:loc>
       <image:title>Relação de Trabalho x Relação de Emprego</image:title>
     </image:image>
   </url>
 
-  <!-- 2) Contrato de Trabalho -->
+  <!-- 2. Contrato de Trabalho -->
   <url>
     <loc>https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho.html</loc>
-    <lastmod>2025-10-31T12:00:00-03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-    <image:image>
-      <image:loc>https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho-clt-cover.jpg</image:loc>
-      <image:title>Contrato de Trabalho na CLT</image:title>
-    </image:image>
-  </url>
-
-  <!-- 3) Jornada de Trabalho -->
-  <url>
-    <loc>https://eisleioliveirae-boop.github.io/SITE/blog/jornada-de-trabalho-clt.html</loc>
-    <lastmod>2025-10-31T12:00:00-03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.82</priority>
-    <image:image>
-      <image:loc>https://eisleioliveirae-boop.github.io/SITE/blog/jornada-de-trabalho-clt-cover.jpg</image:loc>
-      <image:title>Jornada de Trabalho na CLT</image:title>
-    </image:image>
-  </url>
-
-  <!-- 4) Salário na CLT -->
-  <url>
-    <loc>https://eisleioliveirae-boop.github.io/SITE/blog/salario-conceitos-e-legislacao.html</loc>
-    <lastmod>2025-10-31T12:00:00-03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.82</priority>
-    <image:image>
-      <image:loc>https://eisleioliveirae-boop.github.io/SITE/blog/salario-conceitos-e-legislacao-cover.jpg</image:loc>
-      <image:title>Salário: Conceitos e Legislação</image:title>
-    </image:image>
-  </url>
-
-  <!-- 5) Férias e 13º Salário -->
-  <url>
-    <loc>https://eisleioliveirae-boop.github.io/SITE/blog/ferias-e-13o-gestao-empresarial.html</loc>
-    <lastmod>2025-10-31T12:00:00-03:00</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2025-01-06T09:00:00-03:00</lastmod>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://eisleioliveirae-boop.github.io/SITE/blog/ferias-e-13o-gestao-empresarial-cover.jpg</image:loc>
-      <image:title>Férias e 13º Salário — Gestão Empresarial</image:title>
-    </image:image>
-  </url>
-
-  <!-- 6) Alteração Contratual e Condições de Trabalho -->
-  <url>
-    <loc>https://eisleioliveirae-boop.github.io/SITE/blog/alteracao-contratual-condicoes-de-trabalho.html</loc>
-    <lastmod>2025-10-31T12:00:00-03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-    <image:image>
-      <image:loc>https://eisleioliveirae-boop.github.io/SITE/blog/alteracao-contratual-condicoes-de-trabalho-cover.jpg</image:loc>
-      <image:title>Alteração Contratual e Condições de Trabalho</image:title>
-    </image:image>
-  </url>
-
-  <!-- 7) Terceirização e Contratos de Serviço -->
-  <url>
-    <loc>https://eisleioliveirae-boop.github.io/SITE/blog/terceirizacao-contratos-prestacao-servicos.html</loc>
-    <lastmod>2025-10-31T12:00:00-03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-    <image:image>
-      <image:loc>https://eisleioliveirae-boop.github.io/SITE/blog/terceirizacao-contratos-prestacao-servicos-cover.jpg</image:loc>
-      <image:title>Terceirização e Contratos de Prestação de Serviços</image:title>
-    </image:image>
-  </url>
-
-  <!-- 8) Pejotização -->
-  <url>
-    <loc>https://eisleioliveirae-boop.github.io/SITE/blog/pejotizacao.html</loc>
-    <lastmod>2025-10-31T12:00:00-03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.78</priority>
-    <image:image>
-      <image:loc>https://eisleioliveirae-boop.github.io/SITE/blog/pejotizacao-aspectos-juridicos-cover.jpg</image:loc>
-      <image:title>Pejotização nas Relações de Trabalho</image:title>
-    </image:image>
-  </url>
-
-  <!-- 9) Riscos Trabalhistas e Compliance Empresarial -->
-  <url>
-    <loc>https://eisleioliveirae-boop.github.io/SITE/blog/riscos-trabalhistas-compliance-empresarial.html</loc>
-    <lastmod>2025-10-31T12:00:00-03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-    <image:image>
-      <image:loc>https://eisleioliveirae-boop.github.io/SITE/blog/riscos-trabalhistas-compliance-empresarial-cover.jpg</image:loc>
-      <image:title>Riscos Trabalhistas e Compliance Empresarial</image:title>
-    </image:image>
-  </url>
-
-  <!-- 10) Gestão de Passivos Trabalhistas (SST/Política Interna) -->
-  <url>
-    <loc>https://eisleioliveirae-boop.github.io/SITE/blog/sst-politica-interna-prevencao-passivos.html</loc>
-    <lastmod>2025-10-31T12:00:00-03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.78</priority>
-    <image:image>
-      <image:loc>https://eisleioliveirae-boop.github.io/SITE/blog/sst-politica-interna-prevencao-passivos-cover.jpg</image:loc>
-      <image:title>Política Interna de SST e Prevenção de Passivos</image:title>
-    </image:image>
-  </url>
-
-  <!-- 11) Acidente de Trabalho e Responsabilidade Empresarial -->
-  <url>
-    <loc>https://eisleioliveirae-boop.github.io/SITE/blog/acidente-de-trabalho-responsabilidade-empresarial.html</loc>
-    <lastmod>2025-10-31T12:00:00-03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-    <image:image>
-      <image:loc>https://eisleioliveirae-boop.github.io/SITE/blog/acidente-de-trabalho-responsabilidade-empresarial-cover.jpg</image:loc>
-      <image:title>Acidente de Trabalho e Responsabilidade Empresarial</image:title>
-    </image:image>
-  </url>
-
-  <!-- 12) Responsabilidade Civil do Empregador -->
-  <url>
-    <loc>https://eisleioliveirae-boop.github.io/SITE/blog/responsabilidade-civil-do-empregador.html</loc>
-    <lastmod>2025-11-02T12:00:00-03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-    <image:image>
-      <image:loc>https://eisleioliveirae-boop.github.io/SITE/blog/responsabilidade-civil-do-empregador-cover.jpg</image:loc>
-      <image:title>Responsabilidade Civil do Empregador</image:title>
-    </image:image>
-  </url>
-
-  <!-- 13) Ação Regressiva do INSS -->
-  <url>
-    <loc>https://eisleioliveirae-boop.github.io/SITE/blog/acao-regressiva-inss.html</loc>
-    <lastmod>2025-10-31T12:00:00-03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.78</priority>
-  </url>
-
-</urlset>
+      <image:loc

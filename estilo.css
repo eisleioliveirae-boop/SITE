@@ -476,3 +476,21 @@ article.post li { margin: 6px 0; }
     font-size:clamp(0.98rem, 0.92rem + 0.4vw, 1.02rem);
   }
 }
+/* ===== Ajustes visuais finais ===== */
+
+/* Espaçamento entre a navegação de artigos/páginas e a próxima seção */
+.post-nav,
+.pagination {
+  margin-bottom: 60px; /* dá respiro entre o bloco e a seção seguinte */
+}
+
+/* Garante distância extra entre seções consecutivas */
+section + section {
+  margin-top: 60px;
+}
+
+/* Espaço adicional antes do formulário de contato (Fale Conosco) */
+#fale-conosco,
+#contato {
+  padding-top: 40px;
+}

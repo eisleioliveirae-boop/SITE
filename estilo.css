@@ -492,7 +492,7 @@ section + section {
 /* Espaço adicional antes do formulário de contato (Fale Conosco) */
 #fale-conosco,
 #contato {
-  padding-top: 40px;
+  padding-top: 45px;
 }
 /* ===== Navegação por âncoras (menu) ===== */
 html { scroll-behavior: smooth; }

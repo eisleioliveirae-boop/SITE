@@ -507,3 +507,13 @@ section[id] { scroll-margin-top: var(--header-offset); }
 .section-área de atuação{
   margin-bottom: 80px; /* você pode ajustar: 60px, 80px, 100px conforme preferir */
 }
+
+/* --- Espaço entre "Áreas de Atuação" e "Artigos Publicados" --- */
+.section-atuacao {
+  margin-bottom: 100px; /* ajuste conforme desejar: 80px, 100px, 120px */
+}
+
+/* --- Espaço entre "Nossos Valores" e "Artigos Publicados" --- */
+.section-valores {
+  margin-bottom: 100px; /* cria um respiro entre os blocos */
+}

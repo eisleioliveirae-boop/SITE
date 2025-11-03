@@ -502,3 +502,8 @@ html { scroll-behavior: smooth; }
 
 /* Garante que o título da seção não seja cortado ao chegar pela âncora */
 section[id] { scroll-margin-top: var(--header-offset); }
+
+/* --- Espaço entre a seção "Nossos Valores" e "Artigos Publicados" --- */
+.section-valores {
+  margin-bottom: 80px; /* você pode ajustar: 60px, 80px, 100px conforme preferir */
+}

@@ -517,3 +517,24 @@ section[id] { scroll-margin-top: var(--header-offset); }
 .section-valores {
   margin-bottom: 100px; /* cria um respiro entre os blocos */
 }
+/* ====== Espaçamentos Responsivos entre Seções ====== */
+
+/* 1️⃣ Espaço entre “Nossos Valores” e “Artigos Publicados” */
+.section-valores {
+  margin-bottom: clamp(48px, 6vw, 96px);
+  /* 48px em telas pequenas, 6vw em médias, até 96px em grandes */
+}
+
+/* 2️⃣ Espaço entre “Áreas de Atuação” e “Artigos Publicados” */
+.section-atuacao {
+  margin-bottom: clamp(48px, 7vw, 110px);
+  /* cresce suavemente conforme a largura da tela */
+}
+
+/* 3️⃣ Ajuste adicional para suavizar o fluxo em dispositivos menores */
+@media (max-width: 640px) {
+  .section-valores,
+  .section-atuacao {
+    margin-bottom: 56px; /* mantém boa proporção no mobile */
+  }
+}

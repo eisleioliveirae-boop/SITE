@@ -502,11 +502,3 @@ html { scroll-behavior: smooth; }
 
 /* Garante que o título da seção não seja cortado ao chegar pela âncora */
 section[id] { scroll-margin-top: var(--header-offset); }
-#quem-somos,
-#fundadora,
-#nossos-valores,
-#areas-de-atuacao,
-#blog-previews,
-#contato {
-  scroll-margin-top: var(--header-offset);
-}

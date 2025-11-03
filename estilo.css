@@ -504,6 +504,6 @@ html { scroll-behavior: smooth; }
 section[id] { scroll-margin-top: var(--header-offset); }
 
 /* --- Espaço entre a seção "Áreas de Atuação" e "Artigos Publicados" --- */
-.section-valores {
+.section-área de atuação{
   margin-bottom: 80px; /* você pode ajustar: 60px, 80px, 100px conforme preferir */
 }

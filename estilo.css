@@ -494,3 +494,19 @@ section + section {
 #contato {
   padding-top: 40px;
 }
+/* ===== Navegação por âncoras (menu) ===== */
+html { scroll-behavior: smooth; }
+
+/* Altura do cabeçalho fixo (ajuste se mudar o header) */
+:root { --header-offset: 96px; } /* 96px costuma ficar perfeito para desktop; teste 88–112px se precisar */
+
+/* Garante que o título da seção não seja cortado ao chegar pela âncora */
+section[id] { scroll-margin-top: var(--header-offset); }
+#quem-somos,
+#fundadora,
+#nossos-valores,
+#areas-de-atuacao,
+#blog-previews,
+#contato {
+  scroll-margin-top: var(--header-offset);
+}

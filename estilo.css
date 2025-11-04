@@ -583,3 +583,43 @@ section[id]{
   line-height:1.4;
   word-wrap:break-word;
 }
+/* ===== PATCH FIXO MENU EOD (coloque no final do arquivo) ===== */
+
+/* Garante que o cabeçalho fique visível em TODAS as seções */
+.header, .top-bar {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  background-color: #0b0b33; /* mantém a cor institucional */
+}
+
+/* Remove qualquer ocultamento acidental */
+body, html {
+  overflow-x: hidden;
+}
+
+/* Quando rolar, mantém espaço de respiro */
+section[id] {
+  scroll-margin-top: 110px; /* compensa a altura do menu fixo */
+}
+
+/* Espaçamentos adaptáveis entre seções — responsivos */
+.section-valores,
+.section-atuacao,
+#blog-previews {
+  margin-top: clamp(48px, 6vw, 120px);
+  margin-bottom: clamp(48px, 6vw, 120px);
+}
+
+/* Títulos das seções sempre com distância confortável */
+.section-valores h2,
+.section-atuacao h2,
+#blog-previews h2 {
+  margin-top: 0;
+  padding-top: clamp(24px, 4vw, 60px);
+}
+
+/* Evita colar a seção “Fale Conosco” ao blog */
+#blog-previews + .section-contato {
+  margin-top: clamp(48px, 7vw, 140px);
+}

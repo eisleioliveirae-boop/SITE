@@ -681,3 +681,25 @@ section[id] {
 #blog-previews + .section-contato {
   margin-top: clamp(48px, 7vw, 140px);
 }
+/* ==== Banner responsivo (altura e render do logo) ==== */
+.main-banner{
+  /* altura responsiva enxuta */
+  min-height: clamp(160px, 22vw, 340px) !important;
+
+  /* garante que o logo sempre caiba e fique centralizado */
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important; /* mostra o logo inteiro */
+  /* se seu banner usar imagem “full” em vez de logo puro, troque por: background-size: cover; */
+}
+
+/* Ajustes finos por breakpoint (opcional, deixa bem previsível) */
+@media (min-width: 1400px){
+  .main-banner{ min-height: 300px !important; }
+}
+@media (max-width: 1024px){
+  .main-banner{ min-height: 240px !important; }
+}
+@media (max-width: 640px){
+  .main-banner{ min-height: 180px !important; }
+}

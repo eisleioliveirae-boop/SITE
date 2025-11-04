@@ -623,3 +623,29 @@ section[id] {
 #blog-previews + .section-contato {
   margin-top: clamp(48px, 7vw, 140px);
 }
+/* ==== UNIFICA O FUNDO DO MENU COM O BANNER (remove a “faixa”) ==== */
+:root{
+  --brand-navy: #232342; /* azul institucional do herói */
+}
+
+html, body{ margin:0; }              /* evita 1px de gap do user agent */
+
+.header,
+.top-bar{
+  background: var(--brand-navy) !important; /* mesma cor do banner */
+  border-bottom: none !important;
+  box-shadow: none !important;
+  background-image: none !important;
+}
+
+/* garante que o bloco de capa também use o mesmo tom */
+.main-banner{
+  background: var(--brand-navy) !important;
+  margin-top: 0;
+}
+
+/* se existir alguma linha decorativa logo abaixo do header, zera */
+.header::after,
+.top-bar::after{
+  content: none !important;
+}

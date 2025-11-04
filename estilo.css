@@ -703,3 +703,30 @@ section[id] {
 @media (max-width: 640px){
   .main-banner{ min-height: 180px !important; }
 }
+/* ==== Banner responsivo ajustado (altura moderada e proporcional) ==== */
+.main-banner{
+  background-color: var(--brand-navy) !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+
+  /* Altura ajustada — agora mais enxuta */
+  min-height: clamp(120px, 18vw, 220px) !important;
+
+  /* Alinha o conteúdo caso exista texto ou logo dentro do banner */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+}
+
+/* Ajustes extras de segurança para telas muito grandes ou pequenas */
+@media (min-width: 1600px){
+  .main-banner{ min-height: 240px !important; }
+}
+@media (max-width: 1024px){
+  .main-banner{ min-height: 180px !important; }
+}
+@media (max-width: 640px){
+  .main-banner{ min-height: 140px !important; }
+}

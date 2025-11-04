@@ -538,3 +538,48 @@ section[id] { scroll-margin-top: var(--header-offset); }
     margin-bottom: 56px; /* mantém boa proporção no mobile */
   }
 }
+/* ===== PATCH EOD (adicione no final do arquivo) ===== */
+
+/* 1) Header visível sem mexer no layout existente */
+.header{
+  position: sticky; /* fica preso no topo quando rola */
+  top: 0;
+  z-index: 9999;      /* acima do conteúdo */
+}
+
+/* 2) Âncoras não cortam o título ao clicar no menu
+      (usa um valor seguro; não depende de JS nem muda seu layout) */
+section[id]{
+  scroll-margin-top: 96px; /* ajuste fino do offset do menu */
+}
+
+/* 3) Espaçamentos RESPONSIVOS entre blocos (sem afetar o resto) */
+#nossos-valores{
+  /* margem extra abaixo, adaptando ao tamanho de tela */
+  margin-bottom: clamp(48px, 6vw, 120px);
+}
+
+.section-atuacao{
+  /* garante respiro acima e abaixo da área de atuação */
+  margin-top: clamp(40px, 5vw, 100px);
+  margin-bottom: clamp(40px, 5vw, 100px);
+}
+
+#blog-previews{
+  /* respiro antes dos cards do blog e antes do contato */
+  margin-top: clamp(48px, 6vw, 120px);
+  padding-bottom: clamp(32px, 5vw, 96px);
+}
+
+/* 4) Espaço extra entre BLOG e “Fale Conosco” (quando não houver muito conteúdo) */
+#blog-previews + .section-contato{
+  margin-top: clamp(40px, 6vw, 120px);
+}
+
+/* 5) Links de navegação longos nos artigos quebram linha com elegância */
+.post-nav a{
+  display:inline-block;
+  max-width:48%;
+  line-height:1.4;
+  word-wrap:break-word;
+}

@@ -1041,3 +1041,48 @@ section + section{
 section + section{
   margin-top: var(--gap-medio) !important;
 }
+/* === EOD — Ajuste cirúrgico de espaçamentos (final do arquivo) === */
+
+/* 1) Respiro entre “Quem Somos” → “Fundadora”
+   (funciona se o id estiver na section OU no h2) */
+#quem-somos,
+h2#quem-somos {
+  margin-bottom: clamp(16px, 1.8vw, 28px) !important;
+}
+
+#fundadora,
+.section-fundadora,
+h2#fundadora {
+  margin-top: clamp(16px, 1.8vw, 28px) !important;
+  padding-top: clamp(6px, 0.6vw, 10px) !important;
+}
+
+/* 2) Aproximar “Artigos publicados” → “Fale Conosco” */
+#blog-previews {
+  margin-bottom: clamp(8px, 1vw, 14px) !important;
+}
+
+/* a sua regra antiga inflava o vão; reduzimos aqui */
+.pagination {
+  margin-bottom: clamp(8px, 1vw, 14px) !important;
+}
+
+#blog-previews + #fale-conosco,
+#blog-previews + .section-contato,
+#fale-conosco,
+.section-contato {
+  margin-top: clamp(8px, 1vw, 14px) !important;
+  padding-top: clamp(6px, 0.6vw, 10px) !important;
+}
+
+/* 3) Corta qualquer “gordura” interna dos blocos nas bordas */
+.section-fundadora > *:last-child,
+.section-valores   > *:last-child,
+.section-atuacao   > *:last-child {
+  margin-bottom: 0 !important;
+}
+.section-fundadora > *:first-child,
+.section-valores   > *:first-child,
+.section-atuacao   > *:first-child {
+  margin-top: 0 !important;
+}

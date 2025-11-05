@@ -907,3 +907,59 @@ section + section{
   padding-top: clamp(10px, 1vw, 13px) !important;
   padding-bottom: clamp(10px, 1.4vw, 20px) !important;
 }
+/* ==== EOD — Compactação FOCADA entre Fundadora / Valores / Áreas ==== */
+/* Cole NO FIM do arquivo */
+
+:root{ --gap-tight: clamp(8px, 0.9vw, 18px); }
+
+/* 0) neutraliza margens internas que criam “barrigas” nas bordas das seções */
+.section-fundadora > *:last-child,
+.section-valores   > *:last-child,
+.section-atuacao   > *:last-child{
+  margin-bottom: 0 !important;
+}
+.section-valores   > *:first-child,
+.section-atuacao   > *:first-child{
+  margin-top: 0 !important;
+}
+
+/* 1) Fundadora -> Nossos Valores */
+#fundadora,
+.section-fundadora{
+  margin-bottom: var(--gap-tight) !important;
+  padding-bottom: clamp(6px, 0.8vw, 12px) !important;
+}
+#nossos-valores,
+.section-valores{
+  margin-top:  var(--gap-tight) !important;
+}
+
+/* 2) Nossos Valores -> Áreas de Atuação */
+#nossos-valores,
+.section-valores{
+  margin-bottom: var(--gap-tight) !important;
+  padding-bottom: clamp(6px, 0.8vw, 12px) !important;
+}
+#areas-de-atuacao,
+.section-atuacao{
+  margin-top:  var(--gap-tight) !important;
+}
+
+/* 3) Tiramos gordura dos títulos (muitas vezes é o que “estica” o vão) */
+#nossos-valores h2,
+.section-valores h2,
+#areas-de-atuacao h2,
+.section-atuacao h2{
+  margin-top: 0 !important;
+  margin-bottom: 8px !important;
+}
+
+/* 4) E se ainda houver algum “empuxo” vindo de listas e parágrafos na borda: */
+#nossos-valores > p:last-child,
+#nossos-valores > ul:last-child,
+#nossos-valores > ol:last-child,
+#areas-de-atuacao > p:first-child,
+#areas-de-atuacao > ul:first-child,
+#areas-de-atuacao > ol:first-child{
+  margin-top: 0 !important;
+}

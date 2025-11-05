@@ -886,8 +886,8 @@ section + section{
 /* Áreas de Atuação */
 #areas-de-atuacao,
 .section-atuacao{
-  margin-top: clamp(14px, 1.4vw, 26px) !important;
-  margin-bottom: clamp(20px, 2vw, 34px) !important;
+  margin-top: clamp(14px, 1.4vw, 20px) !important;
+  margin-bottom: clamp(20px, 2vw, 30px) !important;
 }
 .section-atuacao h2{
   margin-bottom: 10px !important;
@@ -895,8 +895,8 @@ section + section{
 
 /* Artigos publicados (grid do blog na home) */
 #blog-previews{
-  margin-top: clamp(10px, 1.6vw, 28px) !important;
-  margin-bottom: clamp(12px, 2.2vw, 36px) !important;
+  margin-top: clamp(10px, 1.6vw, 20px) !important;
+  margin-bottom: clamp(12px, 2.2vw, 30px) !important;
 }
 #blog-previews h2{
   margin-bottom: 10px !important;
@@ -904,6 +904,6 @@ section + section{
 
 /* Um pouco menos de “respiro” no container geral da página */
 .content{
-  padding-top: clamp(10px, 1vw, 16px) !important;
-  padding-bottom: clamp(10px, 1.4vw, 22px) !important;
+  padding-top: clamp(10px, 1vw, 13px) !important;
+  padding-bottom: clamp(10px, 1.4vw, 20px) !important;
 }

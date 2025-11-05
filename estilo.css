@@ -963,3 +963,49 @@ section + section{
 #areas-de-atuacao > ol:first-child{
   margin-top: 0 !important;
 }
+/* === EOD — Compactação FINAL entre Fundadora / Valores / Áreas === */
+/* cole no FIM do arquivo */
+
+:root{
+  --gap-xxs: clamp(8px, 0.7vw, 16px);
+  --gap-xs:  clamp(10px, 1vw, 20px);
+}
+
+/* 0) derruba qualquer padding vertical nas três seções */
+section.section-fundadora,
+section#nossos-valores.section-valores,
+section#areas-de-atuacao.section-atuacao{
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* 1) espaçamentos bem curtos entre elas */
+section.section-fundadora{               /* Fundadora -> Valores */
+  margin-bottom: var(--gap-xxs) !important;
+}
+section#nossos-valores.section-valores{
+  margin-top:  var(--gap-xxs) !important;
+  margin-bottom: var(--gap-xxs) !important;   /* Valores -> Áreas */
+}
+section#areas-de-atuacao.section-atuacao{
+  margin-top:  var(--gap-xxs) !important;
+  margin-bottom: var(--gap-xxs) !important;
+}
+
+/* 2) títulos sem “barriga” extra */
+section#nossos-valores.section-valores h2,
+section#areas-de-atuacao.section-atuacao h2{
+  margin-top: 0 !important;
+  margin-bottom: 8px !important;
+}
+
+/* 3) neutraliza o espaçamento global exagerado entre QUALQUER seção */
+section + section{
+  margin-top: var(--gap-xs) !important;  /* substitui os 60px */
+}
+
+/* 4) dá uma enxugada no respiro do wrapper geral */
+.content{
+  padding-top: var(--gap-xs) !important;
+  padding-bottom: var(--gap-xs) !important;
+}

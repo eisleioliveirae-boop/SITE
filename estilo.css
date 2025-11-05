@@ -739,7 +739,7 @@ section[id] {
   background-repeat: no-repeat !important;
   background-size: contain !important;
 
-  min-height: clamp(100px, 15vw, 200px) !important;
+  min-height: clamp(80px, 10vw, 150px) !important;
   display: flex;
   align-items: center;
   justify-content: center;

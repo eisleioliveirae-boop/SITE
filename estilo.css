@@ -1108,7 +1108,7 @@ body section + section {
 /* Reduz o vão entre “Artigos Publicados” e “Fale Conosco” */
 #blog-previews,
 .section-blog {
-  margin-bottom: 20px !important;
+  margin-bottom: 30px !important;
   padding-bottom: 0 !important;
 }
 
@@ -1118,12 +1118,12 @@ body section + section {
 
 #fale-conosco,
 .section-contato {
-  margin-top: 30px !important;
-  padding-top: 20px !important;
+  margin-top: 40px !important;
+  padding-top: 30px !important;
 }
 
 /* Neutraliza qualquer margem adicional residual */
 #blog-previews + #fale-conosco,
 #blog-previews + .section-contato {
-  margin-top: 12px !important;
+  margin-top: 32px !important;
 }

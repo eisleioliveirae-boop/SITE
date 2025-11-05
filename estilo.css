@@ -730,3 +730,72 @@ section[id] {
 @media (max-width: 640px){
   .main-banner{ min-height: 140px !important; }
 }
+/* ==== Ajustes finais de responsividade e espaçamento (EOD Advocacia) ==== */
+
+/* Banner: altura proporcional, adaptável a telas diferentes */
+.main-banner {
+  background-color: var(--brand-navy) !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+
+  min-height: clamp(100px, 15vw, 200px) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+}
+
+@media (min-width: 1600px) {
+  .main-banner { min-height: 220px !important; }
+}
+@media (max-width: 1024px) {
+  .main-banner { min-height: 160px !important; }
+}
+@media (max-width: 640px) {
+  .main-banner { min-height: 130px !important; }
+}
+
+/* Corrige corte do menu hamburguer no mobile */
+.menu-toggle {
+  margin-top: 6px !important;
+  margin-bottom: 6px !important;
+  padding: 6px 8px !important;
+  font-size: 1.4rem !important;
+  z-index: 9999 !important;
+}
+
+/* Evita sobreposição do menu ao rolar */
+.header, .top-bar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* ===== Espaçamentos entre seções ===== */
+.section-fundadora,
+.section-valores,
+.section-atuacao,
+#blog-previews {
+  margin-top: clamp(50px, 6vw, 100px);
+  margin-bottom: clamp(50px, 6vw, 100px);
+}
+
+/* Distância extra entre valores → atuação → artigos */
+.section-valores {
+  margin-bottom: clamp(60px, 7vw, 110px);
+}
+.section-atuacao {
+  margin-top: clamp(40px, 5vw, 80px);
+  margin-bottom: clamp(50px, 5vw, 90px);
+}
+
+/* Melhora visual da rolagem para âncoras (não corta título sob o menu) */
+html {
+  scroll-padding-top: 100px;
+}
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 80px;
+  }
+}

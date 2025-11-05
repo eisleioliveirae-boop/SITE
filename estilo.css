@@ -1047,7 +1047,7 @@ section + section{
    (funciona se o id estiver na section OU no h2) */
 #quem-somos,
 h2#quem-somos {
-  margin-bottom: clamp(16px, 1.8vw, 28px) !important;
+  margin-bottom: clamp(10px, 1.2vw, 20px) !important;
 }
 
 #fundadora,

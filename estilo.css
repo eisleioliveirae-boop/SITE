@@ -777,17 +777,17 @@ section[id] {
 .section-valores,
 .section-atuacao,
 #blog-previews {
-  margin-top: clamp(40px, 4vw, 80px);
-  margin-bottom: clamp(40px, 4vw, 80px);
+  margin-top: clamp(30px, 3vw, 60px);
+  margin-bottom: clamp(20px, 2vw, 40px);
 }
 
 /* Distância extra entre valores → atuação → artigos */
 .section-valores {
-  margin-bottom: clamp(50px, 5vw, 100px);
+  margin-bottom: clamp(40px, 4w, 70px);
 }
 .section-atuacao {
-  margin-top: clamp(30px, 3vw, 70px);
-  margin-bottom: clamp(40px, 3vw, 80px);
+  margin-top: clamp(20px, 2vw, 50px);
+  margin-bottom: clamp(30px, 3vw, 60px);
 }
 
 /* Melhora visual da rolagem para âncoras (não corta título sob o menu) */

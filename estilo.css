@@ -70,7 +70,7 @@ body {
 ---------------------------------- */
 .main-banner { 
   width: 100%;
-  padding: 50px 0;                 /* base (mobile/tablet) */
+  padding: 40px 0;                 /* base (mobile/tablet) */
   background-image: url('banner.png');
   background-size: cover;          /* cobre a área e elimina faixas */
   background-position: center;
@@ -201,12 +201,12 @@ a:focus, button:focus { outline: 3px solid var(--focus); outline-offset: 3px; }
   p, li, .fundadora-texto p, .section-atuacao ul li, .artigo-item p { font-size: 1.05rem; line-height: 1.7; }
 
   /* Ajuste de altura do banner somente em desktop */
-  .main-banner { padding: 190px 0; }
+  .main-banner { padding: 170px 0; }
 }
 
 /* Intermediário grande (ex.: 13.3" 1440x900) */
 @media (min-width: 1050px) and (max-width: 1440px) {
-  .main-banner { padding: 140px 0; background-position: center center; }
+  .main-banner { padding: 130px 0; background-position: center center; }
 }
 
 /* Ajustes banner para tablets */

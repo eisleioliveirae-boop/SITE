@@ -1086,3 +1086,44 @@ h2#fundadora {
 .section-atuacao   > *:first-child {
   margin-top: 0 !important;
 }
+/* === EOD — CORREÇÃO FINAL E DEFINITIVA DOS ESPAÇAMENTOS === */
+
+/* Remove totalmente as margens herdadas entre seções */
+body section + section {
+  margin-top: 0 !important;
+}
+
+/* Espaço ajustado entre “Quem Somos” e “Fundadora” */
+#quem-somos,
+.section-quem-somos {
+  margin-bottom: 32px !important;
+}
+
+#fundadora,
+.section-fundadora {
+  margin-top: 32px !important;
+  padding-top: 8px !important;
+}
+
+/* Reduz o vão entre “Artigos Publicados” e “Fale Conosco” */
+#blog-previews,
+.section-blog {
+  margin-bottom: 8px !important;
+  padding-bottom: 0 !important;
+}
+
+.pagination {
+  margin-bottom: 6px !important;
+}
+
+#fale-conosco,
+.section-contato {
+  margin-top: 12px !important;
+  padding-top: 8px !important;
+}
+
+/* Neutraliza qualquer margem adicional residual */
+#blog-previews + #fale-conosco,
+#blog-previews + .section-contato {
+  margin-top: 12px !important;
+}

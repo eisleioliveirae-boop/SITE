@@ -1127,3 +1127,40 @@ body section + section {
 #blog-previews + .section-contato {
   margin-top: 32px !important;
 }
+/* === FIX CIRÚRGICO — Fundadora ⇄ Nossos Valores e Blog ⇄ Fale Conosco === */
+
+/* 1) Fundadora → Nossos Valores: tira o “colchão” e encosta com respiro curto */
+.section-fundadora { 
+  padding-bottom: 8px !important;         /* reduz o respiro da fundadora */
+}
+.section-fundadora *:last-child { 
+  margin-bottom: 0 !important;             /* evita margem do último parágrafo/lista */
+}
+/* quando a seção seguinte for “Nossos Valores”, zera o espaçamento entre sections */
+.section-fundadora + .section-valores {
+  margin-top: 8px !important;              /* só 8px entre as seções */
+  padding-top: 0 !important;               /* remove padding alto da próxima seção */
+}
+/* garante que o título não adicione “barriga” extra */
+.section-valores > h2:first-child {
+  margin-top: 0 !important;
+}
+
+/* 2) Artigos publicados → Fale Conosco: aproxima sem grudar */
+#blog-previews { 
+  margin-bottom: 10px !important;          /* menos espaço após os cards/paginação */
+}
+.pagination { 
+  margin-bottom: 8px !important;           /* baixa o respiro da paginação */
+}
+#blog-previews + #fale-conosco,
+#blog-previews + .section-contato {
+  margin-top: 10px !important;             /* aproxima o formulário */
+  padding-top: 6px !important;
+}
+
+/* 3) Neutraliza qualquer regra global que tente “reabrir” o vão nessa dupla */
+.section-fundadora + section,
+#blog-previews + section {
+  margin-top: 0 !important;
+}

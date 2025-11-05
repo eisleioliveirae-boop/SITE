@@ -521,13 +521,13 @@ section[id] { scroll-margin-top: var(--header-offset); }
 
 /* 1️⃣ Espaço entre “Nossos Valores” e “Artigos Publicados” */
 .section-valores {
-  margin-bottom: clamp(48px, 6vw, 96px);
-  /* 48px em telas pequenas, 6vw em médias, até 96px em grandes */
+  margin-bottom: clamp(28px, 3vw, 76px);
+  /* 28px em telas pequenas, 3vw em médias, até 96px em grandes */
 }
 
 /* 2️⃣ Espaço entre “Áreas de Atuação” e “Artigos Publicados” */
 .section-atuacao {
-  margin-bottom: clamp(48px, 7vw, 110px);
+  margin-bottom: clamp(28px, 3vw, 80px);
   /* cresce suavemente conforme a largura da tela */
 }
 

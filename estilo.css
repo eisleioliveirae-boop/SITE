@@ -865,3 +865,45 @@ html {
     margin-bottom: 36px;
   }
 }
+/* ==== EOD — Compactação dos espaçamentos entre seções (override) ==== */
+/* Cole NO FIM do arquivo */
+
+section + section{
+  /* espaço padrão entre qualquer seção consecutiva */
+  margin-top: clamp(16px, 1.6vw, 28px) !important;
+}
+
+/* Nossos Valores */
+#nossos-valores,
+.section-valores{
+  margin-top: clamp(12px, 1.2vw, 24px) !important;
+  margin-bottom: clamp(18px, 1.8vw, 32px) !important;
+}
+.section-valores h2{
+  margin-bottom: 10px !important;
+}
+
+/* Áreas de Atuação */
+#areas-de-atuacao,
+.section-atuacao{
+  margin-top: clamp(14px, 1.4vw, 26px) !important;
+  margin-bottom: clamp(20px, 2vw, 34px) !important;
+}
+.section-atuacao h2{
+  margin-bottom: 10px !important;
+}
+
+/* Artigos publicados (grid do blog na home) */
+#blog-previews{
+  margin-top: clamp(16px, 1.6vw, 28px) !important;
+  margin-bottom: clamp(22px, 2.2vw, 36px) !important;
+}
+#blog-previews h2{
+  margin-bottom: 10px !important;
+}
+
+/* Um pouco menos de “respiro” no container geral da página */
+.content{
+  padding-top: clamp(10px, 1vw, 16px) !important;
+  padding-bottom: clamp(14px, 1.4vw, 22px) !important;
+}

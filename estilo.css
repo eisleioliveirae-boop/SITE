@@ -1009,3 +1009,35 @@ section + section{
   padding-top: var(--gap-xs) !important;
   padding-bottom: var(--gap-xs) !important;
 }
+/* === EOD — Ajuste final de espaçamento entre seções === */
+/* Cole NO FIM do arquivo */
+
+:root{
+  --gap-fino: clamp(10px, 1vw, 22px);
+  --gap-medio: clamp(16px, 2vw, 28px);
+}
+
+/* 1️⃣  Espaço entre “Quem Somos” e “Fundadora” */
+#quem-somos,
+.section-quem-somos{
+  margin-bottom: var(--gap-medio) !important;
+}
+#fundadora,
+.section-fundadora{
+  margin-top: var(--gap-medio) !important;
+}
+
+/* 2️⃣  Reduz o espaço entre “Artigos Publicados” e “Fale Conosco” */
+#blog-previews{
+  margin-bottom: var(--gap-fino) !important;
+}
+#fale-conosco,
+.section-contato{
+  margin-top: var(--gap-fino) !important;
+  padding-top: var(--gap-fino) !important;
+}
+
+/* 3️⃣  Evita que qualquer regra anterior volte a inflar margens */
+section + section{
+  margin-top: var(--gap-medio) !important;
+}

@@ -1223,7 +1223,7 @@ body section + section {
 /* ==== Banner principal (logo centralizado) ==== */
 .main-banner {
   width: 100%;
-  height: 280px; /* altura ajustada para desktop */
+  height: 260px; /* altura ajustada para desktop */
   background-color: #232342; /* cor institucional azul escuro */
   background-image: url('banner.png'); /* caminho correto */
   background-repeat: no-repeat;
@@ -1237,7 +1237,7 @@ body section + section {
 /* Versão mobile */
 @media (max-width: 768px) {
   .main-banner {
-    height: 200px;
+    height: 120px;
     background-size: 70%; /* reduz o logo em telas pequenas */
   }
 }

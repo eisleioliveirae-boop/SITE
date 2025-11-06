@@ -1317,5 +1317,15 @@ body section + section {
     background-repeat: no-repeat !important;
     background-size: auto 80% !important;  
   }
+}/* === Banner Mobile Real (até 480px) === */
+@media (max-width: 480px){
+  .main-banner{
+    height: 40px !important;
+    background-color: #232342 !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-size: auto 85% !important;
+  }
 }
+
 

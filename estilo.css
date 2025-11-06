@@ -1220,3 +1220,22 @@ body section + section {
     z-index: 1320;
   }
 }
+/* ==== Ajuste de altura do banner inicial ==== */
+.main-banner {
+  width: 100%;
+  height: 320px; /* antes devia estar entre 500–600px */
+  background-image: url('banner-principal.jpg'); /* mantenha sua imagem atual */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Altura menor ainda no mobile */
+@media (max-width: 768px) {
+  .main-banner {
+    height: 220px;
+  }
+}

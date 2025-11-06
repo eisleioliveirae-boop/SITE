@@ -1300,3 +1300,11 @@ body section + section {
   background-clip: border-box !important;
   overflow: hidden; /* corta 1px fantasma se aparecer */
 }
+/* Troca a arte no mobile por uma versão “recortada” (preenche melhor) */
+@media (max-width: 700px){
+  .main-banner{
+    background-image: url('banner-mobile.png') !important;
+    background-size: contain !important;    /* preserva a proporção */
+    background-position: center center !important;
+  }
+}

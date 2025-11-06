@@ -1381,3 +1381,30 @@ body section + section {
   }
 }
 
+/* === Banner (desktop permanece igual) === */
+.main-banner{
+  width:100%;
+  height:90px;
+  background:#232342 url('banner.png') no-repeat center center / contain;
+  display:flex;align-items:center;justify-content:center;
+}
+
+/* === Banner MOBILE: usa o arquivo próprio e controla o tamanho pelo ALTO da imagem === */
+@media (max-width:700px){
+  .main-banner{
+    height:90px !important;                         /* não aumenta a faixa azul */
+    background-color:#232342 !important;
+    background-image:url('banner-mobile.png') !important;
+
+    /* Escala pela ALTURA da arte (garante logo inteiro) */
+    background-repeat:no-repeat !important;
+    background-size:auto clamp(50px, 8.5vw, 64px) !important;
+
+    /* Empurra levemente o logo para baixo para compensar a “sobra” superior do PNG */
+    background-position:center calc(50% + 6px) !important;
+
+    /* Evita qualquer linha/clipping lateral */
+    background-origin:padding-box;
+    background-clip:padding-box;
+  }
+}

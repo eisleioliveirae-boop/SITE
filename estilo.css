@@ -1194,3 +1194,29 @@ body section + section {
   margin-top: 0 !important; 
   padding-top: 0 !important; 
 }
+/* ==== FIX: hamburger não fica cortado no mobile ==== */
+@media (max-width: 768px){
+  /* garante altura e respiro no topo (iOS safe-area) */
+  .header{
+    padding-top: max(env(safe-area-inset-top), 0px);
+  }
+  .top-bar{
+    min-height: 56px;           /* 56–60px resolve em todas as telas */
+    padding: 10px 16px;
+  }
+  /* botão com caixa própria (não “gruda” no topo) */
+  .menu-toggle{
+    display: inline-flex !important;
+    align-items: center; 
+    justify-content: center;
+    width: 40px; 
+    height: 40px;
+    padding: 0;                 /* evita que o ícone estoure a altura */
+    line-height: 1;
+    position: absolute;
+    right: max(16px, env(safe-area-inset-right)); 
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1320;
+  }
+}

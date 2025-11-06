@@ -1349,14 +1349,35 @@ body section + section {
     pointer-events: none;
   }
 }
-
-/* iPhones mais altos podem usar um logo um tiquinho maior */
-@media (max-width: 480px) and (min-height: 700px){
-  .main-banner{ height: 68px !important; }
-  .main-banner::before{ background-size: auto 135% !important; }
+/* === Banner Desktop === */
+.main-banner {
+  width: 100%;
+  height: 90px; /* altura ideal para desktop */
+  background-color: #232342;
+  background-image: url('banner.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Se vir qualquer risquinho vertical: garante que nada “vaze” */
-.header, .top-bar { background-color: #232342 !important; }
+/* === Banner Mobile (usa arquivo banner-mobile.png) === */
+@media (max-width: 700px) {
+  .main-banner {
+    height: 90px !important; /* altura suficiente para o logo */
+    background-color: #232342 !important;
+    background-image: url('banner-mobile.png') !important; /* <-- arquivo específico */
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-size: 100% auto !important; /* logo maior, ocupa quase toda a largura */
+    overflow: hidden;
+  }
 
+  /* corrige qualquer traço branco na lateral */
+  .header, .top-bar {
+    background-color: #232342 !important;
+  }
+}
 

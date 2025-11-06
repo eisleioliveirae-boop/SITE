@@ -1239,3 +1239,24 @@ body section + section {
     height: 220px;
   }
 }
+/* ==== Banner principal ajustado ==== */
+.main-banner {
+  width: 100%;
+  height: 280px; /* altura ideal para notebooks */
+  background-image: url('logo-banner.png'); /* ⬅ substitua pelo nome real da imagem do banner */
+  background-repeat: no-repeat;
+  background-size: 160px auto;  /* tamanho controlado do logotipo */
+  background-position: center center;
+  background-color: #232342; /* azul institucional de fundo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Altura menor em telas pequenas */
+@media (max-width: 768px) {
+  .main-banner {
+    height: 200px;
+    background-size: 120px auto;
+  }
+}

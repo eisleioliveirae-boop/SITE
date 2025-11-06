@@ -19,6 +19,14 @@
     <priority>0.90</priority>
   </url>
 
+  <!-- Página da Autora (metadados / Person) -->
+  <url>
+    <loc>https://eisleioliveirae-boop.github.io/SITE/autor/eislei-domingues-de-oliveira.html</loc>
+    <lastmod>2025-11-05T09:00:00-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+  </url>
+
   <!-- 1. Relação de Trabalho x Relação de Emprego -->
   <url>
     <loc>https://eisleioliveirae-boop.github.io/SITE/blog/relacao-de-trabalho-e-emprego.html</loc>
@@ -35,5 +43,12 @@
     <loc>https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho.html</loc>
     <lastmod>2025-01-06T09:00:00-03:00</lastmod>
     <priority>0.80</priority>
+    <!-- Se houver imagem de capa, você pode (depois) incluir assim:
     <image:image>
-      <image:loc
+      <image:loc>https://eisleioliveirae-boop.github.io/SITE/blog/contrato-de-trabalho-cover.jpg</image:loc>
+      <image:title>Contrato de Trabalho</image:title>
+    </image:image>
+    -->
+  </url>
+
+</urlset>

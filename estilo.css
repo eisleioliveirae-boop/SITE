@@ -1327,5 +1327,36 @@ body section + section {
     background-size: auto 85% !important;
   }
 }
+/* === Banner: correção mobile (logo maior + sem cortes) === */
+@media (max-width: 480px){
+  .main-banner{
+    position: relative;
+    height: 60px !important;              /* banner baixo */
+    background: #232342 !important;       /* só a cor de fundo aqui */
+    overflow: hidden;                      /* evita qualquer bleed */
+  }
+
+  /* Renderiza o logo por cima, com tamanho controlado e sem “linhas” */
+  .main-banner::before{
+    content: "";
+    position: absolute;
+    inset: 0;                              /* ocupa todo o banner */
+    background-image: url('banner.png');
+    background-repeat: no-repeat !important;
+    background-position: center 6px !important;  /* sobe um pouquinho */
+    background-size: auto 125% !important;       /* AUMENTA o logo */
+    -webkit-mask-image: radial-gradient(white, black); /* suaviza borda no iOS */
+    pointer-events: none;
+  }
+}
+
+/* iPhones mais altos podem usar um logo um tiquinho maior */
+@media (max-width: 480px) and (min-height: 700px){
+  .main-banner{ height: 68px !important; }
+  .main-banner::before{ background-size: auto 135% !important; }
+}
+
+/* Se vir qualquer risquinho vertical: garante que nada “vaze” */
+.header, .top-bar { background-color: #232342 !important; }
 
 

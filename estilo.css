@@ -1241,3 +1241,28 @@ body section + section {
     background-size: 70%; /* reduz o logo em telas pequenas */
   }
 }
+/* --- FIX DEFINITIVO ALTURA DO BANNER (coloque no FIM do arquivo) --- */
+.main-banner{
+  height: 90px !important;         /* desktop/notebook */
+  min-height: 0 !important;         /* neutraliza min-height antigos */
+  padding-top: 0 !important;        /* evita altura por padding */
+  padding-bottom: 0 !important;
+  background-size: contain !important;
+  background-position: center center !important;
+}
+
+/* Mobile */
+@media (max-width: 700px){
+  .main-banner{
+    height: 40px !important;        /* ajuste real de altura no mobile */
+    min-height: 0 !important;       /* garante que nada expanda */
+    background-size: 70% !important;
+  }
+}
+
+/* Mobile pequeno (opcional) */
+@media (max-width: 420px){
+  .main-banner{
+    height: 34px !important;
+  }
+}

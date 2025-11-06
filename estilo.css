@@ -1243,7 +1243,7 @@ body section + section {
 }
 /* --- FIX DEFINITIVO ALTURA DO BANNER (coloque no FIM do arquivo) --- */
 .main-banner{
-  height: 150px !important;         /* desktop/notebook */
+  height: 250px !important;         /* desktop/notebook */
   min-height: 0 !important;         /* neutraliza min-height antigos */
   padding-top: 0 !important;        /* evita altura por padding */
   padding-bottom: 0 !important;
@@ -1254,7 +1254,7 @@ body section + section {
 /* Mobile */
 @media (max-width: 700px){
   .main-banner{
-    height: 70px !important;        /* ajuste real de altura no mobile */
+    height: 120px !important;        /* ajuste real de altura no mobile */
     min-height: 0 !important;       /* garante que nada expanda */
     background-size: 70% !important;
   }
@@ -1263,6 +1263,6 @@ body section + section {
 /* Mobile pequeno (opcional) */
 @media (max-width: 420px){
   .main-banner{
-    height: 54px !important;
+    height: 74px !important;
   }
 }

@@ -1392,7 +1392,7 @@ body section + section {
 /* === Banner MOBILE: usa o arquivo próprio e controla o tamanho pelo ALTO da imagem === */
 @media (max-width:700px){
   .main-banner{
-    height:120px !important;                         /* não aumenta a faixa azul */
+    height:160px !important;                         /* não aumenta a faixa azul */
     background-color:#232342 !important;
     background-image:url('banner-mobile.png') !important;
 

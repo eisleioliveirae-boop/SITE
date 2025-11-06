@@ -1164,3 +1164,33 @@ body section + section {
 #blog-previews + section {
   margin-top: 0 !important;
 }
+/* === FIX DEFINITIVO: Fundadora ⇄ Nossos Valores (override por ID) === */
+
+/* tira qualquer respiro sobrando no final da seção Fundadora */
+#fundadora { 
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+  display: flow-root; /* evita colapso de margens */
+}
+#fundadora .fundadora-texto > *:last-child { 
+  margin-bottom: 0 !important; 
+}
+#fundadora .fundadora-info { 
+  margin-bottom: 0 !important; 
+}
+
+/* encosta a seção Nossos Valores sem “barriga” no topo */
+#nossos-valores {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+  display: flow-root; /* evita colapso de margens com o h2 */
+}
+#nossos-valores > h2:first-child { 
+  margin-top: 0 !important; 
+}
+
+/* regra cirúrgica só quando Nossos Valores vem logo após Fundadora */
+#fundadora + #nossos-valores { 
+  margin-top: 0 !important; 
+  padding-top: 0 !important; 
+}

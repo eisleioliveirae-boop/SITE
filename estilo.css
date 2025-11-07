@@ -1291,53 +1291,5 @@ body section + section {
 .header, .top-bar, .menu, .main-banner {
   border: 0 !important;
   box-shadow: none !important;
-}
-
-/* 4) Segurança extra no banner (sem repetir imagem e sem “costura”) */
-.main-banner{
-  background-repeat: no-repeat !important;
-  background-attachment: scroll !important;
-  background-clip: border-box !important;
-  overflow: hidden; /* corta 1px fantasma se aparecer */
-}
-/* === Banner EOD — versão refinada e responsiva === */
-.main-banner {
-  position: relative;
-  height: 90px; /* altura desktop */
-  background-color: #232342 !important;  /* azul institucional */
-  background-image: none !important;
-  overflow: hidden;
-}
-
-/* Logo sobreposto centralizado */
-.main-banner::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: url('logo-eod.png') no-repeat center center;
-  background-size: auto 80px; /* tamanho padrão do logo */
-  pointer-events: none;
-}
-
-/* === Telas intermediárias (ex.: notebooks 900–1200px) === */
-@media (max-width: 1200px) {
-  .main-banner { height: 80px; }
-  .main-banner::after { background-size: auto 70px; }
-}
-
-/* === Tablets e telas médias (até 900px) === */
-@media (max-width: 900px) {
-  .main-banner { height: 70px; }
-  .main-banner::after { background-size: auto 65px; }
-}
-
-/* === Mobile real (até 600px) === */
-@media (max-width: 600px) {
-  .main-banner {
-    height: 60px; /* faixa azul mais compacta */
-  }
-  .main-banner::after {
-    background-size: auto 55px; /* logo proporcional e centralizado */
-    background-position: center center; /* garante alinhamento */
-  }
+ }
 }

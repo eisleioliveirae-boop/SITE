@@ -1301,3 +1301,32 @@ body section + section {
   overflow: hidden; /* corta 1px fantasma se aparecer */
 }
 }
+/* ==== Banner principal com fundo azul e logo transparente ==== */
+.main-banner {
+  width: 100%;
+  height: 90px;
+  background-color: #232342; /* azul institucional */
+  background-image: url('logo-eod.png'); /* novo logo com fundo transparente */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==== Ajuste para telas médias ==== */
+@media (max-width: 1200px) {
+  .main-banner {
+    height: 80px;
+    background-size: auto 75%;
+  }
+}
+
+/* ==== Mobile ==== */
+@media (max-width: 700px) {
+  .main-banner {
+    height: 90px !important;
+    background-size: auto 65% !important;
+  }
+}

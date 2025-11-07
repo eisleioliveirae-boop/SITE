@@ -1300,29 +1300,44 @@ body section + section {
   background-clip: border-box !important;
   overflow: hidden; /* corta 1px fantasma se aparecer */
 }
-/* === FORÇA O FUNDO AZUL E INJETA O LOGO, SEM MEXER NO HTML === */
-.main-banner{
+/* === Banner EOD — versão refinada e responsiva === */
+.main-banner {
   position: relative;
-  height: 90px;
-  background-color: #232342 !important;   /* garante o azul sólido */
-  background-image: none !important;       /* derruba qualquer banner antigo */
-  background-repeat: no-repeat !important;
-  background-position: center center !important;
-  background-size: cover !important;       /* só para não sobrar resíduo */
+  height: 90px; /* altura desktop */
+  background-color: #232342 !important;  /* azul institucional */
+  background-image: none !important;
   overflow: hidden;
 }
 
-/* Logo sobreposto (não depende do HTML) */
-.main-banner::after{
+/* Logo sobreposto centralizado */
+.main-banner::after {
   content: "";
-  position: absolute; inset: 0;
-  background: url('logo-eod.png') no-repeat center;
-  background-size: auto 80px;              /* tamanho do logo no desktop */
+  position: absolute;
+  inset: 0;
+  background: url('logo-eod.png') no-repeat center center;
+  background-size: auto 80px; /* tamanho padrão do logo */
   pointer-events: none;
 }
 
-/* Mobile: faixa menor e logo proporcionalmente grande */
-@media (max-width: 700px){
-  .main-banner{ height: 70px !important; }
-  .main-banner::after{ background-size: auto 60px; }
+/* === Telas intermediárias (ex.: notebooks 900–1200px) === */
+@media (max-width: 1200px) {
+  .main-banner { height: 80px; }
+  .main-banner::after { background-size: auto 70px; }
+}
+
+/* === Tablets e telas médias (até 900px) === */
+@media (max-width: 900px) {
+  .main-banner { height: 70px; }
+  .main-banner::after { background-size: auto 65px; }
+}
+
+/* === Mobile real (até 600px) === */
+@media (max-width: 600px) {
+  .main-banner {
+    height: 60px; /* faixa azul mais compacta */
+  }
+  .main-banner::after {
+    background-size: auto 55px; /* logo proporcional e centralizado */
+    background-position: center center; /* garante alinhamento */
+  }
 }

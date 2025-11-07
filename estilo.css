@@ -1301,3 +1301,36 @@ body section + section {
   overflow: hidden; /* corta 1px fantasma se aparecer */
 }
 }
+/* ===== Banner: logo GRANDE sem mudar a altura do banner ===== */
+:root{
+  /* fácil de calibrar */
+  --logo-h-desktop: 78px;  /* ↑ deixe 80–84px se quiser ainda maior */
+  --logo-h-mobile:  64px;  /* ↑ 66–72px se quiser ainda maior no mobile */
+}
+
+/* Desktop / base */
+.main-banner{
+  width:100%;
+  height:90px;                                   /* mantém sua altura */
+  background-color:#232342;
+  background-image:url('banner.png');
+  background-repeat:no-repeat;
+  background-position:center center;
+  background-size:auto var(--logo-h-desktop);    /* <— controla o TAMANHO do logo */
+}
+
+/* Mobile */
+@media (max-width:700px){
+  .main-banner{
+    /* mantém a faixa do banner pequena, mas com logo grande */
+    height:80px;                                  /* pode reduzir para 72–76 se quiser menos faixa */
+    background-image:url('banner-mobile.png');    /* usa o arquivo recortado p/ mobile */
+    background-size:auto var(--logo-h-mobile);    /* <— controla o TAMANHO do logo */
+    background-position:center center;
+    background-repeat:no-repeat;
+
+    /* elimina linhas/brilhos nas bordas que você viu */
+    background-origin:padding-box;
+    background-clip:padding-box;
+  }
+}

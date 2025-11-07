@@ -1266,18 +1266,3 @@ body section + section {
     height: 74px !important;
   }
 }
-/* ==== PATCH ANTIRISCO NO TOPO (cole no fim do CSS) ==== */
-
-/* 1) Desliga qualquer pseudo-elemento que possa desenhar uma linha */
-.header::before,
-.header::after,
-.top-bar::before,
-.top-bar::after,
-.menu::before,
-.menu::after,
-.menu-list::before,
-.menu-list::after {
-  content: none !important;
-  display: none !important;
-}
-}
